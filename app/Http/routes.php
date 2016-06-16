@@ -15,5 +15,11 @@ Route::group(['middleware' => ['web']], function () {
 
     //Route::auth();
 
-    Route::get('/',['as' => 'home', 'uses' => 'PagesController@home']);
+    Route::get('/',['as' => 'home', 'uses' => 'PagesController@soon']);
+
+
+    Route::get('try',['as' => 'try', 'uses' => 'PagesController@home']);
+
+    // Subscribe
+    Route::post('pages.subscribe',['as' => 'pages.subscribe', 'uses' => 'PagesController@subscribe']);
 });
