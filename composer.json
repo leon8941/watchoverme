@@ -9,7 +9,9 @@
         "laravel/framework": "5.2.*",
         "laravelcollective/html": "5.2.*",
         "cviebrock/eloquent-sluggable": "4.0.0-beta",
-        "laraveldaily/quickadmin": "^1.1"
+        "laraveldaily/quickadmin": "^1.1",
+        "nayjest/grids": "1.1.4",
+        "guzzlehttp/guzzle": "~6.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

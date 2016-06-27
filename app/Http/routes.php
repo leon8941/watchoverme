@@ -20,6 +20,12 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('try',['as' => 'try', 'uses' => 'PagesController@home']);
 
+    // API consuming
+    Route::get('consult',['as' => 'consult', 'uses' => 'PagesController@consult']);
+
     // Subscribe
     Route::post('pages.subscribe',['as' => 'pages.subscribe', 'uses' => 'PagesController@subscribe']);
+
+    // Users
+    Route::resource('users','UsersController');
 });
