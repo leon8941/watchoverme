@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Role;
 use App\User;
-use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -16,118 +15,17 @@ class UsersController extends Controller
      */
     public function index()
     {
-        // Define query
-        $config = (new GridConfig())
-            ->setName('Users')
-            ->setDataProvider(
-                new EloquentDataProvider(
-                    (new User())
-                        ->newQuery()
-                )
-            )
-            ->setPageSize($view_amount)
-            ->setColumns([
-                new FieldConfig('id'),
-                $this->getActionColumn(),
-                (new FieldConfig('name'))
-                    ->addFilter(getFilterILike('name'))
-                    ->setSortable(true)
-                ,
-                (new FieldConfig('staff'))
-                    ->setLabel('is RH?')
-                    ->setCallback(function ($val) {
+        $users = User::all();
 
-                        if($val)
-                            return '<span class="glyphicon glyphicon-registration-mark"></span>';
+        return view('admin.users.index', compact('users'));
+    }
 
-                        return '';
-                    }),
-                (new FieldConfig('level'))
-                    ->setSortable(true),
-                (new FieldConfig('phone'))
-                    ->setSortable(true)
-                    ->setCallback(function ($val, \Nayjest\Grids\EloquentDataRow $row) {
-                        if (!$val)
-                            return '';
+    public function show($id)
+    {
+        $user = User::where('id',$id)
+            ->firstOrFail();
 
-                        if (!empty($val))
-                            return $val . ' <a href="tel:'.$val.'"><i class="fa fa-phone"></i></a> ';
-                    })
-                ,
-                (new FieldConfig('email'))
-                    ->addFilter(getFilterILike('email'))
-                    ->setSortable(true)
-                    ->setCallback(function ($val) {
-
-                        if (!empty($val))
-                            return $val . ' <a href="mailto:'.$val.'"><i class="fa fa-envelope-o"></i></a> ';
-                    }),
-                (new FieldConfig('points'))
-                    ->setLabel('Pontos'),
-                (new FieldConfig('id'))
-                    ->setLabel('Rank')
-                    ->setCallback(function ($val) {
-
-                        // Get the user rank position
-                        if(User::getRankingPosition($val) == 1)
-                            return '<span class="glyphicon glyphicon-star-empty"></span> 1st';
-
-                        if(User::getRankingPosition($val) == 2 )
-                            return '<span class="glyphicon glyphicon-star"></span> 2nd';
-
-                        if(User::getRankingPosition($val) == 3 )
-                            return '<span class="glyphicon glyphicon-star"></span> 3rd';
-
-                        return User::getRankingPosition($val);
-                    }),
-            ])
-            ->setComponents([
-                (new THead)
-                    ->getComponentByName(FiltersRow::NAME)
-                    ->setComponents([
-                        (new RecordsPerPage)
-                            ->setVariants([
-                                50,
-                                100,
-                                200
-                            ])
-                            ->setRenderSection('filters_row_column_level')
-                        ,
-                        (new HtmlTag)
-                            ->setTagName('button')
-                            ->setAttributes([
-                                'type' => 'submit',
-                                'class' => 'btn btn-success btn-small'
-                            ])
-                            ->addComponent(new RenderFunc(function() {
-                                return '<i class="glyphicon glyphicon-refresh"></i> Filter';
-                            }))
-                            ->setRenderSection('filters_row_column_level'),
-                        (new HtmlTag)
-                            ->setContent(' <i class="fa fa-home"></i> Default ')
-                            ->setTagName('config')
-                            ->setRenderSection(RenderableRegistry::SECTION_BEFORE)
-                            ->setAttributes([
-                                'class' => 'btn btn-default btn-sm',
-                                'id'    => 'show-clean'
-                            ]),
-                        (new HtmlTag)
-                            ->setContent(' <i class="fa fa-arrows-alt"></i> All ')
-                            ->setTagName('span')
-                            ->setRenderSection(RenderableRegistry::SECTION_BEFORE)
-                            ->setAttributes([
-                                'class' => 'btn btn-warning btn-sm',
-                                'id'    => 'show-all'
-                            ])
-                    ])
-                    ->getParent()
-                ,
-                new TFoot
-            ]);
-
-        $grid = (new Grid($config))->render();
-
-        return view('users.index', compact('users'));
+        return view('users.show', compact('user'));
     }
 
     /**
@@ -204,6 +102,4 @@ class UsersController extends Controller
 
         return redirect()->route('users.index')->withMessage(trans('quickadmin::admin.users-controller-successfully_deleted'));
     }
-
-
 }

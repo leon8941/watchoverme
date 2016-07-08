@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use App\Subscriber;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
@@ -16,7 +17,9 @@ class PagesController extends Controller
 
     public function home()
     {
-        return view('pages.home');
+        $posts = Post::all();
+
+        return view('pages.home',compact('posts'));
     }
 
 
@@ -49,7 +52,7 @@ class PagesController extends Controller
             // Base URI is used with relative requests
             'base_uri' => 'https://api.lootbox.eu/',
             // You can set any number of default request options.
-            'timeout'  => 2.0,
+            'timeout'  => 999,
         ]);
 
         //$client->setDefaultOption('verify', false);
@@ -57,7 +60,15 @@ class PagesController extends Controller
         // Send a request to https://foo.com/api/test
         $response = $client->request('GET', 'pc/us/kzz-1722/profile');
 
-        dd($response);
+
+        echo $response->getStatusCode(); // 200
+        echo $response->getReasonPhrase(); // OK
+
+        $body = $response->getBody();
+
+        $obj = json_decode($body);
+
+        dd($obj);
         /*$response = $client->request('GET', 'profile', [
             'query' => [
                 'tag' => 'kzz-1722',

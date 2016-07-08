@@ -1,91 +1,65 @@
-@extends('layouts.manager')
+@extends('layouts.main')
 
 @section('content')
-    <!-- Top Bar starts -->
-    <div class="top-bar">
-        <div class="page-title">
-            Management
+        <!-- begin #content -->
+<div id="content" class="content">
+    <!-- begin breadcrumb -->
+    <ol class="breadcrumb pull-right">
+        <li><a href="javascript:;">Home</a></li>
+        <li class="active">Players</li>
+    </ol>
+    <!-- end breadcrumb -->
+    <!-- begin page-header -->
+    <h1 class="page-header">Players <small>current ranked players</small></h1>
+    <!-- end page-header -->
+
+    @if (session('message'))
+        <div class="alert alert-success">
+            {{ session('message') }}
         </div>
-    </div>
-    <!-- Top Bar ends -->
+    @endif
 
-    <!-- Main Container starts -->
-    <div class="main-container">
-
-        <!-- Container fluid starts -->
-        <div class="container-fluid">
-            <!-- Spacer starts -->
-            <div class="spacer">
-
-                <!-- Row Starts -->
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <!-- Widget starts -->
-                        <div class="blog">
-                            <div class="blog-header">
-                                <div class="text-left" style="float:left">
-                                    <h5 class="blog-title">Users / Technicians</h5>
-                                </div>
-                                <div class="text-right">
-                                    <button type="button" class="btn btn-info btn-rounded" id="new">New</button>
-                                </div>
-                                @if (session('message'))
-                                    <div class="alert alert-success">
-                                        {{ session('message') }}
-                                    </div>
-                                @endif
-                            </div>
-                            <div class="blog-body">
-                                <div class="row">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        {!! $grid !!}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Widget ends -->
+    <!-- begin row -->
+    <div class="row">
+        <!-- begin col-12 -->
+        <div class="col-md-12">
+            <!-- begin panel -->
+            <div class="panel panel-inverse" data-sortable-id="table-basic-7">
+                <div class="panel-heading">
+                    <div class="panel-heading-btn">
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                    </div>
+                    <h4 class="panel-title">Ranked Players</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        {!! $grid !!}
                     </div>
                 </div>
-                <!-- Row Ends -->
-
             </div>
-            <!-- Spacer ends -->
+            <!-- end panel -->
         </div>
-        <!-- Container fluid ends -->
-
+        <!-- end col-12 -->
     </div>
-    <!-- Main Container ends -->
+    <!-- end row -->
+</div>
+<!-- end #content -->
 
-    <!-- Right sidebar starts -->
-    <div class="right-sidebar">
-
-
-    </div>
-    <!-- Right sidebar ends -->
 @endsection
 
-@section('footer')
+@section('scripts')
+
+        <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script src="assets/js/apps.min.js"></script>
+    <!-- ================== END PAGE LEVEL JS ================== -->
 
     <script>
-        $('#new').click(function(){
-            location.href = '{{ route('users.create') }}';
-        });
-
-        $('.edit-entity').click(function(){
-
-            var ref = $(this).data('ref');
-
-            location.href = ref;
-        });
-
-        // View all function
-        $('#show-all').click(function() {
-            location.href = '{{ route('users.index', ['all' => true]) }}';
-        });
-
-        // View default
-        $('#show-clean').click(function(){
-            location.href = '{{ route('users.index') }}';
+        $(document).ready(function() {
+            App.init();
         });
     </script>
 @endsection
+

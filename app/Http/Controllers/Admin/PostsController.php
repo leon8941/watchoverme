@@ -9,7 +9,8 @@ use App\Posts;
 use App\Http\Requests\CreatePostsRequest;
 use App\Http\Requests\UpdatePostsRequest;
 use Illuminate\Http\Request;
-
+use App\Http\Controllers\Traits\FileUploadTrait;
+use App\User;
 
 
 class PostsController extends Controller {
@@ -23,7 +24,7 @@ class PostsController extends Controller {
 	 */
 	public function index(Request $request)
     {
-        $posts = Posts::all();
+        $posts = Posts::with("user")->get();
 
 		return view('admin.posts.index', compact('posts'));
 	}
@@ -35,9 +36,10 @@ class PostsController extends Controller {
 	 */
 	public function create()
 	{
+	    $user = User::lists("id", "id")->prepend('Please select', '');
+
 	    
-	    
-	    return view('admin.posts.create');
+	    return view('admin.posts.create', compact("user"));
 	}
 
 	/**
@@ -47,7 +49,7 @@ class PostsController extends Controller {
 	 */
 	public function store(CreatePostsRequest $request)
 	{
-	    
+	    $request = $this->saveFiles($request);
 		Posts::create($request->all());
 
 		return redirect()->route('admin.posts.index');
@@ -62,9 +64,10 @@ class PostsController extends Controller {
 	public function edit($id)
 	{
 		$posts = Posts::find($id);
+	    $user = User::lists("id", "id")->prepend('Please select', '');
+
 	    
-	    
-		return view('admin.posts.edit', compact('posts'));
+		return view('admin.posts.edit', compact('posts', "user"));
 	}
 
 	/**
@@ -77,7 +80,7 @@ class PostsController extends Controller {
 	{
 		$posts = Posts::findOrFail($id);
 
-        
+        $request = $this->saveFiles($request);
 
 		$posts->update($request->all());
 

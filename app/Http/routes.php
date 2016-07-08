@@ -15,10 +15,8 @@ Route::group(['middleware' => ['web']], function () {
 
     //Route::auth();
 
-    Route::get('/',['as' => 'home', 'uses' => 'PagesController@soon']);
-
-
-    Route::get('try',['as' => 'try', 'uses' => 'PagesController@home']);
+    Route::get('/',['as' => 'home', 'uses' => 'PagesController@home']);
+    Route::get('home',['as' => 'home', 'uses' => 'PagesController@home']);
 
     // API consuming
     Route::get('consult',['as' => 'consult', 'uses' => 'PagesController@consult']);
@@ -28,4 +26,14 @@ Route::group(['middleware' => ['web']], function () {
 
     // Users
     Route::resource('users','UsersController');
+    Route::resource('events','EventsController');
+    Route::resource('gamers','GamersController');
+    Route::resource('posts','PostsController');
+
+    //Route::get('posts.show',['as' => 'consult', 'uses' => 'PagesController@consult']);
 });
+
+//Route::auth();
+
+Route::auth();
+

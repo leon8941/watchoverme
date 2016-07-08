@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', false),
+    'debug' => env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -156,6 +156,24 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // Helpers
+        'App\Providers\HelperServiceProvider',
+
+        // Grids
+        'Nayjest\Grids\ServiceProvider',
+
+        // Form & HTML
+        'Collective\Html\HtmlServiceProvider',
+
+        // Excel
+        'Maatwebsite\Excel\ExcelServiceProvider',
+
+        // Image Intervention
+        'Intervention\Image\ImageServiceProvider',
+
+        // Sluggable
+        'Cviebrock\EloquentSluggable\SluggableServiceProvider',
+
         // Admin
         Laraveldaily\Quickadmin\QuickadminServiceProvider::class
     ],
@@ -203,6 +221,20 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        'Input'     => 'Illuminate\Support\Facades\Input',
+
+        'Form' => 'Collective\Html\FormFacade',
+        'Html' => 'Collective\Html\HtmlFacade',
+
+        // Grid
+        'Grids'     => 'Nayjest\Grids\Grids',
+
+        // Excel
+        'Excel' => 'Maatwebsite\Excel\Facades\Excel',
+
+        // Images
+        'Image' => 'Intervention\Image\Facades\Image',
 
     ],
 

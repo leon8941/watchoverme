@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- {{ \Illuminate\Support\Facades\Config::get('custom.html_developer_description') }} -->
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
@@ -37,7 +36,7 @@
 
     <link rel="shortcut icon" href="img/favicon.ico">
 
-    <title>Watch Over Me</title>
+    <title>Watch OverMe</title>
 
 </head>
 <body>
@@ -57,7 +56,7 @@
                     <div style="float:left; min-width: 400px">
                         <a href="{{ route('home') }}" class="navbar-brand">
                             <div style="float:left; padding-right: 6px"><img src="{{ asset('img/watchoverme.jpg') }}" width="30px"></div>
-                            <div>Watch Over Me</div>
+                            <div>Watch OverMe</div>
                         </a>
                         <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
                             <span class="icon-bar"></span>
@@ -139,17 +138,22 @@
                     </li>
                     <li class="dropdown navbar-user">
                         <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="assets/img/user-13.jpg" alt="" />
-                            <span class="hidden-xs">Adam Schwartz</span> <b class="caret"></b>
+                            @if (Auth::check())
+                                    <img src="assets/img/user-13.jpg" alt="" />
+                                <span class="hidden-xs">{{ \Illuminate\Support\Facades\Auth::user()->name }}</span> <b class="caret"></b>
+                            @else
+                                <div class="info">
+                                    <a class="" href="{{ url('auth/login') }}">
+                                        Faça Login
+                                    </a>
+                                </div>
+                            @endif
                         </a>
                         <ul class="dropdown-menu animated fadeInLeft">
                             <li class="arrow"></li>
-                            <li><a href="javascript:;">Edit Profile</a></li>
-                            <li><a href="javascript:;"><span class="badge badge-danger pull-right">2</span> Inbox</a></li>
-                            <li><a href="javascript:;">Calendar</a></li>
-                            <li><a href="javascript:;">Setting</a></li>
+                            <li><a href="{{ route('users.show', [1]) }}">Profile</a></li>
                             <li class="divider"></li>
-                            <li><a href="javascript:;">Log Out</a></li>
+                            <li><a href="{{ url('logout') }}">Log Out</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -160,47 +164,7 @@
         <!-- end #header -->
 
         <!-- begin #sidebar -->
-        <div id="sidebar" class="sidebar">
-            <!-- begin sidebar scrollbar -->
-            <div data-scrollbar="true" data-height="100%">
-                <!-- begin sidebar user -->
-                <ul class="nav">
-                    <li class="nav-profile">
-                        <div class="image">
-                            <a href="javascript:;"><img src="assets/img/user-13.jpg" alt="" /></a>
-                        </div>
-                        <div class="info">
-                            Thiago Lithium
-                            <small>Gordo das abóboras</small>
-                        </div>
-                    </li>
-                </ul>
-                <!-- end sidebar user -->
-                <!-- begin sidebar nav -->
-                <ul class="nav">
-                    <li class="nav-header">Navigation</li>
-                    <li class=" active">
-                        <a href="javascript:;">
-                            <i class="fa fa-laptop"></i>
-                            <span>Dashboard</span>
-                        </a>
-                    </li>
-                    <li class="has-sub">
-                        <a href="{{ route('users.index') }}">
-                            <i class="fa fa-inbox"></i>
-                            <span>Users</span>
-                        </a>
-                    </li>
-
-                    <!-- begin sidebar minify button -->
-                    <li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
-                    <!-- end sidebar minify button -->
-                </ul>
-                <!-- end sidebar nav -->
-            </div>
-            <!-- end sidebar scrollbar -->
-        </div>
-        <div class="sidebar-bg"></div>
+        @include('elements.menu-left')
         <!-- end #sidebar -->
 
         <!-- begin #content -->
@@ -291,36 +255,25 @@
     <!-- end page container -->
 
     <!-- ================== BEGIN BASE JS ================== -->
-    <script src="assets/plugins/jquery/jquery-1.9.1.min.js"></script>
-    <script src="assets/plugins/jquery/jquery-migrate-1.1.0.min.js"></script>
-    <script src="assets/plugins/jquery-ui/ui/minified/jquery-ui.min.js"></script>
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <!--[if lt IE 9]>
-    <script src="assets/crossbrowserjs/html5shiv.js"></script>
-    <script src="assets/crossbrowserjs/respond.min.js"></script>
-    <script src="assets/crossbrowserjs/excanvas.min.js"></script>
-    <![endif]-->
-    <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-    <script src="assets/plugins/jquery-cookie/jquery.cookie.js"></script>
+    <script src="{{ asset('assets/plugins/jquery/jquery-1.9.1.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/jquery/jquery-migrate-1.1.0.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/jquery-ui/ui/minified/jquery-ui.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/crossbrowserjs/html5shiv.js') }}"></script>
+    <script src="{{ asset('assets/crossbrowserjs/respond.min.js') }}"></script>
+    <script src="{{ asset('assets/crossbrowserjs/excanvas.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/slimscroll/jquery.slimscroll.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/morris/raphael.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/morris/morris.js') }}"></script>
+    <script src="{{ asset('assets/plugins/jquery-jvectormap/jquery-jvectormap-1.2.2.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/bootstrap-calendar/js/bootstrap_calendar.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/gritter/js/jquery.gritter.js') }}"></script>
+    <script src="{{ asset('assets/js/dashboard-v2.min.js') }}"></script>
+
+    <script src="{{ asset('assets/js/apps.min.js') }}"></script>
     <!-- ================== END BASE JS ================== -->
 
-    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
-    <script src="assets/plugins/morris/raphael.min.js"></script>
-    <script src="assets/plugins/morris/morris.js"></script>
-    <script src="assets/plugins/jquery-jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-    <script src="assets/plugins/jquery-jvectormap/jquery-jvectormap-world-merc-en.js"></script>
-    <script src="assets/plugins/bootstrap-calendar/js/bootstrap_calendar.min.js"></script>
-    <script src="assets/plugins/gritter/js/jquery.gritter.js"></script>
-    <script src="assets/js/dashboard-v2.min.js"></script>
-    <script src="assets/js/apps.min.js"></script>
-    <!-- ================== END PAGE LEVEL JS ================== -->
-
-    <script>
-        $(document).ready(function() {
-            App.init();
-            DashboardV2.init();
-        });
-    </script>
+    @yield('scripts')
 
     @if (getenv('APP_ENV') == 'production')
         <script type="text/javascript" src="{{ URL::asset('js/analytics/analytics.js') }}"></script>

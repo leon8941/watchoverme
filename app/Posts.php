@@ -23,8 +23,9 @@ class Posts extends Model {
     
     protected $fillable = [
           'title',
-          'author_id',
-          'texto'
+          'image',
+          'text',
+          'user_id'
     ];
     
 
@@ -34,7 +35,23 @@ class Posts extends Model {
 
         Posts::observe(new UserActionsObserver);
     }
-    
+
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    /**
+     * Get the post image.
+     *
+     * @param  string  $value
+     * @return string
+     */
+    public function getImageAttribute($value)
+    {
+        return 'uploads/' . $value;
+    }
     
     
     

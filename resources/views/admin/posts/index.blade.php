@@ -16,8 +16,9 @@
                         <th>
                             {!! Form::checkbox('delete_all',1,false,['class' => 'mass']) !!}
                         </th>
-                        <th>Título</th>
-<th>Autor</th>
+                        <th>Title</th>
+<th>Image</th>
+<th>Author</th>
 
                         <th>&nbsp;</th>
                     </tr>
@@ -30,7 +31,8 @@
                                 {!! Form::checkbox('del-'.$row->id,1,false,['class' => 'single','data-id'=> $row->id]) !!}
                             </td>
                             <td>{{ $row->title }}</td>
-<td>{{ $row->author_id }}</td>
+<td>@if($row->image != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->image }}">@endif</td>
+<td>{{ isset($row->user->id) ? $row->user->id : '' }}</td>
 
                             <td>
                                 {!! link_to_route('admin.posts.edit', trans('quickadmin::templates.templates-view_index-edit'), array($row->id), array('class' => 'btn btn-xs btn-info')) !!}

@@ -51,4 +51,12 @@ class User extends Model implements AuthenticatableContract,
     {
         return $this->belongsTo(Role::class);
     }
+
+    /**
+     * Get the comments for the blog post.
+     */
+    public function posts()
+    {
+        return $this->hasMany('App\Post');
+    }
 }

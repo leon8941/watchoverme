@@ -25,8 +25,7 @@ class CreatePostsRequest extends Request {
 	{
 		return [
             'title' => 'required', 
-            'author_id' => 'required', 
-            'texto' => 'required', 
+            'user_id' => 'required', 
             
 		];
 	}

@@ -20,27 +20,26 @@ class UsersTableSeeder extends Seeder
             'name'  => 'kz',
             'email' => 'souto.victor@gmail.com',
             'password' => \Illuminate\Support\Facades\Hash::make('123'),
-            'battletag' => 'kzz#1722'
         ]);
         $user2 = \App\User::create([
             'name'  => $faker->name,
             'email' => $faker->email,
-            'password' => \Illuminate\Support\Facades\Hash::make('123')
+            'password' => \Illuminate\Support\Facades\Hash::make('123'),
         ]);
         $user3 = \App\User::create([
             'name'  => $faker->name,
             'email' => $faker->email,
-            'password' => \Illuminate\Support\Facades\Hash::make('123')
+            'password' => \Illuminate\Support\Facades\Hash::make('123'),
         ]);
         $user4 = \App\User::create([
             'name'  => $faker->name,
             'email' => $faker->email,
-            'password' => \Illuminate\Support\Facades\Hash::make('123')
+            'password' => \Illuminate\Support\Facades\Hash::make('123'),
         ]);
         $user5 = \App\User::create([
             'name'  => $faker->name,
             'email' => $faker->email,
-            'password' => \Illuminate\Support\Facades\Hash::make('123')
+            'password' => \Illuminate\Support\Facades\Hash::make('123'),
         ]);
     }
 }
