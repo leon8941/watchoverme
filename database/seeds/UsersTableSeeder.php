@@ -17,8 +17,9 @@ class UsersTableSeeder extends Seeder
         $faker = Faker::create();
 
         $user1 = \App\User::create([
-            'name'  => 'kz',
-            'email' => 'souto.victor@gmail.com',
+            'name'     => 'kz',
+            'email'    => 'souto.victor@gmail.com',
             'password' => \Illuminate\Support\Facades\Hash::make('cracker0'),
         ]);
+    }
 }
