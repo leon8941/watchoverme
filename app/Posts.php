@@ -2,15 +2,18 @@
 
 namespace App;
 
+use Cviebrock\EloquentSluggable\SluggableInterface;
+use Cviebrock\EloquentSluggable\SluggableTrait;
 use Illuminate\Database\Eloquent\Model;
 use Laraveldaily\Quickadmin\Observers\UserActionsObserver;
 
 
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Posts extends Model {
+class Posts extends Model implements SluggableInterface {
 
     use SoftDeletes;
+    use SluggableTrait;
 
     /**
     * The attributes that should be mutated to dates.
@@ -27,7 +30,11 @@ class Posts extends Model {
           'text',
           'user_id'
     ];
-    
+
+    protected $sluggable = array(
+        'build_from' => 'title',
+        'save_to'    => 'slug',
+    );
 
     public static function boot()
     {

@@ -10,9 +10,9 @@ use App\Http\Requests;
 class PostsController extends Controller
 {
     //
-    public function show($id)
+    public function show($slug)
     {
-        $post = Posts::where('id',$id)
+        $post = Posts::where('slug',$slug)
             ->firstOrFail();
 
         return view('posts.show', compact('post'));

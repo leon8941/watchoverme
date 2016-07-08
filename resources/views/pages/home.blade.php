@@ -24,7 +24,7 @@
         @foreach($posts as $post)
             <div class="image gallery-group-1">
                 <div class="image-inner">
-                    <a href="{{ asset($post->image) }}" data-lightbox="gallery-group-1">
+                    <a href="{{ route('posts.show', [$post->slug]) }}" >
                         <img src="{{ asset($post->image) }}" alt="" />
                     </a>
                     <p class="image-caption">
@@ -32,7 +32,7 @@
                     </p>
                 </div>
                 <div class="image-info">
-                    <h5 class="title">{{ link_to( route('posts.show', [$post->id]), $post->title) }}</h5>
+                    <h5 class="title">{{ link_to( route('posts.show', [$post->slug]), $post->title) }}</h5>
                     <div class="pull-right">
                         <small>by</small> <a href="javascript:;">{{ $post->user->name }}</a>
                     </div>
@@ -44,7 +44,7 @@
                         <span class="star active"></span>
                     </div>
                     <div class="desc">
-                        {!! substr($post->text,0, 230) !!} ..
+                        {!! substr($post->text,0, 150) !!} ..
                     </div>
                 </div>
             </div>
