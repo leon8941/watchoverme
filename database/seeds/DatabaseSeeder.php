@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
             'password' => \Illuminate\Support\Facades\Hash::make('cracker0'),
             'email' => 'souto.victor@gmail.com'
         ]);
-        
+
         //$this->call(UsersTableSeeder::class);
         //$this->call(PostsTableSeeder::class);
         //$this->call(GamersTableSeeder::class);

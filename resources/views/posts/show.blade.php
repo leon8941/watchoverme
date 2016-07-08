@@ -24,7 +24,7 @@
                 <h4 class="panel-title">{{ $post->title }}</h4>
             </div>
             <div class="panel-body">
-                <img src="{{ asset($post->image) }}" style="float: left; margin: 0px 15px 15px 0px; max-width: 300px"> {!! $post->text !!}
+                <img src="{{ asset($post->image) }}" style="float: left; margin: 0px 15px 15px 0px; max-width: 230px"> {!! $post->text !!}
             </div>
         </div>
     </div>

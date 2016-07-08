@@ -44,7 +44,7 @@
                         <span class="star active"></span>
                     </div>
                     <div class="desc">
-                        {!! substr($post->text,0, 150) !!} ..
+                        {!! substr($post->text,0, 136) !!} ...
                     </div>
                 </div>
             </div>
