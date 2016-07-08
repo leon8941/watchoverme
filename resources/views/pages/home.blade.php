@@ -44,7 +44,7 @@
                         <span class="star active"></span>
                     </div>
                     <div class="desc">
-                        {!! substr($post->text,0, 280) !!} ..
+                        {!! substr($post->text,0, 230) !!} ..
                     </div>
                 </div>
             </div>
@@ -56,9 +56,9 @@
 @endsection
 
 @section('scripts')
-    <script src="assets/plugins/isotope/jquery.isotope.min.js"></script>
-    <script src="assets/plugins/lightbox/js/lightbox-2.6.min.js"></script>
-    <script src="assets/js/gallery.demo.min.js"></script>
+    <script src="{{ asset('assets/plugins/isotope/jquery.isotope.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/lightbox/js/lightbox-2.6.min.js') }}"></script>
+    <script src="{{ asset('assets/js/gallery.demo.min.js') }}"></script>
     <script>
         $(document).ready(function() {
             App.init();
