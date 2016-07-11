@@ -244,7 +244,7 @@ class GamersController extends Controller
                     'quick_playtime' => $obj->data->playtime->quick,
                     'avatar' => $obj->data->avatar,
                     'competitive_rank' => $rank,
-                    'competitive_rank_img' => $obj->data->competitive->rank_img,
+                    'competitive_rank_img' => $rank_img,
                     'user_id' => Auth::user()->id
                 ]);
             }
