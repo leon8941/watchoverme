@@ -69,7 +69,7 @@
 
                 <!-- begin header navigation right -->
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
+                    <!--<li>
                         <form class="navbar-form full-width">
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Enter keyword" />
@@ -136,6 +136,7 @@
                             </li>
                         </ul>
                     </li>
+                    -->
                     <li class="dropdown navbar-user">
                         <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
                             @if (Auth::check())
@@ -143,8 +144,12 @@
                                 <span class="hidden-xs">{{ \Illuminate\Support\Facades\Auth::user()->name }}</span> <b class="caret"></b>
                             @else
                                 <div class="info">
-                                    <a class="" href="{{ url('auth/login') }}">
+                                    <a class="" href="{{ url('login') }}">
                                         Faça Login
+                                    </a>
+                                    |
+                                    <a class="" href="{{ url('register') }}">
+                                        Registrar
                                     </a>
                                 </div>
                             @endif

@@ -20,9 +20,9 @@ class UsersController extends Controller
         return view('admin.users.index', compact('users'));
     }
 
-    public function show($id)
+    public function show($slug)
     {
-        $user = User::where('id',$id)
+        $user = User::where('slug',$slug)
             ->firstOrFail();
 
         return view('users.show', compact('user'));

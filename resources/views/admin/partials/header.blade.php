@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>
-        {{ trans('quickadmin::admin.partials-header-title') }}
+        Watch OVerMe
     </title>
 
     <meta http-equiv="X-UA-Compatible"

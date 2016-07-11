@@ -8,19 +8,23 @@
                 @if (Auth::check())
 
                     <div class="image">
-                        <a href="{{ route('users.show',[ \Illuminate\Support\Facades\Auth::user()->id]) }}">
+                        <a href="{{ route('users.show',[ \Illuminate\Support\Facades\Auth::user()->slug]) }}">
                             <img src="{{ asset('assets/img/user-13.jpg') }}" alt="" />
                         </a>
                     </div>
                     <div class="info">
-                        <a href="{{ route('users.show',[\Illuminate\Support\Facades\Auth::user()->id]) }}">
+                        <a href="{{ route('users.show',[\Illuminate\Support\Facades\Auth::user()->slug]) }}">
                             {{ \Illuminate\Support\Facades\Auth::user()->name }}
                         </a>
                     </div>
                 @else
                     <div class="info">
-                        <a class="" href="{{ url('auth/login') }}">
+                        <a class="" href="{{ url('login') }}">
                             Faça Login
+                        </a>
+                        |
+                        <a class="" href="{{ url('register') }}">
+                            Registrar
                         </a>
                     </div>
                 @endif
@@ -36,14 +40,12 @@
                     <span>Home</span>
                 </a>
             </li>
-            <!--
             <li class="has-sub">
                 <a href="{{ route('gamers.index') }}">
                     <i class="fa fa-users"></i>
                     <span>Players</span>
                 </a>
             </li>
-            -->
             <!-- begin sidebar minify button -->
             <li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
             <!-- end sidebar minify button -->

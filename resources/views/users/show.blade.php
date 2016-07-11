@@ -47,96 +47,133 @@
                                         <td class="field">Battle Tag</td>
                                         <td><a href="#">{{ $user->gamer->battletag }}</a></td>
                                     </tr>
+                                    <tr class="highlight">
+                                        <td>Gamer Profile</td>
+                                        <td><button class="btn btn-info btn-xs" id="update-gamer">Update</button>
+                                            <br>
+                                        </td>
+                                    </tr>
+                                    <tr class="highlight">
+                                        <td class="field" colspan="2"><h4>General</h4></td>
+                                    </tr>
                                     <tr class="divider">
                                         <td colspan="2"></td>
                                     </tr>
                                     <tr>
-                                        <td class="field">Mobile</td>
-                                        <td><i class="fa fa-mobile fa-lg m-r-5"></i> +1-(847)- 367-8924 <a href="#" class="m-l-5">Edit</a></td>
+                                        <td class="field">Avatar</td>
+                                        <td><img src="{{ $user->gamer->avatar }}" width="68px"> </td>
                                     </tr>
                                     <tr>
-                                        <td class="field">Home</td>
-                                        <td><a href="#">Add Number</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="field">Office</td>
-                                        <td><a href="#">Add Number</a></td>
+                                        <td class="field">Level</td>
+                                        <td>{{ $user->gamer->level }}</td>
                                     </tr>
                                     <tr class="divider">
                                         <td colspan="2"></td>
                                     </tr>
                                     <tr class="highlight">
-                                        <td class="field">About Me</td>
-                                        <td><a href="#">Add Description</a></td>
+                                        <td class="field" colspan="2"><h4>Competitive</h4></td>
                                     </tr>
                                     <tr class="divider">
                                         <td colspan="2"></td>
                                     </tr>
                                     <tr>
-                                        <td class="field">Country/Region</td>
-                                        <td>
-                                            <select class="form-control input-inline input-xs" name="region">
-                                                <option value="US" selected>United State</option>
-                                                <option value="AF">Afghanistan</option>
-                                                <option value="AL">Albania</option>
-                                                <option value="DZ">Algeria</option>
-                                                <option value="AS">American Samoa</option>
-                                                <option value="AD">Andorra</option>
-                                                <option value="AO">Angola</option>
-                                                <option value="AI">Anguilla</option>
-                                                <option value="AQ">Antarctica</option>
-                                                <option value="AG">Antigua and Barbuda</option>
-                                            </select>
+                                        <td class="field">Rank</td>
+                                        <td>{{ $user->gamer->competitive_rank }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="field">Wins</td>
+                                        <td>{{ $user->gamer->competitive_wins }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="field">Lost</td>
+                                        <td>{{ $user->gamer->competitive_lost }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="field">Played</td>
+                                        <td>{{ $user->gamer->competitive_played }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="field">Play Time</td>
+                                        <td>{{ $user->gamer->competitive_playtime }}</td>
+                                    </tr>
+                                    <tr class="divider">
+                                        <td colspan="2"></td>
+                                    </tr>
+                                    <tr class="highlight">
+                                        <td class="field" colspan="2"><h4>Quick Match</h4></td>
+                                    </tr>
+                                    <tr class="divider">
+                                        <td colspan="2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="field">Wins</td>
+                                        <td>{{ $user->gamer->quick_wins }}
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="field">City</td>
-                                        <td>Los Angeles</td>
+                                        <td class="field">Lost</td>
+                                        <td>{{ $user->gamer->quick_lost }}</td>
                                     </tr>
                                     <tr>
-                                        <td class="field">State</td>
-                                        <td><a href="#">Add State</a></td>
+                                        <td class="field">Played</td>
+                                        <td><a href="#">{{ $user->gamer->quick_played }}</a></td>
                                     </tr>
                                     <tr>
-                                        <td class="field">Website</td>
-                                        <td><a href="#">Add Webpage</a></td>
+                                        <td class="field">Play Time</td>
+                                        <td>{{ $user->gamer->quick_playtime }}</td>
                                     </tr>
-                                    <tr>
-                                        <td class="field">Gender</td>
-                                        <td>
-                                            <select class="form-control input-inline input-xs" name="gender">
-                                                <option value="male">Male</option>
-                                                <option value="female">Female</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="field">Birthdate</td>
-                                        <td>
-                                            <select class="form-control input-inline input-xs" name="day">
-                                                <option value="04" selected>04</option>
-                                            </select>
-                                            -
-                                            <select class="form-control input-inline input-xs" name="month">
-                                                <option value="11" selected>11</option>
-                                            </select>
-                                            -
-                                            <select class="form-control input-inline input-xs" name="year">
-                                                <option value="1989" selected>1989</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="field">Language</td>
-                                        <td>
-                                            <select class="form-control input-inline input-xs" name="language">
-                                                <option value="" selected>English</option>
-                                            </select>
-                                        </td>
-                                    </tr>
+
                                 </tbody>
                                 @else
-                                    This user is not an active gamer yet.
+                                    <tbody>
+                                    <tr class="highlight">
+                                        <td colspan="2">Este usuário ainda não está ativo como um jogador.</td>
+                                    </tr>
+                                    @if (\Illuminate\Support\Facades\Auth::user()->slug == $user->slug)
+                                        <tr class="highlight">
+                                            <td>Gamer Profile</td>
+                                            <td><a href="#modal-activate-player" class="btn btn-info btn-xs" data-toggle="modal">Ativar</a>
+                                                <!-- #modal-activate-player -->
+                                                <div class="modal fade" id="modal-activate-player">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                                <h4 class="modal-title">Ativar Jogador</h4>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div class="form-group">
+                                                                    <label class="col-md-3 control-label">Battle Tag:</label>
+                                                                    <div class="col-md-9">
+                                                                        <input type="text" name="battletag" id="battletag"
+                                                                               class="form-control" placeholder="verme#2424">
+                                                                    </div>
+                                                                    <br><br><br>
+                                                                    <div class="alert alert-danger" id="gamer_activation_error_panel" style="display: none">
+                                                                        <ul id="gamer_activation_error_msg">
+                                                                        </ul>
+                                                                    </div>
+                                                                    <br>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <a href="javascript:;" class="btn btn-sm btn-white" data-dismiss="modal">Fechar</a>
+                                                                <a href="javascript:;" class="btn btn-sm btn-success" id="ativar-jogador">Ativar</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <br><br>
+                                                <div class="note note-success">
+                                                    <p>
+                                                        Ao ativar seu perfil de gamer, você irá importar seus dados e
+                                                        estatísticas do Overwatch, e autorizar a visualização e inclusão
+                                                        do seu perfil de jogador no WatchOverMe.
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    @endif
                                 @endif
                             </table>
                         </div>
@@ -155,10 +192,32 @@
 @endsection
 
 @section('scripts')
+    @include('elements.scripts')
     <script>
         $(document).ready(function() {
             App.init();
         });
+
+        $('#ativar-jogador').click(function() {
+
+            var battletag = $('#battletag').val();
+
+            // Ativa
+            if ( ativarJogador( battletag ) ) {
+
+            }
+            else {
+
+            }
+        });
+
+        @if($user->gamer)
+            $('#update-gamer').click(function() {
+                var battletag = '{{ $user->gamer->battletag }}';
+
+                ativarJogador( battletag );
+            });
+        @endif
     </script>
 @endsection
 

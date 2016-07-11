@@ -7,6 +7,40 @@ use Illuminate\Database\Eloquent\Model;
 class Gamer extends Model
 {
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'battletag',
+        'win_percentage',
+        'wins',
+        'lost',
+        'played',
+        'playtime',
+        'avatar',
+        'username',
+        'level',
+        'quick_wins',
+        'quick_lost',
+        'quick_played',
+        'competitive_wins',
+        'competitive_lost',
+        'competitive_played',
+        'competitive_playtime',
+        'quick_playtime',
+        'avatar',
+        'competitive_rank',
+        'competitive_rank_img',
+        'user_id',
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    /**
      * Get users ranking of RH Staff
      */
     public static function getRanking()

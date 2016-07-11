@@ -2,6 +2,8 @@
 
 namespace App;
 
+use Cviebrock\EloquentSluggable\SluggableInterface;
+use Cviebrock\EloquentSluggable\SluggableTrait;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
@@ -13,11 +15,11 @@ use App\Role;
 use Laraveldaily\Quickadmin\Observers\UserActionsObserver;
 use Laraveldaily\Quickadmin\Traits\AdminPermissionsTrait;
 
-class User extends Model implements AuthenticatableContract,
+class User extends Model implements AuthenticatableContract, SluggableInterface,
     AuthorizableContract,
     CanResetPasswordContract
 {
-    use Authenticatable, Authorizable, CanResetPassword, AdminPermissionsTrait;
+    use Authenticatable, Authorizable, CanResetPassword, AdminPermissionsTrait, SluggableTrait;
 
     /**
      * The database table used by the model.
@@ -32,6 +34,11 @@ class User extends Model implements AuthenticatableContract,
      * @var array
      */
     protected $fillable = ['name', 'email', 'password', 'role_id'];
+
+    protected $sluggable = array(
+        'build_from' => 'name',
+        'save_to'    => 'slug',
+    );
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -50,6 +57,14 @@ class User extends Model implements AuthenticatableContract,
     public function role()
     {
         return $this->belongsTo(Role::class);
+    }
+
+    /**
+     * Get the comments for the blog post.
+     */
+    public function gamer()
+    {
+        return $this->hasOne('App\Gamer');
     }
 
     /**

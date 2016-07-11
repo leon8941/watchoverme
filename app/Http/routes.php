@@ -24,16 +24,20 @@ Route::group(['middleware' => ['web']], function () {
     // Subscribe
     Route::post('pages.subscribe',['as' => 'pages.subscribe', 'uses' => 'PagesController@subscribe']);
 
-    // Users
-    Route::resource('users','UsersController');
-    Route::resource('events','EventsController');
-    Route::resource('gamers','GamersController');
+
     Route::resource('posts','PostsController');
 
-    //Route::get('posts.show',['as' => 'consult', 'uses' => 'PagesController@consult']);
+    Route::get('gamers.activate',['as' => 'gamers.activate', 'uses' => 'GamersController@activate']);
 });
 
 //Route::auth();
 
 Route::auth();
 
+Route::group(['middleware' => ['auth']], function () {
+
+    // Users
+    Route::resource('users','UsersController');
+    Route::resource('events','EventsController');
+    Route::resource('gamers','GamersController');
+});
