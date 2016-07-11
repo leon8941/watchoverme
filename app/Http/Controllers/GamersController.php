@@ -164,6 +164,8 @@ class GamersController extends Controller
                 return $return;
             }
 
+            // TODO: checar se já existe alguem com essa battletag.
+
             $explode_tag = explode('#',$battletag);
 
             // The API requests a battle tag as name-9999 , not name#9999
@@ -241,13 +243,16 @@ class GamersController extends Controller
                 ]);
             }
 
-            return Response::json($gamer);
+            $return['code'] = '1';
+            $return['success'] = true;
+
+            return Response::json($return);
         }
         else {
             $possible_responses = [
                 '404' => 'User not found'
             ];
-dd($obj);
+dd('error 092');
             return Response::json( $possible_responses[$obj->statusCode] );
         }
 

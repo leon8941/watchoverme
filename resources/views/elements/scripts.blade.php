@@ -2,6 +2,8 @@
 <script>
     function ativarJogador( battletag ) {
 
+        $('#gamer_activation_error_panel').hide();
+
         $.ajax({
             url: "{{ route('gamers.activate') }}",
             dataType: "html",
