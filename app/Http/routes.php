@@ -28,6 +28,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::resource('posts','PostsController');
 
     Route::get('gamers.activate',['as' => 'gamers.activate', 'uses' => 'GamersController@activate']);
+    Route::get('test',['as' => 'test', 'uses' => 'UsersController@test']);
 });
 
 //Route::auth();

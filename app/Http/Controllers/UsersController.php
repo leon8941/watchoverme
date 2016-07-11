@@ -6,6 +6,7 @@ use App\Role;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 
 class UsersController extends Controller
 {
@@ -101,5 +102,18 @@ class UsersController extends Controller
         User::destroy($id);
 
         return redirect()->route('users.index')->withMessage(trans('quickadmin::admin.users-controller-successfully_deleted'));
+    }
+
+    public function test()
+    {
+        $data['name'] = 'vic';
+        $data['email'] = 'souto.victor@gmail.com';
+
+        Mail::send('emails.users.register', [], function ($m) use ($data) {
+            $m->from('staff@watchoverme.com.br', 'OVerme');
+
+            $m->to($data['email'], $data['name'])->subject('Bem vindo Verme!');
+        });
+
     }
 }
