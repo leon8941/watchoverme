@@ -14,7 +14,7 @@
             }
         }).done(function(data) {
 
-            console.debug(data);
+            //console.debug(data);
 
             var obj = JSON.parse(data);
 

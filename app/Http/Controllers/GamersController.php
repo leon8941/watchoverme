@@ -73,6 +73,9 @@ class GamersController extends Controller
 
                         $gamer = Gamer::where('battletag',$val)->first();
 
+                        if (!$gamer->user)
+                            return $val . ' (!)';
+
                         return '<a href="' . route('users.show',[$gamer->user->slug]) . '">' . $val . '</a>';
                     }),
                 (new FieldConfig('competitive_wins'))
@@ -237,7 +240,7 @@ class GamersController extends Controller
                     'competitive_playtime' => $obj->data->playtime->competitive,
                     'quick_playtime' => $obj->data->playtime->quick,
                     'avatar' => $obj->data->avatar,
-                    'competitive_rank' => $obj->data->competitive->rank,
+                    'competitive_rank' => $obj->data->competitive->rank? $obj->data->competitive->rank : '',
                     'competitive_rank_img' => $obj->data->competitive->rank_img,
                     'user_id' => Auth::user()->id
                 ]);
