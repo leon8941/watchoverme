@@ -74,4 +74,6 @@ class User extends Model implements AuthenticatableContract, SluggableInterface,
     {
         return $this->hasMany('App\Post');
     }
+
+    //
 }
