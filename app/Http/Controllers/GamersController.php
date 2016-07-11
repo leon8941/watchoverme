@@ -227,6 +227,8 @@ class GamersController extends Controller
             else {
                 //print_r($obj);exit;
 
+                $rank = isset($obj->data->competitive->rank)? $obj->data->competitive->rank: '';
+
                 $gamer = Gamer::create([
                     'battletag' => $battletag,
                     'username' => $obj->data->username,
@@ -240,7 +242,7 @@ class GamersController extends Controller
                     'competitive_playtime' => $obj->data->playtime->competitive,
                     'quick_playtime' => $obj->data->playtime->quick,
                     'avatar' => $obj->data->avatar,
-                    'competitive_rank' => $obj->data->competitive->rank? $obj->data->competitive->rank : '',
+                    'competitive_rank' => $rank,
                     'competitive_rank_img' => $obj->data->competitive->rank_img,
                     'user_id' => Auth::user()->id
                 ]);
