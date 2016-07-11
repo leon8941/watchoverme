@@ -72,13 +72,6 @@
 
                     </p>
                 </div>
-                <div class="note note-info">
-                    <h4>Fórmulas de Ranking</h4>
-                    <p>
-                        Por enquanto as fórmulas que usamos para rankear os jogadores são obscuras para você, pequeno
-                        verme. Aguarde um pouco até que a fórmula seja estabilizada e a divulgaremos.
-                    </p>
-                </div>
             </div>
         </div>
     </div>

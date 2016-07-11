@@ -1,34 +1,64 @@
 @extends('layouts.main')
 
 @section('content')
-    <!-- begin #content -->
-    <div id="content" class="content">
-        <!-- begin breadcrumb -->
-        <ol class="breadcrumb pull-right">
-            <li><a href="javascript:;">Home</a></li>
-            <li><a href="javascript:;">News</a></li>
-            <li class="active">{{ $post->title }}</li>
-        </ol>
-        <!-- end breadcrumb -->
-        <!-- begin page-header -->
-        <h1 class="page-header">{{ $post->title }} <small></small></h1>
-        <!-- end page-header -->
-
-        <div class="panel panel-inverse">
-            <div class="panel-heading">
-                <div class="panel-heading-btn">
-                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
-                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
-                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+        <!-- begin #content -->
+<div id="content" class="content">
+    <!-- begin breadcrumb -->
+    <ol class="breadcrumb pull-right">
+        <li><a href="javascript:;">Home</a></li>
+        <li><a href="javascript:;">News</a></li>
+        <li class="active">{{ $post->title }}</li>
+    </ol>
+    <!-- end breadcrumb -->
+    <!-- begin page-header -->
+    <h1 class="page-header">{{ $post->title }} </h1>
+    <!-- end page-header -->
+    <!-- begin profile-container -->
+    <div class="profile-container" style="margin-left: 4%; margin-right: 16%;">
+        <!-- begin profile-section -->
+        <div class="profile-section">
+            <!-- begin profile-left -->
+            <div class="post-left">
+                <!-- begin profile-image -->
+                <div class="post-image">
+                    <img src="{{ asset($post->image) }}" width="272px">
+                    <i class="fa fa-user hide"></i>
                 </div>
-                <h4 class="panel-title">{{ $post->title }}</h4>
+                <!-- end profile-image -->
+                <!-- begin profile-highlight
+                <div class="profile-highlight">
+                    <h4><i class="fa fa-cog"></i> Only My Contacts</h4>
+                    <div class="checkbox m-b-5 m-t-0">
+                        <label><input type="checkbox" /> Show my timezone</label>
+                    </div>
+                    <div class="checkbox m-b-0">
+                        <label><input type="checkbox" /> Show i have 14 contacts</label>
+                    </div>
+                </div>
+                <!-- end profile-highlight -->
             </div>
-            <div class="panel-body">
-                <img src="{{ asset($post->image) }}" style="float: left; margin: 0px 15px 15px 0px; max-width: 230px"> {!! $post->text !!}
+            <!-- end profile-left -->
+            <!-- begin profile-right -->
+            <div class="profile-right">
+                <!-- begin profile-info -->
+                <div class="profile-info">
+                    <!-- begin table -->
+                    <div class="table-responsive">
+                        <h4>{!! $post->description !!}</h4>
+                        {!! $post->text !!}
+                    </div>
+                    <!-- end table -->
+                </div>
+                <!-- end profile-info -->
             </div>
+            <!-- end profile-right -->
         </div>
+        <!-- end profile-section -->
+
     </div>
-    <!-- end #content -->
+    <!-- end profile-container -->
+</div>
+<!-- end #content -->
 
 @endsection
 
