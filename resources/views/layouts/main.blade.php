@@ -138,7 +138,7 @@
                     <li class="dropdown navbar-user">
                         <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
                             @if (Auth::check())
-                                    <img src="assets/img/user-13.jpg" alt="" />
+                                <img src="{{ asset('assets/img/user-13.jpg') }}" alt="" />
                                 <span class="hidden-xs">{{ \Illuminate\Support\Facades\Auth::user()->name }}</span> <b class="caret"></b>
                             @else
                                 <div class="info">
@@ -152,12 +152,14 @@
                                 </div>
                             @endif
                         </a>
-                        <ul class="dropdown-menu animated fadeInLeft">
-                            <li class="arrow"></li>
-                            <li><a href="{{ route('users.show', [1]) }}">Profile</a></li>
-                            <li class="divider"></li>
-                            <li><a href="{{ url('logout') }}">Log Out</a></li>
-                        </ul>
+                        @if (Auth::check())
+                            <ul class="dropdown-menu animated fadeInLeft">
+                                <li class="arrow"></li>
+                                <li><a href="{{ route('users.show', [\Illuminate\Support\Facades\Auth::user()->slug]) }}">Profile</a></li>
+                                <li class="divider"></li>
+                                <li><a href="{{ url('logout') }}">Log Out</a></li>
+                            </ul>
+                        @endif
                     </li>
                 </ul>
                 <!-- end header navigation right -->
