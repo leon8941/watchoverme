@@ -6,59 +6,63 @@
     <!-- begin breadcrumb -->
     <ol class="breadcrumb pull-right">
         <li><a href="javascript:;">Home</a></li>
-        <li class="active">News</li>
+        <li class="active">Notícias</li>
     </ol>
     <!-- end breadcrumb -->
     <!-- begin page-header -->
-    <h1 class="page-header">News <small>current ranked players</small></h1>
+    <h1 class="page-header">Notícias <small></small></h1>
     <!-- end page-header -->
 
-    @if (session('message'))
-        <div class="alert alert-success">
-            {{ session('message') }}
-        </div>
-    @endif
-
-    <!-- begin row -->
-    <div class="row">
-        <!-- begin col-12 -->
-        <div class="col-md-12">
-            <!-- begin panel -->
-            <div class="panel panel-inverse" data-sortable-id="table-basic-7">
-                <div class="panel-heading">
-                    <div class="panel-heading-btn">
-                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
-                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
-                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
-                    </div>
-                    <h4 class="panel-title">News</h4>
+    <div id="options" class="m-b-10">
+        <span class="gallery-option-set" id="filter" data-option-key="filter">
+            <a href="#show-all" class="btn btn-default btn-xs active" data-option-value="*">
+                Show All
+            </a>
+        </span>
+    </div>
+    <div id="gallery" class="gallery">
+        @foreach($posts as $post)
+            <div class="image gallery-group-1">
+                <div class="image-inner">
+                    <a href="{{ route('posts.show', [$post->slug]) }}" >
+                        <img src="{{ asset($post->image) }}" alt="" />
+                    </a>
+                    <p class="image-caption">
+                        {{ $post->title }}
+                    </p>
                 </div>
-                <div class="panel-body">
-                    <div class="table-responsive">
-                        ae
+                <div class="image-info">
+                    <h5 class="title">{{ link_to( route('posts.show', [$post->slug]), $post->title) }}</h5>
+                    <div class="pull-right">
+                        <small>by</small> <a href="javascript:;">{{ $post->user->name }}</a>
+                    </div>
+                    <div class="rating">
+                        <span class="star active"></span>
+                        <span class="star active"></span>
+                        <span class="star active"></span>
+                        <span class="star active"></span>
+                        <span class="star active"></span>
+                    </div>
+                    <div class="desc">
+                        {!! substr($post->description,0, 160) !!} ..
                     </div>
                 </div>
             </div>
-            <!-- end panel -->
-        </div>
-        <!-- end col-12 -->
+        @endforeach
+
     </div>
-    <!-- end row -->
 </div>
 <!-- end #content -->
-
 @endsection
 
 @section('scripts')
-
-    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
-    <script src="assets/js/apps.min.js"></script>
-    <!-- ================== END PAGE LEVEL JS ================== -->
-
+    <script src="{{ asset('assets/plugins/isotope/jquery.isotope.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/lightbox/js/lightbox-2.6.min.js') }}"></script>
+    <script src="{{ asset('assets/js/gallery.demo.min.js') }}"></script>
     <script>
         $(document).ready(function() {
             App.init();
+            Gallery.init();
         });
     </script>
 @endsection

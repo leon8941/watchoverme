@@ -25,4 +25,18 @@ class PostsController extends Controller
 
         return view('posts.show', compact('post'));
     }
+
+    public function index()
+    {
+        SEO::setTitle('Notícias');
+        SEO::setDescription('Últimas notícias de Overwatch, campeonatos, eventos e vídeos.');
+        SEO::opengraph()->setUrl('http://watchoverme.com.br');
+        //SEO::setCanonical('https://codecasts.com.br/lesson');
+        SEO::opengraph()->addProperty('type', 'articles');
+
+        $posts = Posts::orderBy('created_at','DESC')
+            ->get();
+
+        return view('posts.index',compact('posts'));
+    }
 }

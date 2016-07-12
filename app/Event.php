@@ -26,6 +26,15 @@ class Event extends Model implements SluggableInterface
         'starts',
         'checkin',
         'spots',
+        'image'
+    ];
+
+    public static $regions = [
+        'USA',
+        'South America',
+        'Brasil',
+        'Europe',
+        'Asia'
     ];
 
     /**

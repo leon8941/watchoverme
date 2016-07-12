@@ -24,7 +24,15 @@
         {!! Form::text('title', old('title'), array('class'=>'form-control')) !!}
         
     </div>
-</div><div class="form-group">
+</div>
+<div class="form-group">
+    {!! Form::label('from', 'Region', array('class'=>'col-sm-2 control-label')) !!}
+    <div class="col-sm-10">
+        {!! Form::select('from', $regions, old('from'), array('class'=>'form-control')) !!}
+
+    </div>
+</div>
+<div class="form-group">
     {!! Form::label('image', 'Image', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
         {!! Form::file('image') !!}
@@ -32,10 +40,11 @@
         {!! Form::hidden('image_h', 4096) !!}
         
     </div>
-</div><div class="form-group">
-    {!! Form::label('text', 'Description', array('class'=>'col-sm-2 control-label')) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('description', 'Description', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::textarea('text', old('text'), array('class'=>'form-control ckeditor')) !!}
+        {!! Form::textarea('description', old('description'), array('class'=>'form-control')) !!}
         
     </div>
 </div>

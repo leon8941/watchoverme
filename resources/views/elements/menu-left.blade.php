@@ -34,19 +34,25 @@
         <!-- begin sidebar nav -->
         <ul class="nav">
             <li class="nav-header">Navigation</li>
-            <li class=" active">
+            <li class="{{ isActive('home') }}">
                 <a href="{{ route('home') }}">
                     <i class="fa fa-laptop"></i>
-                    <span>News</span>
+                    <span>Home</span>
                 </a>
             </li>
-            <li class="has-sub">
+            <li class=" {{ isActive('posts.index') }}">
+                <a href="{{ route('posts.index') }}">
+                    <i class="fa fa-globe"></i>
+                    <span>Notícias</span>
+                </a>
+            </li>
+            <li class="{{ isActive('gamers.index') }}">
                 <a href="{{ route('gamers.index') }}">
                     <i class="fa fa-users"></i>
                     <span>Jogadores</span>
                 </a>
             </li>
-            <li class="has-sub">
+            <li class="{{ isActive('events.index') }}">
                 <a href="{{ route('events.index') }}">
                     <i class="fa fa-calendar-o"></i>
                     <span>Eventos</span>

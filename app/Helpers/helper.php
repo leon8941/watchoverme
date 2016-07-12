@@ -52,3 +52,30 @@ function getFilterILike($name, $initial = false) {
     });
     return $filter;
 }
+
+function isActive($page) {
+
+    if ( \Request::route()->getName() == $page)
+        return 'active';
+}
+
+function getRandomUserImage()
+{
+    $images = [
+        'assets/img/user-1.jpg',
+        'assets/img/user-2.jpg',
+        'assets/img/user-3.jpg',
+        'assets/img/user-4.jpg',
+        'assets/img/user-5.jpg',
+        'assets/img/user-6.jpg',
+        'assets/img/user-7.jpg',
+        'assets/img/user-8.jpg',
+    ];
+
+    return $images[rand(0,7)];
+}
+
+function getRegion($from) {
+
+    return isset(\App\Event::$regions[$from])? \App\Event::$regions[$from] : '';
+}

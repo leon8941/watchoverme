@@ -39,8 +39,9 @@ class EventsController extends Controller {
 	{
 	    $user = User::lists("id", "id")->prepend('Please select', '');
 
-	    
-	    return view('admin.events.create', compact("user"));
+	    $regions = Event::$regions;
+
+	    return view('admin.events.create', compact("user",'regions'));
 	}
 
 	/**

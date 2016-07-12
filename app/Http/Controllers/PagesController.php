@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Event;
+use App\Gamer;
 use App\Post;
+use App\Posts;
 use App\Subscriber;
+use App\User;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Response;
 use SEO;
@@ -24,10 +29,31 @@ class PagesController extends Controller
         //SEO::setCanonical('https://codecasts.com.br/lesson');
         SEO::opengraph()->addProperty('type', 'articles');
 
-        $posts = Post::orderBy('created_at','DESC')
+        // Last Posts
+        $posts = Posts::orderBy('created_at','DESC')
             ->get();
 
-        return view('pages.home',compact('posts'));
+        // Last updated players
+        $updated_players = Gamer::orderBy('updated_at', 'DESC')
+            ->take(6)->get();
+
+        // New registered users
+        $new_registered_users = User::orderBy('created_at','DESC')
+            ->take(8)->get();
+
+        $date = new \DateTime();
+        $date->modify('-6 days');
+        $formatted_date = $date->format('Y-m-d H:i:s');
+
+        // New users amount
+        $count_new_users = User::where('created_at','>=',$formatted_date)->count();
+
+        // Events later than today
+        $events = Event::orderBy('starts','ASC')
+            ->where('starts','>=', DB::raw('curdate()'))
+            ->get();
+
+        return view('pages.home',compact('posts','updated_players','new_registered_users','count_new_users','events'));
     }
 
 

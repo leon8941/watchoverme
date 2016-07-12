@@ -34,9 +34,9 @@
     </div>
 </div>
 <div class="form-group">
-    {!! Form::label('text', 'Text', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('description', 'Description', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::textarea('text', old('text',$events->text), array('class'=>'form-control ckeditor')) !!}
+        {!! Form::textarea('description', old('description',$events->description), array('class'=>'form-control')) !!}
         
     </div>
 </div>

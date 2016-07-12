@@ -18,6 +18,15 @@
 
 {!! Form::open(array('files' => true, 'route' => 'admin.posts.store', 'id' => 'form-with-validation', 'class' => 'form-horizontal')) !!}
 
+<div class="note note-success">
+    <h3>Formatação Obrigatória</h3>
+    <p>
+        A descrição não necessita formatação.
+    </p>
+    <p>O texto deve estar todo em Verdana, 14. Títulos de seção devem estar como "Título 2", tamanho 16 e negrito.</p>
+    <p>É obrigatório ter uma imagem.</p>
+</div>
+
 <div class="form-group">
     {!! Form::label('title', 'Title*', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
