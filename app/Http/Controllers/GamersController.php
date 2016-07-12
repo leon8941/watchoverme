@@ -228,6 +228,10 @@ class GamersController extends Controller
                 // Fields that may come null
                 $rank = isset($obj->data->competitive->rank)? $obj->data->competitive->rank: '';
                 $rank_img = isset($obj->data->competitive->rank_img)? $obj->data->competitive->rank_img: '';
+                $competitive_wins = isset($obj->data->games->competitive->wins)? $obj->data->games->competitive->wins: '';
+                $competitive_lost = isset($obj->data->games->competitive->lost)? $obj->data->games->competitive->lost: '';
+                $competitive_played = isset($obj->data->games->competitive->played)? $obj->data->games->competitive->played: '';
+                $competitive_playtime = isset($obj->data->games->competitive->playtime)? $obj->data->games->competitive->playtime: '';
 
                 $gamer = Gamer::create([
                     'battletag' => $battletag,
@@ -236,10 +240,10 @@ class GamersController extends Controller
                     'quick_wins' => $obj->data->games->quick->wins,
                     'quick_lost' => $obj->data->games->quick->lost,
                     'quick_played' => $obj->data->games->quick->played,
-                    'competitive_wins' => $obj->data->games->competitive->wins,
-                    'competitive_lost' => $obj->data->games->competitive->lost,
-                    'competitive_played' => $obj->data->games->competitive->played,
-                    'competitive_playtime' => $obj->data->playtime->competitive,
+                    'competitive_wins' => $competitive_wins,
+                    'competitive_lost' => $competitive_lost,
+                    'competitive_played' => $competitive_played,
+                    'competitive_playtime' => $competitive_playtime,
                     'quick_playtime' => $obj->data->playtime->quick,
                     'avatar' => $obj->data->avatar,
                     'competitive_rank' => $rank,
