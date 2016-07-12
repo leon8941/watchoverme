@@ -175,7 +175,11 @@ return [
         'Cviebrock\EloquentSluggable\SluggableServiceProvider',
 
         // Admin
-        Laraveldaily\Quickadmin\QuickadminServiceProvider::class
+        Laraveldaily\Quickadmin\QuickadminServiceProvider::class,
+
+        // other providers ommited
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class
+
     ],
 
     /*
@@ -236,6 +240,12 @@ return [
         // Images
         'Image' => 'Intervention\Image\Facades\Image',
 
+        // other Facades ommited
+        'SEOMeta'   => Artesaos\SEOTools\Facades\SEOMeta::class,
+        'OpenGraph' => Artesaos\SEOTools\Facades\OpenGraph::class,
+        'Twitter'   => Artesaos\SEOTools\Facades\TwitterCard::class,
+        // or
+        'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
     ],
 
 ];

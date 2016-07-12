@@ -16,7 +16,7 @@
     </div>
 </div>
 
-{!! Form::open(array('files' => true, 'route' => 'admin.posts.store', 'id' => 'form-with-validation', 'class' => 'form-horizontal')) !!}
+{!! Form::open(array('files' => true, 'route' => 'admin.events.store', 'id' => 'form-with-validation', 'class' => 'form-horizontal')) !!}
 
 <div class="form-group">
     {!! Form::label('title', 'Title*', array('class'=>'col-sm-2 control-label')) !!}
@@ -32,25 +32,32 @@
         {!! Form::hidden('image_h', 4096) !!}
         
     </div>
-</div>
-<div class="form-group">
-    {!! Form::label('description', 'Description (1 short paragraph)', array('class'=>'col-sm-2 control-label')) !!}
-    <div class="col-sm-10">
-        {!! Form::textarea('description', old('description'), array('class'=>'form-control')) !!}
-
-    </div>
-</div>
-<div class="form-group">
-    {!! Form::label('text', 'Text', array('class'=>'col-sm-2 control-label')) !!}
+</div><div class="form-group">
+    {!! Form::label('text', 'Description', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
         {!! Form::textarea('text', old('text'), array('class'=>'form-control ckeditor')) !!}
         
     </div>
-</div><div class="form-group">
-    {!! Form::label('user_id', 'Author*', array('class'=>'col-sm-2 control-label')) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('url', 'URL*', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::select('user_id', $user, old('user_id'), array('class'=>'form-control')) !!}
-        
+        {!! Form::text('url', old('url'), array('class'=>'form-control')) !!}
+
+    </div>
+</div>
+<div class="form-group">
+    {!! Form::label('streamer', 'Streamer', array('class'=>'col-sm-2 control-label')) !!}
+    <div class="col-sm-10">
+        {!! Form::text('streamer', old('streamer'), array('class'=>'form-control')) !!}
+
+    </div>
+</div>
+<div class="form-group">
+    {!! Form::label('starts', 'Starts', array('class'=>'col-sm-2 control-label')) !!}
+    <div class="col-sm-10">
+        {!! Form::text('starts', old('starts'), array('class'=>'form-control datepicker')) !!}
+
     </div>
 </div>
 

@@ -13,7 +13,6 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
 
-
         $faker = Faker::create();
 
         $user1 = \App\User::create([
@@ -21,5 +20,12 @@ class UsersTableSeeder extends Seeder
             'email'    => 'souto.victor@gmail.com',
             'password' => \Illuminate\Support\Facades\Hash::make('cracker0'),
         ]);
+
+        $lithium = \App\User::create([
+            'name' => 'Lithium',
+            'password' => \Illuminate\Support\Facades\Hash::make('12345'),
+            'email' => 'lithiumbloodthirst@gmail.com'
+        ]);
+
     }
 }

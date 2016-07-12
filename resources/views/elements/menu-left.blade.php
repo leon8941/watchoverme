@@ -37,13 +37,19 @@
             <li class=" active">
                 <a href="{{ route('home') }}">
                     <i class="fa fa-laptop"></i>
-                    <span>Home</span>
+                    <span>News</span>
                 </a>
             </li>
             <li class="has-sub">
                 <a href="{{ route('gamers.index') }}">
                     <i class="fa fa-users"></i>
-                    <span>Players</span>
+                    <span>Jogadores</span>
+                </a>
+            </li>
+            <li class="has-sub">
+                <a href="{{ route('events.index') }}">
+                    <i class="fa fa-calendar-o"></i>
+                    <span>Eventos</span>
                 </a>
             </li>
             <!-- begin sidebar minify button -->

@@ -41,6 +41,9 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
+// SEO
+$app->register(Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class);
+
 /*
 |--------------------------------------------------------------------------
 | Return The Application
@@ -51,5 +54,6 @@ $app->singleton(
 | from the actual running of the application and sending responses.
 |
 */
+
 
 return $app;

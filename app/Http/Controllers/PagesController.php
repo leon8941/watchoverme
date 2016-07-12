@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Response;
+use SEO;
 
 class PagesController extends Controller
 {
@@ -17,6 +18,12 @@ class PagesController extends Controller
 
     public function home()
     {
+        SEO::setTitle('Notícias');
+        SEO::setDescription('Últimas notícias de Overwatch, campeonatos, eventos e vídeos.');
+        SEO::opengraph()->setUrl('http://watchoverme.com.br');
+        //SEO::setCanonical('https://codecasts.com.br/lesson');
+        SEO::opengraph()->addProperty('type', 'articles');
+
         $posts = Post::orderBy('created_at','DESC')
             ->get();
 
@@ -46,48 +53,4 @@ class PagesController extends Controller
         return Response::json(false);
     }
 
-    public function consult()
-    {
-
-        $client = new Client([
-            // Base URI is used with relative requests
-            'base_uri' => 'https://api.lootbox.eu/',
-            // You can set any number of default request options.
-            'timeout'  => 999,
-        ]);
-
-        //$client->setDefaultOption('verify', false);
-
-        // Send a request to https://foo.com/api/test
-        $response = $client->request('GET', 'pc/us/kzz-1722/profile');
-
-
-        echo $response->getStatusCode(); // 200
-        echo $response->getReasonPhrase(); // OK
-
-        $body = $response->getBody();
-
-        $obj = json_decode($body);
-
-        dd($obj);
-        /*$response = $client->request('GET', 'profile', [
-            'query' => [
-                'tag' => 'kzz-1722',
-                'platform' => 'pc',
-                'region' => 'us',
-            ]
-        ]);
-
-        /*
-        $ch = curl_init();
-
-        $url = "https://api.lootbox.eu/pc/us/kzz-1722/profile";
-
-        curl_setopt($ch, CURLOPT_URL, $url);
-        $response = curl_exec($ch);
-        curl_close($ch);
-
-        dd($response);
-*/
-    }
 }

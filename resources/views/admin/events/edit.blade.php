@@ -16,12 +16,12 @@
     </div>
 </div>
 
-{!! Form::model($posts, array('files' => true, 'class' => 'form-horizontal', 'id' => 'form-with-validation', 'method' => 'PATCH', 'route' => array('admin.posts.update', $posts->id))) !!}
+{!! Form::model($events, array('files' => true, 'class' => 'form-horizontal', 'id' => 'form-with-validation', 'method' => 'PATCH', 'route' => array('admin.events.update', $events->id))) !!}
 
 <div class="form-group">
     {!! Form::label('title', 'Title*', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::text('title', old('title',$posts->title), array('class'=>'form-control')) !!}
+        {!! Form::text('title', old('title',$events->title), array('class'=>'form-control')) !!}
         
     </div>
 </div><div class="form-group">
@@ -32,24 +32,16 @@
         {!! Form::hidden('image_h', 4096) !!}
         
     </div>
-</div>
-<div class="form-group">
-    {!! Form::label('description', 'Description (1 short paragraph)', array('class'=>'col-sm-2 control-label')) !!}
-    <div class="col-sm-10">
-        {!! Form::textarea('description', old('description',$posts->description), array('class'=>'form-control')) !!}
-
-    </div>
-</div>
-<div class="form-group">
+</div><div class="form-group">
     {!! Form::label('text', 'Text', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::textarea('text', old('text',$posts->text), array('class'=>'form-control ckeditor')) !!}
+        {!! Form::textarea('text', old('text',$events->text), array('class'=>'form-control ckeditor')) !!}
         
     </div>
 </div><div class="form-group">
     {!! Form::label('user_id', 'Author*', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::select('user_id', $user, old('user_id',$posts->user_id), array('class'=>'form-control')) !!}
+        {!! Form::select('user_id', $user, old('user_id',$events->user_id), array('class'=>'form-control')) !!}
         
     </div>
 </div>
@@ -57,7 +49,7 @@
 <div class="form-group">
     <div class="col-sm-10 col-sm-offset-2">
       {!! Form::submit(trans('quickadmin::templates.templates-view_edit-update'), array('class' => 'btn btn-primary')) !!}
-      {!! link_to_route('admin.posts.index', trans('quickadmin::templates.templates-view_edit-cancel'), null, array('class' => 'btn btn-default')) !!}
+      {!! link_to_route('admin.events.index', trans('quickadmin::templates.templates-view_edit-cancel'), null, array('class' => 'btn btn-default')) !!}
     </div>
 </div>
 

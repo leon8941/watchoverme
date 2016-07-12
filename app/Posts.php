@@ -20,7 +20,7 @@ class Posts extends Model implements SluggableInterface {
     *
     * @var array
     */
-    protected $dates = ['deleted_at'];
+    protected $dates = ['deleted_at','created_at','updated_at'];
 
     protected $table    = 'posts';
     
@@ -28,7 +28,8 @@ class Posts extends Model implements SluggableInterface {
           'title',
           'image',
           'text',
-          'user_id'
+          'user_id',
+        'description'
     ];
 
     protected $sluggable = array(

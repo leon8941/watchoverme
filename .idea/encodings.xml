@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/Http/Controllers/GamersController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/PagesController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config/seotools.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/auth/register.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/elements/menu-left.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/errors/403.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/events/index.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/layouts/main.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/pages/coming-soon.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/users/index.blade.php" charset="UTF-8" />

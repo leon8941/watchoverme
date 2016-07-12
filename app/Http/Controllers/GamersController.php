@@ -225,8 +225,7 @@ class GamersController extends Controller
                 $gamer->save();
             }
             else {
-                //print_r($obj);exit;
-
+                // Fields that may come null
                 $rank = isset($obj->data->competitive->rank)? $obj->data->competitive->rank: '';
                 $rank_img = isset($obj->data->competitive->rank_img)? $obj->data->competitive->rank_img: '';
 
@@ -258,60 +257,56 @@ class GamersController extends Controller
             $possible_responses = [
                 '404' => 'User not found'
             ];
-dd('error 092');
+
             return Response::json( $possible_responses[$obj->statusCode] );
         }
 
-        return Response::json($response);
+        return Response::json(false);
     }
-
-    public function show()
-    {
-        dd('wtf');
-    }
-
 
     /*
+     * How the obj returns from API
+     *
      * stdClass Object
-(
-[data] => stdClass Object
     (
-        [username] => kzz
-        [level] => 78
-        [games] => stdClass Object
-            (
-                [quick] => stdClass Object
-                    (
-                        [wins] => 207
-                        [lost] => 185
-                        [played] => 392
-                    )
+    [data] => stdClass Object
+        (
+            [username] => kzz
+            [level] => 78
+            [games] => stdClass Object
+                (
+                    [quick] => stdClass Object
+                        (
+                            [wins] => 207
+                            [lost] => 185
+                            [played] => 392
+                        )
 
-                [competitive] => stdClass Object
-                    (
-                        [wins] => 54
-                        [lost] => 55
-                        [played] => 109
-                    )
+                    [competitive] => stdClass Object
+                        (
+                            [wins] => 54
+                            [lost] => 55
+                            [played] => 109
+                        )
 
-            )
+                )
 
-        [playtime] => stdClass Object
-            (
-                [quick] => 49 hours
-                [competitive] => 21 hours
-            )
+            [playtime] => stdClass Object
+                (
+                    [quick] => 49 hours
+                    [competitive] => 21 hours
+                )
 
-        [avatar] => https://blzgdapipro-a.akamaihd.net/game/unlocks/0x025000000000054C.png
-        [competitive] => stdClass Object
-            (
-                [rank] => 49
-                [rank_img] => https://blzgdapipro-a.akamaihd.net/game/rank-icons/rank-5.png
-            )
+            [avatar] => https://blzgdapipro-a.akamaihd.net/game/unlocks/0x025000000000054C.png
+            [competitive] => stdClass Object
+                (
+                    [rank] => 49
+                    [rank_img] => https://blzgdapipro-a.akamaihd.net/game/rank-icons/rank-5.png
+                )
+
+        )
 
     )
-
-)
 
      */
 }

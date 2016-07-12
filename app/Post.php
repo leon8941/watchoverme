@@ -28,9 +28,11 @@ class Post extends Model implements SluggableInterface {
     protected $table    = 'posts';
     
     protected $fillable = [
-          'title',
-          'author_id',
-          'texto'
+        'title',
+        'author_id',
+        'texto',
+        'description',
+        'image'
     ];
 
     public function user()

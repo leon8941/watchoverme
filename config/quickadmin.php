@@ -8,7 +8,7 @@ return [
      * Datepicker configuration:
      */
     'date_format'        => 'd/m/Y',
-    'date_format_jquery' => 'dd-mm-yy',
+    'date_format_jquery' => 'yy-mm-dd',
     'time_format'        => 'H:i:s',
     'time_format_jquery' => 'HH:mm:ss',
 

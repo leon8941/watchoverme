@@ -17,22 +17,22 @@ class PostsTableSeeder extends Seeder
 
         $post = \App\Post::create([
             'title' => $faker->title,
-            'texto' => $faker->paragraph(8),
+            'text' => $faker->paragraph(8),
             'user_id' => '1'
         ]);
         $post = \App\Post::create([
             'title' => $faker->title,
-            'texto' => $faker->paragraph(8),
+            'text' => $faker->paragraph(8),
             'user_id' => '1'
         ]);
         $post = \App\Post::create([
             'title' => $faker->title,
-            'texto' => $faker->paragraph(8),
+            'text' => $faker->paragraph(8),
             'user_id' => '1'
         ]);
         $post = \App\Post::create([
             'title' => $faker->title,
-            'texto' => $faker->paragraph(8),
+            'text' => $faker->paragraph(8),
             'user_id' => '1'
         ]);
 
