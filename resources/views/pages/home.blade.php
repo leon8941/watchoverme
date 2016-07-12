@@ -113,6 +113,10 @@
                             @endforeach
                             </tbody>
                         </table>
+
+                        <div class="panel-footer text-center">
+                            <a href="{{ route('gamers.index') }}" class="text-inverse">Ver Ranking</a>
+                        </div>
                     </div>
                 </div>
 
@@ -130,8 +134,10 @@
                     <div class="panel-body">
                         <!--<div id="datepicker-inline" class="datepicker-full-width"><div></div></div>-->
                         <i>em breve.</i>
-                        <br><br>
-                        <p><a href="{{ route('events.index') }}">Lista de eventos</a></p>
+                        <br>
+                        <div class="panel-footer text-center">
+                            <a href="{{ route('events.index') }}" class="text-inverse">Lista de Eventos</a>
+                        </div>
                     </div>
                 </div>
 
@@ -152,7 +158,7 @@
                             @endforeach
                         </ul>
                         <div class="panel-footer text-center">
-                            <a href="{{ route('gamers.index') }}" class="text-inverse">View All</a>
+                            <a href="{{ route('gamers.index') }}" class="text-inverse">Ver Todos</a>
                         </div>
                     </div>
                     <!-- end panel -->
