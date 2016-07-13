@@ -6,10 +6,9 @@
         <ul class="nav">
             <li class="nav-profile">
                 @if (Auth::check())
-
                     <div class="image">
                         <a href="{{ route('users.show',[ \Illuminate\Support\Facades\Auth::user()->slug]) }}">
-                            <img src="{{ asset( getUserAvatar(\Illuminate\Support\Facades\Auth::user()->avatar)) }}"
+                            <img src="{{ getUserAvatar(\Illuminate\Support\Facades\Auth::user()->avatar) }}"
                                  alt="{{ \Illuminate\Support\Facades\Auth::user()->name }}" />
                         </a>
                     </div>

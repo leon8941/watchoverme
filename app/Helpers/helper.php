@@ -90,10 +90,12 @@ function getRegion($from) {
 
 function getUserAvatar($avatar) {
 
-    $full_dir = \App\User::$avatar_dir . $avatar;
+    if ($avatar) {
+        $full_dir = \App\User::$avatar_dir . $avatar;
 
-    if (\Illuminate\Support\Facades\File::exists($full_dir))
-        return asset($full_dir);
+        if (\Illuminate\Support\Facades\File::exists($full_dir))
+            return asset($full_dir);
+    }
 
     return asset('assets/img/profile-cover.jpg');
 }
