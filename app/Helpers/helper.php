@@ -59,9 +59,17 @@ function isActive($page) {
         return 'active';
 }
 
-function getRandomUserImage()
+function getUserImage($avatar = false)
 {
-    $images = [
+    if ($avatar) {
+
+        $full_dir = \App\User::$avatar_dir . $avatar;
+
+        if (\Illuminate\Support\Facades\File::exists($full_dir))
+            return $full_dir;
+    }
+
+    $random_images = [
         'assets/img/user-1.jpg',
         'assets/img/user-2.jpg',
         'assets/img/user-3.jpg',
@@ -72,10 +80,20 @@ function getRandomUserImage()
         'assets/img/user-8.jpg',
     ];
 
-    return $images[rand(0,7)];
+    return $random_images[rand(0,7)];
 }
 
 function getRegion($from) {
 
     return isset(\App\Event::$regions[$from])? \App\Event::$regions[$from] : '';
+}
+
+function getUserAvatar($avatar) {
+
+    $full_dir = \App\User::$avatar_dir . $avatar;
+
+    if (\Illuminate\Support\Facades\File::exists($full_dir))
+        return asset($full_dir);
+
+    return asset('assets/img/profile-cover.jpg');
 }

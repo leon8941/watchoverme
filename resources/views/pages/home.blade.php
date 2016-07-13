@@ -19,7 +19,7 @@
 
                 <ul class="nav nav-tabs nav-tabs-inverse nav-justified nav-justified-mobile" data-sortable-id="index-1">
                     <li class="active"><a href="#latest-post" data-toggle="tab"><i class="fa fa-comment-o m-r-5"></i> <span class="hidden-xs">Últimas Notícias</span></a></li>
-                    <li class=""><a href="#purchase" data-toggle="tab"><i class="fa fa-gamepad m-r-5"></i> <span class="hidden-xs">Eventos</span></a></li>
+                    <li class=""><a href="#purchase" data-toggle="tab"><i class="fa fa-gamepad m-r-5"></i> <span class="hidden-xs">Próximos Eventos</span></a></li>
                 </ul>
                 <div class="tab-content" data-sortable-id="index-2">
                     <div class="tab-pane fade active in" id="latest-post">
@@ -149,7 +149,8 @@
                         <ul class="registered-users-list clearfix">
                             @foreach($new_registered_users as $user)
                                 <li>
-                                    <a href="{{ route('users.show',[$user->slug]) }}"><img src="{{ getRandomUserImage() }}" alt="" /></a>
+                                    <a href="{{ route('users.show',[$user->slug]) }}">
+                                        <img src="{{ getUserImage($user->avatar) }}" alt="{{ $user->name }}" width="114px" style="max-height: 114px"/></a>
                                     <h4 class="username text-ellipsis">
                                         {{ $user->name }}
                                         <small></small>

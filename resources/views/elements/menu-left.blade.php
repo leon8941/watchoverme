@@ -9,7 +9,8 @@
 
                     <div class="image">
                         <a href="{{ route('users.show',[ \Illuminate\Support\Facades\Auth::user()->slug]) }}">
-                            <img src="{{ asset('assets/img/user-13.jpg') }}" alt="" />
+                            <img src="{{ asset( getUserAvatar(\Illuminate\Support\Facades\Auth::user()->avatar)) }}"
+                                 alt="{{ \Illuminate\Support\Facades\Auth::user()->name }}" />
                         </a>
                     </div>
                     <div class="info">

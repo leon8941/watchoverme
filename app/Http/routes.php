@@ -28,7 +28,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::resource('posts','PostsController');
 
     Route::get('gamers.activate',['as' => 'gamers.activate', 'uses' => 'GamersController@activate']);
-    Route::get('test',['as' => 'test', 'uses' => 'UsersController@test']);
+    //Route::get('test',['as' => 'test', 'uses' => 'UsersController@test']);
 
     Route::resource('events','EventsController');
     Route::resource('gamers','GamersController');
@@ -43,4 +43,7 @@ Route::group(['middleware' => ['auth']], function () {
     // Users
     Route::resource('users','UsersController');
 
+    // User avatar upload
+    //Route::get('users.upload',['as' => 'users.upload', 'uses' => 'UsersController@upload']);
+    Route::post('users/upload',['as' => 'users/upload', 'uses' => 'UsersController@upload']);
 });

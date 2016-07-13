@@ -20,10 +20,19 @@
                 <div class="profile-left">
                     <!-- begin profile-image -->
                     <div class="profile-image">
-                        <img src="{{ asset('assets/img/profile-cover.jpg') }}" />
+                        <img src="{{ getUserAvatar($user->avatar) }}" />
                         <i class="fa fa-user hide"></i>
                     </div>
                     <!-- end profile-image -->
+                    <div class="m-b-10">
+                        {!! Form::open(array('url'=> 'users/upload','method'=>'POST', 'files'=>true, 'id' => 'form-upload-picture')) !!}
+                            @if(Session::has('error'))
+                                <p class="errors">{!! Session::get('error') !!}</p>
+                            @endif
+                            <div class="btn btn-warning btn-block btn-sm" id="change-picture">Change Picture</div>
+                            <input type="file" name="image" style="opacity: 0" id="upload-picture">
+                        {!! Form::close() !!}
+                    </div>
                 </div>
                 <!-- end profile-left -->
                 <!-- begin profile-right -->
@@ -209,6 +218,15 @@
             else {
 
             }
+        });
+
+        $('#change-picture').click(function() {
+            $('#upload-picture').click();
+            return false;
+        });
+
+        $('#upload-picture').change(function() {
+            $('#form-upload-picture').submit();
         });
 
         @if($user->gamer)

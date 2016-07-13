@@ -54,6 +54,8 @@ class User extends Model implements AuthenticatableContract, SluggableInterface,
         User::observe(new UserActionsObserver);
     }
 
+    public static $avatar_dir = 'uploads/users/';
+
     public function role()
     {
         return $this->belongsTo(Role::class);

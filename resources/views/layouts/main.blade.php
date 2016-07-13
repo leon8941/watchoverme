@@ -138,7 +138,8 @@
                     <li class="dropdown navbar-user">
                         <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
                             @if (Auth::check())
-                                <img src="{{ asset('assets/img/user-13.jpg') }}" alt="" />
+                                <img src="{{ asset( getUserAvatar(\Illuminate\Support\Facades\Auth::user()->avatar)) }}"
+                                     alt="{{ \Illuminate\Support\Facades\Auth::user()->name }}" />
                                 <span class="hidden-xs">{{ \Illuminate\Support\Facades\Auth::user()->name }}</span> <b class="caret"></b>
                             @else
                                 <div class="info">
