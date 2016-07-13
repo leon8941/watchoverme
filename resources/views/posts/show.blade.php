@@ -41,7 +41,9 @@
                         <div class="article-header">
                             <h4>{!! $post->description !!}</h4>
                         </div>
-                        {!! $post->text !!}
+                        <div class="article-text">
+                            {!! $post->text !!}
+                        </div>
                     </div>
                     <!-- end table -->
                 </div>

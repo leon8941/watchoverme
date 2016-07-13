@@ -12,7 +12,17 @@ class CreateTeamsTable extends Migration
      */
     public function up()
     {
-        //
+        Model::unguard();
+        Schema::create('teams',function(Blueprint $table){
+            $table->increments("id");
+            $table->string("title");
+            $table->string("image")->nullable();
+            $table->text("description")->nullable();
+            $table->integer("user_id")->references("id")->on("user"); // Captain
+
+            $table->timestamps();
+            $table->softDeletes();
+        });
     }
 
     /**
@@ -22,6 +32,6 @@ class CreateTeamsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('teams');
     }
 }

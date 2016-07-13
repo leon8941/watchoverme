@@ -48,22 +48,23 @@
             </li>
             <li class="{{ isActive('events.index') }}">
                 <a href="{{ route('events.index') }}">
-                    <i class="fa fa-calendar-o"></i>
+                    <i class="fa fa-trophy"></i>
                     <span>Eventos</span>
                 </a>
             </li>
             <li class="{{ isActive('gamers.index') }}">
                 <a href="{{ route('gamers.index') }}">
-                    <i class="fa fa-users"></i>
-                    <span>Jogadores</span>
+                    <i class="fa fa-star"></i>
+                    <span>Rankings</span>
                 </a>
             </li>
+            <!--
             <li class="{{ isActive('teams.index') }}">
                 <a href="{{ route('teams.index') }}">
                     <i class="fa fa-users"></i>
                     <span>Times</span>
                 </a>
-            </li>
+            </li>-->
             <!-- begin sidebar minify button -->
             <li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
             <!-- end sidebar minify button -->
