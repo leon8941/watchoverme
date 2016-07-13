@@ -25,15 +25,9 @@
                     <i class="fa fa-user hide"></i>
                 </div>
                 <!-- end profile-image -->
-                <!-- begin profile-highlight
-                <div class="profile-highlight">
-                    <h4><i class="fa fa-cog"></i> Only My Contacts</h4>
-                    <div class="checkbox m-b-5 m-t-0">
-                        <label><input type="checkbox" /> Show my timezone</label>
-                    </div>
-                    <div class="checkbox m-b-0">
-                        <label><input type="checkbox" /> Show i have 14 contacts</label>
-                    </div>
+                <!-- begin profile-highlight -->
+                <div class="profile">
+                    Posted {{ $post->created_at->diffForHumans() }}
                 </div>
                 <!-- end profile-highlight -->
             </div>
@@ -44,7 +38,9 @@
                 <div class="profile-info">
                     <!-- begin table -->
                     <div class="table-responsive">
-                        <h4>{!! $post->description !!}</h4>
+                        <div class="article-header">
+                            <h4>{!! $post->description !!}</h4>
+                        </div>
                         {!! $post->text !!}
                     </div>
                     <!-- end table -->

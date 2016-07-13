@@ -46,16 +46,22 @@
                     <span>Notícias</span>
                 </a>
             </li>
+            <li class="{{ isActive('events.index') }}">
+                <a href="{{ route('events.index') }}">
+                    <i class="fa fa-calendar-o"></i>
+                    <span>Eventos</span>
+                </a>
+            </li>
             <li class="{{ isActive('gamers.index') }}">
                 <a href="{{ route('gamers.index') }}">
                     <i class="fa fa-users"></i>
                     <span>Jogadores</span>
                 </a>
             </li>
-            <li class="{{ isActive('events.index') }}">
-                <a href="{{ route('events.index') }}">
-                    <i class="fa fa-calendar-o"></i>
-                    <span>Eventos</span>
+            <li class="{{ isActive('teams.index') }}">
+                <a href="{{ route('teams.index') }}">
+                    <i class="fa fa-users"></i>
+                    <span>Times</span>
                 </a>
             </li>
             <!-- begin sidebar minify button -->

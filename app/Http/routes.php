@@ -32,6 +32,7 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::resource('events','EventsController');
     Route::resource('gamers','GamersController');
+    Route::resource('teams','TeamsController');
 });
 
 //Route::auth();
