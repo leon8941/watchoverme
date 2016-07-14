@@ -35,4 +35,58 @@
 
         });
     }
+
+
+    function requestJoinTeam( team_id ) {
+
+        $.ajax({
+            url: "{{ route('teams.request') }}",
+            dataType: "html",
+            type: "GET",
+            data: {
+                team_id: team_id,
+                _token: '{{ csrf_token() }}',
+            }
+        }).done(function(data) {
+
+            console.debug(data);
+
+            //var obj = JSON.parse(data);
+
+            if (data) {
+
+                setTimeout(function(){
+                    location.reload();
+                }, 400);
+            }
+        });
+    }
+
+    function aproveRequest(user_id, team_id) {
+
+        $.ajax({
+            url: "{{ route('teams.aproveRequest') }}",
+            dataType: "html",
+            type: "GET",
+            data: {
+                user_id: user_id,
+                team_id: team_id,
+                _token: '{{ csrf_token() }}',
+            }
+        }).done(function(data) {
+
+            console.debug(data);
+
+            //var obj = JSON.parse(data);
+
+            if (data) {
+/*
+                setTimeout(function(){
+                    location.reload();
+                }, 400);
+                */
+            }
+        });
+    }
+
 </script>

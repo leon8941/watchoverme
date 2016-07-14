@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 
+use Faker\Factory as Faker;
+
 class TeamsTableSeeder extends Seeder
 {
     /**
@@ -11,6 +13,26 @@ class TeamsTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+
+        $faker = Faker::create();
+
+        $team = \App\Team::create([
+            'title' => $faker->title,
+            'description' => $faker->paragraph(3)
+        ]);
+
+        $team = \App\Team::create([
+            'title' => $faker->title,
+            'description' => $faker->paragraph(3)
+        ]);
+        $team = \App\Team::create([
+            'title' => $faker->title,
+            'description' => $faker->paragraph(3)
+        ]);
+        $team = \App\Team::create([
+            'title' => $faker->title,
+            'description' => $faker->paragraph(3)
+        ]);
+
     }
 }

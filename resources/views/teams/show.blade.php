@@ -10,7 +10,7 @@
         </ol>
         <!-- end breadcrumb -->
         <!-- begin page-header -->
-        <h1 class="page-header">Team Profile <small> you are looking good...</small></h1>
+        <h1 class="page-header">Team Profile <small> this team is looking really good...</small></h1>
         <!-- end page-header -->
         <!-- begin profile-container -->
         <div class="profile-container">
@@ -20,18 +20,21 @@
                 <div class="profile-left">
                     <!-- begin profile-image -->
                     <div class="profile-image">
-                        <img src="{{ getTeamAvatar($team->avatar) }}" />
+                        <img src="{{ getTeamAvatar($team->image) }}" />
                         <i class="fa fa-team hide"></i>
                     </div>
                     <!-- end profile-image -->
                     <div class="m-b-10">
+                    @if(\Illuminate\Support\Facades\Auth::check() && \App\User::isOnTeam($team->id))
                         {!! Form::open(array('url'=> 'teams/upload','method'=>'POST', 'files'=>true, 'id' => 'form-upload-picture')) !!}
                             @if(Session::has('error'))
                                 <p class="errors">{!! Session::get('error') !!}</p>
                             @endif
                             <div class="btn btn-warning btn-block btn-sm" id="change-picture">Change Picture</div>
                             <input type="file" name="image" style="opacity: 0" id="upload-picture">
+                            <input type="hidden" name="team_id" value="{{ $team->id }}">
                         {!! Form::close() !!}
+                    @endif
                     </div>
                 </div>
                 <!-- end profile-left -->
@@ -46,144 +49,73 @@
                                 <tr>
                                     <th></th>
                                     <th>
-                                        <h4>{{ $team->name }} <small></small></h4>
+                                        <h4>{{ $team->title }} <small></small></h4>
                                     </th>
                                 </tr>
                                 </thead>
-                                @if($team->gamer)
                                 <tbody>
                                     <tr class="highlight">
-                                        <td class="field">Battle Tag</td>
-                                        <td><a href="#">{{ $team->gamer->battletag }}</a></td>
+                                        <td class="field">Descrição</td>
+                                        <td class="">{{ $team->description }}</td>
                                     </tr>
-                                    <tr class="highlight">
-                                        <td>Gamer Profile</td>
-                                        <td><button class="btn btn-info btn-xs" id="update-gamer">Update</button>
-                                            <br>
-                                        </td>
-                                    </tr>
-                                    <tr class="highlight">
-                                        <td class="field" colspan="2"><h4>General</h4></td>
-                                    </tr>
-                                    <tr class="divider">
-                                        <td colspan="2"></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="field">Avatar</td>
-                                        <td><img src="{{ $team->gamer->avatar }}" width="68px"> </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="field">Level</td>
-                                        <td>{{ $team->gamer->level }}</td>
-                                    </tr>
-                                    <tr class="divider">
-                                        <td colspan="2"></td>
-                                    </tr>
-                                    <tr class="highlight">
-                                        <td class="field" colspan="2"><h4>Competitive</h4></td>
-                                    </tr>
-                                    <tr class="divider">
-                                        <td colspan="2"></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="field">Rank</td>
-                                        <td>{{ $team->gamer->competitive_rank }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="field">Wins</td>
-                                        <td>{{ $team->gamer->competitive_wins }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="field">Lost</td>
-                                        <td>{{ $team->gamer->competitive_lost }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="field">Played</td>
-                                        <td>{{ $team->gamer->competitive_played }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="field">Play Time</td>
-                                        <td>{{ $team->gamer->competitive_playtime }}</td>
-                                    </tr>
-                                    <tr class="divider">
-                                        <td colspan="2"></td>
-                                    </tr>
-                                    <tr class="highlight">
-                                        <td class="field" colspan="2"><h4>Quick Match</h4></td>
-                                    </tr>
-                                    <tr class="divider">
-                                        <td colspan="2"></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="field">Wins</td>
-                                        <td>{{ $team->gamer->quick_wins }}
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="field">Lost</td>
-                                        <td>{{ $team->gamer->quick_lost }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="field">Played</td>
-                                        <td><a href="#">{{ $team->gamer->quick_played }}</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="field">Play Time</td>
-                                        <td>{{ $team->gamer->quick_playtime }}</td>
-                                    </tr>
-
-                                </tbody>
-                                @else
-                                    <tbody>
-                                    <tr class="highlight">
-                                        <td colspan="2">Este usuário ainda não está ativo como um jogador.</td>
-                                    </tr>
-                                    @if (\Illuminate\Support\Facades\Auth::team()->slug == $team->slug)
-                                        <tr class="highlight">
-                                            <td>Gamer Profile</td>
-                                            <td><a href="#modal-activate-player" class="btn btn-info btn-xs" data-toggle="modal">Ativar</a>
-                                                <!-- #modal-activate-player -->
-                                                <div class="modal fade" id="modal-activate-player">
-                                                    <div class="modal-dialog">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                                                <h4 class="modal-title">Ativar Jogador</h4>
-                                                            </div>
-                                                            <div class="modal-body">
-                                                                <div class="form-group">
-                                                                    <label class="col-md-3 control-label">Battle Tag:</label>
-                                                                    <div class="col-md-9">
-                                                                        <input type="text" name="battletag" id="battletag"
-                                                                               class="form-control" placeholder="verme#2424">
-                                                                    </div>
-                                                                    <br><br><br>
-                                                                    <div class="alert alert-danger" id="gamer_activation_error_panel" style="display: none">
-                                                                        <ul id="gamer_activation_error_msg">
-                                                                        </ul>
-                                                                    </div>
-                                                                    <br>
-                                                                </div>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <a href="javascript:;" class="btn btn-sm btn-white" data-dismiss="modal">Fechar</a>
-                                                                <a href="javascript:;" class="btn btn-sm btn-success" id="ativar-jogador">Ativar</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <br><br>
-                                                <div class="note note-success">
-                                                    <p>
-                                                        Ao ativar seu perfil de gamer, você irá importar seus dados e
-                                                        estatísticas do Overwatch, e autorizar a visualização e inclusão
-                                                        do seu perfil de jogador no WatchOverMe.
-                                                    </p>
-                                                </div>
+                                    @if(!\App\User::isOnTeam($team->id) && \App\Request::userCanRequest($team->id))
+                                        <tr>
+                                            <td class="field">Entrar</td>
+                                            <td class="">
+                                                <button type="button" class="btn btn-info btn-xs" id="request-join">Solicitar</button>
                                             </td>
                                         </tr>
                                     @endif
-                                @endif
+                                    <tr class="highlight">
+                                        <td class="field" colspan="2"><h4>Roster</h4></td>
+                                    </tr>
+                                    <tr class="divider">
+                                        <td colspan="2"></td>
+                                    </tr>
+                                    @foreach($team->users as $player)
+                                        <tr>
+                                            <td class="field">
+                                                <img src="{{ getUserAvatar($player->avatar) }}" width="80px"></td>
+                                            <td><a href="{{ route('gamers.show',[$player->slug]) }}">
+                                                    {{ $player->name }}
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                    <tr class="divider">
+                                        <td colspan="2"></td>
+                                    </tr>
+                                    @if (\App\User::isOnTeam($team->id))
+                                        <tr class="highlight">
+                                            <td class="field" colspan="2"><h4>Requisições</h4></td>
+                                        </tr>
+                                        <tr class="divider">
+                                            <td colspan="2"></td>
+                                        </tr>
+                                        <tr class="">
+                                            <td class="field">Atenção</td>
+                                            <td class="">Apenas integrantes do time visualizam as requisições.</td>
+                                        </tr>
+                                        @foreach($team->requests as $request)
+                                            <tr>
+                                                <td class="field">
+                                                    <img src="{{ getUserAvatar($request->avatar) }}" width="80px"></td>
+                                                <td>
+                                                    <a href="{{ route('users.show',[$request->slug]) }}">
+                                                        {{ $request->name }}
+                                                    </a>
+                                                    @if ($request->aproved)
+                                                        <span>Aprovado</span>
+                                                    @else
+                                                        <button type="button" class="btn btn-xs btn-info btn-right"
+                                                            id="aprove-request" data-user="{{ $request->id }}">Aprovar</button>
+                                                    @endif
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    @endif
+                                </tbody>
+
                             </table>
                         </div>
                         <!-- end table -->
@@ -227,6 +159,22 @@
 
         $('#upload-picture').change(function() {
             $('#form-upload-picture').submit();
+        });
+
+        $('#request-join').click(function() {
+
+            var team_id = '{{ $team->id }}';
+
+            requestJoinTeam(team_id);
+        });
+
+        $('#aprove-request').click(function () {
+
+            var user_id = $(this).data('user');
+
+            var team_id = '{{ $team->id }}';
+
+            aproveRequest(user_id, team_id);
         });
 
         @if($team->gamer)

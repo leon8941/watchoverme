@@ -45,6 +45,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('users','UsersController');
 
     // User avatar upload
-    //Route::get('users.upload',['as' => 'users.upload', 'uses' => 'UsersController@upload']);
     Route::post('users/upload',['as' => 'users/upload', 'uses' => 'UsersController@upload']);
+    Route::post('teams/upload',['as' => 'teams/upload', 'uses' => 'TeamsController@upload']);
+
+    // Team request to join
+    Route::get('teams.request',['as' => 'teams.request', 'uses' => 'TeamsController@request']);
+    Route::get('teams.aproveRequest',['as' => 'teams.aproveRequest', 'uses' => 'TeamsController@aproveRequest']);
 });

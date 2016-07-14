@@ -56,21 +56,11 @@
             </div>
             <div class="panel-body">
                 <div class="note note-success">
-                    <h4>Como ser Rankeado</h4>
+                    <h4>Entre em um time</h4>
                     <p>
-                        Para aparecer na lista de jogadores, você deve autorizar a importação de seus dados reais do
-                        Overwatch, inserindo
-                        a sua battle-tag no seu perfil.
-                        <br><br>
-                            @if (\Illuminate\Support\Facades\Auth::check())
-                                <a href="{{ route('teams.show',[\Illuminate\Support\Facades\Auth::team()->slug]) }}">Clique
-                                aqui</a> para ir para o seu perfil.
-                            @else
-                                Você deve <a href="{{ url('register') }}">ter uma conta</a> e
-                                <a href="{{ url('login') }}">estar logado</a>, depois visite seu perfil.
-                            @endif
-
+                        Para entrar em um time, vá para a página do time selecionado e clique em <b>"Entrar"</b>.
                     </p>
+                    <p>Uma requisição será enviada para que os responsáveis pelo time aprovem ou não sua entrada.</p>
                 </div>
             </div>
         </div>

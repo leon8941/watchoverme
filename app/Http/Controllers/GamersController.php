@@ -116,14 +116,6 @@ class GamersController extends Controller
                             }))
                             ->setRenderSection('filters_row_column_level'),
                         (new HtmlTag)
-                            ->setContent(' <i class="fa fa-home"></i> Default ')
-                            ->setTagName('config')
-                            ->setRenderSection(RenderableRegistry::SECTION_BEFORE)
-                            ->setAttributes([
-                                'class' => 'btn btn-default btn-sm',
-                                'id'    => 'show-clean'
-                            ]),
-                        (new HtmlTag)
                             ->setContent(' <i class="fa fa-arrows-alt"></i> All ')
                             ->setTagName('span')
                             ->setRenderSection(RenderableRegistry::SECTION_BEFORE)

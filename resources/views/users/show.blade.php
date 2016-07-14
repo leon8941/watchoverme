@@ -25,13 +25,15 @@
                     </div>
                     <!-- end profile-image -->
                     <div class="m-b-10">
-                        {!! Form::open(array('url'=> 'users/upload','method'=>'POST', 'files'=>true, 'id' => 'form-upload-picture')) !!}
-                            @if(Session::has('error'))
-                                <p class="errors">{!! Session::get('error') !!}</p>
-                            @endif
-                            <div class="btn btn-warning btn-block btn-sm" id="change-picture">Change Picture</div>
-                            <input type="file" name="image" style="opacity: 0" id="upload-picture">
-                        {!! Form::close() !!}
+                        @if (\Illuminate\Support\Facades\Auth::user()->id == $user->id)
+                            {!! Form::open(array('url'=> 'users/upload','method'=>'POST', 'files'=>true, 'id' => 'form-upload-picture')) !!}
+                                @if(Session::has('error'))
+                                    <p class="errors">{!! Session::get('error') !!}</p>
+                                @endif
+                                <div class="btn btn-warning btn-block btn-sm" id="change-picture">Change Picture</div>
+                                <input type="file" name="image" style="opacity: 0" id="upload-picture">
+                            {!! Form::close() !!}
+                        @endif
                     </div>
                 </div>
                 <!-- end profile-left -->

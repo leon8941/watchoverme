@@ -99,3 +99,15 @@ function getUserAvatar($avatar) {
 
     return asset('assets/img/profile-cover.jpg');
 }
+
+function getTeamAvatar($avatar) {
+
+    if ($avatar) {
+        $full_dir = \App\Team::$avatar_dir . $avatar;
+
+        if (\Illuminate\Support\Facades\File::exists($full_dir))
+            return asset($full_dir);
+    }
+
+    return asset('img/team.jpg');
+}

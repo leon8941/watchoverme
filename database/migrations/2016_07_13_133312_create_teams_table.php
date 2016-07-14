@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Eloquent\Model;
 
 class CreateTeamsTable extends Migration
 {
@@ -16,9 +17,28 @@ class CreateTeamsTable extends Migration
         Schema::create('teams',function(Blueprint $table){
             $table->increments("id");
             $table->string("title");
+            $table->string("slug");
             $table->string("image")->nullable();
             $table->text("description")->nullable();
-            $table->integer("user_id")->references("id")->on("user"); // Captain
+
+            $table->timestamps();
+            $table->softDeletes();
+        });
+
+        Schema::create('team_user',function(Blueprint $table){
+
+            $table->unsignedInteger("user_id");
+            $table->unsignedInteger("team_id");
+
+            $table->timestamps();
+            $table->softDeletes();
+        });
+
+        Schema::create('request_team',function(Blueprint $table){
+
+            $table->unsignedInteger("user_id");
+            $table->unsignedInteger("team_id");
+            $table->boolean("aproved")->default(0);
 
             $table->timestamps();
             $table->softDeletes();
@@ -33,5 +53,6 @@ class CreateTeamsTable extends Migration
     public function down()
     {
         Schema::drop('teams');
+        Schema::drop('team_user');
     }
 }

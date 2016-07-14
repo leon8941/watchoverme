@@ -35,6 +35,9 @@
                                                 <a href="{{ route('posts.show',[$post->slug]) }}">{{ $post->title }}</a>
                                             </h4>
                                             {{ $post->description }}
+                                            <div class="text text-right text-muted text-align-reverse">
+                                                {{ $post->created_at->diffForHumans() }}
+                                            </div>
                                         </div>
                                     </li>
                                 @endforeach

@@ -12,6 +12,7 @@ use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\Access\Authorizable;
 use App\Role;
+use Illuminate\Support\Facades\Auth;
 use Laraveldaily\Quickadmin\Observers\UserActionsObserver;
 use Laraveldaily\Quickadmin\Traits\AdminPermissionsTrait;
 
@@ -54,6 +55,7 @@ class User extends Model implements AuthenticatableContract, SluggableInterface,
         User::observe(new UserActionsObserver);
     }
 
+    // Avatar images dir
     public static $avatar_dir = 'uploads/users/';
 
     public function role()
@@ -75,6 +77,29 @@ class User extends Model implements AuthenticatableContract, SluggableInterface,
     public function posts()
     {
         return $this->hasMany('App\Post');
+    }
+
+    public function team()
+    {
+        return $this->belongsToMany(Team::class,'team_user');
+    }
+
+    public function request()
+    {
+        return $this->belongsToMany(Request::class);
+    }
+
+    /*
+    * Is this logged user on this team?
+    */
+    public static function isOnTeam($team_id)
+    {
+        if (!Auth::check())
+            return false;
+
+        $teams = collect(Auth::user()->team()->first());
+
+        return $teams->search($team_id);
     }
 
     ////
