@@ -198,7 +198,7 @@ class GamersController extends Controller
                 // Base URI is used with relative requests
                 'base_uri' => 'https://api.lootbox.eu/',
                 // You can set any number of default request options.
-                'timeout'  => 999,
+                'timeout'  => 60,
             ]);
 
             // Send a request to https://foo.com/api/test
@@ -273,8 +273,8 @@ class GamersController extends Controller
             }
 
             // Get user general stats
-            //$this->updateUserStats($filtered_tag, 'competitive');
-            //$this->updateUserStats($filtered_tag, 'quick');
+            $this->updateUserStats($filtered_tag, 'competitive');
+            $this->updateUserStats($filtered_tag, 'quick');
 
             $return['code'] = '1';
             $return['success'] = true;
@@ -331,11 +331,8 @@ class GamersController extends Controller
                     [rank] => 49
                     [rank_img] => https://blzgdapipro-a.akamaihd.net/game/rank-icons/rank-5.png
                 )
-
         )
-
     )
-
      */
 
     /**
@@ -356,7 +353,7 @@ class GamersController extends Controller
             // Base URI is used with relative requests
             'base_uri' => 'https://api.lootbox.eu/',
             // You can set any number of default request options.
-            'timeout'  => 999,
+            'timeout'  => 60,
         ]);
 
         // Send a request to https://foo.com/api/test
@@ -365,62 +362,143 @@ class GamersController extends Controller
         // Decode response body
         $obj = json_decode($response->getBody());
 
+        $obj = $this->filterResponseFields($obj);
+
         $stats = Stats::where('user_id',Auth::user()->id)
             ->where('mode',$mode)
             ->first();
 
         if (!$stats) {
             $stats = Stats::create([
-                "MeleeFinalBlows" => $obj->MeleeFinalBlows,
-                "SoloKills" => $obj->SoloKills,
-                "ObjectiveKills" => $obj->ObjectiveKills,
-                "FinalBlows" => $obj->FinalBlows,
-                "DamageDone" => $obj->DamageDone,
-                "Eliminations" => $obj->Eliminations,
-                "EnvironmentalKills" => $obj->EnvironmentalKills,
-                "Multikills" => $obj->Multikills,
-                "HealingDone" => $obj->HealingDone,
-                "TeleporterPadsDestroyed" => $obj->TeleporterPadsDestroyed,
-                "Eliminations-MostinGame" => $obj->Eliminations-MostinGame,
-                "FinalBlows-MostinGame" => $obj->FinalBlows-MostinGame,
-                "DamageDone-MostinGame" => $obj->DamageDone-MostinGame,
-                "HealingDone-MostinGame" => $obj->HealingDone-MostinGame,
-                "DefensiveAssists-MostinGame" => $obj->DefensiveAssists-MostinGame,
-                "OffensiveAssists-MostinGame" => $obj->OffensiveAssists-MostinGame,
-                "ObjectiveKills-MostinGame" => $obj->ObjectiveKills-MostinGame,
-                "ObjectiveTime-MostinGame" => $obj->ObjectiveTime-MostinGame,
-                "Multikill-Best" => $obj->Multikill-Best,
-                "SoloKills-MostinGame" => $obj->SoloKills-MostinGame,
-                "TimeSpentonFire-MostinGame" => $obj->TimeSpentonFire-MostinGame,
-                "MeleeFinalBlows-Average" => $obj->MeleeFinalBlows-Average,
-                "TimeSpentonFire-Average" => $obj->TimeSpentonFire-Average,
-                "SoloKills-Average" => $obj->SoloKills-Average,
-                "ObjectiveTime-Average" => $obj->ObjectiveTime-Average,
-                "ObjectiveKills-Average" => $obj->ObjectiveKills-Average,
-                "HealingDone-Average" => $obj->HealingDone-Average,
-                "FinalBlows-Average" => $obj->FinalBlows-Average,
-                "Deaths-Average" => $obj->Deaths-Average,
-                "DamageDone-Average" => $obj->DamageDone-Average,
-                "Eliminations-Average" => $obj->Eliminations-Average,
-                "Deaths" => $obj->DeathsDeaths,
-                "EnvironmentalDeaths" => $obj->EnvironmentalDeaths,
-                "Cards" => $obj->Cards,
-                "Medals" => $obj->Medals,
-                "Medals-Gold" => $obj->Medals-Gold,
-                "Medals-Silver" => $obj->Medals-Silver,
-                "Medals-Bronze" => $obj->Medals-Bronze,
-                "GamesWon" => $obj->GamesWon,
-                "GamesPlayed" => $obj->GamesPlayed,
-                "TimeSpentonFire" => $obj->TimeSpentonFire,
-                "ObjectiveTime" => $obj->ObjectiveTime,
-                "TimePlayed" => $obj->TimePlayed,
-                "MeleeFinalBlow-MostinGame" => $obj->MeleeFinalBlow-MostinGame,
-                "DefensiveAssists" => $obj->DefensiveAssists,
-                "DefensiveAssists-Average" => $obj->DefensiveAssists-Average,
-                "OffensiveAssists" => $obj->OffensiveAssists,
-                "OffensiveAssists-Average" => $obj->OffensiveAssists-Average,
+                'user_id' => Auth::user()->id,
+                'mode' => $mode,
+                "MeleeFinalBlows" => $obj['MeleeFinalBlows'],
+                "SoloKills" => $obj['SoloKills'],
+                "ObjectiveKills" => $obj['ObjectiveKills'],
+                "FinalBlows" => $obj['FinalBlows'],
+                "DamageDone" => $obj['DamageDone'],
+                "Eliminations" => $obj['Eliminations'],
+                "EnvironmentalKills" => $obj['EnvironmentalKills'],
+                "Multikills" => $obj['Multikills'],
+                "HealingDone" => $obj['HealingDone'],
+                "TeleporterPadsDestroyed" => $obj['TeleporterPadsDestroyed'],
+                "Eliminations_MostinGame" => $obj['Eliminations-MostinGame'],
+                "FinalBlows_MostinGame" => $obj['FinalBlows-MostinGame'],
+                "DamageDone_MostinGame" => $obj['DamageDone-MostinGame'],
+                "HealingDone_MostinGame" => $obj['HealingDone-MostinGame'],
+                "DefensiveAssists_MostinGame" => $obj['DefensiveAssists-MostinGame'],
+                "OffensiveAssists_MostinGame" => $obj['OffensiveAssists-MostinGame'],
+                "ObjectiveKills_MostinGame" => $obj['ObjectiveKills-MostinGame'],
+                "ObjectiveTime_MostinGame" => $obj['ObjectiveTime-MostinGame'],
+                "Multikill_Best" => $obj['Multikill-Best'],
+                "SoloKills_MostinGame" => $obj['SoloKills-MostinGame'],
+                "TimeSpentonFire_MostinGame" => $obj['TimeSpentonFire-MostinGame'],
+                "MeleeFinalBlows_Average" => $obj['MeleeFinalBlows-Average'],
+                "TimeSpentonFire_Average" => $obj['TimeSpentonFire-Average'],
+                "SoloKills_Average" => $obj['SoloKills-Average'],
+                "ObjectiveTime_Average" => $obj['ObjectiveTime-Average'],
+                "ObjectiveKills_Average" => $obj['ObjectiveKills-Average'],
+                "HealingDone_Average" => $obj['HealingDone-Average'],
+                "FinalBlows_Average" => $obj['FinalBlows-Average'],
+                "Deaths_Average" => $obj['Deaths-Average'],
+                "DamageDone_Average" => $obj['DamageDone-Average'],
+                "Eliminations_Average" => $obj['Eliminations-Average'],
+                "Deaths" => $obj['Deaths'],
+                "EnvironmentalDeaths" => $obj['EnvironmentalDeaths'],
+                "Cards" => $obj['Cards'],
+                "Medals" => $obj['Medals'],
+                "Medals_Gold" => $obj['Medals-Gold'],
+                "Medals_Silver" => $obj['Medals-Silver'],
+                "Medals_Bronze" => $obj['Medals-Bronze'],
+                "GamesWon" => $obj['GamesWon'],
+                "GamesPlayed" => $obj['GamesPlayed'],
+                "TimeSpentonFire" => $obj['TimeSpentonFire'],
+                "ObjectiveTime" => $obj['ObjectiveTime'],
+                "TimePlayed" => $obj['TimePlayed'],
+                "MeleeFinalBlow_MostinGame" => $obj['MeleeFinalBlow-MostinGame'],
+                "DefensiveAssists" => $obj['DefensiveAssists'],
+                "DefensiveAssists_Average" => $obj['DefensiveAssists-Average'],
+                "OffensiveAssists" => $obj['OffensiveAssists'],
+                "OffensiveAssists_Average" => $obj['OffensiveAssists-Average'],
             ]);
         }
+        else {
+            $stats->MeleeFinalBlows = $obj['MeleeFinalBlows'];
+            $stats->SoloKills = $obj['SoloKills'];
+            $stats->ObjectiveKills = $obj['ObjectiveKills'];
+            $stats->FinalBlows = $obj['FinalBlows'];
+            $stats->DamageDone = $obj['DamageDone'];
+            $stats->Eliminations = $obj['Eliminations'];
+            $stats->EnvironmentalKills = $obj['EnvironmentalKills'];
+            $stats->Multikills = $obj['Multikills'];
+            $stats->HealingDone = $obj['HealingDone'];
+            $stats->TeleporterPadsDestroyed = $obj['TeleporterPadsDestroyed'];
+            $stats->Eliminations_MostinGame = $obj['Eliminations-MostinGame'];
+            $stats->FinalBlows_MostinGame = $obj['FinalBlows-MostinGame'];
+            $stats->DamageDone_MostinGame = $obj['DamageDone-MostinGame'];
+            $stats->HealingDone_MostinGame = $obj['HealingDone-MostinGame'];
+            $stats->DefensiveAssists_MostinGame = $obj['DefensiveAssists-MostinGame'];
+            $stats->OffensiveAssists_MostinGame = $obj['OffensiveAssists-MostinGame'];
+            $stats->ObjectiveKills_MostinGame = $obj['ObjectiveKills-MostinGame'];
+            $stats->ObjectiveTime_MostinGame = $obj['ObjectiveTime-MostinGame'];
+            $stats->Multikill_Best = $obj['Multikill-Best'];
+            $stats->SoloKills_MostinGame = $obj['SoloKills-MostinGame'];
+            $stats->TimeSpentonFire_MostinGame = $obj['TimeSpentonFire-MostinGame'];
+            $stats->MeleeFinalBlows_Average = $obj['MeleeFinalBlows-Average'];
+            $stats->TimeSpentonFire_Average = $obj['TimeSpentonFire-Average'];
+            $stats->SoloKills_Average = $obj['SoloKills-Average'];
+            $stats->ObjectiveTime_Average = $obj['ObjectiveTime-Average'];
+            $stats->ObjectiveKills_Average = $obj['ObjectiveKills-Average'];
+            $stats->HealingDone_Average = $obj['HealingDone-Average'];
+            $stats->FinalBlows_Average = $obj['FinalBlows-Average'];
+            $stats->Deaths_Average = $obj['Deaths-Average'];
+            $stats->DamageDone_Average = $obj['DamageDone-Average'];
+            $stats->Eliminations_Average = $obj['Eliminations-Average'];
+            $stats->Deaths = $obj['Deaths'];
+            $stats->EnvironmentalDeaths = $obj['EnvironmentalDeaths'];
+            $stats->Cards = $obj['Cards'];
+            $stats->Medals = $obj['Medals'];
+            $stats->Medals_Gold = $obj['Medals-Gold'];
+            $stats->Medals_Silver = $obj['Medals-Silver'];
+            $stats->Medals_Bronze = $obj['Medals-Bronze'];
+            $stats->GamesWon = $obj['GamesWon'];
+            $stats->GamesPlayed = $obj['GamesPlayed'];
+            $stats->TimeSpentonFire = $obj['TimeSpentonFire'];
+            $stats->ObjectiveTime = $obj['ObjectiveTime'];
+            $stats->TimePlayed = $obj['TimePlayed'];
+            $stats->MeleeFinalBlow_MostinGame = $obj['MeleeFinalBlow-MostinGame'];
+            $stats->DefensiveAssists = $obj['DefensiveAssists'];
+            $stats->DefensiveAssists_Average = $obj['DefensiveAssists-Average'];
+            $stats->OffensiveAssists = $obj['OffensiveAssists'];
+            $stats->OffensiveAssists_Average = $obj['OffensiveAssists-Average'];
 
+            $stats->save();
+        }
+
+    }
+
+    public function filterResponseFields($obj)
+    {
+        $result = [];
+
+        foreach($obj as $key => $field) {
+            if ($field == null)
+                $result[$key] = '';
+            else
+                $result[$key] = $field;
+        }
+
+        // Exceptions
+        $exceptions = [
+            'MeleeFinalBlow-MostinGame'
+        ];
+
+        foreach ($exceptions as $exp) {
+
+            if (!isset($result[$exp]))
+                $result[$exp] = '';
+        }
+
+        return $result;
     }
 }

@@ -39,7 +39,14 @@ class UsersController extends Controller
         //SEO::setCanonical('https://codecasts.com.br/lesson');
         SEO::opengraph()->addProperty('type', 'articles');
 
-        return view('users.show', compact('user'));
+        if ($user->stats) {
+            $stats['quick'] = $user->stats->where('mode','quick')->first();
+            $stats['competitive'] = $user->stats->where('mode','competitive')->first();
+        }
+        else
+            $stats = null;
+
+        return view('users.show', compact('user', 'stats'));
     }
 
     /**

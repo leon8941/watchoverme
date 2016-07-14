@@ -54,5 +54,6 @@ class CreateTeamsTable extends Migration
     {
         Schema::drop('teams');
         Schema::drop('team_user');
+        Schema::drop('request_team');
     }
 }
