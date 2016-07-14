@@ -67,7 +67,7 @@
                                                         {{ $team->title }}
                                                     </a>
                                                 @endforeach
-                                            @elseif ($user->team)
+                                            @elseif (isset($user->team) && $user->team->count() == 1)
                                                 <a href="{{ route('teams.show',[$user->team->first()->slug]) }}">
                                                     <img src="{{ getTeamAvatar($user->team->first()->image) }}" width="100px">
                                                     {{ $user->team->first()->title or 'nenhum' }}
@@ -151,7 +151,7 @@
                                     </tr>
                                     <tr>
                                         <td class="field">Played</td>
-                                        <td><a href="#">{{ $user->gamer->quick_played }}</a></td>
+                                        <td>{{ $user->gamer->quick_played }}</td>
                                     </tr>
                                     <tr>
                                         <td class="field">Play Time</td>
