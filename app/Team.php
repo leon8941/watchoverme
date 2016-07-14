@@ -33,6 +33,6 @@ class Team extends Model implements SluggableInterface
 
     public function requests()
     {
-        return $this->belongsToMany(Request::class)->orderBy('created_at','DESC');
+        return $this->hasMany(Request::class)->orderBy('created_at','DESC');
     }
 }

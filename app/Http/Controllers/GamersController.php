@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Gamer;
+use App\Team;
 use App\User;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
@@ -87,6 +88,25 @@ class GamersController extends Controller
                 (new FieldConfig('competitive_played'))
                     ->setSortable(true)
                     ->setLabel('Played'),
+                (new FieldConfig('team'))
+                    ->setSortable(true)
+                    ->setCallback(function ($val, \Nayjest\Grids\EloquentDataRow $row) {
+
+                        if (!$row->getSrc()->user)
+                            return '';
+
+                        $user = User::where('id',$row->getSrc()->user->id)
+                            ->with('team')
+                            ->first();
+
+                        if (!$user || $user->team->count() < 1)
+                            return '';
+
+                        $team = Team::where('id',$row->getSrc()->user->team->first()->id)->first();
+
+                        return '<a href="' . route('teams.show',[$team->slug]) . '">' .
+                                '<img src="'.getTeamAvatar($team->image).'" width="40px"> '. $team->title . '</a>';
+                    }),
                 (new FieldConfig('updated_at'))
                     ->setLabel('Last Update')
                     ->setCallback(function ($val) {

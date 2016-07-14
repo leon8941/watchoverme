@@ -23,12 +23,12 @@ class Request extends Model
 
     public function user()
     {
-        return $this->hasMany(User::class);
+        return $this->belongsTo(User::class);
     }
 
     public function team()
     {
-        return $this->hasMany(Team::class);
+        return $this->belongsTo(Team::class);
     }
 
     /*
@@ -41,6 +41,7 @@ class Request extends Model
 
         $request = Request::where('user_id',Auth::user()->id)
             ->where('team_id',$team_id)
+            ->where('aproved','<>','1')
             ->first();
 
         if ($request)

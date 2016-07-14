@@ -43,6 +43,9 @@
                                 @endforeach
                             </ul>
                         </div>
+                        <div class="panel-footer text-center">
+                            <a href="{{ route('posts.index') }}" class="text-inverse">Ver Todas</a>
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="purchase">
                         <div class="height-sm" data-scrollbar="true">
@@ -116,7 +119,6 @@
                             @endforeach
                             </tbody>
                         </table>
-
                         <div class="panel-footer text-center">
                             <a href="{{ route('gamers.index') }}" class="text-inverse">Ver Ranking</a>
                         </div>

@@ -58,14 +58,16 @@
                                         <td class="field">Descrição</td>
                                         <td class="">{{ $team->description }}</td>
                                     </tr>
-                                    @if(!\App\User::isOnTeam($team->id) && \App\Request::userCanRequest($team->id))
-                                        <tr>
-                                            <td class="field">Entrar</td>
-                                            <td class="">
+                                    <tr>
+                                        <td class="field">Entrar</td>
+                                        <td class="">
+                                            @if(!\App\User::isOnTeam($team->id) && \App\Request::userCanRequest($team->id))
                                                 <button type="button" class="btn btn-info btn-xs" id="request-join">Solicitar</button>
-                                            </td>
-                                        </tr>
-                                    @endif
+                                            @else
+                                                Você já solicitou ou não pode entrar neste time.
+                                            @endif
+                                        </td>
+                                    </tr>
                                     <tr class="highlight">
                                         <td class="field" colspan="2"><h4>Roster</h4></td>
                                     </tr>
@@ -75,8 +77,12 @@
                                     @foreach($team->users as $player)
                                         <tr>
                                             <td class="field">
-                                                <img src="{{ getUserAvatar($player->avatar) }}" width="80px"></td>
-                                            <td><a href="{{ route('gamers.show',[$player->slug]) }}">
+                                                <a href="{{ route('users.show',[$player->slug]) }}">
+                                                    <img src="{{ getUserAvatar($player->avatar) }}" width="80px">
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="{{ route('users.show',[$player->slug]) }}">
                                                     {{ $player->name }}
                                                 </a>
                                             </td>
@@ -99,16 +105,16 @@
                                         @foreach($team->requests as $request)
                                             <tr>
                                                 <td class="field">
-                                                    <img src="{{ getUserAvatar($request->avatar) }}" width="80px"></td>
+                                                    <img src="{{ getUserAvatar($request->user->avatar) }}" width="80px"></td>
                                                 <td>
-                                                    <a href="{{ route('users.show',[$request->slug]) }}">
-                                                        {{ $request->name }}
+                                                    <a href="{{ route('users.show',[$request->user->slug]) }}">
+                                                        {{ $request->user->name }}
                                                     </a>
                                                     @if ($request->aproved)
                                                         <span>Aprovado</span>
                                                     @else
                                                         <button type="button" class="btn btn-xs btn-info btn-right"
-                                                            id="aprove-request" data-user="{{ $request->id }}">Aprovar</button>
+                                                            id="aprove-request" data-user="{{ $request->user->id }}">Aprovar</button>
                                                     @endif
                                                 </td>
                                             </tr>

@@ -80,11 +80,11 @@
             //var obj = JSON.parse(data);
 
             if (data) {
-/*
+
                 setTimeout(function(){
                     location.reload();
                 }, 400);
-                */
+
             }
         });
     }

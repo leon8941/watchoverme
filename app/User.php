@@ -86,7 +86,7 @@ class User extends Model implements AuthenticatableContract, SluggableInterface,
 
     public function request()
     {
-        return $this->belongsToMany(Request::class);
+        return $this->hasMany(Request::class);
     }
 
     /*

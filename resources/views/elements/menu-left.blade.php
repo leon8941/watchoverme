@@ -58,7 +58,6 @@
                     <span>Rankings</span>
                 </a>
             </li>
-            <!--
             <li class="{{ isActive('teams.index') }}">
                 <a href="{{ route('teams.index') }}">
                     <i class="fa fa-users"></i>

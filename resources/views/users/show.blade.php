@@ -59,9 +59,33 @@
                                         <td><a href="#">{{ $user->gamer->battletag }}</a></td>
                                     </tr>
                                     <tr class="highlight">
+                                        <td class="field">Time</td>
+                                        <td>
+                                            @if ($user->team->count() >1)
+                                                @foreach($user->team as $team)
+                                                    <a href="{{ route('teams.show',[$team->slug]) }}">
+                                                        {{ $team->title }}
+                                                    </a>
+                                                @endforeach
+                                            @elseif ($user->team)
+                                                <a href="{{ route('teams.show',[$user->team->first()->slug]) }}">
+                                                    <img src="{{ getTeamAvatar($user->team->first()->image) }}" width="100px">
+                                                    {{ $user->team->first()->title or 'nenhum' }}
+                                                </a>
+                                            @else
+                                                nenhum
+                                            @endif
+                                        </td>
+                                    </tr>
+                                    <tr class="highlight">
                                         <td>Gamer Profile</td>
-                                        <td><button class="btn btn-info btn-xs" id="update-gamer">Update</button>
-                                            <br>
+                                        <td>
+                                            @if (\Illuminate\Support\Facades\Auth::user()->id == $user->id)
+                                                <button class="btn btn-info btn-xs" id="update-gamer">Update</button>
+                                                <br>
+                                            @else
+                                                Ativo
+                                            @endif
                                         </td>
                                     </tr>
                                     <tr class="highlight">
