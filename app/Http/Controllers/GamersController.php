@@ -26,6 +26,7 @@ use Nayjest\Grids\FieldConfig;
 use Nayjest\Grids\Grid;
 use Nayjest\Grids\GridConfig;
 
+use SEO;
 
 class GamersController extends Controller
 {
@@ -150,6 +151,12 @@ class GamersController extends Controller
             ]);
 
         $grid = (new Grid($config))->render();
+
+        SEO::setTitle('Ranking brasileiro de Overwatch | Watch OVerme');
+        SEO::setDescription('Lista de jogadores brasileiros de Overwatch, Ranking nacional');
+        SEO::opengraph()->setUrl('http://watchoverme.com.br/gamers');
+        //SEO::setCanonical('https://codecasts.com.br/lesson');
+        SEO::opengraph()->addProperty('type', 'articles');
 
         return view('users.index', compact('users','grid'));
     }

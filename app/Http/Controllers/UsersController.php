@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
+use SEO;
+
 class UsersController extends Controller
 {
     /**
@@ -30,6 +32,12 @@ class UsersController extends Controller
     {
         $user = User::where('slug',$slug)
             ->firstOrFail();
+
+        SEO::setTitle($user->name, ' | ' . 'Watch OVerme');
+        SEO::setDescription('Jogador brasileiro de Overwatch ' . $user->name );
+        SEO::opengraph()->setUrl('http://watchoverme.com.br/users/' . $user->slug);
+        //SEO::setCanonical('https://codecasts.com.br/lesson');
+        SEO::opengraph()->addProperty('type', 'articles');
 
         return view('users.show', compact('user'));
     }

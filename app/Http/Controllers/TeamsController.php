@@ -148,8 +148,8 @@ class TeamsController extends Controller
         $team = Team::where('slug',$slug)
             ->firstOrFail();
 
-        SEO::setTitle($team->title, '- Time brasileiro de OverWatch');
-        SEO::setDescription($team->description);
+        SEO::setTitle($team->title, '- Time brasileiro de OverWatch | ' . 'Watch OVerme');
+        SEO::setDescription('Time de Overwatch ' . $team->title . ' - ' . $team->description);
         SEO::opengraph()->setUrl('http://watchoverme.com.br/teams/' . $team->slug);
         //SEO::setCanonical('https://codecasts.com.br/lesson');
         SEO::opengraph()->addProperty('type', 'articles');
