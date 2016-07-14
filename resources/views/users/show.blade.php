@@ -220,10 +220,13 @@
             </div>
             <!-- end profile-section -->
 
+            
+
         </div>
         <!-- end profile-container -->
     </div>
     <!-- end #content -->
+
 @endsection
 
 @section('scripts')

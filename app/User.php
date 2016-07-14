@@ -74,6 +74,14 @@ class User extends Model implements AuthenticatableContract, SluggableInterface,
     /**
      * Get the comments for the blog post.
      */
+    public function stats()
+    {
+        return $this->hasOne('App\Stats');
+    }
+
+    /**
+     * Get the comments for the blog post.
+     */
     public function posts()
     {
         return $this->hasMany('App\Post');

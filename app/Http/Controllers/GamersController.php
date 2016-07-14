@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Gamer;
+use App\Stats;
 use App\Team;
 use App\User;
 use GuzzleHttp\Client;
@@ -271,6 +272,10 @@ class GamersController extends Controller
                 ]);
             }
 
+            // Get user general stats
+            //$this->updateUserStats($filtered_tag, 'competitive');
+            //$this->updateUserStats($filtered_tag, 'quick');
+
             $return['code'] = '1';
             $return['success'] = true;
 
@@ -332,4 +337,90 @@ class GamersController extends Controller
     )
 
      */
+
+    /**
+     * Get general player stats
+     * Make sure BATTLETAG is already validated
+     *
+     * @param $battletag
+     */
+    public function updateUserStats($battletag, $mode = 'competitive')
+    {
+        $return = [
+            'code' => '0',
+            'success' => false,
+            'msg'   => ''
+        ];
+
+        $client = new Client([
+            // Base URI is used with relative requests
+            'base_uri' => 'https://api.lootbox.eu/',
+            // You can set any number of default request options.
+            'timeout'  => 999,
+        ]);
+
+        // Send a request to https://foo.com/api/test
+        $response = $client->request('GET', "pc/us/$battletag/$mode-play/allHeroes/");
+
+        // Decode response body
+        $obj = json_decode($response->getBody());
+
+        $stats = Stats::where('user_id',Auth::user()->id)
+            ->where('mode',$mode)
+            ->first();
+
+        if (!$stats) {
+            $stats = Stats::create([
+                "MeleeFinalBlows" => $obj->MeleeFinalBlows,
+                "SoloKills" => $obj->SoloKills,
+                "ObjectiveKills" => $obj->ObjectiveKills,
+                "FinalBlows" => $obj->FinalBlows,
+                "DamageDone" => $obj->DamageDone,
+                "Eliminations" => $obj->Eliminations,
+                "EnvironmentalKills" => $obj->EnvironmentalKills,
+                "Multikills" => $obj->Multikills,
+                "HealingDone" => $obj->HealingDone,
+                "TeleporterPadsDestroyed" => $obj->TeleporterPadsDestroyed,
+                "Eliminations-MostinGame" => $obj->Eliminations-MostinGame,
+                "FinalBlows-MostinGame" => $obj->FinalBlows-MostinGame,
+                "DamageDone-MostinGame" => $obj->DamageDone-MostinGame,
+                "HealingDone-MostinGame" => $obj->HealingDone-MostinGame,
+                "DefensiveAssists-MostinGame" => $obj->DefensiveAssists-MostinGame,
+                "OffensiveAssists-MostinGame" => $obj->OffensiveAssists-MostinGame,
+                "ObjectiveKills-MostinGame" => $obj->ObjectiveKills-MostinGame,
+                "ObjectiveTime-MostinGame" => $obj->ObjectiveTime-MostinGame,
+                "Multikill-Best" => $obj->Multikill-Best,
+                "SoloKills-MostinGame" => $obj->SoloKills-MostinGame,
+                "TimeSpentonFire-MostinGame" => $obj->TimeSpentonFire-MostinGame,
+                "MeleeFinalBlows-Average" => $obj->MeleeFinalBlows-Average,
+                "TimeSpentonFire-Average" => $obj->TimeSpentonFire-Average,
+                "SoloKills-Average" => $obj->SoloKills-Average,
+                "ObjectiveTime-Average" => $obj->ObjectiveTime-Average,
+                "ObjectiveKills-Average" => $obj->ObjectiveKills-Average,
+                "HealingDone-Average" => $obj->HealingDone-Average,
+                "FinalBlows-Average" => $obj->FinalBlows-Average,
+                "Deaths-Average" => $obj->Deaths-Average,
+                "DamageDone-Average" => $obj->DamageDone-Average,
+                "Eliminations-Average" => $obj->Eliminations-Average,
+                "Deaths" => $obj->DeathsDeaths,
+                "EnvironmentalDeaths" => $obj->EnvironmentalDeaths,
+                "Cards" => $obj->Cards,
+                "Medals" => $obj->Medals,
+                "Medals-Gold" => $obj->Medals-Gold,
+                "Medals-Silver" => $obj->Medals-Silver,
+                "Medals-Bronze" => $obj->Medals-Bronze,
+                "GamesWon" => $obj->GamesWon,
+                "GamesPlayed" => $obj->GamesPlayed,
+                "TimeSpentonFire" => $obj->TimeSpentonFire,
+                "ObjectiveTime" => $obj->ObjectiveTime,
+                "TimePlayed" => $obj->TimePlayed,
+                "MeleeFinalBlow-MostinGame" => $obj->MeleeFinalBlow-MostinGame,
+                "DefensiveAssists" => $obj->DefensiveAssists,
+                "DefensiveAssists-Average" => $obj->DefensiveAssists-Average,
+                "OffensiveAssists" => $obj->OffensiveAssists,
+                "OffensiveAssists-Average" => $obj->OffensiveAssists-Average,
+            ]);
+        }
+
+    }
 }
