@@ -28,7 +28,8 @@
                                 @foreach ($posts as $post)
                                     <li class="media media-lg" style="min-height: 90px;">
                                         <a href="{{ route('posts.show', [$post->slug]) }}" class="pull-left">
-                                            <img src="{{ asset($post->image) }}" alt="" class="media-object" style="max-height: 320px" />
+                                            <img src="{{ asset($post->image) }}" alt="" class="media-object" width="224px"
+                                                 style="max-height: 320px" />
                                         </a>
                                         <div class="media-body">
                                             <h4 class="media-heading">
