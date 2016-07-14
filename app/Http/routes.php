@@ -51,4 +51,7 @@ Route::group(['middleware' => ['auth']], function () {
     // Team request to join
     Route::get('teams.request',['as' => 'teams.request', 'uses' => 'TeamsController@request']);
     Route::get('teams.aproveRequest',['as' => 'teams.aproveRequest', 'uses' => 'TeamsController@aproveRequest']);
+
+    // Create Team
+    Route::get('teams/create',['as' => 'teams.create', 'uses' => 'TeamsController@create']);
 });

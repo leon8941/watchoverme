@@ -23,8 +23,8 @@
     <p>
         A descrição não necessita formatação.
     </p>
-    <p>O texto deve estar todo em Verdana, 14. Títulos de seção devem estar como "Título 2", tamanho 16 e negrito.</p>
-    <p>É obrigatório ter uma imagem.</p>
+    <p>O texto deve estar todo em Arial, 14. Títulos de seção devem estar como "Título 2", tamanho 16 e negrito.</p>
+    <p>É obrigatório ter uma imagem principal.</p>
 </div>
 
 <div class="form-group">

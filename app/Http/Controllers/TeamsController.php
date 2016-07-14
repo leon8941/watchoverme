@@ -113,12 +113,12 @@ class TeamsController extends Controller
                             }))
                             ->setRenderSection('filters_row_column_level'),
                         (new HtmlTag)
-                            ->setContent(' <i class="fa fa-arrows-alt"></i> All ')
+                            ->setContent(' <i class="fa fa-plus"></i> Criar Time ')
                             ->setTagName('span')
                             ->setRenderSection(RenderableRegistry::SECTION_BEFORE)
                             ->setAttributes([
-                                'class' => 'btn btn-warning btn-sm',
-                                'id'    => 'show-all'
+                                'class' => 'btn btn-info btn-sm',
+                                'id'    => 'create-team'
                             ])
                     ])
                     ->getParent()
@@ -252,4 +252,37 @@ class TeamsController extends Controller
 
     }
 
+    public function create()
+    {
+
+        return view('teams.create');
+    }
+
+    /**
+     * Store a new team.
+     *
+     * @param  Request  $request
+     * @return Response
+     */
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'title' => 'required|unique:teams|min:2'
+        ]);
+
+        $data = Input::only('title','description');
+
+        $team = Team::create($data);
+
+        if ($team) {
+
+            // Adiciona o criador como membro do time
+            $user = User::where('id',Auth::user()->id)
+                ->first();
+
+            $user->team()->attach($team->id);
+
+            return redirect()->route('teams.index')->with('message', 'Time criado com sucesso!');;
+        }
+    }
 }

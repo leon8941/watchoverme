@@ -78,6 +78,11 @@
     <script>
         $(document).ready(function() {
             App.init();
+
+            $('#create-team').click(function() {
+
+                location.href = '{{ route('teams.create') }}';
+            });
         });
     </script>
 @endsection
