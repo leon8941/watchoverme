@@ -98,7 +98,7 @@ class User extends Model implements AuthenticatableContract, SluggableInterface,
             return false;
 
         foreach(Auth::user()->team()->get() as $team) {
-            
+
             if ($team->id == $team_id)
                 return true;
         }
