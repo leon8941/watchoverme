@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use SEO;
+use Sitemap;
 
 class PostsController extends Controller
 {
@@ -23,6 +24,8 @@ class PostsController extends Controller
         //SEO::setCanonical('https://codecasts.com.br/lesson');
         SEO::opengraph()->addProperty('type', 'articles');
 
+        Sitemap::addTag(route('posts.show', $post->slug), $post->updated_at, 'daily', '0.8');
+
         return view('posts.show', compact('post'));
     }
 
@@ -36,6 +39,8 @@ class PostsController extends Controller
 
         $posts = Posts::orderBy('created_at','DESC')
             ->get();
+
+        Sitemap::addTag(route('posts.index'), '', 'daily', '0.8');
 
         return view('posts.index',compact('posts'));
     }

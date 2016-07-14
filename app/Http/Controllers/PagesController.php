@@ -15,7 +15,9 @@ use App\Http\Requests;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\URL;
 use SEO;
+use Sitemap;
 
 class PagesController extends Controller
 {
@@ -77,6 +79,19 @@ class PagesController extends Controller
         }
 
         return Response::json(false);
+    }
+
+    public function sitemap()
+    {
+        // Get a general sitemap.
+        Sitemap::addSitemap('/sitemap');
+
+        // You can use the route helpers too.
+        //Sitemap::addSitemap(URL::route('sitemap.posts'));
+        //Sitemap::addSitemap(route('sitemaps.users'));
+
+        // Return the sitemap to the client.
+        return Sitemap::index();
     }
 
 }

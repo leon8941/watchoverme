@@ -55,8 +55,9 @@ function getFilterILike($name, $initial = false) {
 
 function isActive($page) {
 
-    if ( \Request::route()->getName() == $page)
-        return 'active';
+    if (\Illuminate\Support\Facades\Route::getCurrentRoute() !== null )
+        if (\Illuminate\Support\Facades\Route::getCurrentRoute()->getPath() == $page )
+            return 'active';
 }
 
 function getUserImage($avatar = false)

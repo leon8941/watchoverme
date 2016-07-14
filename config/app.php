@@ -178,7 +178,10 @@ return [
         Laraveldaily\Quickadmin\QuickadminServiceProvider::class,
 
         // other providers ommited
-        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+
+        // Site map
+        'Watson\Sitemap\SitemapServiceProvider'
 
     ],
 
@@ -246,6 +249,9 @@ return [
         'Twitter'   => Artesaos\SEOTools\Facades\TwitterCard::class,
         // or
         'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
+
+        // Sitemap
+        'Sitemap' => 'Watson\Sitemap\Facades\Sitemap'
     ],
 
 ];

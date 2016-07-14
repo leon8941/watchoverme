@@ -40,25 +40,25 @@
                     <span>Home</span>
                 </a>
             </li>
-            <li class=" {{ isActive('posts.index') }}">
+            <li class=" {{ isActive('posts') }}">
                 <a href="{{ route('posts.index') }}">
                     <i class="fa fa-globe"></i>
                     <span>Notícias</span>
                 </a>
             </li>
-            <li class="{{ isActive('events.index') }}">
+            <li class="{{ isActive('events') }}">
                 <a href="{{ route('events.index') }}">
                     <i class="fa fa-trophy"></i>
                     <span>Eventos</span>
                 </a>
             </li>
-            <li class="{{ isActive('gamers.index') }}">
+            <li class="{{ isActive('gamers') }}">
                 <a href="{{ route('gamers.index') }}">
                     <i class="fa fa-star"></i>
                     <span>Rankings</span>
                 </a>
             </li>
-            <li class="{{ isActive('teams.index') }}">
+            <li class="{{ isActive('teams') }}">
                 <a href="{{ route('teams.index') }}">
                     <i class="fa fa-users"></i>
                     <span>Times</span>

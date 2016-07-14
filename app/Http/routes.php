@@ -33,6 +33,13 @@ Route::group(['middleware' => ['web']], function () {
     Route::resource('events','EventsController');
     Route::resource('gamers','GamersController');
     Route::resource('teams','TeamsController');
+
+    // Sitemaps
+    Route::get('sitemap',['as' => 'sitemap', 'uses' => 'SitemapsController@index']);
+    Route::get('sitemaps/general',['as' => 'sitemaps.general', 'uses' => 'SitemapsController@index']);
+    Route::get('sitemaps/users',['as' => 'sitemaps.users', 'uses' => 'SitemapsController@users']);
+    Route::get('sitemaps/posts',['as' => 'sitemaps.posts', 'uses' => 'SitemapsController@posts']);
+    Route::get('sitemaps/teams',['as' => 'sitemaps.teams', 'uses' => 'SitemapsController@teams']);
 });
 
 //Route::auth();

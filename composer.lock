@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9771b71e3a0394aa0735505941ac1af8",
-    "content-hash": "8c8bec913b06017e854370bfa8ff1b38",
+    "hash": "a00cf1322078566293fde57279178927",
+    "content-hash": "995836f9620546d0215e09df0a13b5f2",
     "packages": [
         {
             "name": "artesaos/seotools",
@@ -2860,17 +2860,63 @@
             "time": "2016-06-14 14:14:52"
         },
         {
-            "name": "yajra/laravel-datatables-oracle",
-            "version": "v6.15.0",
+            "name": "watson/sitemap",
+            "version": "2.0.13",
             "source": {
                 "type": "git",
-                "url": "https://github.com/yajra/laravel-datatables.git",
-                "reference": "c1bbfc01434f1ebe808f75a339a6ded5557d3664"
+                "url": "https://github.com/dwightwatson/sitemap.git",
+                "reference": "9d616948c1f997d500f48c8b426ac6dd5640cbff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/c1bbfc01434f1ebe808f75a339a6ded5557d3664",
-                "reference": "c1bbfc01434f1ebe808f75a339a6ded5557d3664",
+                "url": "https://api.github.com/repos/dwightwatson/sitemap/zipball/9d616948c1f997d500f48c8b426ac6dd5640cbff",
+                "reference": "9d616948c1f997d500f48c8b426ac6dd5640cbff",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "~5.0",
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "4.3.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Watson\\": "src/Watson"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dwight Watson",
+                    "email": "dwightwatson@studious.com.au"
+                }
+            ],
+            "description": "Generate Google Sitemaps in Laravel 4/5",
+            "keywords": [
+                "laravel",
+                "sitemaps"
+            ],
+            "time": "2016-04-05 02:28:57"
+        },
+        {
+            "name": "yajra/laravel-datatables-oracle",
+            "version": "v6.15.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yajra/laravel-datatables.git",
+                "reference": "2af423095de1a68514361e7826b187b92b15bb24"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/2af423095de1a68514361e7826b187b92b15bb24",
+                "reference": "2af423095de1a68514361e7826b187b92b15bb24",
                 "shasum": ""
             },
             "require": {
@@ -2917,7 +2963,7 @@
                 "laravel4",
                 "laravel5"
             ],
-            "time": "2016-07-05 01:37:34"
+            "time": "2016-07-14 03:04:52"
         }
     ],
     "packages-dev": [
