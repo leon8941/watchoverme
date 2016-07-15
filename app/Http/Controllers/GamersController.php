@@ -59,7 +59,7 @@ class GamersController extends Controller
                     $query
                 )
             )
-            ->setPageSize(50)
+            ->setPageSize(30)
             ->setColumns([
                 (new FieldConfig('competitive_rank'))
                     ->setLabel('Rank')

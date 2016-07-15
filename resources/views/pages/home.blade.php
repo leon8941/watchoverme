@@ -111,8 +111,15 @@
                             <tbody>
                             @foreach($updated_players as $player)
                                 <tr>
-                                    <td>{{ $player->battletag }}</td>
-                                    <td>{{ $player->competitive_rank }} <span class="text-success"><i class="fa fa-arrow-up"></i></span></td>
+                                    <td><a href="{{route('users.show',[$player->user->slug]) }}"> {{ $player->battletag }}</a></td>
+                                    <td>
+                                        @if ($player->competitive_rank)
+                                            {{ $player->competitive_rank }}
+                                            <span class="text-success"><i class="fa fa-arrow-up"></i></span>
+                                        @else
+                                            -
+                                        @endif
+                                    </td>
                                     <td>{{ $player->level }}</td>
                                     <td>{{ $player->competitive_wins }}</td>
                                     <td>{{ $player->competitive_lost }}</td>

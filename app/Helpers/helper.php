@@ -101,7 +101,7 @@ function getUserAvatar($avatar) {
     return asset('assets/img/profile-cover.jpg');
 }
 
-function getTeamAvatar($avatar) {
+function getTeamAvatar($avatar = false) {
 
     if ($avatar) {
         $full_dir = \App\Team::$avatar_dir . $avatar;

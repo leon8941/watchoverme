@@ -47,16 +47,57 @@
                             <table class="table table-profile">
                                 <thead>
                                 <tr>
-                                    <th></th>
+                                    <th class=""></th>
                                     <th>
-                                        <h4>{{ $team->title }} <small></small></h4>
+                                        <span id="team-title">
+                                            <h4>{{ $team->title }}
+                                                @if (\App\User::isOnTeam($team->id))
+                                                    <a class="btn btn-warning btn-icon btn-circle btn-sm btn-right"
+                                                       id="edit-team-title"><i class="fa fa-pencil"></i></a>
+                                                @endif
+                                            </h4>
+                                        </span>
+                                        @if (\App\User::isOnTeam($team->id))
+                                            <div id="team-title-input" style="display: none; width: 260px; float: left">
+                                                <div style="float: left">
+                                                    <input type="text" id="team_title_value" class="form-control" value="{{ $team->title }}">
+                                                </div>
+                                                <div style="float: left">
+                                                    <a class="btn btn-primary btn-icon btn-circle btn-sm"
+                                                       id="submit-team-title" style="margin: 4px">
+                                                        <i class="fa fa-check"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        @endif
                                     </th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                     <tr class="highlight">
                                         <td class="field">Descrição</td>
-                                        <td class="">{{ $team->description }}</td>
+                                        <td class="">
+                                            <span id="team-description">
+                                                {{ $team->description }}
+                                                @if (\App\User::isOnTeam($team->id))
+                                                    <a class="btn btn-warning btn-icon btn-circle btn-sm btn-right"
+                                                       id="edit-team-description"><i class="fa fa-pencil"></i></a>
+                                                @endif
+                                            </span>
+                                            @if (\App\User::isOnTeam($team->id))
+                                                <div id="team-description-input" style="display: none; width: 460px; float: left">
+                                                    <div style="float: left">
+                                                        <input type="text" id="team_description_value" class="form-control" value="{{ $team->description }}">
+                                                    </div>
+                                                    <div style="float: left">
+                                                        <a class="btn btn-primary btn-icon btn-circle btn-sm"
+                                                           id="submit-team-description" style="margin: 4px">
+                                                            <i class="fa fa-check"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            @endif
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td class="field">Entrar</td>
@@ -145,18 +186,6 @@
             App.init();
         });
 
-        $('#ativar-jogador').click(function() {
-
-            var battletag = $('#battletag').val();
-
-            // Ativa
-            if ( ativarJogador( battletag ) ) {
-
-            }
-            else {
-
-            }
-        });
 
         $('#change-picture').click(function() {
             $('#upload-picture').click();
@@ -183,13 +212,45 @@
             aproveRequest(user_id, team_id);
         });
 
-        @if($team->gamer)
-            $('#update-gamer').click(function() {
-                var battletag = '{{ $team->gamer->battletag }}';
+        $('#edit-team-title').click(function () {
 
-                ativarJogador( battletag );
-            });
-        @endif
+            // Esconde o nome
+            $('#team-title').hide();
+
+            // Abre o input
+            $('#team-title-input').show();
+        });
+
+        $('#submit-team-title').click(function () {
+
+            var title = $('#team_title_value').val();
+
+            if (editTeamInfo('{{ $team->id }}', 'title',title) ){
+                setTimeout(function(){
+                    location.reload();
+                }, 3200);
+            }
+        });
+
+        $('#edit-team-description').click(function () {
+
+            // Esconde o nome
+            $('#team-description').hide();
+
+            // Abre o input
+            $('#team-description-input').show();
+        });
+
+        $('#submit-team-description').click(function () {
+
+            var title = $('#team_description_value').val();
+
+            if (editTeamInfo('{{ $team->id }}', 'description',title) ){
+                setTimeout(function(){
+                    location.reload();
+                }, 3200);
+            }
+        });
     </script>
 @endsection
 

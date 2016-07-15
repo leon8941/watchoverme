@@ -66,7 +66,10 @@ class TeamsController extends Controller
 
                         if (!empty($val))
                             return '<a href="'.route('teams.show',[$row->getSrc()->slug]).'">'
-                                . '<img src="'.Team::$avatar_dir . $val .'" width="180px"></a>';
+                                . '<img src="'.getTeamAvatar($val) .'" width="180px"></a>';
+                        else
+                            return '<a href="'.route('teams.show',[$row->getSrc()->slug]).'">'
+                            . '<img src="'.getTeamAvatar() .'" width="180px"></a>';
                     }),
                 (new FieldConfig('title'))
                     ->setLabel('Time')
@@ -129,7 +132,7 @@ class TeamsController extends Controller
         $grid = (new Grid($config))->render();
 
         SEO::setTitle('Times brasileiros de OverWatch');
-        SEO::setDescription('As principais equipes, cl�s e times de Overwatch do Brasil, encontre o seu time.');
+        SEO::setDescription('As principais equipes, clãs e times de Overwatch do Brasil, encontre o seu time.');
         SEO::opengraph()->setUrl('http://watchoverme.com.br/teams');
         //SEO::setCanonical('https://codecasts.com.br/lesson');
         SEO::opengraph()->addProperty('type', 'articles');
@@ -284,5 +287,41 @@ class TeamsController extends Controller
 
             return redirect()->route('teams.index')->with('message', 'Time criado com sucesso!');;
         }
+    }
+
+    /**
+     * Update team info.
+     *
+     * @param  Request  $request
+     * @return Response
+     */
+    public function update(Request $request, $team_id)
+    {
+        $response = [
+            'status' => '503',
+            'title' => 'Erro ao editar!',
+            'msg' => 'Ocorreu um erro e as informações não foram salvas.'
+        ];
+
+        if (!$request->field || !$request->value)
+            return Response::json($response);
+
+        $data = Input::only('field','value');
+
+        $new_info[$data['field']] = $data['value'];
+
+        $team = Team::where('id',$team_id)
+            ->update($new_info);
+
+        if ($team) {
+            $response = [
+                'status' => '200',
+                'title' => 'Time editado com sucesso!',
+                'msg' => 'As informações foram salvas com sucesso.<br>Obs: No caso de alterações no nome do time, '
+                    . 'a url será mantida. '
+            ];
+        }
+
+        return Response::json($response);
     }
 }

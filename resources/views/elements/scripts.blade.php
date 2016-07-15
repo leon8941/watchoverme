@@ -111,4 +111,33 @@
         });
     }
 
+
+    function editTeamInfo(team_id, field, value) {
+
+        return $.ajax({
+            url: "{{ url('teams') }}/" + team_id,
+            dataType: "html",
+            type: "PUT",
+            data: {
+                field: field,
+                value: value,
+                _token: '{{ csrf_token() }}',
+            }
+        }).done(function(data) {
+
+            //console.debug(data);
+
+            var obj = JSON.parse(data);
+
+            $.gritter.add({
+                title: obj.title,
+                text: obj.msg,
+                sticky:true,
+            });
+
+            return obj.status == '200'? true : false;
+        });
+
+
+    }
 </script>

@@ -37,6 +37,7 @@ class PagesController extends Controller
 
         // Last updated players
         $updated_players = Gamer::orderBy('updated_at', 'DESC')
+            ->with('user')
             ->take(6)->get();
 
         // New registered users
