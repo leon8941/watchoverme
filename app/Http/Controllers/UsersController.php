@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
 use SEO;
+use Sitemap;
+use OpenGraph;
+use SEOMeta;
 
 class UsersController extends Controller
 {
