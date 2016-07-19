@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use SEO;
 use Sitemap;
+use OpenGraph;
+use SEOMeta;
+
 
 class PostsController extends Controller
 {
@@ -18,11 +21,27 @@ class PostsController extends Controller
         $post = Posts::where('slug',$slug)
             ->firstOrFail();
 
-        SEO::setTitle($post->title);
-        SEO::setDescription($post->description);
-        SEO::opengraph()->setUrl('http://watchoverme.com.br/events');
+        //SEO::setTitle($post->title);
+        //SEO::setDescription($post->description);
+        //SEO::opengraph()->setUrl('http://watchoverme.com.br/posts/' . $post->slug);
         //SEO::setCanonical('https://codecasts.com.br/lesson');
-        SEO::opengraph()->addProperty('type', 'articles');
+        //SEO::opengraph()->addProperty('type', 'articles');
+
+        SEOMeta::setTitle($post->title);
+        SEOMeta::setDescription($post->description . ' - Notícias OverWatch - O Verme');
+        SEOMeta::setCanonical('http://watchoverme.com.br/posts/' . $post->slug);
+        SEOMeta::addMeta('article:published_time', $post->created_at->toW3CString(), 'property');
+        //SEOMeta::addMeta('article:section', $post->category, 'property');
+        //SEOMeta::addKeyword(['key1', 'key2', 'key3']);
+
+        OpenGraph::setDescription($post->description);
+        OpenGraph::setTitle($post->title);
+        OpenGraph::setUrl('http://www.watchoverme.com.br/posts/' . $post->slug);
+        OpenGraph::addProperty('type', 'article');
+        OpenGraph::addProperty('locale', 'pt-br');
+        OpenGraph::addProperty('locale:alternate', ['pt-pt', 'en-us']);
+
+        OpenGraph::addImage(getPostImage($post->image));
 
         Sitemap::addTag(route('posts.show', $post->slug), $post->updated_at, 'daily', '0.8');
 

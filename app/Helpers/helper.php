@@ -62,14 +62,6 @@ function isActive($page) {
 
 function getUserImage($avatar = false)
 {
-    if ($avatar) {
-
-        $full_dir = \App\User::$avatar_dir . $avatar;
-
-        if (\Illuminate\Support\Facades\File::exists($full_dir))
-            return $full_dir;
-    }
-
     $random_images = [
         'assets/img/user-1.jpg',
         'assets/img/user-2.jpg',
@@ -81,7 +73,13 @@ function getUserImage($avatar = false)
         'assets/img/user-8.jpg',
     ];
 
-    return $random_images[rand(0,7)];
+    if (!$avatar)
+        return $random_images[rand(0,7)];
+
+    $full_dir = \App\User::$avatar_dir . $avatar;
+
+    if (\Illuminate\Support\Facades\File::exists($full_dir))
+        return $full_dir;
 }
 
 function getRegion($from) {
@@ -91,24 +89,37 @@ function getRegion($from) {
 
 function getUserAvatar($avatar) {
 
-    if ($avatar) {
-        $full_dir = \App\User::$avatar_dir . $avatar;
+    if (!$avatar)
+        return asset('assets/img/profile-cover.jpg');
 
-        if (\Illuminate\Support\Facades\File::exists($full_dir))
-            return asset($full_dir);
-    }
+    $full_dir = \App\User::$avatar_dir . $avatar;
 
-    return asset('assets/img/profile-cover.jpg');
+    if (\Illuminate\Support\Facades\File::exists($full_dir))
+        return asset($full_dir);
 }
 
 function getTeamAvatar($avatar = false) {
 
-    if ($avatar) {
-        $full_dir = \App\Team::$avatar_dir . $avatar;
+    if (!$avatar)
+        return asset('img/team.jpg');
 
-        if (\Illuminate\Support\Facades\File::exists($full_dir))
-            return asset($full_dir);
-    }
+    $full_dir = \App\Team::$avatar_dir . $avatar;
 
-    return asset('img/team.jpg');
+    if (\Illuminate\Support\Facades\File::exists($full_dir))
+        return asset($full_dir);
+}
+
+function getPostImage($image = false, $thumb = false) {
+
+    if (!$image)
+        return asset('img/team.jpg');
+
+    if ($thumb)
+        $full_dir = \App\Posts::$image_dir . '/thumb/' . $image;
+    else
+        $full_dir = \App\Posts::$image_dir . $image;
+
+    if (\Illuminate\Support\Facades\File::exists($full_dir))
+        return asset($full_dir);
+
 }

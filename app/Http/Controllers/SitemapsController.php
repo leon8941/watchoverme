@@ -23,6 +23,7 @@ class SitemapsController extends Controller
         Sitemap::addSitemap(URL::route('sitemaps.posts'));
         Sitemap::addSitemap(route('sitemaps.users'));
         Sitemap::addSitemap(route('sitemaps.teams'));
+        //Sitemap::addSitemap(route('sitemaps.gamers'));
 
         // Return the sitemap to the client.
         return Sitemap::index();
@@ -49,7 +50,6 @@ class SitemapsController extends Controller
 
         return Sitemap::render();
     }
-
 
     public function teams()
     {

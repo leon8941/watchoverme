@@ -21,7 +21,7 @@
             <div class="post-left">
                 <!-- begin profile-image -->
                 <div class="post-image">
-                    <img src="{{ asset($post->image) }}" width="272px">
+                    <img src="{{ getPostImage($post->image) }}" width="272px">
                     <i class="fa fa-user hide"></i>
                 </div>
                 <!-- end profile-image -->

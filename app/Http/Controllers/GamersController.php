@@ -154,7 +154,7 @@ class GamersController extends Controller
         $grid = (new Grid($config))->render();
 
         SEO::setTitle('Ranking brasileiro de Overwatch | Watch OVerme');
-        SEO::setDescription('Lista de jogadores brasileiros de Overwatch, Ranking nacional');
+        SEO::setDescription('Ranking nacional de OverWatch - Lista dos melhores jogadores brasileiros rankeados no Overwatch, Ranking Competitvo, Ranking Quick Match');
         SEO::opengraph()->setUrl('http://watchoverme.com.br/gamers');
         //SEO::setCanonical('https://codecasts.com.br/lesson');
         SEO::opengraph()->addProperty('type', 'articles');

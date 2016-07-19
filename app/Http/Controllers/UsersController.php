@@ -35,9 +35,26 @@ class UsersController extends Controller
 
         SEO::setTitle($user->name, ' | ' . 'Watch OVerme');
         SEO::setDescription('Jogador brasileiro de Overwatch ' . $user->name );
-        SEO::opengraph()->setUrl('http://watchoverme.com.br/users/' . $user->slug);
+        //SEO::opengraph()->setUrl('http://watchoverme.com.br/users/' . $user->slug);
         //SEO::setCanonical('https://codecasts.com.br/lesson');
-        SEO::opengraph()->addProperty('type', 'articles');
+        //SEO::opengraph()->addProperty('type', 'articles');
+
+        // TODO: adicionar o nome do gamer?
+        SEOMeta::setTitle($user->name);
+        SEOMeta::setDescription('Perfil do Verme de Overwatch ' . $user->name);
+        SEOMeta::setCanonical('http://watchoverme.com.br/users/' . $user->slug);
+        //SEOMeta::addMeta('article:published_time', $post->created_at->toW3CString(), 'property');
+        //SEOMeta::addMeta('article:section', $post->category, 'property');
+        SEOMeta::addKeyword([$user->slug, $user->name]);
+
+        OpenGraph::setDescription($user->name . ' Perfil de Jogador - O Verme ');
+        OpenGraph::setTitle($user->name);
+        OpenGraph::setUrl('http://www.watchoverme.com.br/users/' . $user->slug);
+        OpenGraph::addProperty('type', 'profile');
+        OpenGraph::addProperty('locale', 'pt-br');
+        OpenGraph::addProperty('locale:alternate', ['pt-pt', 'en-us']);
+
+        OpenGraph::addImage(getUserAvatar($user->avatar));
 
         if ($user->stats) {
             $stats['quick'] = $user->stats->where('mode','quick')->first();

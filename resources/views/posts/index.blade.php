@@ -25,7 +25,7 @@
             <div class="image gallery-group-1">
                 <div class="image-inner">
                     <a href="{{ route('posts.show', [$post->slug]) }}" >
-                        <img src="{{ asset($post->image) }}" alt="" />
+                        <img src="{{ getPostImage($post->image) }}" alt="" />
                     </a>
                     <p class="image-caption">
                         {{ $post->title }}

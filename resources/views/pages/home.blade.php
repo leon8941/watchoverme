@@ -28,7 +28,7 @@
                                 @foreach ($posts as $post)
                                     <li class="media media-lg" style="min-height: 90px;">
                                         <a href="{{ route('posts.show', [$post->slug]) }}" class="pull-left">
-                                            <img src="{{ asset($post->image) }}" alt="" class="media-object" width="206px"
+                                            <img src="{{ getPostImage($post->image) }}" alt="" class="media-object" width="206px"
                                                  style="max-height: 290px" />
                                         </a>
                                         <div class="media-body">
@@ -111,7 +111,10 @@
                             <tbody>
                             @foreach($updated_players as $player)
                                 <tr>
-                                    <td><a href="{{route('users.show',[$player->user->slug]) }}"> {{ $player->battletag }}</a></td>
+                                    <td>
+                                        @if ($player->user)
+                                            <a href="{{route('users.show',[$player->user->slug]) }}"> {{ $player->battletag }}</a></td>
+                                        @endif
                                     <td>
                                         @if ($player->competitive_rank)
                                             {{ $player->competitive_rank }}

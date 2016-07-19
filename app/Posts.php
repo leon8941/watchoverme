@@ -23,7 +23,9 @@ class Posts extends Model implements SluggableInterface {
     protected $dates = ['deleted_at','created_at','updated_at'];
 
     protected $table    = 'posts';
-    
+
+    public static $image_dir = 'uploads/';
+
     protected $fillable = [
           'title',
           'image',
@@ -44,10 +46,14 @@ class Posts extends Model implements SluggableInterface {
         Posts::observe(new UserActionsObserver);
     }
 
-
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function categories()
+    {
+        return $this->belongsToMany('App\Category');
     }
 
     /**
@@ -55,11 +61,11 @@ class Posts extends Model implements SluggableInterface {
      *
      * @param  string  $value
      * @return string
-     */
+
     public function getImageAttribute($value)
     {
-        return 'uploads/' . $value;
-    }
+        return $value;
+    }*/
     
     
     
