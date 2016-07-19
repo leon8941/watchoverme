@@ -60,6 +60,15 @@ class EventsController extends Controller
             )
             ->setPageSize(50)
             ->setColumns([
+                (new FieldConfig('image'))
+                    ->setLabel(' ')
+                    ->setCallback(function ($val, \Nayjest\Grids\EloquentDataRow $row) {
+
+                        $event = $row->getSrc();
+
+                        return '<a href="'.$event->url.'">'.
+                            '<img src="'.asset('uploads/'.$event->image).'" width="240px"></a>';
+                    }),
                 (new FieldConfig('title'))
                     ->addFilter(getFilterILike('title'))
                     ->setLabel('Evento')
@@ -73,7 +82,7 @@ class EventsController extends Controller
                     ->setLabel('Streamer')
                     ->setCallback(function ($val, \Nayjest\Grids\EloquentDataRow $row) {
 
-                        return '<a href="'.$val.'">' . $val . ' <i class="fa fa-external-link"></i></a>';
+                        return '<a href="'.$val.'"><i class="fa fa-caret-square-o-right"></i></a>';
                     }),
                 (new FieldConfig('from'))
                     ->setSortable(true)
@@ -132,5 +141,15 @@ class EventsController extends Controller
         $grid = (new Grid($config))->render();
 
         return view('events.index', compact('grid'));
+    }
+
+    public function get()
+    {
+
+        $events = Event::
+            select('starts as start','title')
+            ->get();
+
+        return Response::json($events);
     }
 }

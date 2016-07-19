@@ -58,6 +58,7 @@
                                     <th>Evento</th>
                                     <th>Região</th>
                                     <th>Descrição</th>
+                                    <th>Stream</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -74,6 +75,11 @@
                                         </td>
                                         <td>{{ getRegion($event->from) }}</td>
                                         <td>{{ $event->description }}</td>
+                                        <td>
+                                            @if ($event->streamer)
+                                                <a href="{{ $event->streamer }}" target="_blank"><i class="fa fa-caret-square-o-right"></i></a>
+                                            @endif
+                                        </td>
                                     </tr>
                                 @endforeach
                                 </tbody>
@@ -148,11 +154,10 @@
                         <h4 class="panel-title">Calendário</h4>
                     </div>
                     <div class="panel-body">
-                        <!--<div id="datepicker-inline" class="datepicker-full-width"><div></div></div>-->
-                        <i>em breve.</i>
+                        <div id="calendar"></div>
                         <br>
                         <div class="panel-footer text-center">
-                            <a href="{{ route('events.index') }}" class="text-inverse">Lista de Eventos</a>
+                            <a href="{{ route('events.index') }}" class="text-inverse">Ver Eventos</a>
                         </div>
                     </div>
                 </div>
@@ -189,13 +194,23 @@
 @endsection
 
 @section('scripts')
+    @include('elements.scripts')
     <script src="{{ asset('assets/plugins/isotope/jquery.isotope.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/lightbox/js/lightbox-2.6.min.js') }}"></script>
+
+    <script src="{{ asset('js/moment/moment.js') }}"></script>
+    <script src="{{ asset('js/fullcalendar/fullcalendar.min.js') }}"></script>
+    <link href="{{ asset('css/fullcalendar/fullcalendar.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/fullcalendar/fullcalendar.print.css') }}" rel="stylesheet" type="text/css">
+
     <script src="{{ asset('assets/js/gallery.demo.min.js') }}"></script>
     <script>
         $(document).ready(function() {
             App.init();
             Gallery.init();
+
+            getEvents();
+
         });
     </script>
 @endsection

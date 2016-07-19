@@ -40,6 +40,9 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('sitemaps/users',['as' => 'sitemaps.users', 'uses' => 'SitemapsController@users']);
     Route::get('sitemaps/posts',['as' => 'sitemaps.posts', 'uses' => 'SitemapsController@posts']);
     Route::get('sitemaps/teams',['as' => 'sitemaps.teams', 'uses' => 'SitemapsController@teams']);
+
+    // Events
+    Route::get('events.get',['as' => 'events.get', 'uses' => 'EventsController@get']);
 });
 
 //Route::auth();

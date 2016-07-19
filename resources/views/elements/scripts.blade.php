@@ -137,7 +137,32 @@
 
             return obj.status == '200'? true : false;
         });
+    }
 
+    // Get current events
+    function getEvents() {
 
+        $.ajax({
+            url: "{{ url('events.get') }}",
+            dataType: "html",
+            type: "GET",
+        }).done(function(data) {
+
+            //console.debug(data);
+
+            var events = JSON.parse(data);
+
+            $('#calendar').fullCalendar({
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,agendaWeek,agendaDay'
+                },
+                defaultDate: '{{ Carbon\Carbon::now()->toDateString() }}',
+                editable: true,
+                eventLimit: true, // allow "more" link when too many events
+                events: events
+            });
+        });
     }
 </script>

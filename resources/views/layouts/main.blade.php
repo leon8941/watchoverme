@@ -25,7 +25,7 @@
 
     <!-- ================== BEGIN PAGE LEVEL CSS STYLE ================== -->
     <link href="{{ asset('assets/plugins/jquery-jvectormap/jquery-jvectormap-1.2.2.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('assets/plugins/bootstrap-calendar/css/bootstrap_calendar.css') }}" rel="stylesheet" type="text/css">
+    <!--<link href="{{ asset('assets/plugins/bootstrap-calendar/css/bootstrap_calendar.css') }}" rel="stylesheet" type="text/css">-->
     <link href="{{ asset('assets/plugins/gritter/css/jquery.gritter.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('assets/plugins/morris/morris.css') }}" rel="stylesheet" type="text/css">
     <!-- ================== END PAGE LEVEL CSS STYLE ================== -->
@@ -222,7 +222,7 @@
     <script src="{{ asset('assets/plugins/morris/raphael.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/morris/morris.js') }}"></script>
     <script src="{{ asset('assets/plugins/jquery-jvectormap/jquery-jvectormap-1.2.2.min.js') }}"></script>
-    <script src="{{ asset('assets/plugins/bootstrap-calendar/js/bootstrap_calendar.min.js') }}"></script>
+    <!--<script src="{{ asset('assets/plugins/bootstrap-calendar/js/bootstrap_calendar.min.js') }}"></script>-->
     <script src="{{ asset('assets/plugins/gritter/js/jquery.gritter.js') }}"></script>
     <script src="{{ asset('assets/js/dashboard-v2.min.js') }}"></script>
 
