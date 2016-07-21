@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\URL;
 use SEO;
 use Sitemap;
+use OpenGraph;
+use SEOMeta;
 
 class PagesController extends Controller
 {
@@ -25,11 +27,21 @@ class PagesController extends Controller
 
     public function home()
     {
-        SEO::setTitle('Notícias');
-        SEO::setDescription('Últimas notícias de Overwatch, campeonatos, eventos e vídeos.');
-        SEO::opengraph()->setUrl('http://watchoverme.com.br');
-        //SEO::setCanonical('https://codecasts.com.br/lesson');
-        SEO::opengraph()->addProperty('type', 'articles');
+        SEOMeta::setTitle('Home - O Verme');
+        SEOMeta::setDescription('Últimas notícias de Overwatch, campeonatos, eventos e vídeos.');
+        SEOMeta::setCanonical('http://watchoverme.com.br/');
+        SEOMeta::addKeyword(['notícias', 'overwatch', 'o verme', 'verme', 'campeonatos overwatch', 'ranking overwatch', 'ranking nacional']);
+
+        OpenGraph::setDescription('Últimas notícias de Overwatch, campeonatos, eventos e vídeos.');
+        OpenGraph::setTitle('Home - O Verme');
+        OpenGraph::setUrl('http://www.watchoverme.com.br/');
+        //OpenGraph::addProperty('type', 'article');
+        OpenGraph::addProperty('locale', 'pt-br');
+        OpenGraph::addProperty('locale:alternate', ['pt-pt', 'en-us']);
+
+        OpenGraph::addImage(asset('img/o-verme-jim.jpg'));
+
+        Sitemap::addTag(route('home'), '', 'daily', '0.8');
 
         // Last Posts
         $posts = Posts::orderBy('created_at','DESC')

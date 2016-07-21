@@ -66,12 +66,13 @@ class TeamsController extends Controller
 
                         if (!empty($val))
                             return '<a href="'.route('teams.show',[$row->getSrc()->slug]).'">'
-                                . '<img src="'.getTeamAvatar($val) .'" width="180px"></a>';
+                                . '<img src="'.getTeamAvatar($val) .'" width="120px"></a>';
                         else
                             return '<a href="'.route('teams.show',[$row->getSrc()->slug]).'">'
-                            . '<img src="'.getTeamAvatar() .'" width="180px"></a>';
+                            . '<img src="'.getTeamAvatar() .'" width="120px"></a>';
                     }),
                 (new FieldConfig('title'))
+                    ->addFilter(getFilterILike('title'))
                     ->setLabel('Time')
                     ->setSortable(true)
                     ->setCallback(function ($val, \Nayjest\Grids\EloquentDataRow $row) {

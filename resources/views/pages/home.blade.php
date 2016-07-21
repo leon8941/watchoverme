@@ -89,6 +89,48 @@
 
                 </div>
 
+                <ul class="nav nav-tabs nav-justified nav-justified-mobile" data-sortable-id="index-2">
+                    <li class="active"><a href="#parceiros" data-toggle="tab"><i class="fa fa-glass m-r-5"></i> <span class="hidden-xs">Parceiros</span></a></li>
+                </ul>
+                <div class="tab-content" data-sortable-id="index-3">
+                    <div class="tab-pane fade active in" id="parceiros">
+                        <div class="height-250" data-scrollbar="true">
+                            <ul class="media-list media-list-with-divider">
+                                <li class="media media-sm">
+                                    <a href="javascript:;" class="pull-left">
+                                        <img src="{{ asset('img/partners/best-gamers.png') }}" alt="" class="" width="160px"/>
+                                    </a>
+                                    <div class="media-body">
+                                        <a href="javascript:;"><h4 class="media-heading">BestGamers</h4></a>
+                                        <p class="m-b-5">
+                                            Uma das maiores e melhores lojas para gamers do Brasil
+                                        </p>
+                                        <i class="text-muted">
+                                            <a href="bestgamers.com.br"
+                                               target="_blank">www.BestGamers.com.br</a>
+                                        </i>
+                                    </div>
+                                </li>
+                                <li class="media media-sm">
+                                    <a href="javascript:;" class="pull-left">
+                                        <img src="{{ asset('img/partners/gaming-room.png') }}" alt="" class="" width="160px"/>
+                                    </a>
+                                    <div class="media-body">
+                                        <a href="javascript:;"><h4 class="media-heading">Gaming Room</h4></a>
+                                        <p class="m-b-5">
+                                            Gaming Room é um canal de debate de games que começa a ganhar volume no YouTube.
+                                        </p>
+                                        <i class="text-muted">
+                                            <a href="https://www.youtube.com/channel/UC4JKcRevcfS1cKDwmYY4acg"
+                                               target="_blank">Gaming Room YouTube channel</a>
+                                        </i>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <!-- end col-8 -->
             <!-- begin col-4 -->
@@ -189,6 +231,7 @@
             <!-- end col-4 -->
         </div>
         <!-- end row -->
+
     </div>
     <!-- end #content -->
 @endsection

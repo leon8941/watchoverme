@@ -52,8 +52,6 @@
     <meta name="msapplication-TileImage" content="{{ asset('ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#ffffff">
 
-    <title>Watch OverMe</title>
-
 </head>
 <body>
 
@@ -71,8 +69,8 @@
                 <div class="navbar-header">
                     <div style="float:left; min-width: 400px">
                         <a href="{{ route('home') }}" class="navbar-brand">
-                            <div style="float:left; padding-right: 6px"><img src="{{ asset('img/watchoverme.jpg') }}" width="30px"></div>
-                            <div>Watch OverMe</div>
+                            <div style="float:left; padding-right: 6px"><img src="{{ asset('img/o-verme-jim.jpg') }}" width="30px"></div>
+                            <div>O Verme</div>
                         </a>
                         <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
                             <span class="icon-bar"></span>
