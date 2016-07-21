@@ -106,7 +106,7 @@
                                             Uma das maiores e melhores lojas para gamers do Brasil
                                         </p>
                                         <i class="text-muted">
-                                            <a href="bestgamers.com.br"
+                                            <a href="http://www.bestgamers.com.br"
                                                target="_blank">www.BestGamers.com.br</a>
                                         </i>
                                     </div>
