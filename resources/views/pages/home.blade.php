@@ -97,7 +97,8 @@
                         <div class="height-250" data-scrollbar="true">
                             <ul class="media-list media-list-with-divider">
                                 <li class="media media-sm">
-                                    <a href="javascript:;" class="pull-left">
+                                    <a href="http://www.bestgamers.com.br"
+                                       target="_blank" class="pull-left">
                                         <img src="{{ asset('img/partners/best-gamers.png') }}" alt="" class="" width="160px"/>
                                     </a>
                                     <div class="media-body">
@@ -112,7 +113,8 @@
                                     </div>
                                 </li>
                                 <li class="media media-sm">
-                                    <a href="javascript:;" class="pull-left">
+                                    <a href="https://www.youtube.com/channel/UC4JKcRevcfS1cKDwmYY4acg"
+                                       target="_blank" class="pull-left">
                                         <img src="{{ asset('img/partners/gaming-room.PNG') }}" alt="" class="" width="160px"/>
                                     </a>
                                     <div class="media-body">
