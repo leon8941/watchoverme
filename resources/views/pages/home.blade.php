@@ -123,8 +123,8 @@
                                             Gaming Room é um canal de debate de games que começa a ganhar volume no YouTube.
                                         </p>
                                         <i class="text-muted">
-                                            <a href="https://www.youtube.com/channel/UC4JKcRevcfS1cKDwmYY4acg"
-                                               target="_blank">Gaming Room YouTube channel</a>
+                                            <a href="www.gamingroom.net"
+                                               target="_blank">www.GamingRoom.net</a>
                                         </i>
                                     </div>
                                 </li>
