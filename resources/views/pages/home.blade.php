@@ -113,7 +113,7 @@
                                 </li>
                                 <li class="media media-sm">
                                     <a href="javascript:;" class="pull-left">
-                                        <img src="{{ asset('img/partners/gaming-room.png') }}" alt="" class="" width="160px"/>
+                                        <img src="{{ asset('img/partners/gaming-room.PNG') }}" alt="" class="" width="160px"/>
                                     </a>
                                     <div class="media-body">
                                         <a href="javascript:;"><h4 class="media-heading">Gaming Room</h4></a>
