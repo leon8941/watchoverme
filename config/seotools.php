@@ -6,16 +6,18 @@ return [
          * The default configurations to be used by the meta generator.
          */
         'defaults'       => [
-            'title'        => "Watch OVerMe", // set false to total remove
-            'description'  => 'A mais nova comunidade brasileira de Overwatch', // set false to total remove
+            'title'        => "O Verme", // set false to total remove
+            'description'  => 'Comunidade brasileira de Overwatch', // set false to total remove
             'separator'    => ' - ',
             'keywords'     => [
                 'overwatch',
                 'verme',
-                'overme',
                 'campeonatos',
+                'torneios',
+                'inhouse',
                 'notícias',
                 'ranking',
+                'brasileiro',
                 'api',
                 'stats',
                 'estatísticas',
@@ -39,12 +41,12 @@ return [
          * The default configurations to be used by the opengraph generator.
          */
         'defaults' => [
-            'title'       => 'Watch OVerMe', // set false to total remove
-            'description' => 'A mais nova comunidade brasileira de Overwatch', // set false to total remove
+            'title'       => 'O Verme', // set false to total remove
+            'description' => 'Comunidade brasileira de Overwatch', // set false to total remove
             'url'         => 'www.watchoverme.com.br',
             'type'        => false,
-            'site_name'   => true,
-            'images'      => ['http://watchoverme.com.br/img/watchoverme.jpg'],
+            'site_name'   => 'O Verme',
+            'images'      => ['http://watchoverme.com.br/img/verme.png'],
         ],
     ],
     'twitter' => [

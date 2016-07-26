@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-        <!-- begin #content -->
+    <!-- begin #content -->
     <div id="content" class="content">
         <!-- begin breadcrumb -->
         <ol class="breadcrumb pull-right">
@@ -113,7 +113,7 @@
                                     </div>
                                 </li>
                                 <li class="media media-sm">
-                                    <a href="https://www.youtube.com/channel/UC4JKcRevcfS1cKDwmYY4acg"
+                                    <a href="www.gamingroom.net"
                                        target="_blank" class="pull-left">
                                         <img src="{{ asset('img/partners/gaming-room.PNG') }}" alt="" class="" width="160px"/>
                                     </a>

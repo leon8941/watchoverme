@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class Gamer extends Model
 {
@@ -40,6 +41,17 @@ class Gamer extends Model
         return $this->belongsTo('App\User');
     }
 
+    public function inhouser()
+    {
+        return $this->hasOne('App\Inhouser');
+    }
+
+    // Matchs
+    public function matchs()
+    {
+        return $this->belongsToMany('App\Match','gamer_match')->withPivot('team');
+    }
+
     /**
      * Get users ranking of RH Staff
      */
@@ -67,5 +79,16 @@ class Gamer extends Model
         $key = $users->search( $user->points );
 
         return $key + 1;
+    }
+
+    // Get the current user gamer
+    public static function getGamer()
+    {
+        $gamer = Gamer::where('user_id',Auth::user()->id)->first();
+
+        if (!$gamer || $gamer->count() <= 0)
+            return false;
+
+        return $gamer;
     }
 }

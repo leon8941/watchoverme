@@ -27,13 +27,11 @@ class PagesController extends Controller
 
     public function home()
     {
-        SEOMeta::setTitle('Home - O Verme');
-        SEOMeta::setDescription('Últimas notícias de Overwatch, campeonatos, eventos e vídeos.');
+        SEOMeta::setDescription('Últimas notícias de Overwatch, campeonatos, eventos, vídeos e tudo sobre a comunidade de Overwatch.');
         SEOMeta::setCanonical('http://watchoverme.com.br/');
         SEOMeta::addKeyword(['notícias', 'overwatch', 'o verme', 'verme', 'campeonatos overwatch', 'ranking overwatch', 'ranking nacional']);
 
-        OpenGraph::setDescription('Últimas notícias de Overwatch, campeonatos, eventos e vídeos.');
-        OpenGraph::setTitle('Home - O Verme');
+        OpenGraph::setDescription('Últimas notícias de Overwatch, campeonatos, eventos e vídeos e tudo sobre a comunidade de Overwatch.');
         OpenGraph::setUrl('http://www.watchoverme.com.br/');
         //OpenGraph::addProperty('type', 'article');
         OpenGraph::addProperty('locale', 'pt-br');
@@ -45,6 +43,7 @@ class PagesController extends Controller
 
         // Last Posts
         $posts = Posts::orderBy('created_at','DESC')
+            ->take(8)
             ->get();
 
         // Last updated players
@@ -57,7 +56,7 @@ class PagesController extends Controller
             ->take(8)->get();
 
         $date = new \DateTime();
-        $date->modify('-6 days');
+        $date->modify('-30 days');
         $formatted_date = $date->format('Y-m-d H:i:s');
 
         // New users amount

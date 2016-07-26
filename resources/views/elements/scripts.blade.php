@@ -165,4 +165,28 @@
             });
         });
     }
+
+    // Get current events
+    function inviteGamerToInhouse(gamer_id, element) {
+
+        $.ajax({
+            url: "{{ route('inhouse.invite') }}",
+            dataType: "html",
+            type: "POST",
+            data: {
+                _token: '{{ csrf_token() }}',
+                gamer_id: gamer_id
+            }
+        }).done(function(data) {
+
+            var obj = JSON.parse(data);
+
+            if (obj.code == '1') {
+                alert('Vouch enviado com sucesso.');
+
+                setTime
+            }
+
+        });
+    }
 </script>

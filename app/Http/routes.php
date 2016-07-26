@@ -16,7 +16,7 @@ Route::group(['middleware' => ['web']], function () {
     //Route::auth();
 
     Route::get('/',['as' => 'home', 'uses' => 'PagesController@home']);
-    Route::get('home',['as' => 'home', 'uses' => 'PagesController@home']);
+    //Route::get('home',['as' => 'home', 'uses' => 'PagesController@home']);
 
     // API consuming
     Route::get('consult',['as' => 'consult', 'uses' => 'PagesController@consult']);
@@ -51,6 +51,9 @@ Route::auth();
 
 Route::group(['middleware' => ['auth']], function () {
 
+
+    //Route::resource('inhouse','InhouseController');
+
     // Users
     Route::resource('users','UsersController');
 
@@ -64,4 +67,38 @@ Route::group(['middleware' => ['auth']], function () {
 
     // Create Team
     Route::get('teams/create',['as' => 'teams.create', 'uses' => 'TeamsController@create']);
+
+    // Inhouse auth
+    Route::post('pusher/auth', function (Illuminate\Http\Request $request, Pusher $pusher) {
+        return $pusher->presence_auth(
+            $request->input('channel_name'),
+            $request->input('socket_id'),
+            uniqid(),
+            //['username' => $request->input('username')]
+            ['username' => 'souto']
+        );
+    });
+
+    // Inhouse
+    //Route::get('/chat', '\App\Http\Controllers\Chat\ChatController@getChat');
+    //Route::get('/login', '\App\Http\Controllers\Chat\ChatController@getLogin');
+    Route::get('messages', ['as' => 'messages', 'uses' => 'InhouseController@listMessages']);
+    Route::post('/messages', 'InhouseController@saveMessage');
+
+    Route::get('inhouse/entrar', ['as' => 'inhouse.entrar', 'uses' => 'InhouseController@join']);
+    Route::get('inhouse/ranking', ['as' => 'inhouse.ranking', 'uses' => 'InhouseController@ranking']);
+    Route::get('inhouse/', ['as' => 'inhouse', 'uses' => 'InhouseController@index']);
+
+    Route::get('inhouse/invite', ['as' => 'inhouse.invite', 'uses' => 'InhouseController@invite']);
+    Route::post('inhouse/invite',['as' => 'inhouse.invite', 'uses' => 'InhouseController@doInvite']);
+
+    //tests
+    Route::get('inhouse/tests', ['as' => 'inhouse.tests', 'uses' => 'InhouseController@tests']);
 });
+
+
+
+// Pusher auth
+//Route::post('pusher/auth',['as' => 'pusher/auth', 'uses' => 'InhouseController@auth']);
+//Route::get('pusher/auth',['as' => 'pusher/auth', 'uses' => 'InhouseController@auth']);
+

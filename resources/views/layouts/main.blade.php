@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <!-- start: Mobile Specific -->
@@ -52,6 +51,11 @@
     <meta name="msapplication-TileImage" content="{{ asset('ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#ffffff">
 
+    <script src="{{ asset('assets/plugins/jquery/jquery-1.9.1.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/jquery/jquery-migrate-1.1.0.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/jquery-ui/ui/minified/jquery-ui.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+
 </head>
 <body>
 
@@ -68,9 +72,9 @@
                 <!-- begin mobile sidebar expand / collapse button -->
                 <div class="navbar-header">
                     <div style="float:left; min-width: 400px">
-                        <a href="{{ route('home') }}" class="navbar-brand">
-                            <div style="float:left; padding-right: 6px"><img src="{{ asset('img/o-verme-jim.jpg') }}" width="30px"></div>
-                            <div>O Verme</div>
+                        <a href="{{ route('home') }}" class="navbar-brand" style="padding-left: 26px; padding-top: 2px">
+                            <div style="float:left; padding-right: 6px"><img src="{{ asset('img/verme-word.png') }}" width="122px"></div>
+                            <div></div>
                         </a>
                         <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
                             <span class="icon-bar"></span>
@@ -209,13 +213,7 @@
     <!-- end page container -->
 
     <!-- ================== BEGIN BASE JS ================== -->
-    <script src="{{ asset('assets/plugins/jquery/jquery-1.9.1.min.js') }}"></script>
-    <script src="{{ asset('assets/plugins/jquery/jquery-migrate-1.1.0.min.js') }}"></script>
-    <script src="{{ asset('assets/plugins/jquery-ui/ui/minified/jquery-ui.min.js') }}"></script>
-    <script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('assets/crossbrowserjs/html5shiv.js') }}"></script>
-    <script src="{{ asset('assets/crossbrowserjs/respond.min.js') }}"></script>
-    <script src="{{ asset('assets/crossbrowserjs/excanvas.min.js') }}"></script>
+
     <script src="{{ asset('assets/plugins/slimscroll/jquery.slimscroll.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/morris/raphael.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/morris/morris.js') }}"></script>

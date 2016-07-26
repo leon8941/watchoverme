@@ -81,9 +81,6 @@
 
 @section('scripts')
 
-        <!-- ================== BEGIN PAGE LEVEL JS ================== -->
-    <script src="assets/js/apps.min.js"></script>
-    <!-- ================== END PAGE LEVEL JS ================== -->
 
     <script>
         $(document).ready(function() {

@@ -181,8 +181,10 @@ return [
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
 
         // Site map
-        'Watson\Sitemap\SitemapServiceProvider'
+        'Watson\Sitemap\SitemapServiceProvider',
 
+        // Pusher
+        Vinkla\Pusher\PusherServiceProvider::class
     ],
 
     /*
@@ -251,7 +253,10 @@ return [
         'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
 
         // Sitemap
-        'Sitemap' => 'Watson\Sitemap\Facades\Sitemap'
+        'Sitemap' => 'Watson\Sitemap\Facades\Sitemap',
+
+        // Pusher
+        'LaravelPusher' => Vinkla\Pusher\Facades\Pusher::class
     ],
 
 ];

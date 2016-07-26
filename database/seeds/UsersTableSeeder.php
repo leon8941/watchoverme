@@ -27,5 +27,11 @@ class UsersTableSeeder extends Seeder
             'email' => 'lithiumbloodthirst@gmail.com'
         ]);
 
+        $inhouse_bot = \App\User::create([
+            'id' => '666',
+            'name' => 'InHouse Bot',
+            'password' => \Illuminate\Support\Facades\Hash::make('12345'),
+            'email' => 'staff@watchoverme.com.br'
+        ]);
     }
 }
