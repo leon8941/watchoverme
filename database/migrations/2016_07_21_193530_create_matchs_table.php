@@ -18,6 +18,7 @@ class CreateMatchsTable extends Migration
             $table->unsignedInteger("user_id"); // Criador
             $table->smallInteger("status"); // 1 - aberta, 2 - picking, 3 - jogando , 4 - encerrada, 5 - contestada,
             $table->string("winner")->nullable(); // Time A ou B
+            $table->smallInteger("rating")->default('0'); // avg rating of match
 
             $table->timestamps();
             $table->softDeletes();

@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class Gamer extends Model
 {
@@ -90,5 +91,22 @@ class Gamer extends Model
             return false;
 
         return $gamer;
+    }
+
+    /**
+     * Is gamer in a match?
+     *
+     * @param $match_id
+     * @param $gamer_id
+     * @return mixed
+     */
+    public static function isOnMatch($match_id, $gamer_id)
+    {
+        $exists = DB::table("gamer_match")
+            ->where("match_id",$match_id)
+            ->where('gamer_id', $gamer_id)
+            ->first();
+
+        return $exists? true : false;
     }
 }

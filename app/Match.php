@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Match extends Model
 {
@@ -44,5 +45,33 @@ class Match extends Model
         return $query->where('status','4');
     }
 
+    /**
+     * is Match full ?
+     *
+     * @param $match_id
+     * @return bool
+     */
+    public static function isFull($match_id)
+    {
+        // conta total de jogadores na partida
+        $players = DB::table('gamer_match')
+            ->select('id')
+            ->where('match_id',$match_id)
+            ->count();
 
+        return ($players == 12)? true : false;
+    }
+
+    /**
+     * Get all players in a match
+     *
+     * @param $match_id
+     */
+    public static function getPlayers($match_id)
+    {
+        return DB::table('gamer_match')
+            ->where('match_id', $match_id)
+            ->get();
+
+    }
 }

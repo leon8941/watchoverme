@@ -528,6 +528,13 @@ class InhouseController extends Controller
         return $return;
     }
 
+    /**
+     * Format return of response
+     *
+     * @param $code
+     * @param $msg
+     * @return array
+     */
     public function formatReturn($code, $msg)
     {
         return [
@@ -547,7 +554,7 @@ class InhouseController extends Controller
     }
 
     /**
-     * Execute an Inhouse command
+     * Execute an Inhouse command: user open a new match
      *
      * Can open a match:
      * role > user
@@ -579,7 +586,7 @@ class InhouseController extends Controller
     }
 
     /**
-     * Execute an Inhouse command
+     * Execute an Inhouse command: user closes a match
      *
      */
     public function comClose()
@@ -595,7 +602,7 @@ class InhouseController extends Controller
     }
 
     /**
-     * Execute an Inhouse command
+     * Execute an Inhouse command: user join a match
      *
      */
     public function comJoin()
@@ -604,13 +611,31 @@ class InhouseController extends Controller
         if (!Inhouser::isInhouser(true))
             return false;
 
-        // get gamer
-        $gamer = Gamer::getGamer();
-
         // Get open match
         $match = Match::open()->first();
 
+        if (!$match)
+            return false;
+
+        // Checks if match is full
+        if (Match::isFull($match->id))
+            return false;
+
+        // get gamer
+        $gamer = Gamer::getGamer();
+
+        // Check if user is already on match
+        if (Gamer::isOnMatch($match->id, $gamer->id))
+            return false;
+
+        // ok to enter match
         $gamer->matchs()->attach($match->id);
+
+        // Checks if match is full now
+        if (Match::isFull($match->id)) {
+            // Prepare to initiate match
+            $this->prepareMatch($match->id);
+        }
 
         return true;
     }
@@ -621,7 +646,26 @@ class InhouseController extends Controller
      */
     public function comLeave()
     {
+        // Check if user Can Play
+        if (!Inhouser::isInhouser(true))
+            return false;
 
+        // Get open match
+        $match = Match::open()->first();
+
+        if (!$match)
+            return false;
+
+        // get gamer
+        $gamer = Gamer::getGamer();
+
+        // Check if user is already on match
+        if (!Gamer::isOnMatch($match->id, $gamer->id))
+            return false;
+
+        $gamer->matchs()->detach($match->id);
+
+        return true;
     }
 
     /**
@@ -633,6 +677,70 @@ class InhouseController extends Controller
 
     }
 
+
+    /**
+     * Prepare a match to initiate
+     *
+     * @param $match_id
+     * @return mixed
+     */
+    public function prepareMatch($match_id)
+    {
+        // Change status to "Picking"
+        $match = Match::where('id',$match_id)->update([
+            'status' => '2'
+        ]);
+
+        //
+        $this->defineMatchRating($match_id);
+
+        // Start picking
+        //$this->startPicks();
+    }
+
+    /**
+     * Initiate a match
+     *
+     * @param $match_id
+     * @return mixed
+     */
+    public function initiateMatch($match_id)
+    {
+        return Match::where('id',$match_id)->update([
+            'status' => '3'
+        ]);
+    }
+
+    /**
+     * Calculates the match rating average
+     *
+     * @param $match_id
+     * @return mixed
+     */
+    public function defineMatchRating($match_id)
+    {
+        // get players of the match
+        $gamers = Match::getPlayers($match_id);
+
+        $match_rating = '0';
+        $rating_sum = '0';
+
+        foreach($gamers as $gamer) {
+            $player = new Gamer();
+            $player->id = $gamer->id;
+
+            var_dump($player->inhouser()->id);
+            // Soma o rating do jogador no rating da partida
+            $rating_sum += $gamer->rating;
+        }
+
+        // Divide o total por 12, e acha o rating medio da partida
+        $match_rating = $rating_sum / 12;
+
+        return Match::where('id',$match_id)->update([
+            'rating' => $match_rating
+        ]);
+    }
     public function auth(Request $request, \Pusher $pusher)
     {
         return $pusher->presence_auth(
