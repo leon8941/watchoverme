@@ -39,7 +39,7 @@ class GamersController extends Controller
     {
 
         // Requested to view all?
-        $view_amount = $request->get('all')? '3000' : 60;
+        $view_amount = $request->get('all')? '3000' : 15;
         //$view_amount = $request->get('all')? '3000' : config('verme.default_ranking_page_size');
 
         // If user didnt defined filters or order, define order
@@ -50,21 +50,22 @@ class GamersController extends Controller
                 ->orderBy('competitive_rank','DESC');
         }
         else {
-            /*
-            //$orderBy = $request->query
+            // Checks if there is a sorting request
             if(isset($request->get('Gamers')['sort'])) {
-                $sort = $request->get('Gamers')['sort'];
-                var_dump($sort);exit;
+                $sort_array = $request->get('Gamers')['sort'];
+                reset($sort_array);
+                $sort = key($sort_array);
                 $order = $request->get('Gamers')['sort'][$sort];
             }
             else {
                 $sort = 'competitive_rank';
                 $order = 'DESC';
             }
-*/
+
             // Define Query
             $query = (new Gamer())
-                ->newQuery();
+                ->newQuery()
+                ->orderBy($sort,$order);
         }
 
         // Define query
