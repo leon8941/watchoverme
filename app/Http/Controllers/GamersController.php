@@ -39,7 +39,7 @@ class GamersController extends Controller
     {
 
         // Requested to view all?
-        $view_amount = $request->get('all')? '3000' : 15;
+        $view_amount = $request->get('all')? '3000' : 60;
         //$view_amount = $request->get('all')? '3000' : config('verme.default_ranking_page_size');
 
         // If user didnt defined filters or order, define order
