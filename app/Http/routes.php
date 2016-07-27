@@ -94,6 +94,8 @@ Route::group(['middleware' => ['auth']], function () {
 
     //tests
     Route::get('inhouse/tests', ['as' => 'inhouse.tests', 'uses' => 'InhouseController@tests']);
+
+    Route::get('inhouse/defineMatchRating/{match}', ['as' => 'inhouse.defineMatchRating', 'uses' => 'InhouseController@defineMatchRating']);
 });
 
 

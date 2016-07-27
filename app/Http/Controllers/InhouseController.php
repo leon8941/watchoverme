@@ -385,8 +385,10 @@ class InhouseController extends Controller
         // Receive data
         $data = Input::all();
 
+        $test = isset($data['test']);
+
         // Check for commands, and do what you must do
-        $return = $this->checkForCommand($data['message'], $data['test']);
+        $return = $this->checkForCommand($data['message'], $test);
 
         // Create msg on DB
         $message = new Message();
@@ -395,7 +397,7 @@ class InhouseController extends Controller
         $message->save();
 
         // Send to pusher if is not a Test
-        if (!isset($data['test']) && $data['test'] != '1')
+        if (!$test)
             LaravelPusher::trigger('chat', 'message', ['message' => $message->message]);
 
         return Response::json($return);

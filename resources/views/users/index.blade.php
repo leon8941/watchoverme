@@ -85,6 +85,11 @@
     <script>
         $(document).ready(function() {
             App.init();
+
+            // View all function
+            $('#show-all').click(function() {
+                location.href = '{{ route('gamers.index', ['all' => true]) }}';
+            });
         });
     </script>
 @endsection

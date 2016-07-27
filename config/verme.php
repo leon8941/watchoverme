@@ -13,5 +13,7 @@ return [
     'role_editor' => '2',
     'role_admin' => '4',
 
-    'msg_no_permission' => 'Você não tem permissão pra fazer isso.'
+    'msg_no_permission' => 'Você não tem permissão pra fazer isso.',
+
+    'default_ranking_page_size' => '60'
 ];

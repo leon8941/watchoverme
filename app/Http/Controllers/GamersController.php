@@ -38,6 +38,10 @@ class GamersController extends Controller
     public function index(Request $request)
     {
 
+        // Requested to view all?
+        $view_amount = $request->get('all')? '3000' : 15;
+        //$view_amount = $request->get('all')? '3000' : config('verme.default_ranking_page_size');
+
         // If user didnt defined filters or order, define order
         if ($request->query->count() <= 0) {
             // Define Query
@@ -46,6 +50,18 @@ class GamersController extends Controller
                 ->orderBy('competitive_rank','DESC');
         }
         else {
+            /*
+            //$orderBy = $request->query
+            if(isset($request->get('Gamers')['sort'])) {
+                $sort = $request->get('Gamers')['sort'];
+                var_dump($sort);exit;
+                $order = $request->get('Gamers')['sort'][$sort];
+            }
+            else {
+                $sort = 'competitive_rank';
+                $order = 'DESC';
+            }
+*/
             // Define Query
             $query = (new Gamer())
                 ->newQuery();
@@ -54,12 +70,13 @@ class GamersController extends Controller
         // Define query
         $config = (new GridConfig())
             ->setName('Gamers')
+            ->setCachingTime(0)
             ->setDataProvider(
                 new EloquentDataProvider(
                     $query
                 )
             )
-            ->setPageSize(30)
+            ->setPageSize($view_amount)
             ->setColumns([
                 (new FieldConfig('competitive_rank'))
                     ->setLabel('Rank')

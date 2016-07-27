@@ -93,7 +93,7 @@ class Inhouser extends Model
 
     public static function getVouchs()
     {
-        $gamer = Gamer::get();
+        $gamer = Gamer::getGamer();
 
         if (!$gamer)
             return 0;
