@@ -86,53 +86,7 @@
                             </table>
                         </div>
                     </div>
-
                 </div>
-
-                <ul class="nav nav-tabs nav-justified nav-justified-mobile" data-sortable-id="index-2">
-                    <li class="active"><a href="#parceiros" data-toggle="tab"><i class="fa fa-glass m-r-5"></i> <span class="hidden-xs">Parceiros</span></a></li>
-                </ul>
-                <div class="tab-content" data-sortable-id="index-3">
-                    <div class="tab-pane fade active in" id="parceiros">
-                        <div class="height-250" data-scrollbar="true">
-                            <ul class="media-list media-list-with-divider">
-                                <li class="media media-sm">
-                                    <a href="http://www.bestgamers.com.br"
-                                       target="_blank" class="pull-left">
-                                        <img src="{{ asset('img/partners/best-gamers.png') }}" alt="" class="" width="160px"/>
-                                    </a>
-                                    <div class="media-body">
-                                        <a href="javascript:;"><h4 class="media-heading">BestGamers</h4></a>
-                                        <p class="m-b-5">
-                                            Uma das maiores e melhores lojas para gamers do Brasil
-                                        </p>
-                                        <i class="text-muted">
-                                            <a href="http://www.bestgamers.com.br"
-                                               target="_blank">www.BestGamers.com.br</a>
-                                        </i>
-                                    </div>
-                                </li>
-                                <li class="media media-sm">
-                                    <a href="www.gamingroom.net"
-                                       target="_blank" class="pull-left">
-                                        <img src="{{ asset('img/partners/gaming-room.PNG') }}" alt="" class="" width="160px"/>
-                                    </a>
-                                    <div class="media-body">
-                                        <a href="javascript:;"><h4 class="media-heading">Gaming Room</h4></a>
-                                        <p class="m-b-5">
-                                            Gaming Room é um canal de debate de games que começa a ganhar volume no YouTube.
-                                        </p>
-                                        <i class="text-muted">
-                                            <a href="www.gamingroom.net"
-                                               target="_blank">www.GamingRoom.net</a>
-                                        </i>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
             </div>
             <!-- end col-8 -->
             <!-- begin col-4 -->
@@ -206,29 +160,136 @@
                     </div>
                 </div>
 
-                    <!-- begin panel -->
-                    <div class="panel panel-inverse" data-sortable-id="index-6">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">New Registered Users <span class="pull-right label label-success">{{ $count_new_users }} new users</span></h4>
-                        </div>
-                        <ul class="registered-users-list clearfix">
-                            @foreach($new_registered_users as $user)
-                                <li>
-                                    <a href="{{ route('users.show',[$user->slug]) }}">
-                                        <img src="{{ getUserImage($user->avatar) }}" alt="{{ $user->name }}" width="114px" style="max-height: 114px"/></a>
-                                    <h4 class="username text-ellipsis">
-                                        {{ $user->name }}
-                                        <small></small>
-                                    </h4>
+            </div>
+            <!-- end col-4 -->
+        </div>
+        <!-- end row -->
+
+        <!-- begin row -->
+        <div class="row">
+            <!-- begin col-4 -->
+            <div class="col-md-4">
+                <!-- begin panel -->
+                <div class="panel panel-inverse" data-sortable-id="index-2">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Parceiros<span class="label label-success pull-right">3 deuses</span></h4>
+                    </div>
+                    <div class="panel-body bg-silver">
+                        <div data-scrollbar="true" data-height="310px">
+                            <ul class="chats">
+                                <li class="left">
+                                    <a href="http://www.bestgamers.com.br"
+                                       target="_blank" class="name">Best Gamers</a>
+                                    <a href="http://www.bestgamers.com.br"
+                                       target="_blank" class="image pull-left">
+                                        <img src="{{ asset('img/partners/best-gamers.jpg') }}" alt="" class="" width="160px"/>
+                                    </a>
+                                    <div class="message">
+                                        Uma das maiores e melhores lojas <b>para gamers</b> do Brasil.<br>
+                                        Patrocinamos a Temporada Best Gamers do ranking nacional de Overwatch pois acreditamos
+                                        no cenário de e-sports brasileiro.
+                                    </div>
                                 </li>
-                            @endforeach
-                        </ul>
-                        <div class="panel-footer text-center">
-                            <a href="{{ route('gamers.index') }}" class="text-inverse">Ver Todos</a>
+                                <li class="right">
+                                    <a href="https://www.youtube.com/channel/UCcpyVzY-cxTTmacKZM3_edQ"
+                                       target="_blank" class="name">pOkiz Games - YouTube Channel</a>
+                                    <a href="https://www.youtube.com/channel/UCcpyVzY-cxTTmacKZM3_edQ"
+                                       target="_blank"  class="image"><img alt="" src="assets/img/user-13.jpg" /></a>
+                                    <div class="message">
+                                        Nullam posuere, nisl a varius rhoncus, risus tellus hendrerit neque.
+                                    </div>
+                                </li>
+                                <li class="left">
+                                    <span class="date-time">09:20am</span>
+                                    <a href="http://gamingroom.net" class="name">Gaming Room</a>
+                                    <a href="www.gamingroom.net"
+                                       target="_blank" class="image pull-left">
+                                        <img src="{{ asset('img/partners/gaming-room-square.PNG') }}" alt="" class="" width="160px"/>
+                                    </a>
+                                    <div class="message">
+                                        Gaming Room é um canal de debate de games que começa a ganhar volume no YouTube.
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <!-- end panel -->
-
+                </div>
+                <!-- end panel -->
+            </div>
+            <!-- end col-4 -->
+            <!-- begin col-4 -->
+            <div class="col-md-4">
+                <!-- begin panel -->
+                <div class="panel panel-inverse" data-sortable-id="index-3">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Top 5 Ranking <span class="label label-success pull-right">5 lendas</span></h4>
+                    </div>
+                    <div id="schedule-calendar" class="bootstrap-calendar"></div>
+                    <div class="list-group">
+                        <table id="data-table" class="table table-striped nowrap dataTable no-footer dtr-inline" width="100%" role="grid" aria-describedby="data-table_info" style="width: 100%;">
+                            <thead>
+                            <tr role="row">
+                                <th class="sorting_asc" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 222px;">#</th>
+                                <th class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 322px;">Jogador</th>
+                                <th class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 293px;">Rank</th>
+                                <th class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 190px;">Vitórias</th>
+                                <th class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 139px;">Derrotas</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <?php $i=1; ?>
+                            @foreach ($tops as $top)
+                                <tr class="gradeA odd" role="row">
+                                    <td class="sorting_1">{{ $i }}</td>
+                                    <td>
+                                        <a href="{{ route('users.show', [$top->user->slug]) }}" target="_blank">
+                                            {{ $top->battletag }}
+                                        </a>
+                                    </td>
+                                    <td><span class="badge badge-primary">{{ $top->competitive_rank }}</span></td>
+                                    <td>{{ $top->competitive_wins }}</td>
+                                    <td>{{ $top->competitive_lost }}</td>
+                                </tr>
+                                <?php $i++; ?>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="panel-body">
+                        <div id="calendar"></div>
+                        <br>
+                        <div class="panel-footer text-center">
+                            <a href="{{ route('users.index') }}" class="text-inverse">Ver Ranking</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end panel -->
+            </div>
+            <!-- end col-4 -->
+            <!-- begin col-4 -->
+            <div class="col-md-4">
+                <!-- begin panel -->
+                <div class="panel panel-inverse" data-sortable-id="index-6">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">New Registered Users <span class="pull-right label label-success">{{ $count_new_users }} larvinhas novas</span></h4>
+                    </div>
+                    <ul class="registered-users-list clearfix">
+                        @foreach($new_registered_users as $user)
+                            <li>
+                                <a href="{{ route('users.show',[$user->slug]) }}">
+                                    <img src="{{ getUserImage($user->avatar) }}" alt="{{ $user->name }}" width="114px" style="max-height: 114px"/></a>
+                                <h4 class="username text-ellipsis">
+                                    {{ $user->name }}
+                                    <small></small>
+                                </h4>
+                            </li>
+                        @endforeach
+                    </ul>
+                    <div class="panel-footer text-center">
+                        <a href="{{ route('gamers.index') }}" class="text-inverse">Ver Todos</a>
+                    </div>
+                </div>
+                <!-- end panel -->
             </div>
             <!-- end col-4 -->
         </div>

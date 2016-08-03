@@ -15,5 +15,7 @@ return [
 
     'msg_no_permission' => 'Você não tem permissão pra fazer isso.',
 
-    'default_ranking_page_size' => '60'
+    'default_ranking_page_size' => '60',
+
+    'inhouse_test_mode' => false
 ];

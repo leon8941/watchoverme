@@ -67,7 +67,13 @@ class PagesController extends Controller
             ->where('starts','>=', DB::raw('curdate()'))
             ->get();
 
-        return view('pages.home',compact('posts','updated_players','new_registered_users','count_new_users','events'));
+        // Top 5 ranking
+        $tops = Gamer::orderBy('competitive_rank', 'DESC')
+            ->with('user')
+            ->take(5)->get();
+
+        return view('pages.home',compact(
+            'posts','updated_players','new_registered_users','count_new_users','events','tops'));
     }
 
 

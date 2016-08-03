@@ -94,8 +94,12 @@ Route::group(['middleware' => ['auth']], function () {
 
     //tests
     Route::get('inhouse/tests', ['as' => 'inhouse.tests', 'uses' => 'InhouseController@tests']);
+    Route::get('inhouse/testGamer/{gamer_id}', ['as' => 'inhouse.testGamer', 'uses' => 'InhouseController@testGamer']);
+    Route::get('inhouse/getLowestPlayer/{gamer_id}', ['as' => 'inhouse.getLowestPlayer', 'uses' => 'InhouseController@getLowestPlayer']);
 
     Route::get('inhouse/defineMatchRating/{match}', ['as' => 'inhouse.defineMatchRating', 'uses' => 'InhouseController@defineMatchRating']);
+    Route::get('inhouse/getMatchs', ['as' => 'inhouse.getMatchs', 'uses' => 'InhouseController@getMatchs']);
+    Route::get('inhouse/getOnlinePlayers', ['as' => 'inhouse.getOnlinePlayers', 'uses' => 'InhouseController@getOnlinePlayers']);
 });
 
 

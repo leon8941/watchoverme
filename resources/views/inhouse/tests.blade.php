@@ -36,8 +36,7 @@
                             <input type="text" id="command">
                             <button type="button" class="btn btn-info" id="send">enviar</button>
                             <br>
-                            <br>
-                            <div id="return" style="width: 100%; height: 300px"></div>
+                            <div id="return" style="width: 100%; height: 150px"></div>
                             <br>
                             <ul>
                                 <li>/start</li>

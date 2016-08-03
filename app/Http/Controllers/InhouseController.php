@@ -43,6 +43,26 @@ class InhouseController extends Controller
         return view('inhouse.tests');
     }
 
+    public function testGamer(Request $request, $gamer_id)
+    {
+
+        $gamer = Gamer::where('id',$gamer_id)
+            ->with('inhouser')
+            ->first();
+
+        var_dump($gamer->inhouser->rating);exit;
+    }
+
+    public function getLowestPlayer($match_id)
+    {
+        $lowest = Match::getLowestPlayer($match_id);
+
+        var_dump($lowest[0]->id);exit;
+
+        //dd(DB::getQueryLog());
+        //DB::enableQueryLog();
+    }
+
     //
     public function index()
     {
@@ -68,6 +88,7 @@ class InhouseController extends Controller
         $credentials['pusher_key'] = getenv('PUSHER_KEY');
         $credentials['pusher_secret'] = getenv('PUSHER_SECRET');
 
+        /*
         $partidas_abertas = Match::open()->get();
 
         $partidas_encerradas = Match::closed()->get();
@@ -77,14 +98,10 @@ class InhouseController extends Controller
         $online_inhousers = Inhouser::online()
             ->with('gamer')
             ->get();
-
+*/
 
         return view('inhouse.index', compact(
             'credentials',
-            'partidas_abertas',
-            'partidas_encerradas',
-            'partidas_andamento',
-            'online_inhousers',
             'isInhouser',
             'vouchs'
         ));
@@ -422,26 +439,34 @@ class InhouseController extends Controller
             '/leave',
             '/contest',
             '/cancel',
+            '/status'
         ];
 
         // Message is a command?
         if (in_array($message, $commands)) {
 
             switch ($message) {
+                case '/status':
+
+                    $status = $this->comStatus();
+
+                    $return = $this->formatReturn(1, $status);
+
+                    break;
                 case '/start':
                 case '/iniciar':
 
-                    $start = $this->comStart();
+                    $partida = $this->comStart();
 
                     // Try to start a match
-                    if (!$start) {
+                    if (!$partida) {
                         $msg = config('verme.msg_no_permission');
                         $msg .= '<br>Uma partida pode estar aberta ou você tem restrições.';
 
                         $return = $this->formatReturn(0,$msg);
                     }
                     else {
-                        $return = $this->formatReturn(1, "Partida $start aberta! Jogadores podem entrar digitando: /entrar");
+                        $return = $this->formatReturn(1, "Partida $partida aberta! Jogadores podem entrar digitando: /entrar");
                     }
 
                     break;
@@ -468,11 +493,11 @@ class InhouseController extends Controller
                     $join = $this->comJoin();
 
                     if ($join)
-                        $return = $this->formatReturn(1,'N entrou na partida. X vagas restantes');
+                        // Todo: dizer vagas restantes na partida
+                        $return = $this->formatReturn(1, Auth::user()->name . ' entrou na partida. ');
                     else
-                        $return = $this->formatReturn(0,'Você não pode entrar na partida.');
-
-                    // Check if N = 12 players, and start
+                        $return = $this->formatReturn(0,'Você não pode entrar na partida. '
+                                    .'<br>A Partida pode não estar aberta, você pode já estar na partida ou ter restrições.');
 
                     break;
 
@@ -501,33 +526,48 @@ class InhouseController extends Controller
 
                 case '/cancel':
 
-                    $start = $this->comCancel();
+                    $partida = $this->comCancel();
 
                     // Try to start a match
-                    if (!$start)
+                    if (!$partida)
                         $return = $this->formatReturn(0,'Você não pode cancelar a partida.');
                     else {
-                        $return = $this->formatReturn(1, "Partida $start cancelada! Nenhum ponto foi computado.");
+                        $return = $this->formatReturn(1, "Partida $partida cancelada! Nenhum ponto foi computado.");
                     }
 
                     break;
             }
 
-            // Save the bot answer
-            $message = new Message();
-            $message->user_id = config('verme.bot_id');
-            $message->message = $return['message'];
-            $message->save();
+            // Testing?
+            $isTest = $test? true : config('verme.inhouse_test_mode');
 
-            // Send to pusher if is not a Test
-            if (!isset($test) && $test != '1')
-                LaravelPusher::trigger('chat', 'message', ['message' => $message->message]);
+            // Bot response message
+            $this->sendBotMessage($return['message'], false);
         }
         else {
             $return = $this->formatReturn(1,'Mensagem normal');
         }
 
         return $return;
+    }
+
+    /**
+     * Send a message as the BOT
+     *
+     * @param $msg
+     * @param $test
+     */
+    public function sendBotMessage($msg, $test = true)
+    {
+        // Save the bot answer
+        $message = new Message();
+        $message->user_id = config('verme.bot_id');
+        $message->message = $msg;
+        $message->save();
+
+        // Send to pusher if is not a Test
+        if (!$test)
+            LaravelPusher::trigger('chat', 'message', ['message' => $message->message]);
     }
 
     /**
@@ -553,6 +593,35 @@ class InhouseController extends Controller
      */
     public function listMessages(Message $message) {
         return response()->json($message->orderBy("created_at", "DESC")->take(5)->get());
+    }
+
+    /**
+     * Execute inhouse command: Get status
+     *
+     * @return bool
+     */
+    public function comStatus()
+    {
+        // Check if there is a match open
+        $open = Match::open()->first();
+
+        if (!$open) {
+
+            $running = Match::running()->first();
+
+            if ($running)
+                return '1 partida <b>em andamento</b> e nenhuma aberta.';
+        }
+
+        // Check how many on match
+        $players_amount = Match::countPlayers($open->id);
+
+        $msg = 'Partida aberta: ' . $open->id . ' com ' . $players_amount . ' jogadores';
+
+        // send msg
+        //$this->sendBotMessage($msg, config('verme.inhouse_test_mode'));
+
+        return $msg;
     }
 
     /**
@@ -688,16 +757,19 @@ class InhouseController extends Controller
      */
     public function prepareMatch($match_id)
     {
+        // Bot message
+        $this->sendBotMessage('Partida completa. Preparando para iniciar...', true);
+
         // Change status to "Picking"
         $match = Match::where('id',$match_id)->update([
             'status' => '2'
         ]);
 
-        //
+        // Calculate match rating
         $this->defineMatchRating($match_id);
 
         // Start picking
-        //$this->startPicks();
+        $this->startPicks($match_id);
     }
 
     /**
@@ -714,6 +786,120 @@ class InhouseController extends Controller
     }
 
     /**
+     * Start the picks of a match
+     *
+     * @param $match_id
+     * @return bool
+     */
+    public function startPicks($match_id)
+    {
+        // 2x first pick
+        $this->firstPicks($match_id);
+
+        $last_picked = false;
+        $pickeds = [];
+        $teams = [];
+
+        // 10 normal picks
+        for ($i=0; $i<10; $i++) {
+
+            // alternate teams
+            $team = ($i & 1)? 'B' : 'A';
+
+            // Pick for team
+            $last_picked = $this->normalPick($match_id, $team, $last_picked, $pickeds);
+            $pickeds[] = $last_picked;
+
+            $teams[$team][] = $last_picked;
+        }
+
+        //
+        $this->reportTeams($teams);
+
+        $this->sendBotMessage('A partida já pode ser disputada. Boa sorte!',false);
+
+        return true;
+    }
+
+    /**
+     * Report the created teams and picks
+     *
+     * @param $teams
+     */
+    public function reportTeams($teams)
+    {
+        $teamA = '';
+        $teamB = '';
+
+        // Get team A
+        foreach($teams['A'] as $player) {
+            $inhouser = Inhouser::where('id',$player)->first();
+            $teamA .= $inhouser->gamer->battletag . ',';
+        }
+
+        // Get team B
+        foreach($teams['B'] as $player) {
+            $inhouser = Inhouser::where('id',$player)->first();
+            $teamB .= $inhouser->gamer->battletag . ',';
+        }
+
+        $this->sendBotMessage('Time A: ' . $teamA,false);
+        $this->sendBotMessage('Time B: ' . $teamB,false);
+    }
+
+    /**
+     * Perform a normal pick for a new match
+     *
+     * @param $match_id
+     * @param $team
+     * @param $last_picked_id
+     * @param $pickeds (who is already picked)
+     * @return mixed
+     */
+    public function normalPick($match_id, $team, $last_picked_id, $pickeds)
+    {
+        if (!$last_picked_id)
+            // Get the next higher player
+            $highest = Match::getHighestPlayer($match_id);
+
+        else {
+
+            $inhouser = Inhouser::where('id',$last_picked_id)->first();
+
+            // Get the next higher player
+            $highest = Match::getHighestPlayer($match_id, $inhouser->rating, $pickeds);
+        }
+
+        // Put player on team A
+        Match::putPlayerOnTeam($highest[0]->id, $match_id, $team);
+
+        return $highest[0]->id;
+    }
+
+    /**
+     * First picks of the new match
+     *
+     * @param $match_id
+     * @param $team
+     */
+    public function firstPicks($match_id)
+    {
+        // select a player with lower rating
+        $lower = Match::getLowestPlayer($match_id);
+
+        // Put player on team A
+        Match::putPlayerOnTeam($lower[0]->id, $match_id, 'A');
+
+        $inhouser = Inhouser::where('id',$lower[0]->id)->first();
+
+        // Get second lower to team B
+        $next_lower = Match::getLowestPlayer($match_id, $inhouser->rating);
+
+        // Put player on team A
+        Match::putPlayerOnTeam($next_lower[0]->id, $match_id, 'B');
+    }
+
+    /**
      * Calculates the match rating average
      *
      * @param $match_id
@@ -722,27 +908,37 @@ class InhouseController extends Controller
     public function defineMatchRating($match_id)
     {
         // get players of the match
-        $gamers = Match::getPlayers($match_id);
+        $players = Match::getPlayers($match_id);
 
         $match_rating = '0';
         $rating_sum = '0';
 
-        foreach($gamers as $gamer) {
-            $player = new Gamer();
-            $player->id = $gamer->id;
+        foreach($players as $player) {
+            $gamer = Gamer::where('id',$player->gamer_id)
+                ->with('inhouser')
+                ->first();
 
-            var_dump($player->inhouser()->id);
             // Soma o rating do jogador no rating da partida
-            $rating_sum += $gamer->rating;
+            $rating_sum += $gamer->inhouser->rating;
         }
 
         // Divide o total por 12, e acha o rating medio da partida
-        $match_rating = $rating_sum / 12;
+        $match_rating = round($rating_sum / 12);
 
-        return Match::where('id',$match_id)->update([
+        // Bot message
+        $this->sendBotMessage('Partida iniciada. O rating da partida é ' . $match_rating, true);
+
+        Match::where('id',$match_id)->update([
             'rating' => $match_rating
         ]);
+
+        // Bot message
+        $this->sendBotMessage('Rating da partida: ' . $match_rating, false);
+
+        return true;
     }
+
+
     public function auth(Request $request, \Pusher $pusher)
     {
         return $pusher->presence_auth(
@@ -755,5 +951,38 @@ class InhouseController extends Controller
         );
     }
 
+    public function getMatchs()
+    {
+        $type = Input::get('type');
 
+        switch ($type) {
+            case 'open':
+
+                $partidas = Match::open()->get();
+
+                foreach ($partidas as $key => $partida) {
+                    $partidas[$key]['inscritos'] = Match::countPlayers($partida->id);
+                }
+                break;
+            case 'running':
+
+                $partidas = Match::running()->get();
+                break;
+            case 'closed':
+
+                $partidas = Match::closed()->get();
+                break;
+        }
+
+        return Response::json($partidas);
+    }
+
+    public function getOnlinePlayers()
+    {
+        $online_inhousers = Inhouser::online()
+            ->with('gamer')
+            ->get();
+
+        return Response::json($online_inhousers);
+    }
 }

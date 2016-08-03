@@ -22,7 +22,7 @@
 
                         <div class="ten wide column chat-column">
 
-                            <div class="panel-body fixed-panel">
+                            <div class="panel-body fixed-panel" id="chat_panel">
                                 <ul class="media-list">
                                 </ul>
                             </div>
@@ -74,18 +74,10 @@
                             <thead>
                             <tr>
                                 <th>Partida</th>
-                                <th>Rating</th>
-                                <th>Jogadores</th>
+                                <th>Inscritos</th>
                             </tr>
                             </thead>
-                            <tbody>
-                            @foreach ($partidas_abertas as $partida)
-                                <tr>
-                                    <td><label class="label label-primary">Partida {{ $partida->id }}</label></td>
-                                    <td>1500 <span class="text-success"><i class="fa fa-arrow-up"></i></span></td>
-                                    <td><div id="sparkline-unique-visitor">5</div></td>
-                                </tr>
-                            @endforeach
+                            <tbody id="matchs_open">
                             </tbody>
                         </table>
                     </div>
@@ -98,14 +90,7 @@
                                 <th>Jogadores</th>
                             </tr>
                             </thead>
-                            <tbody>
-                            @foreach ($partidas_andamento as $partida)
-                                <tr>
-                                    <td><label class="label label-primary">Partida {{ $partida->id }}</label></td>
-                                    <td>1500 <span class="text-success"><i class="fa fa-arrow-up"></i></span></td>
-                                    <td><div id="sparkline-unique-visitor">5</div></td>
-                                </tr>
-                            @endforeach
+                            <tbody id="matchs_running">
                             </tbody>
                         </table>
                     </div>
@@ -118,14 +103,7 @@
                                 <th>Jogadores</th>
                             </tr>
                             </thead>
-                            <tbody>
-                            @foreach ($partidas_encerradas as $partida)
-                                <tr>
-                                    <td><label class="label label-primary">Partida {{ $partida->id }}</label></td>
-                                    <td>1500 <span class="text-success"><i class="fa fa-arrow-up"></i></span></td>
-                                    <td><div id="sparkline-unique-visitor">5</div></td>
-                                </tr>
-                            @endforeach
+                            <tbody id="matchs_closed">
                             </tbody>
                         </table>
                     </div>
@@ -154,13 +132,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach($online_inhousers as $inhouser)
-                                        <tr>
-                                            <td></td>
-                                            <td>{{ $inhouser->gamer->id }}</td>
-                                            <td>{{ $inhouser->rating }}</td>
-                                        </tr>
-                                    @endforeach
+
                                     </tbody>
                                 </table>
 
@@ -232,7 +204,7 @@
 @endsection
 
 @section('scripts')
-
+    @include('elements.scripts')
     <script>
          $.ajaxSetup({
             headers: { 'X-CSRF-Token' : '{!! csrf_token() !!}' }
@@ -265,6 +237,10 @@
                  //$(".media-list li").first().remove();
                  $(".media-list").append('<li class="media"><div class="media-body"><div class="media"><div class="media-body">'
                          + message.message + '<br/><small class="text-muted">' + author + ' | ' + message.created_at + '</small><hr/></div></div></div></li>');
+
+                 // Scroll down
+                 var objDiv = document.getElementById("chat_panel");
+                 objDiv.scrollTop = objDiv.scrollHeight;
              });
 
              $.get( '{{ route('messages') }}', function (messages) {
@@ -312,8 +288,10 @@
     </script>
     <style type="text/css">
         .fixed-panel {
-            min-height: 500px;
-            max-height: 500px;
+            min-height: 320px;
+            max-height: 400px;
+            height: 395px;
+            overflow-x: auto;
         }
         .media-list {
             overflow: auto;
@@ -326,6 +304,14 @@
 
         $(document).ready(function() {
             App.init();
+
+            getPartidas('open');
+            getPartidas('closed');
+            getPartidas('running');
+
+            getOnlinePlayers();
         });
+
+
     </script>
 @endsection

@@ -189,4 +189,55 @@
 
         });
     }
+
+    /**
+     * get partidas for the inhouse home
+     *
+     * param type
+     */
+    function getPartidas(type) {
+
+        var where = '#matchs_' + type;
+
+        $.ajax({
+            url: "{{ route('inhouse.getMatchs') }}",
+            dataType: "html",
+            type: "GET",
+            data: {
+                _token: '{{ csrf_token() }}',
+                type: type
+            }
+        }).done(function(data) {
+
+            var partidas = JSON.parse(data);
+
+            for (key in partidas) {
+
+                var inscritos = (type == 'open')? partidas[key].inscritos : '-';
+
+                var row = '<tr>'+
+                        '<td><label class="label label-primary">Partida '+ partidas[key].id + '</label></td>'+
+                        '<td>'+inscritos+'</td>'+
+                        '</tr>';
+
+                $(where).append(row);
+            }
+        });
+    }
+
+    function getOnlinePlayers() {
+
+        $.ajax({
+            url: "{{ route('inhouse.getOnlinePlayers') }}",
+            dataType: "html",
+            type: "GET",
+        }).done(function(data) {
+
+            var obj = JSON.parse(data);
+
+
+        });
+    }
+
+
 </script>
