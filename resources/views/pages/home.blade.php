@@ -194,9 +194,9 @@
                                     <a href="https://www.youtube.com/channel/UCcpyVzY-cxTTmacKZM3_edQ"
                                        target="_blank" class="name">pOkiz Games - YouTube Channel</a>
                                     <a href="https://www.youtube.com/channel/UCcpyVzY-cxTTmacKZM3_edQ"
-                                       target="_blank"  class="image"><img alt="" src="assets/img/user-13.jpg" /></a>
+                                       target="_blank"  class="image"><img alt="" src="{{ asset('img/partners/pokiz.PNG') }}" /></a>
                                     <div class="message">
-                                        Nullam posuere, nisl a varius rhoncus, risus tellus hendrerit neque.
+                                        Canal de games no Youtube com foco em Overwatch.
                                     </div>
                                 </li>
                                 <li class="left">

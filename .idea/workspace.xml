@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3406a468-5bd2-41d7-a381-c80813249479" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/GamersController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/GamersController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/InhouseController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/InhouseController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Match.php" afterPath="$PROJECT_DIR$/app/Match.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/home.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/home.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/inhouse/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/inhouse/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/elements/scripts.blade.php" afterPath="$PROJECT_DIR$/resources/views/elements/scripts.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/css/style.min.css" afterPath="$PROJECT_DIR$/public/assets/css/style.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/inhouse/tests.blade.php" afterPath="$PROJECT_DIR$/resources/views/inhouse/tests.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/verme.php" afterPath="$PROJECT_DIR$/config/verme.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="watchoverme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,29 +46,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.038462">
-              <caret line="25" column="45" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.54824066">
+              <caret line="196" column="121" selection-start-line="196" selection-start-column="121" selection-end-line="196" selection-end-column="121" />
               <folding>
-                <element signature="e#13581#13601#0#HTML" expanded="true" />
-                <element signature="e#13891#13912#0#HTML" expanded="true" />
-                <element signature="e#14092#14113#0#HTML" expanded="true" />
-                <element signature="e#14303#14324#0#HTML" expanded="true" />
-                <element signature="e#14514#14535#0#HTML" expanded="true" />
-                <element signature="e#14724#14745#0#HTML" expanded="true" />
+                <element signature="e#13576#13596#0#HTML" expanded="true" />
+                <element signature="e#13886#13907#0#HTML" expanded="true" />
+                <element signature="e#14087#14108#0#HTML" expanded="true" />
+                <element signature="e#14298#14319#0#HTML" expanded="true" />
+                <element signature="e#14509#14530#0#HTML" expanded="true" />
+                <element signature="e#14719#14740#0#HTML" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.min.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/assets/css/style.min.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.353914">
-              <caret line="5" column="46385" selection-start-line="5" selection-start-column="46385" selection-end-line="5" selection-end-column="46385" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -170,8 +147,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/GamersController.php" />
         <option value="$PROJECT_DIR$/resources/views/users/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/home.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/css/style.min.css" />
+        <option value="$PROJECT_DIR$/resources/views/pages/home.blade.php" />
       </list>
     </option>
   </component>
@@ -971,26 +948,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/home.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/assets/css/style.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.038462">
-          <caret line="25" column="45" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="45" />
-          <folding>
-            <element signature="e#13581#13601#0#HTML" expanded="true" />
-            <element signature="e#13891#13912#0#HTML" expanded="true" />
-            <element signature="e#14092#14113#0#HTML" expanded="true" />
-            <element signature="e#14303#14324#0#HTML" expanded="true" />
-            <element signature="e#14514#14535#0#HTML" expanded="true" />
-            <element signature="e#14724#14745#0#HTML" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.5600882">
+          <caret line="5" column="48201" selection-start-line="5" selection-start-column="48201" selection-end-line="5" selection-end-column="48201" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/style.min.css">
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.353914">
-          <caret line="5" column="46385" selection-start-line="5" selection-start-column="46385" selection-end-line="5" selection-end-column="46385" />
-          <folding />
+        <state vertical-scroll-proportion="0.54824066">
+          <caret line="196" column="121" selection-start-line="196" selection-start-column="121" selection-end-line="196" selection-end-column="121" />
+          <folding>
+            <element signature="e#13576#13596#0#HTML" expanded="true" />
+            <element signature="e#13886#13907#0#HTML" expanded="true" />
+            <element signature="e#14087#14108#0#HTML" expanded="true" />
+            <element signature="e#14298#14319#0#HTML" expanded="true" />
+            <element signature="e#14509#14530#0#HTML" expanded="true" />
+            <element signature="e#14719#14740#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
