@@ -259,7 +259,7 @@
                         <div id="calendar"></div>
                         <br>
                         <div class="panel-footer text-center">
-                            <a href="{{ route('users.index') }}" class="text-inverse">Ver Ranking</a>
+                            <a href="{{ route('gamers.index') }}" class="text-inverse">Ver Ranking</a>
                         </div>
                     </div>
                 </div>
