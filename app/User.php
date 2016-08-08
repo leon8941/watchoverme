@@ -97,6 +97,11 @@ class User extends Model implements AuthenticatableContract, SluggableInterface,
         return $this->hasMany(Request::class);
     }
 
+    public function scopeColaborator($query)
+    {
+        return $query->where('role_id','>','1');
+    }
+
     /*
     * Is this logged user on this team?
     */

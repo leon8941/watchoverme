@@ -196,11 +196,10 @@
                                     <a href="https://www.youtube.com/channel/UCcpyVzY-cxTTmacKZM3_edQ"
                                        target="_blank"  class="image"><img alt="" src="{{ asset('img/partners/pokiz.PNG') }}" /></a>
                                     <div class="message">
-                                        Canal de games no Youtube com foco em Overwatch.
+                                        Canal dedicado exclusivamente à abordagem de assuntos técnicos, informativos e gameplays.
                                     </div>
                                 </li>
                                 <li class="left">
-                                    <span class="date-time">09:20am</span>
                                     <a href="http://gamingroom.net" class="name">Gaming Room</a>
                                     <a href="www.gamingroom.net"
                                        target="_blank" class="image pull-left">

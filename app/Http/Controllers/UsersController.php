@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Posts;
 use App\Role;
 use App\User;
 use Illuminate\Http\Request;
@@ -10,6 +11,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
@@ -195,5 +197,21 @@ class UsersController extends Controller
                 return Redirect::back();
             }
         }
+    }
+
+    /**
+     * Get O Verme colaborators
+     *
+     * @return mixed
+     */
+    public function getColaborators()
+    {
+        $users = User::colaborator()->get();
+
+        foreach($users as $key => $user) {
+            $users[$key]->artigos = Posts::where('user_id',$user->id)->count();
+        }
+
+        return Response::json($users);
     }
 }

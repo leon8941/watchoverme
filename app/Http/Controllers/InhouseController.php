@@ -9,6 +9,7 @@ use App\Match;
 use App\Message;
 use App\Team;
 use App\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -428,24 +429,12 @@ class InhouseController extends Controller
         $return['code'] = '0';
         $return['message'] = '';
 
-        $commands = [
-            '/start',
-            '/iniciar',
-            '/close',
-            '/fechar',
-            '/join',
-            '/entrar',
-            '/sair',
-            '/leave',
-            '/contest',
-            '/cancel',
-            '/status'
-        ];
+        $command = $this->isThisMessageCommand($message);
 
         // Message is a command?
-        if (in_array($message, $commands)) {
+        if ($command['isCommand']) {
 
-            switch ($message) {
+            switch ($command['command']) {
                 case '/status':
 
                     $status = $this->comStatus();
@@ -474,16 +463,16 @@ class InhouseController extends Controller
                 case '/close':
                 case '/fechar':
 
-                    $close = $this->comClose();
+                    $close = $this->comClose($command['param']);
 
                     if ($close) {
-                        $msg = 'Partida 666 fechada! Time vencedor: A ';
-                        $msg .= '<br>Jogador 1 : +15pts ';
+                        $msg = 'Partida fechada! Time vencedor: ' . $command['param'];
+                        $msg .= '<br>Os ratings foram atualizados. ';
 
                         $return = $this->formatReturn(1,$msg);
                     }
                     else
-                        $return = $this->formatReturn(0,'Você não pode fechar a partida.');
+                        $return = $this->formatReturn(0,'Comando inválido, ou você tem restrições para fechar a partida.');
 
                     break;
 
@@ -552,6 +541,53 @@ class InhouseController extends Controller
     }
 
     /**
+     * Checks if message is a command
+     *
+     * @param $message
+     * @return array
+     */
+    public function isThisMessageCommand($message)
+    {
+        $return = [
+            'isCommand' => false,
+            'param' => false
+        ];
+
+        $commands = [
+            '/start',
+            '/iniciar',
+            '/close',
+            '/fechar',
+            '/join',
+            '/entrar',
+            '/sair',
+            '/leave',
+            '/contest',
+            '/cancel',
+            '/status'
+        ];
+
+        // if is a command, return true
+        if (in_array($message, $commands)) {
+            $return['isCommand'] = true;
+            $return['command'] = $message;
+            return $return;
+        }
+
+        // Check for close command
+        if (strpos($message, '/close') !== false) {
+            $all = explode(' ', $message);
+            $winner = $all[1];
+
+            $return['isCommand'] = true;
+            $return['command'] = '/close';
+            $return['param'] = $winner;
+
+            return $return;
+        }
+    }
+
+    /**
      * Send a message as the BOT
      *
      * @param $msg
@@ -616,7 +652,7 @@ class InhouseController extends Controller
         // Check how many on match
         $players_amount = Match::countPlayers($open->id);
 
-        $msg = 'Partida aberta: ' . $open->id . ' com ' . $players_amount . ' jogadores';
+        $msg = '<label class="label label-primary">Partida '.$open->id.'</label> aberta com ' . $players_amount . ' jogadores';
 
         // send msg
         //$this->sendBotMessage($msg, config('verme.inhouse_test_mode'));
@@ -660,16 +696,34 @@ class InhouseController extends Controller
      * Execute an Inhouse command: user closes a match
      *
      */
-    public function comClose()
+    public function comClose($winner)
     {
-        // Check for permission for this command
-        if (Auth::user()->role_id <= config('verme.role_user'))
+        if (!$winner)
             return false;
 
-        // Checks for any open match
-        $match = Match::open()->first();
+        // Check for permission for this command
+        if (Auth::user()->role_id < config('verme.role_user'))
+            return false;
 
-        // Checks if
+        // get current gamer
+        $gamer = Gamer::getGamer();
+
+        if (!$gamer)
+            return false;
+
+        // Checks for the match to close
+        // must be a match that is running, and this user is on it
+        $match = DB::select(DB::raw('SELECT m.* FROM matchs m
+                  JOIN gamer_match gm on (gm.match_id = m.id AND gm.gamer_id = '.$gamer->id.')
+                    WHERE m.status = "3"
+              '));
+
+        $match_id = $match[0]->id;
+
+        if (!$match_id)
+            return false;
+
+        return $this->closeMatch($match_id, $winner);
     }
 
     /**
@@ -770,6 +824,12 @@ class InhouseController extends Controller
 
         // Start picking
         $this->startPicks($match_id);
+
+        // change status to running
+        Match::where('id',$match_id)
+            ->update([
+                'status'    => '3'
+            ]);
     }
 
     /**
@@ -843,8 +903,8 @@ class InhouseController extends Controller
             $teamB .= $inhouser->gamer->battletag . ',';
         }
 
-        $this->sendBotMessage('Time A: ' . $teamA,false);
-        $this->sendBotMessage('Time B: ' . $teamB,false);
+        $this->sendBotMessage('<label class="label label-primary">Time A</label>: ' . $teamA,false);
+        $this->sendBotMessage('<label class="label label-successs">Time B</label>: ' . $teamB,false);
     }
 
     /**
@@ -880,7 +940,6 @@ class InhouseController extends Controller
      * First picks of the new match
      *
      * @param $match_id
-     * @param $team
      */
     public function firstPicks($match_id)
     {
@@ -925,15 +984,13 @@ class InhouseController extends Controller
         // Divide o total por 12, e acha o rating medio da partida
         $match_rating = round($rating_sum / 12);
 
-        // Bot message
-        $this->sendBotMessage('Partida iniciada. O rating da partida é ' . $match_rating, true);
-
         Match::where('id',$match_id)->update([
             'rating' => $match_rating
         ]);
 
         // Bot message
-        $this->sendBotMessage('Rating da partida: ' . $match_rating, false);
+        $this->sendBotMessage('<label class="label label-primary">Partida '.$match_id.
+            '</label> iniciada. Rating da partida: ' . $match_rating, false);
 
         return true;
     }
@@ -951,6 +1008,11 @@ class InhouseController extends Controller
         );
     }
 
+    /**
+     * Get matchs and status
+     *
+     * @return mixed
+     */
     public function getMatchs()
     {
         $type = Input::get('type');
@@ -967,6 +1029,11 @@ class InhouseController extends Controller
             case 'running':
 
                 $partidas = Match::running()->get();
+
+                foreach ($partidas as $key => $partida) {
+                    $partidas[$key]['inscritos'] = Match::countPlayers($partida->id);
+                }
+
                 break;
             case 'closed':
 
@@ -977,12 +1044,43 @@ class InhouseController extends Controller
         return Response::json($partidas);
     }
 
+    /**
+     * Get current online players
+     * @return mixed
+     */
     public function getOnlinePlayers()
     {
+        // Checks if user is inhouser, to update online time
+        $isInhouser = Inhouser::isInhouser();
+
+        // if is requesting, he is online
+        if ($isInhouser)
+            Inhouser::goOnline();
+
+        // get online players
         $online_inhousers = Inhouser::online()
             ->with('gamer')
             ->get();
 
         return Response::json($online_inhousers);
+    }
+
+    /**
+     * Close a match and compute results
+     *
+     * @param $match_id
+     * @param $winner
+     */
+    public function closeMatch($match_id,$winner)
+    {
+        if (Match::close($match_id, $winner)) {
+            // Bot message
+            $this->sendBotMessage('<label class="label label-primary">Partida '.$match_id.
+                '</label> <b>encerrada</b>. Resultados já computados', false);
+
+            return true;
+        }
+
+        return false;
     }
 }

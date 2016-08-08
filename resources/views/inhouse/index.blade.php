@@ -131,8 +131,7 @@
                                         <th>Rating</th>
                                     </tr>
                                     </thead>
-                                    <tbody>
-
+                                    <tbody id="players_online">
                                     </tbody>
                                 </table>
 
@@ -305,13 +304,26 @@
         $(document).ready(function() {
             App.init();
 
+            updateInhouseInfo();
+
+            setInterval(function(){
+
+                updateInhouseInfo();
+            }, 7000);
+
+        });
+
+        // Update info
+        function updateInhouseInfo() {
             getPartidas('open');
             getPartidas('closed');
             getPartidas('running');
 
             getOnlinePlayers();
+        }
+
+        $(window).on('beforeunload', function(){
+            //pusher.disconnect();
         });
-
-
     </script>
 @endsection

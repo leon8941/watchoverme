@@ -23,7 +23,7 @@ class CreateInhousersTable extends Migration
             $table->unsignedInteger("voucher_id")->default('2'); // who vouched him?
             $table->smallInteger("vouchs")->default('1'); // vouchs to give
 
-            $table->dateTime("last_online"); // user online?
+            $table->timestamp("last_online"); // user online?
 
             $table->timestamps();
             $table->softDeletes();

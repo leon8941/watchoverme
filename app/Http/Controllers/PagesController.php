@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\URL;
+
 use SEO;
 use Sitemap;
 use OpenGraph;
@@ -23,7 +24,6 @@ use SEOMeta;
 
 class PagesController extends Controller
 {
-    //
 
     public function home()
     {

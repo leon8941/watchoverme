@@ -177,4 +177,67 @@ class Match extends Model
                 'team' => $team
             ]);
     }
+
+    /**
+     * close a match and compute results
+     *
+     * @param $match_id
+     * @param $winner
+     * @return bool
+     */
+    public static function close($match_id, $winner)
+    {
+        $close = Match::where('id',$match_id)
+            ->update([
+                'status' => '4',
+                'winner' => $winner
+            ]);
+
+        if (!$close)
+            return false;
+
+        // Compute results for players in the match
+
+        // Get winners
+        $winners = Match::getPlayersOfTeam($match_id, $winner);
+
+        foreach ($winners as $winner) {
+            Inhouser::where('gamer_id',$winner->gamer_id)
+                ->update([
+                    'rating' => DB::raw('rating + 15'),
+                    'wins' => DB::raw('wins + 1')
+                ]);
+        }
+
+        $loser_team = ($winner == 'A')? 'B' : 'A';
+
+        // Get losers
+        $losers = Match::getPlayersOfTeam($match_id, $loser_team);
+
+        foreach ($losers as $loser) {
+            Inhouser::where('gamer_id',$loser->gamer_id)
+                ->update([
+                    'rating' => DB::raw('rating - 15'),
+                    'lost' => DB::raw('lost + 1')
+                ]);
+        }
+
+        return true;
+    }
+
+    /**
+     * Get players of a team and a match
+     *
+     * @param $match_id
+     * @param $team
+     * @return mixed
+     */
+    public static function getPlayersOfTeam($match_id,$team)
+    {
+        return DB::table('gamer_match')
+            ->where('match_id',$match_id)
+            ->where('team',$team)
+            ->get();
+    }
+
 }

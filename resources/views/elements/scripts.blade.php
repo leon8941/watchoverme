@@ -209,22 +209,39 @@
             }
         }).done(function(data) {
 
+            $(where).empty();
+
             var partidas = JSON.parse(data);
 
             for (key in partidas) {
 
-                var inscritos = (type == 'open')? partidas[key].inscritos : '-';
+                if (typeof (partidas[key].inscritos) != 'undefined')
+                    var inscritos = partidas[key].inscritos
+                else
+                    var inscritos = '-';
 
-                var row = '<tr>'+
-                        '<td><label class="label label-primary">Partida '+ partidas[key].id + '</label></td>'+
-                        '<td>'+inscritos+'</td>'+
-                        '</tr>';
+                // Match open?
+                if (type == 'open') {
+                    var row = '<tr>'+
+                            '<td><label class="label label-primary">Partida '+ partidas[key].id + '</label></td>'+
+                            '<td>'+inscritos+'</td>'+
+                            '</tr>';
+                }
+                else {
+                    var row = '<tr>'+
+                            '<td><label class="label label-primary">Partida '+ partidas[key].id + '</label></td>'+
+                            '<td>'+partidas[key].rating+'</td>'+
+                            '<td>'+inscritos+'</td>'+
+                            '</tr>';
+                }
+
 
                 $(where).append(row);
             }
         });
     }
 
+    // for inhouse
     function getOnlinePlayers() {
 
         $.ajax({
@@ -233,11 +250,54 @@
             type: "GET",
         }).done(function(data) {
 
-            var obj = JSON.parse(data);
+            $('#players_online').empty();
 
+            var players = JSON.parse(data);
+
+            for (key in players) {
+
+                var row = '<tr>'+
+                        '<td></td>'+
+                        '<td><label class="label label-primary">'+ players[key].gamer.battletag + '</label></td>'+
+                        '<td>'+players[key].rating+'</td>'+
+                        '</tr>';
+
+                $('#players_online').append(row);
+            }
 
         });
     }
 
+    // for admin home
+    function getColaborators() {
+
+        var where = '#colaborators_list';
+
+        $.ajax({
+            url: "{{ route('getColaborators') }}",
+            dataType: "html",
+            type: "GET",
+        }).done(function(data) {
+
+            $(where).empty();
+
+            var users = JSON.parse(data);
+            var i = 1;
+
+            for (key in users) {
+
+                var row = '<tr>'+
+                        '<td>'+i+'</td>'+
+                        '<td><label class="label label-primary">'+ users[key].name + '</label></td>'+
+                        '<td>'+users[key].artigos+'</td>'+
+                        '</tr>';
+
+                $(where).append(row);
+
+                i++;
+            }
+
+        });
+    }
 
 </script>

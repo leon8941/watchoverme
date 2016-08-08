@@ -2,8 +2,10 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class Inhouser extends Model
 {
@@ -21,6 +23,8 @@ class Inhouser extends Model
         'last_online',
     ];
 
+    protected $table = 'inhousers';
+
     /**
      * The attributes that should be mutated to dates.
      *
@@ -36,11 +40,10 @@ class Inhouser extends Model
     // Get only whos online
     public function scopeOnline($query)
     {
-        $date = new \DateTime();
-        $date->modify('-5 minutes');
-        $formatted_date = $date->format('Y-m-d H:i:s');
+        $past = Carbon::now(new \DateTimeZone('America/Sao_Paulo'));
+        $past->subMinutes(30);
 
-        return $query->where('last_online','>',$formatted_date);
+        return $query->where('last_online','>=', $past->toDateTimeString());
     }
 
     /**
@@ -85,10 +88,10 @@ class Inhouser extends Model
      */
     public static function goOnline()
     {
-        $gamer = Gamer::where('user_id',Auth::user()->id)->firstOrFail();
+        $gamer = Gamer::where('user_id',Auth::user()->id)->first();
 
         return Inhouser::where('gamer_id',$gamer->id)
-                ->update(['last_online' => 'NOW()']);
+                ->update(['last_online' => DB::raw('NOW()')]);
     }
 
     public static function getVouchs()

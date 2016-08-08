@@ -17,5 +17,8 @@ return [
 
     'default_ranking_page_size' => '60',
 
-    'inhouse_test_mode' => false
+    'inhouse_test_mode' => false,
+
+    'inhouse_win_points' => '15',
+    'inhouse_lost_points' => '15'
 ];

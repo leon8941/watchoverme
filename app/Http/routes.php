@@ -24,15 +24,15 @@ Route::group(['middleware' => ['web']], function () {
     // Subscribe
     Route::post('pages.subscribe',['as' => 'pages.subscribe', 'uses' => 'PagesController@subscribe']);
 
-
-    Route::resource('posts','PostsController');
-
+    // Inhouse
     Route::get('gamers.activate',['as' => 'gamers.activate', 'uses' => 'GamersController@activate']);
     //Route::get('test',['as' => 'test', 'uses' => 'UsersController@test']);
 
+    // Resources
     Route::resource('events','EventsController');
     Route::resource('gamers','GamersController');
     Route::resource('teams','TeamsController');
+    Route::resource('posts','PostsController');
 
     // Sitemaps
     Route::get('sitemap',['as' => 'sitemap', 'uses' => 'SitemapsController@index']);
@@ -80,8 +80,6 @@ Route::group(['middleware' => ['auth']], function () {
     });
 
     // Inhouse
-    //Route::get('/chat', '\App\Http\Controllers\Chat\ChatController@getChat');
-    //Route::get('/login', '\App\Http\Controllers\Chat\ChatController@getLogin');
     Route::get('messages', ['as' => 'messages', 'uses' => 'InhouseController@listMessages']);
     Route::post('/messages', 'InhouseController@saveMessage');
 
@@ -100,6 +98,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('inhouse/defineMatchRating/{match}', ['as' => 'inhouse.defineMatchRating', 'uses' => 'InhouseController@defineMatchRating']);
     Route::get('inhouse/getMatchs', ['as' => 'inhouse.getMatchs', 'uses' => 'InhouseController@getMatchs']);
     Route::get('inhouse/getOnlinePlayers', ['as' => 'inhouse.getOnlinePlayers', 'uses' => 'InhouseController@getOnlinePlayers']);
+
+    // get colaborators
+    Route::get('getColaborators', ['as' => 'getColaborators', 'uses' => 'UsersController@getColaborators']);
 });
 
 
