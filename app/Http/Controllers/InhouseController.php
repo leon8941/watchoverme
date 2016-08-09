@@ -643,6 +643,8 @@ class InhouseController extends Controller
 
             if ($running)
                 return '1 partida <b>em andamento</b> e nenhuma aberta.';
+
+            return 'Nenhuma partida aberta ou em andamento';
         }
 
         // Check how many on match
