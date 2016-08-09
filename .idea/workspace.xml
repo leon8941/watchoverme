@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3406a468-5bd2-41d7-a381-c80813249479" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/InhouseController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/InhouseController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Inhouser.php" afterPath="$PROJECT_DIR$/app/Inhouser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/inhouse/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/inhouse/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/elements/menu-left.blade.php" afterPath="$PROJECT_DIR$/resources/views/elements/menu-left.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/inhouse/join.blade.php" afterPath="$PROJECT_DIR$/resources/views/inhouse/join.blade.php" />
     </list>
     <ignored path="watchoverme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,10 +68,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InhouseController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InhouseController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/InhouseController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50964814">
+            <state vertical-scroll-proportion="-17.26923">
               <caret line="325" column="54" selection-start-line="325" selection-start-column="54" selection-end-line="325" selection-end-column="54" />
               <folding>
                 <element signature="e#40#53#0#PHP" expanded="true" />
@@ -102,6 +98,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-23.115385">
               <caret line="84" column="18" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="join.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/inhouse/join.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7877412">
+              <caret line="97" column="64" selection-start-line="97" selection-start-column="64" selection-end-line="97" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -164,7 +170,6 @@
         <option value="$PROJECT_DIR$/database/migrations/2016_07_25_154852_create_filas_table.php" />
         <option value="$PROJECT_DIR$/resources/views/inhouse/invite.blade.php" />
         <option value="$PROJECT_DIR$/config/inhouse.php" />
-        <option value="$PROJECT_DIR$/resources/views/inhouse/join.blade.php" />
         <option value="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" />
         <option value="$PROJECT_DIR$/config/seotools.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/main.blade.php" />
@@ -193,6 +198,7 @@
         <option value="$PROJECT_DIR$/app/Inhouser.php" />
         <option value="$PROJECT_DIR$/resources/views/inhouse/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/InhouseController.php" />
+        <option value="$PROJECT_DIR$/resources/views/inhouse/join.blade.php" />
       </list>
     </option>
   </component>
@@ -847,13 +853,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/inhouse/join.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6719637">
-          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/UsersTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1106,14 +1105,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/inhouse/invite.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.115385">
-          <caret line="84" column="18" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Gamer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.038462">
@@ -1126,12 +1117,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/InhouseController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50964814">
+        <state vertical-scroll-proportion="-17.26923">
           <caret line="325" column="54" selection-start-line="325" selection-start-column="54" selection-end-line="325" selection-end-column="54" />
           <folding>
             <element signature="e#40#53#0#PHP" expanded="true" />
             <marker date="1470782475157" expanded="true" signature="21705:21865" placeholder="SELECT m.* F..matchs..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/inhouse/invite.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.115385">
+          <caret line="84" column="18" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/inhouse/join.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7877412">
+          <caret line="97" column="64" selection-start-line="97" selection-start-column="64" selection-end-line="97" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>

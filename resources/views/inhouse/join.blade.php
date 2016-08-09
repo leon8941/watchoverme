@@ -95,7 +95,7 @@
             App.init();
 
             $('#entrar_fila').click(function () {
-                alert('A fila de espera será ativada em: \n01/07/2016');
+                alert('A fila de espera será ativada em: \n15/08/2016');
             });
         });
     </script>
