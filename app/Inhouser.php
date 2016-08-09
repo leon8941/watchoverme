@@ -57,9 +57,9 @@ class Inhouser extends Model
             return false;
 
         // does this user have an inhouser?
-        $gamer = Gamer::where('user_id',Auth::user()->id)->firstOrFail();
+        $gamer = Gamer::where('user_id',Auth::user()->id)->first();
 
-        if (!isset($gamer->inhouser) || $gamer->inhouser == null)
+        if (!$gamer || !isset($gamer->inhouser) || $gamer->inhouser == null)
             return false;
 
         if ($gamer->inhouser) {

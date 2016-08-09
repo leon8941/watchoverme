@@ -22,7 +22,7 @@
 
                         <div class="ten wide column chat-column">
 
-                            <div class="panel-body fixed-panel" id="chat_panel">
+                            <div class="panel-body fixed-panel" id="chat_panel" style="padding: 6px !important">
                                 <ul class="media-list">
                                 </ul>
                             </div>
@@ -296,7 +296,8 @@
             overflow: auto;
         }
         .media, .media-body{
-            height: 32px !important;
+            height: 28px !important;
+            font-size: 0.96em;
         }
     </style>
     <script>

@@ -117,18 +117,10 @@ class InhouseController extends Controller
     public function ranking(Request $request)
     {
 
-        // If user didnt defined filters or order, define order
-        if ($request->query->count() <= 0) {
-            // Define Query
-            $query = (new Gamer())
-                ->newQuery()
-                ->orderBy('competitive_rank','DESC');
-        }
-        else {
-            // Define Query
-            $query = (new Gamer())
-                ->newQuery();
-        }
+        $query = (new Inhouser())
+            ->newQuery()
+            ->with('gamer')
+            ->orderBy('rating','DESC');
 
         // Define query
         $config = (new GridConfig())
@@ -140,35 +132,24 @@ class InhouseController extends Controller
             )
             ->setPageSize(30)
             ->setColumns([
-                (new FieldConfig('competitive_rank'))
-                    ->setLabel('Rank')
+                (new FieldConfig('rating'))
+                    ->setLabel('Rating')
                     ->setSortable(true)
                     ->setCallback(function ($val) {
 
                         if (!empty($val))
                             return $val ;
                     }),
-                (new FieldConfig('battletag'))
+                (new FieldConfig('gamer.battletag'))
                     ->addFilter(getFilterILike('battletag'))
                     ->setSortable(true)
+                    ->setLabel('Jogador')
                     ->setCallback(function ($val) {
 
-                        $gamer = Gamer::where('battletag',$val)->first();
-
-                        if (!$gamer->user)
-                            return $val . ' (!)';
-
-                        return '<a href="' . route('users.show',[$gamer->user->slug]) . '">' . $val . '</a>';
+                        if (!empty($val))
+                            return $val;
+                            //return '<a href="' . route('users.show',[$gamer->user->slug]) . '">' . $val . '</a>';
                     }),
-                (new FieldConfig('competitive_wins'))
-                    ->setSortable(true)
-                    ->setLabel('Wins'),
-                (new FieldConfig('competitive_lost'))
-                    ->setSortable(true)
-                    ->setLabel('Lost'),
-                (new FieldConfig('competitive_played'))
-                    ->setSortable(true)
-                    ->setLabel('Played'),
                 (new FieldConfig('team'))
                     ->setSortable(true)
                     ->setCallback(function ($val, \Nayjest\Grids\EloquentDataRow $row) {
@@ -232,7 +213,7 @@ class InhouseController extends Controller
 
         $grid = (new Grid($config))->render();
 
-        return view('inhouse.ranking');
+        return view('inhouse.ranking', compact('grid'));
 
     }
 
@@ -243,6 +224,10 @@ class InhouseController extends Controller
         return view('inhouse.join',compact('fila_espera'));
     }
 
+    public function doJoin()
+    {
+        //$user = Input::get('')
+    }
 
     public function invite()
     {
@@ -287,7 +272,7 @@ class InhouseController extends Controller
                         return '<a href="' . route('users.show',[$gamer->user->slug]) . '">' . $val . '</a>';
                     }),
                 (new FieldConfig('competitive_rank'))
-                    ->setLabel('Gamers')
+                    ->setLabel('competitive rank')
                     ->setSortable(true)
                     ->setCallback(function ($val) {
 
@@ -328,6 +313,17 @@ class InhouseController extends Controller
                     ->setCallback(function ($val, \Nayjest\Grids\EloquentDataRow $row) {
 
                         if (!$row->getSrc()->user)
+                            return '';
+
+                        // Checks if current user has vouchs
+                        $current_gamer = Gamer::where('user_id',Auth::user()->id)
+                            ->with('inhouser')
+                            ->first();
+
+                        if (!$current_gamer)
+                            return '';
+
+                        if ($current_gamer->inhouser->vouchs <= 0)
                             return '';
 
                         return '<button type="button" class="btn btn-info convidar_user" data-gamer="'.

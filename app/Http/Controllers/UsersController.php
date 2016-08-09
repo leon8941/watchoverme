@@ -212,6 +212,8 @@ class UsersController extends Controller
             $users[$key]->artigos = Posts::where('user_id',$user->id)->count();
         }
 
+        $users->sort();
+
         return Response::json($users);
     }
 }
