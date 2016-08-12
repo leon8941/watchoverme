@@ -64,20 +64,11 @@
                     <span>Times</span>
                 </a>
             </li>
-            <li class="has-sub expand">
-                <a href="javascript:;">
-                    <b class="caret pull-right"></b>
-                    <i class="fa fa-gamepad"></i>
-                    <span>InHouse</span>
+            <li class="{{ isActive('about') }}">
+                <a href="{{ route('about') }}">
+                    <i class="fa fa-heart"></i>
+                    <span>O Verme</span>
                 </a>
-                <ul class="sub-menu" style="display: block;">
-                    <li><a href="{{ route('inhouse') }}">Home</a></li>
-                    <li><a href="{{ route('inhouse.ranking') }}">Ranking</a></li>
-                    <li><a href="{{ route('inhouse.entrar') }}">Entrar</a></li>
-                    @if (\App\Inhouser::isInhouser())
-                        <li><a href="{{ route('inhouse.invite') }}">Convidar</a></li>
-                    @endif
-                </ul>
             </li>
             <!-- begin sidebar minify button -->
             <li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>

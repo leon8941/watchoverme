@@ -18,6 +18,9 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/',['as' => 'home', 'uses' => 'PagesController@home']);
     //Route::get('home',['as' => 'home', 'uses' => 'PagesController@home']);
 
+    // Sobre
+    Route::get('about',['as' => 'about', 'uses' => 'PagesController@about']);
+
     // API consuming
     Route::get('consult',['as' => 'consult', 'uses' => 'PagesController@consult']);
 
@@ -43,6 +46,7 @@ Route::group(['middleware' => ['web']], function () {
 
     // Events
     Route::get('events.get',['as' => 'events.get', 'uses' => 'EventsController@get']);
+
 });
 
 //Route::auth();

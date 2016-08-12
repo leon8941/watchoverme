@@ -7,6 +7,7 @@ use App\Gamer;
 use App\Post;
 use App\Posts;
 use App\Subscriber;
+use App\Team;
 use App\User;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
@@ -112,4 +113,14 @@ class PagesController extends Controller
         return Sitemap::index();
     }
 
+    public function about()
+    {
+        $news = Post::count();
+
+        $users = User::count();
+
+        $teams = Team::count();
+
+        return view('pages.about', compact('teams', 'users', 'news'));
+    }
 }
