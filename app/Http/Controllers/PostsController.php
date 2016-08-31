@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Posts;
 use Illuminate\Http\Request;
 
@@ -65,6 +66,8 @@ class PostsController extends Controller
         $posts = Posts::orderBy('created_at',"DESC")
             ->get();
 
-        return view('posts.index',compact('posts'));
+        $categories = Category::getList();
+
+        return view('posts.index',compact('posts','categories'));
     }
 }

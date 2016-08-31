@@ -47,6 +47,8 @@ Route::group(['middleware' => ['web']], function () {
     // Events
     Route::get('events.get',['as' => 'events.get', 'uses' => 'EventsController@get']);
 
+    // Categories
+    Route::get('posts/{category}',['as' => 'posts.category', 'uses' => 'CategoriesController@index']);
 });
 
 //Route::auth();

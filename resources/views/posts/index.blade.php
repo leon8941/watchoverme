@@ -16,15 +16,21 @@
     <div id="options" class="m-b-10">
         <span class="gallery-option-set" id="filter" data-option-key="filter">
             <a href="#show-all" class="btn btn-default btn-xs active" data-option-value="*">
-                Show All
+                Todas
             </a>
+            @foreach($categories as $category)
+                <a href="#{{$category->slug}}" class="btn btn-{{ getCategoryColor($category) }} btn-xs"
+                        data-option-value=".{{$category->slug}}">
+                    {{ $category->title }}
+                </a>
+            @endforeach
         </span>
     </div>
     <div id="gallery" class="gallery">
         @foreach($posts as $post)
-            <div class="image gallery-group-1">
+            <div class="image @foreach($post->categories as $category){{ $category->slug }} @endforeach isotope-item">
                 <div class="image-inner">
-                    <a href="{{ route('posts.show', [$post->slug]) }}" >
+                    <a href="{{ route('posts.show', [$post->slug]) }}" data-lightbox="humor" >
                         <img src="{{ getPostImage($post->image) }}" alt="" />
                     </a>
                     <p class="image-caption">

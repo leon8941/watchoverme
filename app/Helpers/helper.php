@@ -33,20 +33,20 @@ function getCategoryColor($category) {
 
     switch ($category->slug) {
         case 'humor':
-            return 'label-danger';
+            return 'danger';
             break;
         case 'noticias':
-            return 'label-inverse';
+            return 'inverse';
             break;
         case 'blue-post':
-            return 'label-primary';
+            return 'primary';
             break;
         case 'cenario-nacional':
-            return 'label-warning';
+            return 'warning';
             break;
         case 'campeonatos':
         case 'eventos':
-            return 'label-default';
+            return 'default';
             break;
     }
 }

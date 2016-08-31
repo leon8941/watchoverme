@@ -38,7 +38,7 @@
                                             {{ $post->description }}
                                             <div class="text text-right text-muted text-align-reverse" style="margin-right: 4px">
                                                 @foreach($post->categories as $category)
-                                                    <label class="label {{ getCategoryColor($category) }}">{{$category->title}}</label>
+                                                    <label class="label label-{{ getCategoryColor($category) }}">{{$category->title}}</label>
                                                 @endforeach
                                                     <br>
                                                 {{ $post->created_at->diffForHumans() }}
