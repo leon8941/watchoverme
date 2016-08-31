@@ -28,7 +28,7 @@ class CreateCategoriesTable extends Migration
         Schema::create('category_posts',function(Blueprint $table){
 
             $table->unsignedInteger("category_id");
-            $table->unsignedInteger("post_id");
+            $table->unsignedInteger("posts_id");
 
             $table->timestamps();
         });
