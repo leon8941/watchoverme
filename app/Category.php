@@ -37,4 +37,10 @@ class Category extends Model implements SluggableInterface
     {
         return $this->belongsToMany('App\Post');
     }
+
+    public static function getList()
+    {
+        return Category::get();
+        //return Category::lists('title','id');
+    }
 }

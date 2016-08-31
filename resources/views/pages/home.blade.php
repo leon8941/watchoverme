@@ -28,15 +28,19 @@
                                 @foreach ($posts as $post)
                                     <li class="media media-lg" style="min-height: 90px;">
                                         <a href="{{ route('posts.show', [$post->slug]) }}" class="pull-left">
-                                            <img src="{{ getPostImage($post->image) }}" alt="" class="media-object" width="206px"
-                                                 style="max-height: 290px" />
+                                            <img src="{{ getPostImage($post->image) }}" alt="" class="media-object" width="172px"
+                                                 style="max-height: 172px" />
                                         </a>
                                         <div class="media-body">
                                             <h4 class="media-heading">
                                                 <a href="{{ route('posts.show',[$post->slug]) }}">{{ $post->title }}</a>
                                             </h4>
                                             {{ $post->description }}
-                                            <div class="text text-right text-muted text-align-reverse">
+                                            <div class="text text-right text-muted text-align-reverse" style="margin-right: 4px">
+                                                @foreach($post->categories as $category)
+                                                    <label class="label {{ getCategoryColor($category) }}">{{$category->title}}</label>
+                                                @endforeach
+                                                    <br>
                                                 {{ $post->created_at->diffForHumans() }}
                                             </div>
                                         </div>

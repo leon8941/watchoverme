@@ -29,6 +29,27 @@ function getColumn( $column )
     }
 }
 
+function getCategoryColor($category) {
+
+    switch ($category->slug) {
+        case 'humor':
+            return 'label-danger';
+            break;
+        case 'noticias':
+            return 'label-inverse';
+            break;
+        case 'blue-post':
+            return 'label-primary';
+            break;
+        case 'cenario-nacional':
+            return 'label-warning';
+            break;
+        case 'campeonatos':
+        case 'eventos':
+            return 'label-default';
+            break;
+    }
+}
 
 /**
  * Get Filter with LIKE

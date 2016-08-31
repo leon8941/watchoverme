@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Category;
 use App\Http\Controllers\Controller;
 use Redirect;
 use Schema;
@@ -40,8 +41,9 @@ class PostsController extends Controller {
 	{
 	    $user = User::lists("id", "id")->prepend('Please select', '');
 
-	    
-	    return view('admin.posts.create', compact("user"));
+	    $categories = Category::getList();
+
+	    return view('admin.posts.create', compact("user",'categories'));
 	}
 
 	/**
@@ -52,7 +54,19 @@ class PostsController extends Controller {
 	public function store(CreatePostsRequest $request)
 	{
 	    $request = $this->saveFiles($request);
-		Posts::create($request->all());
+
+        $new_post = Posts::create($request->all());
+
+        // save categories
+        $categories = $request->get('category');
+
+        if (!empty($categories)) {
+            foreach ($categories as $category) {
+                $cat = Category::where('id',$category)->first();
+
+                $new_post->categories()->attach($cat->id);
+            }
+        }
 
 		return redirect()->route('admin.posts.index');
 	}

@@ -25,7 +25,7 @@ class CreateCategoriesTable extends Migration
             $table->softDeletes();
         });
 
-        Schema::create('category_post',function(Blueprint $table){
+        Schema::create('category_posts',function(Blueprint $table){
 
             $table->unsignedInteger("category_id");
             $table->unsignedInteger("post_id");
@@ -42,6 +42,6 @@ class CreateCategoriesTable extends Migration
     public function down()
     {
         Schema::drop('categories');
-        Schema::drop('category_post');
+        Schema::drop('category_posts');
     }
 }
