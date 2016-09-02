@@ -82,8 +82,9 @@ class PostsController extends Controller {
 		$posts = Posts::find($id);
 	    $user = User::lists("id", "id")->prepend('Please select', '');
 
-	    
-		return view('admin.posts.edit', compact('posts', "user"));
+		$categories = Category::getList();
+
+		return view('admin.posts.edit', compact('posts', "user", 'categories'));
 	}
 
 	/**
@@ -99,6 +100,17 @@ class PostsController extends Controller {
         $request = $this->saveFiles($request);
 
 		$posts->update($request->all());
+
+        // save categories
+        $categories = $request->get('category');
+
+        if (!empty($categories)) {
+            foreach ($categories as $category) {
+                $cat = Category::where('id',$category)->first();
+
+                $posts->categories()->attach($cat->id);
+            }
+        }
 
 		return redirect()->route('admin.posts.index');
 	}

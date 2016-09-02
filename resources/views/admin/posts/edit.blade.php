@@ -34,6 +34,14 @@
     </div>
 </div>
 <div class="form-group">
+    {!! Form::label('category', 'Categorias', array('class'=>'col-sm-2 control-label')) !!}
+    <div class="col-sm-10">
+        @foreach($categories as $category)
+            <input type="checkbox" name="category[]" value="{{$category->id}}" {{ isChecked($posts->categories, $category->id) }}> {{ $category->title }}
+        @endforeach
+    </div>
+</div>
+<div class="form-group">
     {!! Form::label('description', 'Description (1 short paragraph)', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
         {!! Form::textarea('description', old('description',$posts->description), array('class'=>'form-control')) !!}

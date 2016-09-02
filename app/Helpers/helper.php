@@ -51,6 +51,14 @@ function getCategoryColor($category) {
     }
 }
 
+function isChecked($categories, $this_category) {
+
+    foreach ($categories as $category) {
+        if ($this_category == $category->id)
+            return 'checked="checked"';
+    }
+}
+
 /**
  * Get Filter with LIKE
  *
