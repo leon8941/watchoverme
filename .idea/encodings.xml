@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/GamersController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/InhouseController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/Message.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/PagesController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/PostsController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/TeamsController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Match.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config/seotools.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config/verme.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/admin/categories/create.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/admin/posts/create.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/auth/register.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/elements/menu-left.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/errors/403.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/events/index.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/inhouse/index.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/inhouse/invite.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/inhouse/join.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/layouts/main.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/pages/about.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/pages/coming-soon.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/pages/home.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/posts/index.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/teams/create.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/teams/index.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/teams/show.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/users/index.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/users/show.blade.php" charset="UTF-8" />
+  </component>
+</project>

@@ -16,6 +16,11 @@ class Role extends Model
         return $this->belongsToMany(Menu::class);
     }
 
+    public function team()
+    {
+        return $this->belongsTo(Team::class);
+    }
+
     public function canAccessMenu($menu)
     {
         if ($menu instanceof Menu) {

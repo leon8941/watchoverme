@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', false),
+    'debug' => env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -156,8 +156,35 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // Helpers
+        'App\Providers\HelperServiceProvider',
+
+        // Grids
+        'Nayjest\Grids\ServiceProvider',
+
+        // Form & HTML
+        'Collective\Html\HtmlServiceProvider',
+
+        // Excel
+        'Maatwebsite\Excel\ExcelServiceProvider',
+
+        // Image Intervention
+        'Intervention\Image\ImageServiceProvider',
+
+        // Sluggable
+        'Cviebrock\EloquentSluggable\SluggableServiceProvider',
+
         // Admin
-        Laraveldaily\Quickadmin\QuickadminServiceProvider::class
+        Laraveldaily\Quickadmin\QuickadminServiceProvider::class,
+
+        // other providers ommited
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+
+        // Site map
+        'Watson\Sitemap\SitemapServiceProvider',
+
+        // Pusher
+        Vinkla\Pusher\PusherServiceProvider::class
     ],
 
     /*
@@ -204,6 +231,32 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        'Input'     => 'Illuminate\Support\Facades\Input',
+
+        'Form' => 'Collective\Html\FormFacade',
+        'Html' => 'Collective\Html\HtmlFacade',
+
+        // Grid
+        'Grids'     => 'Nayjest\Grids\Grids',
+
+        // Excel
+        'Excel' => 'Maatwebsite\Excel\Facades\Excel',
+
+        // Images
+        'Image' => 'Intervention\Image\Facades\Image',
+
+        // other Facades ommited
+        'SEOMeta'   => Artesaos\SEOTools\Facades\SEOMeta::class,
+        'OpenGraph' => Artesaos\SEOTools\Facades\OpenGraph::class,
+        'Twitter'   => Artesaos\SEOTools\Facades\TwitterCard::class,
+        // or
+        'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
+
+        // Sitemap
+        'Sitemap' => 'Watson\Sitemap\Facades\Sitemap',
+
+        // Pusher
+        'LaravelPusher' => Vinkla\Pusher\Facades\Pusher::class
     ],
 
 ];

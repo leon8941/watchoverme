@@ -16,27 +16,38 @@
     </div>
 </div>
 
-{!! Form::model($posts, array('class' => 'form-horizontal', 'id' => 'form-with-validation', 'method' => 'PATCH', 'route' => array('admin.posts.update', $posts->id))) !!}
+{!! Form::model($posts, array('files' => true, 'class' => 'form-horizontal', 'id' => 'form-with-validation', 'method' => 'PATCH', 'route' => array('admin.posts.update', $posts->id))) !!}
 
 <div class="form-group">
-    {!! Form::label('title', 'Título*', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('title', 'Title*', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
         {!! Form::text('title', old('title',$posts->title), array('class'=>'form-control')) !!}
         
     </div>
 </div><div class="form-group">
-    {!! Form::label('author_id', 'Autor*', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('image', 'Image', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::text('author_id', old('author_id',$posts->author_id), array('class'=>'form-control')) !!}
-        
-    </div>
-</div><div class="form-group">
-    {!! Form::label('texto', 'Texto*', array('class'=>'col-sm-2 control-label')) !!}
-    <div class="col-sm-10">
-        {!! Form::textarea('texto', old('texto',$posts->texto), array('class'=>'form-control ckeditor')) !!}
+        {!! Form::file('image') !!}
+        {!! Form::hidden('image_w', 4096) !!}
+        {!! Form::hidden('image_h', 4096) !!}
         
     </div>
 </div>
+<div class="form-group">
+    {!! Form::label('description', 'Description (1 short paragraph)', array('class'=>'col-sm-2 control-label')) !!}
+    <div class="col-sm-10">
+        {!! Form::textarea('description', old('description',$posts->description), array('class'=>'form-control')) !!}
+
+    </div>
+</div>
+<div class="form-group">
+    {!! Form::label('text', 'Text', array('class'=>'col-sm-2 control-label')) !!}
+    <div class="col-sm-10">
+        {!! Form::textarea('text', old('text',$posts->text), array('class'=>'form-control ckeditor')) !!}
+        
+    </div>
+</div>
+{!! Form::hidden('user_id', Auth::user()->id) !!}
 
 <div class="form-group">
     <div class="col-sm-10 col-sm-offset-2">

@@ -1,124 +1,174 @@
 @extends('layouts.main')
 
 @section('content')
+    <!-- begin #content -->
     <div id="content" class="content">
         <!-- begin breadcrumb -->
         <ol class="breadcrumb pull-right">
             <li><a href="javascript:;">Home</a></li>
-            <li><a href="javascript:;">Dashboard</a></li>
-            <li class="active">Dashboard v2</li>
         </ol>
         <!-- end breadcrumb -->
         <!-- begin page-header -->
-        <h1 class="page-header">Dashboard v2 <small>header small text goes here...</small></h1>
+        <h1 class="page-header">Dashboard <small></small></h1>
         <!-- end page-header -->
-        <!-- begin row -->
-        <div class="row">
-            <!-- begin col-3 -->
-            <div class="col-md-3 col-sm-6">
-                <div class="widget widget-stats bg-green">
-                    <div class="stats-icon stats-icon-lg"><i class="fa fa-globe fa-fw"></i></div>
-                    <div class="stats-title">TODAY'S VISITS</div>
-                    <div class="stats-number">7,842,900</div>
-                    <div class="stats-progress progress">
-                        <div class="progress-bar" style="width: 70.1%;"></div>
-                    </div>
-                    <div class="stats-desc">Better than last week (70.1%)</div>
-                </div>
-            </div>
-            <!-- end col-3 -->
-            <!-- begin col-3 -->
-            <div class="col-md-3 col-sm-6">
-                <div class="widget widget-stats bg-blue">
-                    <div class="stats-icon stats-icon-lg"><i class="fa fa-tags fa-fw"></i></div>
-                    <div class="stats-title">TODAY'S PROFIT</div>
-                    <div class="stats-number">180,200</div>
-                    <div class="stats-progress progress">
-                        <div class="progress-bar" style="width: 40.5%;"></div>
-                    </div>
-                    <div class="stats-desc">Better than last week (40.5%)</div>
-                </div>
-            </div>
-            <!-- end col-3 -->
-            <!-- begin col-3 -->
-            <div class="col-md-3 col-sm-6">
-                <div class="widget widget-stats bg-purple">
-                    <div class="stats-icon stats-icon-lg"><i class="fa fa-shopping-cart fa-fw"></i></div>
-                    <div class="stats-title">NEW ORDERS</div>
-                    <div class="stats-number">38,900</div>
-                    <div class="stats-progress progress">
-                        <div class="progress-bar" style="width: 76.3%;"></div>
-                    </div>
-                    <div class="stats-desc">Better than last week (76.3%)</div>
-                </div>
-            </div>
-            <!-- end col-3 -->
-            <!-- begin col-3 -->
-            <div class="col-md-3 col-sm-6">
-                <div class="widget widget-stats bg-black">
-                    <div class="stats-icon stats-icon-lg"><i class="fa fa-comments fa-fw"></i></div>
-                    <div class="stats-title">NEW COMMENTS</div>
-                    <div class="stats-number">3,988</div>
-                    <div class="stats-progress progress">
-                        <div class="progress-bar" style="width: 54.9%;"></div>
-                    </div>
-                    <div class="stats-desc">Better than last week (54.9%)</div>
-                </div>
-            </div>
-            <!-- end col-3 -->
-        </div>
-        <!-- end row -->
 
         <!-- begin row -->
         <div class="row">
+            <!-- begin col-8 -->
             <div class="col-md-8">
-                <div class="widget-chart with-sidebar bg-black">
-                    <div class="widget-chart-content">
-                        <h4 class="chart-title">
-                            Visitors Analytics
-                            <small>Where do our visitors come from</small>
-                        </h4>
-                        <div id="visitors-line-chart" class="morris-inverse" style="height: 260px;"></div>
-                    </div>
-                    <div class="widget-chart-sidebar bg-black-darker">
-                        <div class="chart-number">
-                            1,225,729
-                            <small>visitors</small>
+
+                <ul class="nav nav-tabs nav-tabs-inverse nav-justified nav-justified-mobile" data-sortable-id="index-1">
+                    <li class="active"><a href="#latest-post" data-toggle="tab"><i class="fa fa-comment-o m-r-5"></i> <span class="hidden-xs">Últimas Notícias</span></a></li>
+                    <li class=""><a href="#purchase" data-toggle="tab"><i class="fa fa-trophy m-r-5"></i> <span class="hidden-xs">Próximos Eventos</span></a></li>
+                </ul>
+                <div class="tab-content" data-sortable-id="index-2">
+                    <div class="tab-pane fade active in" id="latest-post">
+                        <div class="height-sm" data-scrollbar="true">
+                            <ul class="media-list media-list-with-divider">
+                                @foreach ($posts as $post)
+                                    <li class="media media-lg" style="min-height: 90px;">
+                                        <a href="{{ route('posts.show', [$post->slug]) }}" class="pull-left">
+                                            <img src="{{ getPostImage($post->image) }}" alt="" class="media-object" width="172px"
+                                                 style="max-height: 172px" />
+                                        </a>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">
+                                                <a href="{{ route('posts.show',[$post->slug]) }}">{{ $post->title }}</a>
+                                            </h4>
+                                            {{ $post->description }}
+                                            <div class="text text-right text-muted text-align-reverse" style="margin-right: 4px">
+                                                @foreach($post->categories as $category)
+                                                    <label class="label label-{{ getCategoryColor($category) }}">{{$category->title}}</label>
+                                                @endforeach
+                                                    <br>
+                                                {{ $post->created_at->diffForHumans() }}
+                                            </div>
+                                        </div>
+                                    </li>
+                                @endforeach
+                            </ul>
                         </div>
-                        <div id="visitors-donut-chart" style="height: 160px"></div>
-                        <ul class="chart-legend">
-                            <li><i class="fa fa-circle-o fa-fw text-success m-r-5"></i> 34.0% <span>New Visitors</span></li>
-                            <li><i class="fa fa-circle-o fa-fw text-primary m-r-5"></i> 56.0% <span>Return Visitors</span></li>
-                        </ul>
+                        <div class="panel-footer text-center">
+                            <a href="{{ route('posts.index') }}" class="text-inverse">Ver Todas</a>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="purchase">
+                        <div class="height-sm" data-scrollbar="true">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>Início</th>
+                                    <th></th>
+                                    <th>Evento</th>
+                                    <th>Região</th>
+                                    <th>Descrição</th>
+                                    <th>Stream</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach($events as $event)
+                                    <tr>
+                                        <td>{{ $event->starts->format('d/m/Y') }}</td>
+                                        <td>
+                                            <a href="{{ $event->url }}" target="_blank">
+                                                <img src="{{ asset('uploads/'.$event->image) }}" alt="" width="220px"/>
+                                            </a>
+                                        </td>
+                                        <td class="hidden-sm">
+                                            {{ $event->title }}
+                                        </td>
+                                        <td>{{ getRegion($event->from) }}</td>
+                                        <td>{{ $event->description }}</td>
+                                        <td>
+                                            @if ($event->streamer)
+                                                <a href="{{ $event->streamer }}" target="_blank"><i class="fa fa-caret-square-o-right"></i></a>
+                                            @endif
+                                        </td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- end col-8 -->
+            <!-- begin col-4 -->
             <div class="col-md-4">
-                <div class="panel panel-inverse" data-sortable-id="index-1">
+                <div class="panel panel-inverse" data-sortable-id="index-11">
                     <div class="panel-heading">
-                        <h4 class="panel-title">
-                            Visitors Origin
-                        </h4>
+                        <div class="panel-heading-btn">
+                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                        </div>
+                        <h4 class="panel-title">Últimas atualizações</h4>
                     </div>
-                    <div id="visitors-map" class="bg-black" style="height: 181px;"></div>
-                    <div class="list-group">
-                        <a href="#" class="list-group-item list-group-item-inverse text-ellipsis">
-                            <span class="badge badge-success">20.95%</span>
-                            1. United State
-                        </a>
-                        <a href="#" class="list-group-item list-group-item-inverse text-ellipsis">
-                            <span class="badge badge-primary">16.12%</span>
-                            2. India
-                        </a>
-                        <a href="#" class="list-group-item list-group-item-inverse text-ellipsis">
-                            <span class="badge badge-inverse">14.99%</span>
-                            3. South Korea
-                        </a>
+                    <div class="panel-body p-t-0">
+                        <table class="table table-valign-middle m-b-0">
+                            <thead>
+                            <tr>
+                                <th>Player</th>
+                                <th>Competitive Rank</th>
+                                <th>Level</th>
+                                <th>Competitive Wins</th>
+                                <th>Competitive Lost</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($updated_players as $player)
+                                <tr>
+                                    <td>
+                                        @if ($player->user)
+                                            <a href="{{route('users.show',[$player->user->slug]) }}"> {{ $player->battletag }}</a></td>
+                                        @endif
+                                    <td>
+                                        @if ($player->competitive_rank)
+                                            {{ $player->competitive_rank }}
+                                            <span class="text-success"><i class="fa fa-arrow-up"></i></span>
+                                        @else
+                                            -
+                                        @endif
+                                    </td>
+                                    <td>{{ $player->level }}</td>
+                                    <td>{{ $player->competitive_wins }}</td>
+                                    <td>{{ $player->competitive_lost }}</td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                        <div class="panel-footer text-center">
+                            <a href="{{ route('gamers.index') }}" class="text-inverse">Ver Ranking</a>
+                        </div>
                     </div>
                 </div>
+
+                <!-- calendar -->
+                <div class="panel panel-inverse" data-sortable-id="index-5">
+                    <div class="panel-heading">
+                        <div class="panel-heading-btn">
+                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                        </div>
+                        <h4 class="panel-title">Calendário</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div id="calendar"></div>
+                        <br>
+                        <div class="panel-footer text-center">
+                            <a href="{{ route('events.index') }}" class="text-inverse">Ver Eventos</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+            <!-- end col-4 -->
         </div>
         <!-- end row -->
+
         <!-- begin row -->
         <div class="row">
             <!-- begin col-4 -->
@@ -126,55 +176,45 @@
                 <!-- begin panel -->
                 <div class="panel panel-inverse" data-sortable-id="index-2">
                     <div class="panel-heading">
-                        <h4 class="panel-title">Chat History <span class="label label-success pull-right">4 message</span></h4>
+                        <h4 class="panel-title">Parceiros<span class="label label-success pull-right">3 deuses</span></h4>
                     </div>
                     <div class="panel-body bg-silver">
-                        <div data-scrollbar="true" data-height="225px">
+                        <div data-scrollbar="true" data-height="310px">
                             <ul class="chats">
                                 <li class="left">
-                                    <span class="date-time">yesterday 11:23pm</span>
-                                    <a href="javascript:;" class="name">Sowse Bawdy</a>
-                                    <a href="javascript:;" class="image"><img alt="" src="assets/img/user-12.jpg" /></a>
+                                    <a href="http://www.bestgamers.com.br"
+                                       target="_blank" class="name">Best Gamers</a>
+                                    <a href="http://www.bestgamers.com.br"
+                                       target="_blank" class="image pull-left">
+                                        <img src="{{ asset('img/partners/best-gamers.jpg') }}" alt="" class="" width="160px"/>
+                                    </a>
                                     <div class="message">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit volutpat. Praesent mattis interdum arcu eu feugiat.
+                                        Uma das maiores e melhores lojas <b>para gamers</b> do Brasil.<br>
+                                        Patrocinamos a Temporada Best Gamers do ranking nacional de Overwatch pois acreditamos
+                                        no cenário de e-sports brasileiro.
                                     </div>
                                 </li>
                                 <li class="right">
-                                    <span class="date-time">08:12am</span>
-                                    <a href="#" class="name"><span class="label label-primary">ADMIN</span> Me</a>
-                                    <a href="javascript:;" class="image"><img alt="" src="assets/img/user-13.jpg" /></a>
+                                    <a href="https://www.youtube.com/channel/UCcpyVzY-cxTTmacKZM3_edQ"
+                                       target="_blank" class="name">pOkiz Games - YouTube Channel</a>
+                                    <a href="https://www.youtube.com/channel/UCcpyVzY-cxTTmacKZM3_edQ"
+                                       target="_blank"  class="image"><img alt="" src="{{ asset('img/partners/pokiz.PNG') }}" /></a>
                                     <div class="message">
-                                        Nullam posuere, nisl a varius rhoncus, risus tellus hendrerit neque.
+                                        Canal dedicado exclusivamente à abordagem de assuntos técnicos, informativos e gameplays.
                                     </div>
                                 </li>
                                 <li class="left">
-                                    <span class="date-time">09:20am</span>
-                                    <a href="#" class="name">Neck Jolly</a>
-                                    <a href="javascript:;" class="image"><img alt="" src="assets/img/user-10.jpg" /></a>
+                                    <a href="http://gamingroom.net" class="name">Gaming Room</a>
+                                    <a href="www.gamingroom.net"
+                                       target="_blank" class="image pull-left">
+                                        <img src="{{ asset('img/partners/gaming-room-square.PNG') }}" alt="" class="" width="160px"/>
+                                    </a>
                                     <div class="message">
-                                        Euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                                    </div>
-                                </li>
-                                <li class="left">
-                                    <span class="date-time">11:15am</span>
-                                    <a href="#" class="name">Shag Strap</a>
-                                    <a href="javascript:;" class="image"><img alt="" src="assets/img/user-14.jpg" /></a>
-                                    <div class="message">
-                                        Nullam iaculis pharetra pharetra. Proin sodales tristique sapien mattis placerat.
+                                        Gaming Room é um canal de debate de games que começa a ganhar volume no YouTube.
                                     </div>
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="panel-footer">
-                        <form name="send_message_form" data-id="message-form">
-                            <div class="input-group">
-                                <input type="text" class="form-control input-sm" name="message" placeholder="Enter your message here.">
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-primary btn-sm" type="button">Send</button>
-                                        </span>
-                            </div>
-                        </form>
                     </div>
                 </div>
                 <!-- end panel -->
@@ -185,16 +225,45 @@
                 <!-- begin panel -->
                 <div class="panel panel-inverse" data-sortable-id="index-3">
                     <div class="panel-heading">
-                        <h4 class="panel-title">Today's Schedule</h4>
+                        <h4 class="panel-title">Top 5 Ranking <span class="label label-success pull-right">5 lendas</span></h4>
                     </div>
                     <div id="schedule-calendar" class="bootstrap-calendar"></div>
                     <div class="list-group">
-                        <a href="#" class="list-group-item text-ellipsis">
-                            <span class="badge badge-success">9:00 am</span> Sales Reporting
-                        </a>
-                        <a href="#" class="list-group-item text-ellipsis">
-                            <span class="badge badge-primary">2:45 pm</span> Have a meeting with sales team
-                        </a>
+                        <table id="data-table" class="table table-striped nowrap dataTable no-footer dtr-inline" width="100%" role="grid" aria-describedby="data-table_info" style="width: 100%;">
+                            <thead>
+                            <tr role="row">
+                                <th class="sorting_asc" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 222px;">#</th>
+                                <th class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 322px;">Jogador</th>
+                                <th class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 293px;">Rank</th>
+                                <th class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 190px;">Vitórias</th>
+                                <th class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 139px;">Derrotas</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <?php $i=1; ?>
+                            @foreach ($tops as $top)
+                                <tr class="gradeA odd" role="row">
+                                    <td class="sorting_1">{{ $i }}</td>
+                                    <td>
+                                        <a href="{{ route('users.show', [$top->user->slug]) }}" target="_blank">
+                                            {{ $top->battletag }}
+                                        </a>
+                                    </td>
+                                    <td><span class="badge badge-primary">{{ $top->competitive_rank }}</span></td>
+                                    <td>{{ $top->competitive_wins }}</td>
+                                    <td>{{ $top->competitive_lost }}</td>
+                                </tr>
+                                <?php $i++; ?>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="panel-body">
+                        <div id="calendar"></div>
+                        <br>
+                        <div class="panel-footer text-center">
+                            <a href="{{ route('gamers.index') }}" class="text-inverse">Ver Ranking</a>
+                        </div>
                     </div>
                 </div>
                 <!-- end panel -->
@@ -203,70 +272,24 @@
             <!-- begin col-4 -->
             <div class="col-md-4">
                 <!-- begin panel -->
-                <div class="panel panel-inverse" data-sortable-id="index-4">
+                <div class="panel panel-inverse" data-sortable-id="index-6">
                     <div class="panel-heading">
-                        <h4 class="panel-title">New Registered Users <span class="pull-right label label-success">24 new users</span></h4>
+                        <h4 class="panel-title">Novos Vermes <span class="pull-right label label-success">{{ $count_new_users }} larvinhas </span></h4>
                     </div>
                     <ul class="registered-users-list clearfix">
-                        <li>
-                            <a href="javascript:;"><img src="assets/img/user-5.jpg" alt="" /></a>
-                            <h4 class="username text-ellipsis">
-                                Savory Posh
-                                <small>Algerian</small>
-                            </h4>
-                        </li>
-                        <li>
-                            <a href="javascript:;"><img src="assets/img/user-3.jpg" alt="" /></a>
-                            <h4 class="username text-ellipsis">
-                                Ancient Caviar
-                                <small>Korean</small>
-                            </h4>
-                        </li>
-                        <li>
-                            <a href="javascript:;"><img src="assets/img/user-1.jpg" alt="" /></a>
-                            <h4 class="username text-ellipsis">
-                                Marble Lungs
-                                <small>Indian</small>
-                            </h4>
-                        </li>
-                        <li>
-                            <a href="javascript:;"><img src="assets/img/user-8.jpg" alt="" /></a>
-                            <h4 class="username text-ellipsis">
-                                Blank Bloke
-                                <small>Japanese</small>
-                            </h4>
-                        </li>
-                        <li>
-                            <a href="javascript:;"><img src="assets/img/user-2.jpg" alt="" /></a>
-                            <h4 class="username text-ellipsis">
-                                Hip Sculling
-                                <small>Cuban</small>
-                            </h4>
-                        </li>
-                        <li>
-                            <a href="javascript:;"><img src="assets/img/user-6.jpg" alt="" /></a>
-                            <h4 class="username text-ellipsis">
-                                Flat Moon
-                                <small>Nepalese</small>
-                            </h4>
-                        </li>
-                        <li>
-                            <a href="javascript:;"><img src="assets/img/user-4.jpg" alt="" /></a>
-                            <h4 class="username text-ellipsis">
-                                Packed Puffs
-                                <small>Malaysian></small>
-                            </h4>
-                        </li>
-                        <li>
-                            <a href="javascript:;"><img src="assets/img/user-9.jpg" alt="" /></a>
-                            <h4 class="username text-ellipsis">
-                                Clay Hike
-                                <small>Swedish</small>
-                            </h4>
-                        </li>
+                        @foreach($new_registered_users as $user)
+                            <li>
+                                <a href="{{ route('users.show',[$user->slug]) }}">
+                                    <img src="{{ getUserImage($user->avatar) }}" alt="{{ $user->name }}" width="114px" style="max-height: 114px"/></a>
+                                <h4 class="username text-ellipsis">
+                                    {{ $user->name }}
+                                    <small></small>
+                                </h4>
+                            </li>
+                        @endforeach
                     </ul>
                     <div class="panel-footer text-center">
-                        <a href="javascript:;" class="text-inverse">View All</a>
+                        <a href="{{ route('gamers.index') }}" class="text-inverse">Ver Todos</a>
                     </div>
                 </div>
                 <!-- end panel -->
@@ -274,5 +297,29 @@
             <!-- end col-4 -->
         </div>
         <!-- end row -->
+
     </div>
+    <!-- end #content -->
+@endsection
+
+@section('scripts')
+    @include('elements.scripts')
+    <script src="{{ asset('assets/plugins/isotope/jquery.isotope.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/lightbox/js/lightbox-2.6.min.js') }}"></script>
+
+    <script src="{{ asset('js/moment/moment.js') }}"></script>
+    <script src="{{ asset('js/fullcalendar/fullcalendar.min.js') }}"></script>
+    <link href="{{ asset('css/fullcalendar/fullcalendar.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/fullcalendar/fullcalendar.print.css') }}" rel="stylesheet" type="text/css">
+
+    <script src="{{ asset('assets/js/gallery.demo.min.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            App.init();
+            Gallery.init();
+
+            getEvents();
+
+        });
+    </script>
 @endsection
