@@ -71,7 +71,7 @@
             <div class="container-fluid">
                 <!-- begin mobile sidebar expand / collapse button -->
                 <div class="navbar-header">
-                    <div style="float:left; min-width: 400px">
+                    <div>
                         <a href="{{ route('home') }}" class="navbar-brand" style="padding-left: 26px; padding-top: 2px">
                             <div style="float:left; padding-right: 6px"><img src="{{ asset('img/verme-word.png') }}" width="122px"></div>
                             <div></div>
