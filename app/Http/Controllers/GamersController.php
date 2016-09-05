@@ -480,7 +480,7 @@ class GamersController extends Controller
             $stats->Medals_Silver = $obj['Medals-Silver'];
             $stats->Medals_Bronze = $obj['Medals-Bronze'];
             $stats->GamesWon = $obj['GamesWon'];
-            $stats->GamesPlayed = $obj['GamesPlayed'];
+            $stats->GamesPlayed = isset($obj['GamesPlayed'])? $obj['GamesPlayed'] : '';
             $stats->TimeSpentonFire = $obj['TimeSpentonFire'];
             $stats->ObjectiveTime = $obj['ObjectiveTime'];
             $stats->TimePlayed = $obj['TimePlayed'];
