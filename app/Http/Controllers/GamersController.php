@@ -250,15 +250,15 @@ class GamersController extends Controller
                 $gamer->level = $obj->data->level;
                 $gamer->quick_wins = $obj->data->games->quick->wins;
                 $gamer->quick_lost = isset($obj->data->games->quick->lost)? $obj->data->games->quick->lost : '';
-                $gamer->quick_played = $obj->data->games->quick->played;
-                $gamer->competitive_wins = $obj->data->games->competitive->wins;
-                $gamer->competitive_lost = $obj->data->games->competitive->lost;
-                $gamer->competitive_played = $obj->data->games->competitive->played;
-                $gamer->competitive_playtime = $obj->data->playtime->competitive;
-                $gamer->quick_playtime = $obj->data->playtime->quick;
-                $gamer->avatar = $obj->data->avatar;
-                $gamer->competitive_rank = $obj->data->competitive->rank;
-                $gamer->competitive_rank_img = $obj->data->competitive->rank_img;
+                $gamer->quick_played = isset($obj->data->games->quick->played)? $obj->data->games->quick->played: '';
+                $gamer->competitive_wins = isset($obj->data->games->competitive->wins)? $obj->data->games->competitive->wins: '';
+                $gamer->competitive_lost = isset($obj->data->games->competitive->lost)? $obj->data->games->competitive->lost: '';
+                $gamer->competitive_played = isset($obj->data->games->competitive->played)? $obj->data->games->competitive->played: '';
+                $gamer->competitive_playtime = isset($obj->data->games->competitive->playtime)? $obj->data->games->competitive->playtime: '';
+                $gamer->quick_playtime = isset($obj->data->playtime->quick)? $obj->data->playtime->quick: '';
+                $gamer->avatar = isset($obj->data->avatar)? $obj->data->avatar: '';
+                $gamer->competitive_rank = isset($obj->data->competitive->rank)? $obj->data->competitive->rank: '';
+                $gamer->competitive_rank_img = isset($obj->data->competitive->rank_img)? $obj->data->competitive->rank_img: '';
 
                 $gamer->save();
             }
