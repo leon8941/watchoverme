@@ -249,7 +249,7 @@ class GamersController extends Controller
             if ($gamer) {
                 $gamer->level = $obj->data->level;
                 $gamer->quick_wins = $obj->data->games->quick->wins;
-                $gamer->quick_lost = $obj->data->games->quick->lost;
+                $gamer->quick_lost = isset($obj->data->games->quick->lost)? $obj->data->games->quick->lost : '';
                 $gamer->quick_played = $obj->data->games->quick->played;
                 $gamer->competitive_wins = $obj->data->games->competitive->wins;
                 $gamer->competitive_lost = $obj->data->games->competitive->lost;
