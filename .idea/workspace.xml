@@ -57,8 +57,8 @@
       <file leaf-file-name="GamersController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/GamersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46765038">
-              <caret line="399" column="51" selection-start-line="399" selection-start-column="51" selection-end-line="399" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.44835415">
+              <caret line="401" column="122" selection-start-line="401" selection-start-column="122" selection-end-line="401" selection-end-column="122" />
               <folding />
             </state>
           </provider>
@@ -891,8 +891,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/GamersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46765038">
-          <caret line="399" column="51" selection-start-line="399" selection-start-column="51" selection-end-line="399" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.44835415">
+          <caret line="401" column="122" selection-start-line="401" selection-start-column="122" selection-end-line="401" selection-end-column="122" />
           <folding />
         </state>
       </provider>

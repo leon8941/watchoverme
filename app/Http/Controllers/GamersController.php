@@ -399,7 +399,7 @@ class GamersController extends Controller
                 "EnvironmentalKills" => isset($obj['EnvironmentalKills'])? $obj['EnvironmentalKills'] : '',
                 "Multikills" => $obj['Multikills'],
                 "HealingDone" => $obj['HealingDone'],
-                "TeleporterPadsDestroyed" => $obj['TeleporterPadsDestroyed'],
+                "TeleporterPadsDestroyed" => isset($obj['TeleporterPadsDestroyed'])? $obj['TeleporterPadsDestroyed'] : '',
                 "Eliminations_MostinGame" => $obj['Eliminations-MostinGame'],
                 "FinalBlows_MostinGame" => $obj['FinalBlows-MostinGame'],
                 "DamageDone_MostinGame" => $obj['DamageDone-MostinGame'],
@@ -447,10 +447,10 @@ class GamersController extends Controller
             $stats->FinalBlows = $obj['FinalBlows'];
             $stats->DamageDone = $obj['DamageDone'];
             $stats->Eliminations = $obj['Eliminations'];
-            $stats->EnvironmentalKills = $obj['EnvironmentalKills'];
+            $stats->EnvironmentalKills = isset($obj['EnvironmentalKills'])? $obj['EnvironmentalKills'] : '';
             $stats->Multikills = $obj['Multikills'];
             $stats->HealingDone = $obj['HealingDone'];
-            $stats->TeleporterPadsDestroyed = $obj['TeleporterPadsDestroyed'];
+            $stats->TeleporterPadsDestroyed = isset($obj['TeleporterPadsDestroyed'])? $obj['TeleporterPadsDestroyed'] : '';
             $stats->Eliminations_MostinGame = $obj['Eliminations-MostinGame'];
             $stats->FinalBlows_MostinGame = $obj['FinalBlows-MostinGame'];
             $stats->DamageDone_MostinGame = $obj['DamageDone-MostinGame'];
