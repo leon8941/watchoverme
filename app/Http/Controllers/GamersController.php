@@ -396,7 +396,7 @@ class GamersController extends Controller
                 "FinalBlows" => $obj['FinalBlows'],
                 "DamageDone" => $obj['DamageDone'],
                 "Eliminations" => $obj['Eliminations'],
-                "EnvironmentalKills" => $obj['EnvironmentalKills'],
+                "EnvironmentalKills" => isset($obj['EnvironmentalKills'])? $obj['EnvironmentalKills'] : '',
                 "Multikills" => $obj['Multikills'],
                 "HealingDone" => $obj['HealingDone'],
                 "TeleporterPadsDestroyed" => $obj['TeleporterPadsDestroyed'],
