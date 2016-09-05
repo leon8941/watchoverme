@@ -246,46 +246,51 @@ class GamersController extends Controller
             $gamer = Gamer::where('user_id',Auth::user()->id)
                 ->first();
 
+            $quick_wins = isset($obj->data->games->quick->wins)? $obj->data->games->quick->wins : '';
+            $quick_lost = isset($obj->data->games->quick->lost)? $obj->data->games->quick->lost : '';
+            $quick_played = isset($obj->data->games->quick->played)? $obj->data->games->quick->played: '';
+            $competitive_wins = isset($obj->data->games->competitive->wins)? $obj->data->games->competitive->wins: '';
+            $competitive_lost = isset($obj->data->games->competitive->lost)? $obj->data->games->competitive->lost: '';
+            $competitive_played = isset($obj->data->games->competitive->played)? $obj->data->games->competitive->played: '';
+            $competitive_playtime = isset($obj->data->games->competitive->playtime)? $obj->data->games->competitive->playtime: '';
+            $quick_playtime = isset($obj->data->playtime->quick)? $obj->data->playtime->quick: '';
+            $avatar = isset($obj->data->avatar)? $obj->data->avatar: '';
+            $competitive_rank = isset($obj->data->competitive->rank)? $obj->data->competitive->rank: '';
+            $competitive_rank_img = isset($obj->data->competitive->rank_img)? $obj->data->competitive->rank_img: '';
+
             if ($gamer) {
                 $gamer->level = $obj->data->level;
-                $gamer->quick_wins = $obj->data->games->quick->wins;
-                $gamer->quick_lost = isset($obj->data->games->quick->lost)? $obj->data->games->quick->lost : '';
-                $gamer->quick_played = isset($obj->data->games->quick->played)? $obj->data->games->quick->played: '';
-                $gamer->competitive_wins = isset($obj->data->games->competitive->wins)? $obj->data->games->competitive->wins: '';
-                $gamer->competitive_lost = isset($obj->data->games->competitive->lost)? $obj->data->games->competitive->lost: '';
-                $gamer->competitive_played = isset($obj->data->games->competitive->played)? $obj->data->games->competitive->played: '';
-                $gamer->competitive_playtime = isset($obj->data->games->competitive->playtime)? $obj->data->games->competitive->playtime: '';
-                $gamer->quick_playtime = isset($obj->data->playtime->quick)? $obj->data->playtime->quick: '';
-                $gamer->avatar = isset($obj->data->avatar)? $obj->data->avatar: '';
-                $gamer->competitive_rank = isset($obj->data->competitive->rank)? $obj->data->competitive->rank: '';
-                $gamer->competitive_rank_img = isset($obj->data->competitive->rank_img)? $obj->data->competitive->rank_img: '';
+                $gamer->quick_wins = $quick_wins;
+                $gamer->quick_lost = $quick_lost;
+                $gamer->quick_played = $quick_played;
+                $gamer->competitive_wins = $competitive_wins;
+                $gamer->competitive_lost = $competitive_lost;
+                $gamer->competitive_played = $competitive_played;
+                $gamer->competitive_playtime = $competitive_playtime;
+                $gamer->quick_playtime = $quick_playtime;
+                $gamer->avatar = $avatar;
+                $gamer->competitive_rank = $competitive_rank;
+                $gamer->competitive_rank_img = $competitive_rank_img;
 
                 $gamer->save();
             }
             else {
-                // Fields that may come null
-                $rank = isset($obj->data->competitive->rank)? $obj->data->competitive->rank: '';
-                $rank_img = isset($obj->data->competitive->rank_img)? $obj->data->competitive->rank_img: '';
-                $competitive_wins = isset($obj->data->games->competitive->wins)? $obj->data->games->competitive->wins: '';
-                $competitive_lost = isset($obj->data->games->competitive->lost)? $obj->data->games->competitive->lost: '';
-                $competitive_played = isset($obj->data->games->competitive->played)? $obj->data->games->competitive->played: '';
-                $competitive_playtime = isset($obj->data->games->competitive->playtime)? $obj->data->games->competitive->playtime: '';
 
                 $gamer = Gamer::create([
                     'battletag' => $battletag,
                     'username' => $obj->data->username,
                     'level' => $obj->data->level,
-                    'quick_wins' => $obj->data->games->quick->wins,
-                    'quick_lost' => $obj->data->games->quick->lost,
-                    'quick_played' => $obj->data->games->quick->played,
+                    'quick_wins' => $quick_wins,
+                    'quick_lost' => $quick_lost,
+                    'quick_played' => $quick_played,
                     'competitive_wins' => $competitive_wins,
                     'competitive_lost' => $competitive_lost,
                     'competitive_played' => $competitive_played,
                     'competitive_playtime' => $competitive_playtime,
-                    'quick_playtime' => $obj->data->playtime->quick,
+                    'quick_playtime' => $quick_playtime,
                     'avatar' => $obj->data->avatar,
-                    'competitive_rank' => $rank,
-                    'competitive_rank_img' => $rank_img,
+                    'competitive_rank' => $competitive_rank,
+                    'competitive_rank_img' => $competitive_rank_img,
                     'user_id' => Auth::user()->id
                 ]);
             }
