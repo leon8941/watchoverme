@@ -27,10 +27,10 @@
                 <!-- end profile-image -->
                 <!-- begin profile-highlight -->
                 <div class="profile">
-                    Postado em {{ $post->created_at->diffForHumans() }}
+                    Posted {{ $post->created_at->diffForHumans() }}
                 </div>
                 <div>
-                        <small>Por</small> <a href="javascript:;">{{ $post->user->name }}</a>
+                        <small>by</small> <a href="javascript:;">{{ $post->user->name }}</a>
                 </div>
                 <!-- end profile-highlight -->
             </div>
