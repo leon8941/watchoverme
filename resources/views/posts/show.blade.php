@@ -14,21 +14,23 @@
     <h1 class="page-header">{{ $post->title }} </h1>
     <!-- end page-header -->
     <!-- begin profile-container -->
-    <div class="profile-container" style="margin-left: 4%; margin-right: 16%;">
+    <div class="profile-container">
         <!-- begin profile-section -->
         <div class="profile-section">
             <!-- begin profile-left -->
             <div class="post-left">
                 <!-- begin profile-image -->
                 <div class="post-image">
-                    <img src="{{ getPostImage($post->image) }}" width="272px">
+                    <img src="{{ getPostImage($post->image) }}" width="100%">
                     <i class="fa fa-user hide"></i>
                 </div>
                 <!-- end profile-image -->
                 <!-- begin profile-highlight -->
                 <div class="profile">
-                    Posted {{ $post->created_at->diffForHumans() }}
-                </div>
+                    Postado em {{ $post->created_at->diffForHumans() }}
+                </div> <div>
+                        <small>Por</small> <a href="javascript:;">{{ $post->user->name }}</a>
+                    </div>
                 <!-- end profile-highlight -->
             </div>
             <!-- end profile-left -->
