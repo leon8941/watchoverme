@@ -28,17 +28,17 @@ class PagesController extends Controller
 
     public function home()
     {
-        SEOMeta::setDescription('Últimas notícias de Overwatch, campeonatos, eventos, vídeos e tudo sobre a comunidade de Overwatch.');
-        SEOMeta::setCanonical('http://watchoverme.com.br/');
-        SEOMeta::addKeyword(['notícias', 'overwatch', 'o verme', 'verme', 'campeonatos overwatch', 'ranking overwatch', 'ranking nacional']);
+        SEOMeta::setDescription('Cenário Competitivo de Overwatch, campeonatos, eventos, vídeos e tudo sobre a comunidade de Overwatch.');
+        SEOMeta::setCanonical('http://nerfthis.com.br/');
+        SEOMeta::addKeyword(['notícias', 'overwatch', 'nerfthis', 'campeonatos overwatch', 'ranking overwatch', 'ranking nacional']);
 
-        OpenGraph::setDescription('Últimas notícias de Overwatch, campeonatos, eventos e vídeos e tudo sobre a comunidade de Overwatch.');
-        OpenGraph::setUrl('http://www.watchoverme.com.br/');
+        OpenGraph::setDescription('Cenário Competitivo de Overwatch, campeonatos, eventos e vídeos e tudo sobre a comunidade de Overwatch.');
+        OpenGraph::setUrl('http://www.nerfthis.com.br/');
         //OpenGraph::addProperty('type', 'article');
         OpenGraph::addProperty('locale', 'pt-br');
         OpenGraph::addProperty('locale:alternate', ['pt-pt', 'en-us']);
 
-        OpenGraph::addImage(asset('img/o-verme-jim.jpg'));
+        OpenGraph::addImage(asset('img/nerfthis.jpg'));
 
         Sitemap::addTag(route('home'), '', 'daily', '0.8');
 
