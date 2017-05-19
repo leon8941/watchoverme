@@ -5,12 +5,12 @@
     <div id="content" class="content">
         <!-- begin breadcrumb -->
         <ol class="breadcrumb pull-right">
-            <li><a href="javascript:;">O Verme</a></li>
+            <li><a href="javascript:;">NerfThis</a></li>
             <li class="active">Sobre</li>
         </ol>
         <!-- end breadcrumb -->
         <!-- begin page-header -->
-        <h1 class="page-header">O Verme <small>um pouco sobre nós..</small></h1>
+        <h1 class="page-header">NerfThis <small>um pouco sobre nós..</small></h1>
         <!-- end page-header -->
 
         <!-- begin row -->
@@ -94,7 +94,7 @@
                                     <dd>Com as estatísticas dos jogadores capturadas, conseguimos colocá-los em rankings, comparando os atributos</dd>
                                     <dd>-</dd>
                                     <dt>100% de retorno</dt>
-                                    <dd>Somos uma comunidade sem fins lucrativos. Todo e qualquer investimento ou lucro feito no Verme é retornado para a própria comunidade,
+                                    <dd>Somos uma comunidade sem fins lucrativos. Todo e qualquer investimento ou lucro feito nNerfThis é retornado para a própria comunidade,
                                     seja em forma de prêmios, ou pagando desenvolvedores, designers, para aprimorar a nossa plataforma.</dd>
                                 </dl>
                             </p>

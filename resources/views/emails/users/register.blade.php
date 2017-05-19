@@ -1,5 +1,5 @@
 <h3>Bem vindo, verme!</h3>
-<p>Você agora é o mais novo membro da comunidade do Verme.</p>
+<p>Você agora é o mais novo membro da comunidade dNerfThis.</p>
 <p>Lembre-se que para ser listado no ranking, você deve ativar sua conta de jogador de Overwatch, seguindo esses passos:</p>
 <ul>
     <li><a href="{{ url('login') }}">Faça login</a></li>

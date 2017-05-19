@@ -79,7 +79,7 @@ class InhouseController extends Controller
             $vouchs = Inhouser::getVouchs();
         }
 
-        SEOMeta::setTitle('InHouse - O Verme');
+        SEOMeta::setTitle('InHouse - NerfThis');
         SEOMeta::setDescription('Melhor sistema de ranking brasileiro de Overwatch no modo InHouse');
         SEOMeta::setCanonical('http://watchoverme.com.br/inhouse');
         SEOMeta::addKeyword(['inhouse', 'ranking', 'rating', 'campeonato','overwatch',

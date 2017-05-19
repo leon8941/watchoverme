@@ -73,7 +73,7 @@
                 <div class="navbar-header">
                     <div style="float:left; min-width: 400px">
                         <a href="{{ route('home') }}" class="navbar-brand" style="padding-left: 26px; padding-top: 2px">
-                            <div style="float:left; padding-right: 6px"><img src="{{ asset('img/verme-word.png') }}" width="122px"></div>
+                            <div style="float:left; padding-right: 6px"><img src="{{ asset('img/nerfthis4.PNG') }}" width="146px"></div>
                             <div></div>
                         </a>
                         <button type="button" class="navbar-toggle" data-click="sidebar-toggled">

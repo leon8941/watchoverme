@@ -41,7 +41,7 @@
                             <h4>Como entrar na InHouse</h4>
                         </div>
                         <div class="article-text">
-                            <p>A <b>InHouse do Verme</b> é o maior e melhor núcleo competitivo de <b>Overwatch</b> do Brasil.</p>
+                            <p>A <b>InHouse dNerfThis</b> é o maior e melhor núcleo competitivo de <b>Overwatch</b> do Brasil.</p>
                             <p>Aqui você aprimora suas skills de jogador, conhece os melhores jogadores do país,
                             recebe feedbacks com análises refinadas da sua performance, dentre outras inúmeras vantagens.</p>
                             <p>Para mantermos o nível competitivo alto, temos um filtro para a entrada de novos jogadores.</p>

@@ -11,7 +11,7 @@
 
         <div class="panel panel-inverse">
             <div class="panel-body">
-                <p>Você está no painel administrativo do Verme.</p>
+                <p>Você está no painel administrativo dNerfThis.</p>
                 <p>Você pode:</p>
                 <ul>
                     <li><a href="{{ url('admin/posts') }}">Postar uma notícia</a></li>

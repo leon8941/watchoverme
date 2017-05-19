@@ -6,7 +6,7 @@ return [
          * The default configurations to be used by the meta generator.
          */
         'defaults'       => [
-            'title'        => "O Verme", // set false to total remove
+            'title'        => "NerfThis", // set false to total remove
             'description'  => 'Comunidade brasileira de Overwatch', // set false to total remove
             'separator'    => ' - ',
             'keywords'     => [
@@ -41,11 +41,11 @@ return [
          * The default configurations to be used by the opengraph generator.
          */
         'defaults' => [
-            'title'       => 'O Verme', // set false to total remove
+            'title'       => 'NerfThis', // set false to total remove
             'description' => 'Comunidade brasileira de Overwatch', // set false to total remove
             'url'         => 'www.watchoverme.com.br',
             'type'        => false,
-            'site_name'   => 'O Verme',
+            'site_name'   => 'NerfThis',
             'images'      => ['http://watchoverme.com.br/img/verme.png'],
         ],
     ],

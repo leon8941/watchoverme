@@ -67,7 +67,7 @@
             <li class="{{ isActive('about') }}">
                 <a href="{{ route('about') }}">
                     <i class="fa fa-heart"></i>
-                    <span>O Verme</span>
+                    <span>NerfThis</span>
                 </a>
             </li>
             <!-- begin sidebar minify button -->

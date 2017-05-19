@@ -274,7 +274,7 @@
                 <!-- begin panel -->
                 <div class="panel panel-inverse" data-sortable-id="index-6">
                     <div class="panel-heading">
-                        <h4 class="panel-title">Novos Vermes <span class="pull-right label label-success">{{ $count_new_users }} larvinhas </span></h4>
+                        <h4 class="panel-title">Novos Users <span class="pull-right label label-success">{{ $count_new_users }} </span></h4>
                     </div>
                     <ul class="registered-users-list clearfix">
                         @foreach($new_registered_users as $user)

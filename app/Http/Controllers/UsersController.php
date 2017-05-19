@@ -52,7 +52,7 @@ class UsersController extends Controller
         //SEOMeta::addMeta('article:section', $post->category, 'property');
         SEOMeta::addKeyword([$user->slug, $user->name]);
 
-        OpenGraph::setDescription($user->name . ' Perfil de Jogador - O Verme ');
+        OpenGraph::setDescription($user->name . ' Perfil de Jogador - NerfThis ');
         OpenGraph::setTitle($user->name);
         OpenGraph::setUrl('http://www.watchoverme.com.br/users/' . $user->slug);
         OpenGraph::addProperty('type', 'profile');
@@ -200,7 +200,7 @@ class UsersController extends Controller
     }
 
     /**
-     * Get O Verme colaborators
+     * Get NerfThis colaborators
      *
      * @return mixed
      */
