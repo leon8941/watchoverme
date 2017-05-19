@@ -34,17 +34,16 @@
         <!-- begin sidebar nav -->
         <ul class="nav">
             <li class="nav-header">Navigation</li>
-            <li class="{{ isActive('home') }}">
-                <a href="{{ route('home') }}">
+            <li class="has-sub {{ isActive('home') }}">
+                <a href="javascript:;">
+                    <b class="caret pull-right"></b>
                     <i class="fa fa-laptop"></i>
-                    <span>Home</span>
+                    <span>Dashboard</span>
                 </a>
-            </li>
-            <li class=" {{ isActive('posts') }}">
-                <a href="{{ route('posts.index') }}">
-                    <i class="fa fa-globe"></i>
-                    <span>Notícias</span>
-                </a>
+                <ul class="sub-menu">
+                    <li class="{{ isActive('home') }}"><a href="{{ route('home') }}">Dashboard</a></li>
+                    <li class="{{ isActive('posts') }}"><a href="{{ route('posts.index') }}">Notícias</a></li>
+                </ul>
             </li>
             <li class="{{ isActive('events') }}">
                 <a href="{{ route('events.index') }}">

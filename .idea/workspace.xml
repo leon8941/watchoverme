@@ -2,891 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3406a468-5bd2-41d7-a381-c80813249479" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\css\animate.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\css\assets\plugins\superbox\img\close.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\css\invoice-print.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\css\style-responsive.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\css\style.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\css\theme\default.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\coming-soon.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\gallery\gallery-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\gallery\gallery-10.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\gallery\gallery-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\gallery\gallery-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\gallery\gallery-4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\gallery\gallery-5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\gallery\gallery-6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\gallery\gallery-7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\gallery\gallery-8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\gallery\gallery-9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\login-bg\bg-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\login-bg\bg-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\login-bg\bg-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\login-bg\bg-4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\login-bg\bg-5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\login-bg\bg-6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\login-bg\bg-7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\login-bg\bg-8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\logo.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\product\product-1.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\product\product-2.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\product\product-3.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\product\product-4.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\product\product-5.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\product\product-preview-iphone.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\product\product-preview-sm.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\product\product-preview.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\profile-cover.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\transparent\black-0.2.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\transparent\black-0.4.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\transparent\black-0.6.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\transparent\black-0.8.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\transparent\white-0.98.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\user-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\user-10.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\user-11.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\user-12.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\user-13.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\user-14.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\user-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\user-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\user-4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\user-5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\user-6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\user-7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\user-8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\img\user-9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\apps.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\calendar.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\chart-flot.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\chart-js.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\chart-morris.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\coming-soon.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\dashboard-v2.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\dashboard.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\email-compose.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\email-inbox-v2.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\form-editable.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\form-multiple-upload.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\form-plugins.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\form-slider-switcher.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\form-wizards-validation.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\form-wizards.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\form-wysiwyg.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\gallery-v2.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\gallery.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\inbox.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\login-v2.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\map-google.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\map-vector.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\page-with-two-sidebar.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\table-manage-autofill.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\table-manage-colreorder.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\table-manage-colvis.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\table-manage-combine.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\table-manage-default.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\table-manage-fixed-columns.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\table-manage-fixed-header.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\table-manage-keytable.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\table-manage-responsive.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\table-manage-scroller.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\table-manage-tabletools.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\timeline.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\ui-modal-notification.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\js\ui-tree.demo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\DataTables\css\data-table.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\DataTables\images\background.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\DataTables\images\collection.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\DataTables\images\collection_hover.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\DataTables\img\filler.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\DataTables\img\sort_asc.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\DataTables\img\sort_asc_disabled.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\DataTables\img\sort_both.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\DataTables\img\sort_desc.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\DataTables\img\sort_desc_disabled.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\DataTables\js\dataTables.autoFill.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\DataTables\js\dataTables.colReorder.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\DataTables\js\dataTables.colVis.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\DataTables\js\dataTables.fixedColumns.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\DataTables\js\dataTables.fixedHeader.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\DataTables\js\dataTables.keyTable.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\DataTables\js\dataTables.responsive.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\DataTables\js\dataTables.scroller.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\DataTables\js\dataTables.tableTools.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\DataTables\js\jquery.dataTables.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap-calendar\css\bootstrap_calendar.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap-calendar\js\bootstrap_calendar.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap-colorpicker\css\bootstrap-colorpicker.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap-colorpicker\img\bootstrap-colorpicker\alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap-colorpicker\img\bootstrap-colorpicker\hue.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap-colorpicker\img\bootstrap-colorpicker\saturation.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap-colorpicker\js\bootstrap-colorpicker.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap-combobox\css\bootstrap-combobox.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap-combobox\js\bootstrap-combobox.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap-datepicker\css\datepicker.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap-datepicker\css\datepicker3.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap-datepicker\js\bootstrap-datepicker.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap-daterangepicker\daterangepicker-bs3.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap-daterangepicker\daterangepicker.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap-daterangepicker\moment.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap-datetimepicker\css\datetimepicker.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap-datetimepicker\js\bootstrap-datetimepicker.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap-select\bootstrap-select.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap-select\bootstrap-select.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap-tagsinput\bootstrap-tagsinput-typeahead.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap-tagsinput\bootstrap-tagsinput.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap-tagsinput\bootstrap-tagsinput.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap-timepicker\css\bootstrap-timepicker.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap-timepicker\js\bootstrap-timepicker.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap-wizard\css\bwizard.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap-wizard\js\bwizard.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap-wysihtml5\lib\js\wysihtml5-0.3.0.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap-wysihtml5\src\bootstrap-wysihtml5.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap-wysihtml5\src\bootstrap-wysihtml5.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap3-editable\css\bootstrap-editable.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap3-editable\img\clear.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap3-editable\img\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap3-editable\inputs-ext\address\address.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap3-editable\inputs-ext\address\address.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap3-editable\inputs-ext\typeaheadjs\lib\typeahead.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap3-editable\inputs-ext\typeaheadjs\lib\typeahead.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap3-editable\inputs-ext\typeaheadjs\typeaheadjs.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap3-editable\inputs-ext\wysihtml5\wysihtml5.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap3-editable\js\bootstrap-editable.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap\css\bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap\fonts\glyphicons-halflings-regulard41d.eot" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\bootstrap\js\bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\chart-js\chart.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\ckeditor\ckeditor.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\css\flag-icon.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ad.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ae.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\af.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ag.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ai.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\al.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\am.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ao.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\aq.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ar.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\as.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\at.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\au.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\aw.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ax.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\az.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ba.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\bb.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\bd.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\be.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\bf.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\bg.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\bh.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\bi.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\bj.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\bl.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\bm.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\bn.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\bo.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\bq.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\br.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\bs.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\bt.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\bv.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\bw.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\by.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\bz.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ca.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\cc.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\cd.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\cf.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\cg.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ch.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ci.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ck.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\cl.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\cm.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\cn.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\co.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\cr.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\cu.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\cv.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\cw.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\cx.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\cy.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\cz.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\de.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\dj.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\dk.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\dm.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\do.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\dz.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ec.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ee.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\eg.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\eh.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\er.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\es.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\et.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\fi.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\fj.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\fk.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\fm.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\fo.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\fr.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ga.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\gb.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\gd.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ge.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\gf.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\gg.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\gh.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\gi.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\gl.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\gm.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\gn.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\gp.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\gq.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\gr.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\gs.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\gt.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\gu.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\gw.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\gy.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\hk.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\hm.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\hn.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\hr.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ht.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\hu.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\id.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ie.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\il.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\im.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\in.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\io.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\iq.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ir.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\is.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\it.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\je.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\jm.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\jo.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\jp.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ke.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\kg.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\kh.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ki.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\km.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\kn.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\kp.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\kr.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\kw.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ky.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\kz.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\la.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\lb.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\lc.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\li.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\lk.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\lr.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ls.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\lt.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\lu.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\lv.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ly.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ma.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\mc.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\md.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\me.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\mf.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\mg.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\mh.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\mk.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ml.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\mm.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\mn.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\mo.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\mp.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\mq.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\mr.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ms.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\mt.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\mu.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\mv.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\mw.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\mx.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\my.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\mz.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\na.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\nc.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ne.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\nf.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ng.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ni.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\nl.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\no.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\np.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\nr.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\nu.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\nz.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\om.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\pa.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\pe.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\pf.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\pg.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ph.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\pk.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\pl.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\pm.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\pn.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\pr.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ps.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\pt.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\pw.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\py.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\qa.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\re.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ro.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\rs.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ru.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\rw.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\sa.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\sb.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\sc.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\sd.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\se.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\sg.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\sh.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\si.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\sj.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\sk.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\sl.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\sm.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\sn.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\so.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\sr.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ss.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\st.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\sv.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\sx.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\sy.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\sz.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\tc.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\td.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\tf.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\tg.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\th.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\tj.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\tk.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\tl.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\tm.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\tn.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\to.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\tr.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\tt.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\tv.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\tw.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\tz.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ua.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ug.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\um.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\us.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\uy.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\uz.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\va.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\vc.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ve.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\vg.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\vi.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\vn.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\vu.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\wf.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ws.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\ye.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\yt.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\za.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\zm.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\1x1\zw.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ad.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ae.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\af.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ag.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ai.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\al.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\am.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ao.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\aq.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ar.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\as.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\at.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\au.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\aw.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ax.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\az.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ba.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\bb.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\bd.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\be.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\bf.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\bg.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\bh.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\bi.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\bj.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\bl.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\bm.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\bn.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\bo.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\bq.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\br.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\bs.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\bt.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\bv.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\bw.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\by.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\bz.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ca.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\cc.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\cd.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\cf.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\cg.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ch.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ci.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ck.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\cl.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\cm.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\cn.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\co.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\cr.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\cu.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\cv.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\cw.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\cx.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\cy.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\cz.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\de.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\dj.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\dk.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\dm.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\do.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\dz.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ec.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ee.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\eg.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\eh.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\er.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\es.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\et.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\fi.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\fj.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\fk.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\fm.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\fo.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\fr.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ga.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\gb.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\gd.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ge.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\gf.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\gg.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\gh.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\gi.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\gl.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\gm.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\gn.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\gp.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\gq.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\gr.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\gs.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\gt.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\gu.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\gw.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\gy.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\hk.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\hm.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\hn.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\hr.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ht.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\hu.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\id.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ie.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\il.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\im.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\in.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\io.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\iq.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ir.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\is.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\it.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\je.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\jm.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\jo.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\jp.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ke.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\kg.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\kh.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ki.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\km.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\kn.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\kp.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\kr.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\kw.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ky.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\kz.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\la.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\lb.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\lc.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\li.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\lk.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\lr.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ls.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\lt.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\lu.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\lv.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ly.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ma.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\mc.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\md.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\me.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\mf.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\mg.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\mh.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\mk.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ml.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\mm.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\mn.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\mo.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\mp.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\mq.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\mr.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ms.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\mt.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\mu.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\mv.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\mw.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\mx.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\my.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\mz.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\na.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\nc.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ne.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\nf.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ng.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ni.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\nl.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\no.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\np.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\nr.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\nu.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\nz.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\om.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\pa.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\pe.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\pf.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\pg.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ph.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\pk.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\pl.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\pm.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\pn.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\pr.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ps.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\pt.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\pw.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\py.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\qa.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\re.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ro.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\rs.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ru.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\rw.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\sa.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\sb.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\sc.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\sd.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\se.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\sg.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\sh.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\si.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\sj.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\sk.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\sl.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\sm.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\sn.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\so.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\sr.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ss.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\st.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\sv.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\sx.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\sy.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\sz.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\tc.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\td.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\tf.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\tg.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\th.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\tj.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\tk.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\tl.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\tm.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\tn.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\to.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\tr.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\tt.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\tv.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\tw.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\tz.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ua.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ug.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\um.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\us.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\uy.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\uz.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\va.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\vc.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ve.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\vg.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\vi.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\vn.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\vu.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\wf.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ws.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\ye.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\yt.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\za.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\zm.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flag-icon\flags\4x3\zw.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flot\jquery.flot.categories.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flot\jquery.flot.crosshair.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flot\jquery.flot.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flot\jquery.flot.pie.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flot\jquery.flot.resize.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flot\jquery.flot.stack.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\flot\jquery.flot.time.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\font-awesome\css\font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\font-awesome\fonts\fontawesome-webfontd41d.eot" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\font-awesome\fonts\fontawesome-webfonte0a5.eot" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\font-awesome\fonts\fontawesome-webfonte0a5.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\font-awesome\fonts\fontawesome-webfonte0a5.ttf" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\font-awesome\fonts\fontawesome-webfonte0a5.woff" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\font-awesome\fonts\fontawesome-webfonte0a5.woff2" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\fullcalendar\fullcalendar\fullcalendar.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\fullcalendar\fullcalendar\fullcalendar.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\gritter-1.7.4\css\jquery.gritter.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\gritter\css\jquery.gritter.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\gritter\images\gritter-light.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\gritter\images\gritter.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\gritter\images\ie-spacer.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\gritter\js\jquery.gritter.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\ionRangeSlider\css\ion.rangeSlider.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\ionRangeSlider\css\ion.rangeSlider.skinNice.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\ionRangeSlider\img\sprite-skin-nice.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\ionRangeSlider\js\ion-rangeSlider\ion.rangeSlider.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\ionicons\css\ionicons.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\ionicons\fonts\ionicons28b5.eot" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\ionicons\fonts\ionicons28b5.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\ionicons\fonts\ionicons28b5.ttf" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\ionicons\fonts\ionicons28b5.woff" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\isotope\isotope.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\isotope\jquery.isotope.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-cookie\jquery.cookie.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-file-upload\blueimp-gallery\blueimp-gallery.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-file-upload\blueimp-gallery\jquery.blueimp-gallery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-file-upload\css\jquery.fileupload-ui.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-file-upload\css\jquery.fileupload.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-file-upload\img\error-2.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-file-upload\img\error.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-file-upload\img\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-file-upload\img\play-pause-2.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-file-upload\img\play-pause.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-file-upload\img\progressbar.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-file-upload\img\video-play-2.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-file-upload\img\video-play.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-file-upload\js\jquery.fileupload-audio.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-file-upload\js\jquery.fileupload-image.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-file-upload\js\jquery.fileupload-process.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-file-upload\js\jquery.fileupload-ui.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-file-upload\js\jquery.fileupload-validate.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-file-upload\js\jquery.fileupload-video.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-file-upload\js\jquery.fileupload.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-file-upload\js\jquery.iframe-transport.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-file-upload\js\vendor\canvas-to-blob.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-file-upload\js\vendor\jquery.ui.widget.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-file-upload\js\vendor\load-image.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-file-upload\js\vendor\tmpl.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-jvectormap\jquery-jvectormap-1.2.2.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-jvectormap\jquery-jvectormap-1.2.2.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-jvectormap\jquery-jvectormap-world-merc-en.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-jvectormap\jquery-jvectormap-world-mill-en.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-knob\js\jquery.knob.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-tag-it\css\jquery.tagit.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-tag-it\js\tag-it.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-ui\themes\base\minified\jquery-ui.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery-ui\ui\minified\jquery-ui.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery.countdown\jquery.countdown.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery.countdown\jquery.countdown.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery.countdown\jquery.plugin.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery\jquery-1.9.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jquery\jquery-migrate-1.1.0.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jstree\dist\jstree.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\jstree\dist\themes\default\style.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\lightbox\css\lightbox.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\lightbox\img\close.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\lightbox\img\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\lightbox\img\next.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\lightbox\img\prev.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\lightbox\js\lightbox-2.6.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\masked-input\masked-input.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\mockjax\jquery.mockjax.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\moment\moment.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\morris\morris.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\morris\morris.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\morris\raphael.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\pace\pace.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\parsley\dist\parsley.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\parsley\src\parsley.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\password-indicator\css\password-indicator.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\password-indicator\img\progressImg1.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\password-indicator\js\password-indicator.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\powerange\powerange.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\powerange\powerange.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\select2\dist\css\select2.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\select2\dist\js\select2.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\select2\select2.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\select2\select2.min.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\simple-line-icons\fonts\Simple-Line-Icons.eot" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\simple-line-icons\fonts\Simple-Line-Icons.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\simple-line-icons\fonts\Simple-Line-Icons.ttf" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\simple-line-icons\fonts\Simple-Line-Icons.woff" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\simple-line-icons\fonts\Simple-Line-Iconsd41d.eot" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\simple-line-icons\simple-line-icons.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\slimscroll\jquery.slimscroll.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\sparkline\jquery.sparkline.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\superbox\img\superbox\superbox-thumb-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\superbox\img\superbox\superbox-thumb-10.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\superbox\img\superbox\superbox-thumb-11.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\superbox\img\superbox\superbox-thumb-12.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\superbox\img\superbox\superbox-thumb-13.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\superbox\img\superbox\superbox-thumb-14.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\superbox\img\superbox\superbox-thumb-15.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\superbox\img\superbox\superbox-thumb-16.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\superbox\img\superbox\superbox-thumb-17.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\superbox\img\superbox\superbox-thumb-18.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\superbox\img\superbox\superbox-thumb-19.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\superbox\img\superbox\superbox-thumb-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\superbox\img\superbox\superbox-thumb-20.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\superbox\img\superbox\superbox-thumb-21.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\superbox\img\superbox\superbox-thumb-22.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\superbox\img\superbox\superbox-thumb-23.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\superbox\img\superbox\superbox-thumb-24.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\superbox\img\superbox\superbox-thumb-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\superbox\img\superbox\superbox-thumb-4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\superbox\img\superbox\superbox-thumb-5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\superbox\img\superbox\superbox-thumb-6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\superbox\img\superbox\superbox-thumb-7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\superbox\img\superbox\superbox-thumb-8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\superbox\img\superbox\superbox-thumb-9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\superbox\js\superbox.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\switchery\switchery.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\assets\plugins\switchery\switchery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\calendar.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\chart-flot.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\chart-js.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\chart-morris.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\email_compose.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\email_detail.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\email_inbox.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\email_inbox_v2.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\email_newsletter.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\email_system.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\extra_404_error.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\extra_coming_soon.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\extra_invoice.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\extra_profile.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\extra_search_results.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\extra_timeline.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\form_editable.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\form_editable3366.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\form_elements.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\form_multiple_upload.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\form_plugins.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\form_slider_switcher.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\form_validation.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\form_wizards.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\form_wizards_validation.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\form_wysiwyg.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\gallery.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\gallery_v2.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\helper_css.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\inbox_v2.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\index_v2.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\login.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\login_v2.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\login_v3.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\map_google.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\map_vector.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\page_blank.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\page_full_height.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\page_with_footer.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\page_with_ionicons.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\page_with_light_sidebar.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\page_with_line_icons.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\page_with_mega_menu.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\page_with_minified_sidebar.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\page_with_right_sidebar.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\page_with_top_navbar.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\page_with_two_sidebar.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\page_with_wide_sidebar.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\page_without_sidebar.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\register_v3.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\table_basic.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\table_manage.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\table_manage_autofill.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\table_manage_colreorder.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\table_manage_colvis.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\table_manage_combine.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\table_manage_fixed_columns.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\table_manage_fixed_header.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\table_manage_keytable.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\table_manage_responsive.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\table_manage_scroller.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\table_manage_tabletools.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\ui_buttons.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\ui_general.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\ui_icons.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\ui_ionicons.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\ui_language_bar_icon.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\ui_media_object.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\ui_modal_notification.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\ui_simple_line_icons.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\ui_tabs_accordions.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\ui_tree.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\ui_typography.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\ui_unlimited_tabs.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Projetos\watchoverme\public\theme\ui_widget_boxes.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoriesController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoriesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/InhouseController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/InhouseController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/about.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/about.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/home.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/home.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/inhouse/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/inhouse/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/inhouse/join.blade.php" afterPath="$PROJECT_DIR$/resources/views/inhouse/join.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" />
+      <change type="MOVED" beforePath="C:\Projetos\watchoverme\readme.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/elements/menu-left.blade.php" afterPath="$PROJECT_DIR$/resources/views/elements/menu-left.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/emails/users/register.blade.php" afterPath="$PROJECT_DIR$/resources/views/emails/users/register.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/seotools.php" afterPath="$PROJECT_DIR$/config/seotools.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="watchoverme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -911,7 +29,7 @@
       <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -921,18 +39,28 @@
       <file leaf-file-name="main.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/layouts/main.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.4727273">
+            <state vertical-scroll-proportion="0.0">
               <caret line="94" column="137" selection-start-line="94" selection-start-column="137" selection-end-line="94" selection-end-column="137" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/users/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3276644">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseSeeder.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.807693">
+              <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -941,7 +69,7 @@
       <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.5">
+            <state vertical-scroll-proportion="0.0">
               <caret line="96" column="5" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
               <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
               <folding />
@@ -952,7 +80,7 @@
       <file leaf-file-name="Gamer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Gamer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-48.384617">
+            <state vertical-scroll-proportion="0.0">
               <caret line="76" column="31" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
               <folding />
             </state>
@@ -962,7 +90,7 @@
       <file leaf-file-name="PagesController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PagesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.807693">
+            <state vertical-scroll-proportion="0.0">
               <caret line="34" column="66" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
               <folding />
             </state>
@@ -972,8 +100,18 @@
       <file leaf-file-name="verme.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/verme.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.461538">
+            <state vertical-scroll-proportion="0.0">
               <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu-left.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/elements/menu-left.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.28911564">
+              <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -1001,7 +139,6 @@
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/public/js/pusher/pusher.js" />
         <option value="$PROJECT_DIR$/database/migrations/2015_10_11_163156_create_messages_table.php" />
-        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/database/seeds/MatchsTableSeeder.php" />
         <option value="$PROJECT_DIR$/resources/views/inhouse/ranking.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_07_25_154852_create_filas_table.php" />
@@ -1026,7 +163,6 @@
         <option value="$PROJECT_DIR$/resources/views/inhouse/join.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/InhouseController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" />
-        <option value="$PROJECT_DIR$/resources/views/elements/menu-left.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/about.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/css/style.min.css" />
         <option value="$PROJECT_DIR$/app/Category.php" />
@@ -1045,6 +181,8 @@
         <option value="$PROJECT_DIR$/resources/views/pages/home.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/main.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/users/index.blade.php" />
+        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/resources/views/elements/menu-left.blade.php" />
       </list>
     </option>
   </component>
@@ -1125,7 +263,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1241,6 +379,60 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elements" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="watchoverme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="watchoverme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="watchoverme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="watchoverme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="watchoverme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="watchoverme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seeds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1342,7 +534,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1413,7 +605,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20202559" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20415778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1641,13 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/elements/menu-left.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38321996">
-          <caret line="45" column="41" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/css/style.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.52312773">
@@ -1729,7 +914,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="52" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1737,7 +921,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="50" column="41" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1756,7 +939,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1772,7 +954,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13265306">
           <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1780,13 +961,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="127" selection-start-line="18" selection-start-column="127" selection-end-line="18" selection-end-column="127" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/verme.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538">
+        <state vertical-scroll-proportion="0.0">
           <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
           <folding />
         </state>
@@ -1794,7 +974,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PagesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693">
+        <state vertical-scroll-proportion="0.0">
           <caret line="34" column="66" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
           <folding />
         </state>
@@ -1810,7 +990,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.5">
+        <state vertical-scroll-proportion="0.0">
           <caret line="96" column="5" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
           <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
           <folding />
@@ -1819,7 +999,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Gamer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-48.384617">
+        <state vertical-scroll-proportion="0.0">
           <caret line="76" column="31" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
           <folding />
         </state>
@@ -1827,16 +1007,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/main.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.4727273">
+        <state vertical-scroll-proportion="0.0">
           <caret line="94" column="137" selection-start-line="94" selection-start-column="137" selection-end-line="94" selection-end-column="137" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.807693">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/users/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3276644">
+        <state vertical-scroll-proportion="-0.0">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/elements/menu-left.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28911564">
+          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
           <folding />
         </state>
       </provider>
