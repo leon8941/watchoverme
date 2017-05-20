@@ -184,7 +184,10 @@ return [
         'Watson\Sitemap\SitemapServiceProvider',
 
         // Pusher
-        Vinkla\Pusher\PusherServiceProvider::class
+        Vinkla\Pusher\PusherServiceProvider::class,
+
+        // Debugbar
+        Barryvdh\Debugbar\ServiceProvider::class,
     ],
 
     /*
@@ -256,7 +259,10 @@ return [
         'Sitemap' => 'Watson\Sitemap\Facades\Sitemap',
 
         // Pusher
-        'LaravelPusher' => Vinkla\Pusher\Facades\Pusher::class
+        'LaravelPusher' => Vinkla\Pusher\Facades\Pusher::class,
+
+        // Debugbar
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
     ],
 
 ];

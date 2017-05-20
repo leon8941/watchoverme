@@ -11,7 +11,7 @@
     </ol>
     <!-- end breadcrumb -->
     <!-- begin page-header -->
-    <h1 class="page-header">Criar Time <small>faz acontecer mlk...</small></h1>
+    <h1 class="page-header">Criar Time <small>Faça acontecer!</small></h1>
     <!-- end page-header -->
 
     <div class="panel panel-inverse" data-sortable-id="index-4">
