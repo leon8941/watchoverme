@@ -49,6 +49,9 @@ Route::group(['middleware' => ['web']], function () {
 
     // Categories
     Route::get('posts/{category}',['as' => 'posts.category', 'uses' => 'CategoriesController@index']);
+
+    // Users
+    Route::resource('users','UsersController');
 });
 
 //Route::auth();
@@ -59,9 +62,6 @@ Route::group(['middleware' => ['auth']], function () {
 
 
     //Route::resource('inhouse','InhouseController');
-
-    // Users
-    Route::resource('users','UsersController');
 
     // User avatar upload
     Route::post('users/upload',['as' => 'users/upload', 'uses' => 'UsersController@upload']);
