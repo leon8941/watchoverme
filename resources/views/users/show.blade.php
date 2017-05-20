@@ -25,7 +25,7 @@
                     </div>
                     <!-- end profile-image -->
                     <div class="m-b-10">
-                        @if (\Illuminate\Support\Facades\Auth::user()->id == $user->id)
+                        @if (Auth::check() && Auth::user()->id == $user->id)
                             {!! Form::open(array('url'=> 'users/upload','method'=>'POST', 'files'=>true, 'id' => 'form-upload-picture')) !!}
                                 @if(Session::has('error'))
                                     <p class="errors">{!! Session::get('error') !!}</p>
@@ -80,7 +80,7 @@
                                     <tr class="highlight">
                                         <td>Gamer Profile</td>
                                         <td>
-                                            @if (\Illuminate\Support\Facades\Auth::user()->id == $user->id)
+                                            @if (Auth::check() && Auth::user()->id == $user->id)
                                                 <button class="btn btn-info btn-xs" id="update-gamer">Update</button>
                                                 <br>
                                                 <span class=""

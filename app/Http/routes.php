@@ -50,13 +50,15 @@ Route::group(['middleware' => ['web']], function () {
     // Categories
     Route::get('posts/{category}',['as' => 'posts.category', 'uses' => 'CategoriesController@index']);
 
-    // Users
-    Route::resource('users','UsersController');
+
 });
 
 //Route::auth();
 
 Route::auth();
+
+// Users
+Route::resource('users','UsersController');
 
 Route::group(['middleware' => ['auth']], function () {
 
