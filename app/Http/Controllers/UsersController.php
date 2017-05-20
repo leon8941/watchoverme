@@ -36,7 +36,7 @@ class UsersController extends Controller
     public function show($slug)
     {
         $user = User::where('slug',$slug)
-            ->firstOrFail();
+            ->first();
 
         SEO::setTitle($user->name, ' | ' . 'Watch OVerme');
         SEO::setDescription('Jogador brasileiro de Overwatch ' . $user->name );
