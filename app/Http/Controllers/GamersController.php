@@ -214,13 +214,14 @@ class GamersController extends Controller
 
             $client = new Client([
                 // Base URI is used with relative requests
-                'base_uri' => 'https://api.lootbox.eu/',
+                'base_uri' => 'http://ow-api.herokuapp.com',
                 // You can set any number of default request options.
                 'timeout'  => 60,
             ]);
 
             // Send a request to https://foo.com/api/test
-            $response = $client->request('GET', "pc/us/$filtered_tag/profile");
+            //$response = $client->request('GET', "profile/pc/us/kzz-1722");
+            $response = $client->request('GET', "profile/pc/us/$filtered_tag");
 
             // Decode response body
             $obj = json_decode($response->getBody());
@@ -231,35 +232,36 @@ class GamersController extends Controller
             $return['code'] = $e->getCode();
             $return['msg'] = 'Erro ao buscar battletag.';
 
+            dd($return);
             return $return;
         }
 
         // No user returned?
-        if (!isset($obj->data)) {
+        if (!$obj) {
             $return['msg'] = 'Nenhum usuário encontrado.';
             return $return;
         }
 
         // If have a username, its a succesfull transaction
-        if ($obj->data->username && !empty($obj->data->username)) {
+        if ($obj->username && !empty($obj->username)) {
 
             $gamer = Gamer::where('user_id',Auth::user()->id)
                 ->first();
 
-            $quick_wins = isset($obj->data->games->quick->wins)? $obj->data->games->quick->wins : '';
-            $quick_lost = isset($obj->data->games->quick->lost)? $obj->data->games->quick->lost : '';
-            $quick_played = isset($obj->data->games->quick->played)? $obj->data->games->quick->played: '';
-            $competitive_wins = isset($obj->data->games->competitive->wins)? $obj->data->games->competitive->wins: '';
-            $competitive_lost = isset($obj->data->games->competitive->lost)? $obj->data->games->competitive->lost: '';
-            $competitive_played = isset($obj->data->games->competitive->played)? $obj->data->games->competitive->played: '';
-            $competitive_playtime = isset($obj->data->games->competitive->playtime)? $obj->data->games->competitive->playtime: '';
-            $quick_playtime = isset($obj->data->playtime->quick)? $obj->data->playtime->quick: '';
-            $avatar = isset($obj->data->avatar)? $obj->data->avatar: '';
-            $competitive_rank = isset($obj->data->competitive->rank)? $obj->data->competitive->rank: '';
-            $competitive_rank_img = isset($obj->data->competitive->rank_img)? $obj->data->competitive->rank_img: '';
+            $quick_wins = isset($obj->games->quickplay->wins)? $obj->games->quickplay->wins : '';
+            $quick_lost = isset($obj->games->quickplay->lost)? $obj->games->quickplay->lost : '';
+            $quick_played = isset($obj->games->quickplay->played)? $obj->games->quickplay->played: '';
+            $competitive_wins = isset($obj->games->competitive->wins)? $obj->games->competitive->wins: '';
+            $competitive_lost = isset($obj->games->competitive->lost)? $obj->games->competitive->lost: '';
+            $competitive_played = isset($obj->games->competitive->played)? $obj->games->competitive->played: '';
+            $competitive_playtime = isset($obj->playtime->competitive)? $obj->playtime->competitive: '';
+            $quick_playtime = isset($obj->playtime->quickplay)? $obj->playtime->quickplay: '';
+            $avatar = isset($obj->competitive->rank_image)? $obj->competitive->rank_image: '';
+            $competitive_rank = isset($obj->competitive->rank)? $obj->competitive->rank: '';
+            $competitive_rank_img = isset($obj->competitive->rank_img)? $obj->competitive->rank_img: '';
 
             if ($gamer) {
-                $gamer->level = $obj->data->level;
+                $gamer->level = $obj->level;
                 $gamer->quick_wins = $quick_wins;
                 $gamer->quick_lost = $quick_lost;
                 $gamer->quick_played = $quick_played;
@@ -278,8 +280,141 @@ class GamersController extends Controller
 
                 $gamer = Gamer::create([
                     'battletag' => $battletag,
-                    'username' => $obj->data->username,
-                    'level' => $obj->data->level,
+                    'username' => $obj->username,
+                    'quick_playtime' => $quick_playtime,
+                    'quick_wins' => $quick_wins,
+                    'competitive_wins' => $competitive_wins,
+                    'competitive_lost' => $competitive_lost,
+                    'competitive_played' => $competitive_played,
+                    'competitive_playtime' => $competitive_playtime,
+                    'avatar' => $avatar,
+                    'competitive_rank' => $competitive_rank,
+                    'competitive_rank_img' => $competitive_rank_img,
+                    'user_id' => Auth::user()->id
+                ]);
+            }
+
+            // Get user general stats
+            //$this->updateUserStats($filtered_tag, 'competitive');
+            //$this->updateUserStats($filtered_tag, 'quick');
+
+            $return['code'] = '1';
+            $return['success'] = true;
+
+            return Response::json($return);
+        }
+        else {
+            $possible_responses = [
+                '404' => 'User not found'
+            ];
+
+            return Response::json( $possible_responses[$obj->statusCode] );
+        }
+
+        return Response::json(false);
+    }
+
+    /**
+     * Activate a user as a player
+     * Request player data through API, using battletag
+     *
+     * @return bool
+     */
+    public function activateOldAPI()
+    {
+        $battletag = Input::get('battletag');
+
+        $return = [
+            'code' => '0',
+            'success' => false,
+            'msg'   => ''
+        ];
+
+        try {
+
+            if (!strpos($battletag,'#')) {
+
+                $return['msg'] = 'Certifique-se de digitar uma battletag válida. Exemplo: nome#9999 ';
+
+                return $return;
+            }
+
+            // TODO: checar se já existe alguem com essa battletag.
+
+            $explode_tag = explode('#',$battletag);
+
+            // The API requests a battle tag as name-9999 , not name#9999
+            $filtered_tag = $explode_tag[0] . '-' . $explode_tag[1];
+
+            $client = new Client([
+                // Base URI is used with relative requests
+                'base_uri' => 'https://api.lootbox.eu/',
+                // You can set any number of default request options.
+                'timeout'  => 60,
+            ]);
+
+            // Send a request to https://foo.com/api/test
+            $response = $client->request('GET', "pc/us/$filtered_tag/profile");
+
+            // Decode response body
+            $obj = json_decode($response->getBody());
+
+        }
+        catch (\Exception $e) {
+
+            $return['code'] = $e->getCode();
+            $return['msg'] = 'Erro ao buscar battletag.';
+
+            dd($return);
+            return $return;
+        }
+
+        // No user returned?
+        if (!isset($obj->data)) {
+            $return['msg'] = 'Nenhum usuário encontrado.';
+            return $return;
+        }
+
+        // If have a username, its a succesfull transaction
+        if ($obj->username && !empty($obj->username)) {
+
+            $gamer = Gamer::where('user_id',Auth::user()->id)
+                ->first();
+
+            $quick_wins = isset($obj->games->quick->wins)? $obj->games->quick->wins : '';
+            $quick_lost = isset($obj->games->quick->lost)? $obj->games->quick->lost : '';
+            $quick_played = isset($obj->games->quick->played)? $obj->games->quick->played: '';
+            $competitive_wins = isset($obj->games->competitive->wins)? $obj->games->competitive->wins: '';
+            $competitive_lost = isset($obj->games->competitive->lost)? $obj->games->competitive->lost: '';
+            $competitive_played = isset($obj->games->competitive->played)? $obj->games->competitive->played: '';
+            $competitive_playtime = isset($obj->games->competitive->playtime)? $obj->games->competitive->playtime: '';
+            $quick_playtime = isset($obj->playtime->quick)? $obj->playtime->quick: '';
+            $avatar = isset($obj->avatar)? $obj->avatar: '';
+            $competitive_rank = isset($obj->competitive->rank)? $obj->competitive->rank: '';
+            $competitive_rank_img = isset($obj->competitive->rank_img)? $obj->competitive->rank_img: '';
+
+            if ($gamer) {
+                $gamer->level = $obj->level;
+                $gamer->quick_wins = $quick_wins;
+                $gamer->quick_lost = $quick_lost;
+                $gamer->quick_played = $quick_played;
+                $gamer->competitive_wins = $competitive_wins;
+                $gamer->competitive_lost = $competitive_lost;
+                $gamer->competitive_played = $competitive_played;
+                $gamer->competitive_playtime = $competitive_playtime;
+                $gamer->quick_playtime = $quick_playtime;
+                $gamer->avatar = $avatar;
+                $gamer->competitive_rank = $competitive_rank;
+                $gamer->competitive_rank_img = $competitive_rank_img;
+
+                $gamer->save();
+            }
+            else {
+
+                $gamer = Gamer::create([
+                    'battletag' => $battletag,
+                    'username' => $obj->username,
+                    'level' => $obj->level,
                     'quick_wins' => $quick_wins,
                     'quick_lost' => $quick_lost,
                     'quick_played' => $quick_played,
@@ -288,7 +423,7 @@ class GamersController extends Controller
                     'competitive_played' => $competitive_played,
                     'competitive_playtime' => $competitive_playtime,
                     'quick_playtime' => $quick_playtime,
-                    'avatar' => $obj->data->avatar,
+                    'avatar' => $obj->avatar,
                     'competitive_rank' => $competitive_rank,
                     'competitive_rank_img' => $competitive_rank_img,
                     'user_id' => Auth::user()->id

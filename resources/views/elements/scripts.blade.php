@@ -15,9 +15,11 @@
             }
         }).done(function(data) {
 
-            //console.debug(data);
+            console.log('done');
+            console.debug(data);
 
             var obj = JSON.parse(data);
+
 
             if (obj.code != '1') {
 
