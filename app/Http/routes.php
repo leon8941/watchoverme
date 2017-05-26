@@ -109,8 +109,14 @@ Route::group(['middleware' => ['auth']], function () {
 
     // get colaborators
     Route::get('getColaborators', ['as' => 'getColaborators', 'uses' => 'UsersController@getColaborators']);
+
 });
 
+
+Route::get('getStatsPlayers', ['as' => 'getStatsPlayers', 'uses' => 'PagesController@getStatsPlayers']);
+Route::get('getStatsTeams', ['as' => 'getStatsTeams', 'uses' => 'PagesController@getStatsTeams']);
+Route::get('getStatsUpdates', ['as' => 'getStatsUpdates', 'uses' => 'PagesController@getStatsUpdates']);
+Route::get('getStatsEvents', ['as' => 'getStatsEvents', 'uses' => 'PagesController@getStatsEvents']);
 
 
 // Pusher auth

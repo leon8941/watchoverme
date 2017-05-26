@@ -14,6 +14,73 @@
 
         <!-- begin row -->
         <div class="row">
+            <!-- begin col-3 -->
+            <div class="col-md-3 col-sm-6">
+                <div class="widget widget-stats bg-green">
+                    <div class="stats-icon"><i class="fa fa-child"></i></div>
+                    <div class="stats-info">
+                        <h4>TOTAL PLAYERS</h4>
+                        <p id="stats_total_players">
+                            <i class="fa fa-refresh fa-spin"></i>
+                        </p>
+                    </div>
+                    <div class="stats-link">
+                        <a href="{{ route('gamers.index') }}">Ver Lista <i class="fa fa-arrow-circle-o-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- end col-3 -->
+            <!-- begin col-3 -->
+            <div class="col-md-3 col-sm-6">
+                <div class="widget widget-stats bg-blue">
+                    <div class="stats-icon"><i class="fa fa-users"></i></div>
+                    <div class="stats-info">
+                        <h4>TOTAL TIMES</h4>
+                        <p id="stats_total_teams">
+                            <i class="fa fa-refresh fa-spin"></i>
+                        </p>
+                    </div>
+                    <div class="stats-link">
+                        <a href="{{ route('teams.index') }}">Ver Lista <i class="fa fa-arrow-circle-o-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- end col-3 -->
+            <!-- begin col-3 -->
+            <div class="col-md-3 col-sm-6">
+                <div class="widget widget-stats bg-purple">
+                    <div class="stats-icon"><i class="fa fa-trophy"></i></div>
+                    <div class="stats-info">
+                        <h4>EVENTOS ABERTOS</h4>
+                        <p id="stats_events">
+                            <i class="fa fa-refresh fa-spin"></i>
+                        </p>
+                    </div>
+                    <div class="stats-link">
+                        <a href="{{ route('events.index') }}">Ver Lista <i class="fa fa-arrow-circle-o-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- end col-3 -->
+            <!-- begin col-3 -->
+            <div class="col-md-3 col-sm-6">
+                <div class="widget widget-stats bg-red">
+                    <div class="stats-icon"><i class="fa fa-retweet"></i></div>
+                    <div class="stats-info">
+                        <h4>PLAYER UPDATES SEMANA</h4>
+                        <p id="stats_total_updates"><i class="fa fa-refresh fa-spin"></i></p>
+                    </div>
+                    <div class="stats-link">
+                        <a href="{{ route('gamers.index') }}">Ver Ranking <i class="fa fa-arrow-circle-o-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- end col-3 -->
+        </div>
+        <!-- end row -->
+
+        <!-- begin row -->
+        <div class="row">
             <!-- begin col-8 -->
             <div class="col-md-8">
 
@@ -95,7 +162,7 @@
             <!-- end col-8 -->
             <!-- begin col-4 -->
             <div class="col-md-4">
-                <div class="panel panel-inverse" data-sortable-id="index-11">
+                <div class="panel panel-inverse" data-sortable-id="index-4">
                     <div class="panel-heading">
                         <div class="panel-heading-btn">
                             <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
@@ -163,18 +230,109 @@
                         </div>
                     </div>
                 </div>
-
             </div>
             <!-- end col-4 -->
+
         </div>
         <!-- end row -->
 
-        <!-- begin row -->
         <div class="row">
+
             <!-- begin col-4 -->
             <div class="col-md-4">
                 <!-- begin panel -->
                 <div class="panel panel-inverse" data-sortable-id="index-2">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Top 5 Players <span class="label label-success pull-right">Ranking</span></h4>
+                    </div>
+                    <div id="schedule-calendar" class="bootstrap-calendar"></div>
+                    <div class="list-group">
+                        <table id="data-table" class="table table-striped nowrap dataTable no-footer dtr-inline" width="100%" role="grid" aria-describedby="data-table_info" style="width: 100%;">
+                            <thead>
+                            <tr role="row">
+                                <th class="sorting_asc" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 222px;">#</th>
+                                <th class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 322px;">Jogador</th>
+                                <th class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 293px;">Rank</th>
+                                <th class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 190px;">Vitórias</th>
+                                <th class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 139px;">Derrotas</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <?php $i=1; ?>
+                            @foreach ($tops as $top)
+                                <tr class="gradeA odd" role="row">
+                                    <td class="sorting_1">{{ $i }}</td>
+                                    <td>
+                                        <a href="{{ route('users.show', [$top->user->slug]) }}" target="_blank">
+                                            {{ $top->battletag }}
+                                        </a>
+                                    </td>
+                                    <td><span class="badge badge-primary">{{ $top->competitive_rank }}</span></td>
+                                    <td>{{ $top->competitive_wins }}</td>
+                                    <td>{{ $top->competitive_lost }}</td>
+                                </tr>
+                                <?php $i++; ?>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="panel-body">
+                        <br>
+                        <div class="panel-footer text-center">
+                            <a href="{{ route('gamers.index') }}" class="text-inverse">Ver Ranking</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end panel -->
+            </div>
+            <!-- end col -->
+            <!-- begin col-4 -->
+            <div class="col-md-4">
+                <!-- begin panel -->
+                <div class="panel panel-inverse" data-sortable-id="index-3">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Top 5 Times <span class="pull-right label label-success">Ranking </span></h4>
+                    </div>
+                    <table id="data-table" class="table table-striped nowrap dataTable no-footer dtr-inline" width="100%" role="grid" aria-describedby="data-table_info" style="width: 100%;">
+                        <thead>
+                        <tr role="row">
+                            <th class="sorting_asc" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 222px;">#</th>
+                            <th class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 322px;">Jogador</th>
+                            <th class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 293px;">Rank</th>
+                            <th class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 190px;">Vitórias</th>
+                            <th class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 139px;">Derrotas</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php $i=1; ?>
+                        @foreach ($tops as $top)
+                            <tr class="gradeA odd" role="row">
+                                <td class="sorting_1">{{ $i }}</td>
+                                <td>
+                                    <a href="{{ route('users.show', [$top->user->slug]) }}" target="_blank">
+                                        {{ $top->battletag }}
+                                    </a>
+                                </td>
+                                <td><span class="badge badge-primary">{{ $top->competitive_rank }}</span></td>
+                                <td>{{ $top->competitive_wins }}</td>
+                                <td>{{ $top->competitive_lost }}</td>
+                            </tr>
+                            <?php $i++; ?>
+                        @endforeach
+                        </tbody>
+                    </table>
+                    <div class="panel-footer text-center">
+                        <a href="{{ route('gamers.index') }}" class="text-inverse">Ver Todos</a>
+                    </div>
+                </div>
+                <!-- end panel -->
+            </div>
+            <!-- end col -->
+            <!-- begin col-4 -->
+            <div class="col-md-4">
+
+                <!-- begin panel -->
+                <div class="panel panel-inverse" data-sortable-id="index-6">
                     <div class="panel-heading">
                         <h4 class="panel-title">Parceiros<span class="label label-success pull-right">3 deuses</span></h4>
                     </div>
@@ -219,85 +377,8 @@
                 </div>
                 <!-- end panel -->
             </div>
-            <!-- end col-4 -->
-            <!-- begin col-4 -->
-            <div class="col-md-4">
-                <!-- begin panel -->
-                <div class="panel panel-inverse" data-sortable-id="index-3">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">Top 5 Ranking <span class="label label-success pull-right">5 lendas</span></h4>
-                    </div>
-                    <div id="schedule-calendar" class="bootstrap-calendar"></div>
-                    <div class="list-group">
-                        <table id="data-table" class="table table-striped nowrap dataTable no-footer dtr-inline" width="100%" role="grid" aria-describedby="data-table_info" style="width: 100%;">
-                            <thead>
-                            <tr role="row">
-                                <th class="sorting_asc" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 222px;">#</th>
-                                <th class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 322px;">Jogador</th>
-                                <th class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 293px;">Rank</th>
-                                <th class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 190px;">Vitórias</th>
-                                <th class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 139px;">Derrotas</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <?php $i=1; ?>
-                            @foreach ($tops as $top)
-                                <tr class="gradeA odd" role="row">
-                                    <td class="sorting_1">{{ $i }}</td>
-                                    <td>
-                                        <a href="{{ route('users.show', [$top->user->slug]) }}" target="_blank">
-                                            {{ $top->battletag }}
-                                        </a>
-                                    </td>
-                                    <td><span class="badge badge-primary">{{ $top->competitive_rank }}</span></td>
-                                    <td>{{ $top->competitive_wins }}</td>
-                                    <td>{{ $top->competitive_lost }}</td>
-                                </tr>
-                                <?php $i++; ?>
-                            @endforeach
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="panel-body">
-                        <div id="calendar"></div>
-                        <br>
-                        <div class="panel-footer text-center">
-                            <a href="{{ route('gamers.index') }}" class="text-inverse">Ver Ranking</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end panel -->
-            </div>
-            <!-- end col-4 -->
-            <!-- begin col-4 -->
-            <div class="col-md-4">
-                <!-- begin panel -->
-                <div class="panel panel-inverse" data-sortable-id="index-6">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">Novos Users <span class="pull-right label label-success">{{ $count_new_users }} </span></h4>
-                    </div>
-                    <ul class="registered-users-list clearfix">
-                        @foreach($new_registered_users as $user)
-                            <li>
-                                <a href="{{ route('users.show',[$user->slug]) }}">
-                                    <img src="{{ getUserImage($user->avatar) }}" alt="{{ $user->name }}" width="114px" style="max-height: 114px"/></a>
-                                <h4 class="username text-ellipsis">
-                                    {{ $user->name }}
-                                    <small></small>
-                                </h4>
-                            </li>
-                        @endforeach
-                    </ul>
-                    <div class="panel-footer text-center">
-                        <a href="{{ route('gamers.index') }}" class="text-inverse">Ver Todos</a>
-                    </div>
-                </div>
-                <!-- end panel -->
-            </div>
-            <!-- end col-4 -->
+            <!-- end col -->
         </div>
-        <!-- end row -->
-
     </div>
     <!-- end #content -->
 @endsection
@@ -320,6 +401,10 @@
 
             getEvents();
 
+            getStats('players');
+            getStats('teams');
+            getStats('updates');
+            getStats('events');
         });
     </script>
 @endsection

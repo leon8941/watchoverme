@@ -10,7 +10,7 @@
         </ol>
         <!-- end breadcrumb -->
         <!-- begin page-header -->
-        <h1 class="page-header">Login <small>bem vindo seu verme lindo!</small></h1>
+        <h1 class="page-header">Login <small>bem vindo!</small></h1>
         <!-- end page-header -->
 
         <div class="panel panel-inverse">
@@ -50,6 +50,7 @@
                             <input type="email"
                                    class="form-control"
                                    name="email"
+                                   tabindex="1"
                                    value="{{ old('email') }}">
                         </div>
                     </div>
@@ -60,6 +61,7 @@
                         <div class="col-md-6">
                             <input type="password"
                                    class="form-control"
+                                   tabindex="2"
                                    name="password">
                         </div>
                     </div>

@@ -302,4 +302,45 @@
         });
     }
 
+    // for admin home
+    function getStats(stats) {
+
+        var route = '';
+        var where = '';
+
+        switch (stats) {
+            case 'players':
+                route = "{{ route('getStatsPlayers') }}";
+                where = '#stats_total_players';
+                break;
+            case 'teams':
+                route = "{{ route('getStatsTeams') }}";
+                where = '#stats_total_teams';
+                break;
+            case 'updates':
+                route = "{{ route('getStatsUpdates') }}";
+                where = '#stats_total_updates';
+                break;
+            case 'events':
+                route = "{{ route('getStatsEvents') }}";
+                where = '#stats_events';
+                break;
+        }
+
+        $.ajax({
+            url: route,
+            dataType: "html",
+            type: "GET",
+        }).done(function(data) {
+
+            $(where).empty();
+
+            var obj = JSON.parse(data);
+
+            console.debug(obj);
+            $(where).html(obj);
+
+        });
+    }
+
 </script>

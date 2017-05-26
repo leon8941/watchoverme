@@ -9,6 +9,7 @@ use App\Posts;
 use App\Subscriber;
 use App\Team;
 use App\User;
+use Carbon\Carbon;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 
@@ -123,4 +124,35 @@ class PagesController extends Controller
 
         return view('pages.about', compact('teams', 'users', 'news'));
     }
+
+    public function getStatsPlayers()
+    {
+
+        $players = Gamer::count();
+
+        return Response::json($players);
+    }
+
+    public function getStatsTeams()
+    {
+        $teams = Team::count();
+
+        return Response::json($teams);
+    }
+
+    public function getStatsUpdates()
+    {
+        $updates = Gamer::where('updated_at', '>=', Carbon::now()->subDays('7'))
+            ->count();
+
+        return Response::json($updates);
+    }
+
+    public function getStatsEvents()
+    {
+        $events = Event::count();
+
+        return Response::json($events);
+    }
+
 }
