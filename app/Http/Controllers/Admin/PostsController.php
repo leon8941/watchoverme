@@ -106,9 +106,11 @@ class PostsController extends Controller {
 
         if (!empty($categories)) {
             foreach ($categories as $category) {
-                $cat = Category::where('id',$category)->first();
+                //$cat = Category::where('id',$category)->first();
 
-                $posts->categories()->attach($cat->id);
+                // Check if already exists
+                if (!$posts->categories->contains($category))
+                    $posts->categories()->attach($category);
             }
         }
 
