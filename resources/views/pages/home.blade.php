@@ -298,24 +298,24 @@
                         <tr role="row">
                             <th class="sorting_asc" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 222px;">#</th>
                             <th class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 322px;">Jogador</th>
-                            <th class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 293px;">Rank</th>
+                            <th class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 293px;">Pontos</th>
                             <th class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 190px;">Vitórias</th>
                             <th class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 139px;">Derrotas</th>
                         </tr>
                         </thead>
                         <tbody>
                         <?php $i=1; ?>
-                        @foreach ($tops as $top)
+                        @foreach ($teams as $team)
                             <tr class="gradeA odd" role="row">
                                 <td class="sorting_1">{{ $i }}</td>
                                 <td>
-                                    <a href="{{ route('users.show', [$top->user->slug]) }}" target="_blank">
-                                        {{ $top->battletag }}
+                                    <a href="{{ route('teams.show', [$team->slug]) }}" target="_blank">
+                                        {{ $team->title }}
                                     </a>
                                 </td>
-                                <td><span class="badge badge-primary">{{ $top->competitive_rank }}</span></td>
-                                <td>{{ $top->competitive_wins }}</td>
-                                <td>{{ $top->competitive_lost }}</td>
+                                <td><span class="badge badge-primary">{{ $team->points }}</span></td>
+                                <td>0</td>
+                                <td>0</td>
                             </tr>
                             <?php $i++; ?>
                         @endforeach

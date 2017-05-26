@@ -74,8 +74,10 @@ class PagesController extends Controller
             ->with('user')
             ->take(5)->get();
 
+        $teams = Team::orderBy('points','DESC')->take(5)->get();
+
         return view('pages.home',compact(
-            'posts','updated_players','new_registered_users','count_new_users','events','tops'));
+            'posts','updated_players','new_registered_users','count_new_users','events','tops','teams'));
     }
 
 
