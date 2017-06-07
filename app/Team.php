@@ -35,4 +35,9 @@ class Team extends Model implements SluggableInterface
     {
         return $this->hasMany(Request::class)->orderBy('created_at','DESC');
     }
+/*
+    public function getImageAttribute($value)
+    {
+        return asset(Team::$avatar_dir . $value);
+    }*/
 }

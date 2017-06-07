@@ -4,14 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Event;
 use App\Gamer;
+use App\Market;
 use App\Post;
 use App\Posts;
 use App\Subscriber;
 use App\Team;
 use App\User;
+use App\Request;
 use Carbon\Carbon;
 use GuzzleHttp\Client;
-use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use Illuminate\Support\Facades\DB;
@@ -76,8 +77,11 @@ class PagesController extends Controller
 
         $teams = Team::orderBy('points','DESC')->take(5)->get();
 
+        $mercado = Market::orderBy('created_at','DESC')->take(5)->get();
+
         return view('pages.home',compact(
-            'posts','updated_players','new_registered_users','count_new_users','events','tops','teams'));
+            'posts','updated_players','new_registered_users','count_new_users',
+            'events','tops','teams','mercado'));
     }
 
 

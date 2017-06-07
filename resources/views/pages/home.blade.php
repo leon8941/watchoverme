@@ -222,7 +222,7 @@
                         </div>
                         <h4 class="panel-title">Calendário</h4>
                     </div>
-                    <div class="panel-body">
+                    <div class="panel-body bg-green-lighter">
                         <div id="calendar"></div>
                         <br>
                         <div class="panel-footer text-center">
@@ -230,6 +230,40 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- begin panel -->
+                <div class="panel panel-inverse" data-sortable-id="index-6">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Mercado<span class="label label-success pull-right">últimas</span></h4>
+                    </div>
+                    <div class="panel-body">
+                        <div data-scrollbar="true" data-height="310px">
+                            <ul class="chats">
+                                <?php $row = 0; ?>
+                                @foreach ($mercado as $item)
+                                    <li class="{{ $row%2==0? 'left' : 'right' }}">
+                                        <a href="{{ route('teams.show', ['slug' => $item->team->slug]) }}"
+                                           target="_blank" class="name">{{ $item->team->title }}</a>
+                                        <a href="{{ route('teams.show', ['slug' => $item->team->slug]) }}"
+                                           target="_blank" class="image pull-{{ $row%2==0? 'left' : 'right' }}">
+                                            <img src="{{ getTeamAvatar($item->team->image) }}" alt="" class="" width="160px"/>
+                                        </a>
+                                        <div class="message">
+                                            @if ($item->action == 'I')
+                                                <i class="text-success fa fa-arrow-down"></i>
+                                            @else
+                                                <i class="text-danger fa fa-arrow-up"></i>
+                                            @endif
+                                                {{ $item->description }}
+                                        </div>
+                                    </li>
+                                    <?php $row++; ?>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- end panel -->
             </div>
             <!-- end col-4 -->
 
@@ -328,6 +362,7 @@
                 <!-- end panel -->
             </div>
             <!-- end col -->
+
             <!-- begin col-4 -->
             <div class="col-md-4">
 
@@ -376,6 +411,8 @@
                     </div>
                 </div>
                 <!-- end panel -->
+
+
             </div>
             <!-- end col -->
         </div>

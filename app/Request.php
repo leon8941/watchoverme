@@ -32,20 +32,35 @@ class Request extends Model
     }
 
     /*
-     * Checks if a user has made a request on this team
+     * Checks if a user has made a request on this team OR
+     * if user is in any other team
+     *
      */
-    public static function userCanRequest($team_id)
+    public static function userCanRequest($team_id = false)
     {
         if (!Auth::check())
             return false;
 
-        $request = Request::where('user_id',Auth::user()->id)
-            ->where('team_id',$team_id)
-            ->where('aproved','<>','1')
-            ->first();
+        $user = User::where('id',Auth::user()->id)
+            ->with('team')->first();
 
-        if ($request)
+        // user is in any team
+        if ($user && $user->team()->count() > 0)
             return false;
+
+        // Requesting specific team
+        if ($team_id) {
+
+            $request = Request::where('user_id',Auth::user()->id)
+                ->where('team_id',$team_id)
+                ->where('aproved','<>','1')
+                ->first();
+
+            if ($request && $request->count() > 0)
+                return false;
+
+            return true;
+        }
 
         return true;
     }

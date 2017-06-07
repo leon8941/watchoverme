@@ -22,9 +22,9 @@ class UsersTableSeeder extends Seeder
         ]);
 
         $lithium = \App\User::create([
-            'name' => 'Lithium',
+            'name' => 'Tester',
             'password' => \Illuminate\Support\Facades\Hash::make('12345'),
-            'email' => 'lithiumbloodthirst@gmail.com'
+            'email' => 'tester@gmail.com'
         ]);
 
         $inhouse_bot = \App\User::create([

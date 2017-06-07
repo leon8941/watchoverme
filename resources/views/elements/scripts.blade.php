@@ -343,4 +343,19 @@
         });
     }
 
+    function removePlayerFromTeam(player_id, team_id){
+        $.ajax({
+            url: '{{ route('teams.removePlayer') }}',
+            dataType: "html",
+            type: "GET",
+            data: {
+                team_id: team_id,
+                player_id: player_id
+            }
+        }).done(function(data) {
+
+            alert(data);
+
+        });
+    }
 </script>

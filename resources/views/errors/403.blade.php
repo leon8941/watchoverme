@@ -36,10 +36,11 @@
                 <div class="note note-success">
                     <h4>Permissão</h4>
                     <p>
-                        Caso você queira permissão para fazer alguma tarefa específica no Watch OVerme, contate-nos
-                        enviando um email para {{ 'staff@watchoverme.com.br' }} .
-                        <br><br>Ficaremos contentes em receber mais um verme
-                        na família.
+                        @if (!isset($message) || empty($message))
+                            Caso você queira permissão para fazer alguma tarefa específica no NerfThis, contate-nos
+                            enviando um email para {{ 'staff@nerfthis.com.br' }} .
+                            <br><br>Ficaremos contentes em receber mais um colaborador na família.
+                        @endif
                     </p>
                 </div>
             </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Market;
 use App\Team;
 use App\User;
 use Illuminate\Http\Request;
@@ -249,6 +250,9 @@ class TeamsController extends Controller
 
             $team->users()->attach($user_id);
 
+            // Cria registro no mercado
+            Market::registerPlayer($team_id, $user_id);
+
             return Response::json(true);
         }
 
@@ -258,6 +262,8 @@ class TeamsController extends Controller
 
     public function create()
     {
+        if (!\App\Request::userCanRequest())
+            abort(403,'Você já está em um time.');
 
         return view('teams.create');
     }
@@ -276,6 +282,8 @@ class TeamsController extends Controller
 
         $data = Input::only('title','description');
 
+        $data['owner_id'] = Auth::user()->id;
+
         $team = Team::create($data);
 
         if ($team) {
@@ -285,6 +293,9 @@ class TeamsController extends Controller
                 ->first();
 
             $user->team()->attach($team->id);
+
+            // Cria registro no mercado
+            Market::registerTeam($team);
 
             return redirect()->route('teams.index')->with('message', 'Time criado com sucesso!');;
         }
@@ -324,5 +335,20 @@ class TeamsController extends Controller
         }
 
         return Response::json($response);
+    }
+
+    public function removePlayerFromTeam()
+    {
+        $team_id = Input::get('team_id');
+        $player_id = Input::get('player_id');
+
+        $team = Team::where('id',$team_id)->first();
+
+        if (!$team)
+            return false;
+
+        $team->players()->detach($player_id);
+
+        return true;
     }
 }
