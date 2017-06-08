@@ -1,4 +1,5 @@
 
+
 <script>
     function ativarJogador( battletag ) {
 
@@ -354,8 +355,35 @@
             }
         }).done(function(data) {
 
-            alert(data);
+            var msg, title = '';
 
+            if (data) {
+                title = 'Sucesso!';
+                msg = 'Player removido com sucesso.';
+            }
+            else {
+                title = 'Erro!';
+                msg = 'Erro ao remover player';
+            }
+
+            notification(title, msg, true);
         });
+    }
+
+
+    function notification(title, msg , reload) {
+
+        $.gritter.add({
+            title: title,
+            text: msg
+        });
+
+        if (typeof (reload) != 'undefined' && reload == true) {
+            setTimeout(function(){
+                location.reload();
+            }, 450);
+        }
+
+        return false;
     }
 </script>

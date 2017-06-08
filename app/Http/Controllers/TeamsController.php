@@ -337,7 +337,7 @@ class TeamsController extends Controller
         return Response::json($response);
     }
 
-    public function removePlayerFromTeam()
+    public function removePlayer()
     {
         $team_id = Input::get('team_id');
         $player_id = Input::get('player_id');
@@ -345,10 +345,13 @@ class TeamsController extends Controller
         $team = Team::where('id',$team_id)->first();
 
         if (!$team)
-            return false;
+            return Response::json(false);
 
-        $team->players()->detach($player_id);
+        $team->users()->detach($player_id);
 
-        return true;
+        // Notify market
+        Market::registerPlayer($team_id,$player_id, 'O');
+
+        return Response::json(true);
     }
 }

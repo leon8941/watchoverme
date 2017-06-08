@@ -115,44 +115,48 @@
                                     <tr class="divider">
                                         <td colspan="2"></td>
                                     </tr>
-                                    <table id="data-table" class="table table-striped table-bordered dataTable no-footer" role="grid" aria-describedby="data-table_info">
-                                        <thead>
-                                        <tr role="row">
-                                            <th data-column-index="0" class="sorting_asc" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 222px;">Player</th>
-                                            <th data-column-index="1" class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 322px;"></th>
-                                            <th data-column-index="2" class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 293px;"></th>
-                                            <th data-column-index="3" class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 190px;"></th>
-                                            <th data-column-index="4" class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 139px;">
-                                                @if (\App\User::isOnTeam($team->id))
-                                                    Actions
-                                                @endif
-                                            </th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                            @foreach($team->users as $player)
-                                                <tr class="gradeA odd" role="row">
-                                                    <td class="sorting_1">
-                                                        <a href="{{ route('users.show',[$player->slug]) }}">
-                                                            <img src="{{ getUserAvatar($player->avatar) }}" width="80px">
-                                                        </a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="{{ route('users.show',[$player->slug]) }}">
-                                                            {{ $player->name }}
-                                                        </a>
-                                                    </td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>
+                                    <tr class="divider">
+                                        <td colspan="2">
+                                            <table id="data-table" class="table table-striped table-bordered dataTable no-footer" role="grid" aria-describedby="data-table_info">
+                                                <thead>
+                                                <tr role="row">
+                                                    <th data-column-index="0" class="sorting_asc" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 222px;">Player</th>
+                                                    <th data-column-index="1" class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 322px;"></th>
+                                                    <th data-column-index="2" class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 293px;"></th>
+                                                    <th data-column-index="3" class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 190px;"></th>
+                                                    <th data-column-index="4" class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 139px;">
                                                         @if (\App\User::isOnTeam($team->id))
-                                                            <button class="btn btn-warning remove-player" data-ref="{{ $player->id }}"><i class="fa fa-trash"></i></button>
+                                                            Actions
                                                         @endif
-                                                    </td>
+                                                    </th>
                                                 </tr>
-                                            @endforeach
-                                        </tbody>
-                                    </table>
+                                                </thead>
+                                                <tbody>
+                                                @foreach($team->users as $player)
+                                                    <tr class="gradeA odd" role="row">
+                                                        <td class="sorting_1">
+                                                            <a href="{{ route('users.show',[$player->slug]) }}">
+                                                                <img src="{{ getUserAvatar($player->avatar) }}" width="80px">
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <a href="{{ route('users.show',[$player->slug]) }}">
+                                                                {{ $player->name }}
+                                                            </a>
+                                                        </td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>
+                                                            @if (\App\User::isOnTeam($team->id))
+                                                                <button class="btn btn-warning remove-player" data-ref="{{ $player->id }}"><i class="fa fa-trash"></i></button>
+                                                            @endif
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
                                     <tr class="divider">
                                         <td colspan="2"></td>
                                     </tr>
