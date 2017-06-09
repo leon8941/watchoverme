@@ -10,7 +10,7 @@
         </ol>
         <!-- end breadcrumb -->
         <!-- begin page-header -->
-        <h1 class="page-header">Registrar <small>porque você é só mais um verme como nós...</small></h1>
+        <h1 class="page-header">Registrar <small></small></h1>
         <!-- end page-header -->
 
         <div class="panel panel-inverse">
@@ -28,7 +28,7 @@
                     {{ csrf_field() }}
 
                     <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                        <label for="name" class="col-md-4 control-label">Name</label>
+                        <label for="name" class="col-md-4 control-label">Nickname</label>
 
                         <div class="col-md-6">
                             <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}">
