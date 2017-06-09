@@ -45,7 +45,7 @@ class CheckStreams extends Command
     public function checkStreams()
     {
 
-        $users = User::select('twitch')
+        $users = User::select('id','twitch')
             ->whereNotNull('twitch')
             ->where('twitch','!=','')
             ->get();
