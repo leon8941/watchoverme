@@ -126,7 +126,7 @@ class CheckStreams extends Command
 
         $stream = json_decode($response, TRUE);
 
-        if(!$stream || isNull($stream['stream']))
+        if(!$stream || is_null($stream['stream']) || empty($stream['stream']))
             return false;
         else
             return true;
