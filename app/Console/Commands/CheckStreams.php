@@ -61,6 +61,7 @@ class CheckStreams extends Command
             // Check if channel is live
             $live = $this->getTwitchChannelStatus($user->twitch);
 
+            dd($live);
             User::where('id',$user->id)->update([
                 'twitch_status' => $live,
                 'twitch_followers' => $info['followers'],
