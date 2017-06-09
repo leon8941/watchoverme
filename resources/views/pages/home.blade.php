@@ -160,6 +160,42 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="widget-chart with-sidebar bg-black">
+                    <div class="widget-chart-content">
+                        <h4 class="chart-title">
+                            Live Streams
+                            <small>acompanhe os melhores jogadores brasileiros</small>
+                        </h4>
+                        <div id="visitors-line-chart" class="morris-inverse" style="height: 260px; position: relative; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                            <ul class="registered-users-list clearfix">
+                                @foreach ($streams as $stream)
+                                    <li>
+                                        <a href="http://twitch.tv/{{ $stream->twitch }}" target="_blank">
+                                            <img src="{{ $stream->twitch_logo }}" alt="{{ $stream->gamer->battletag }} stream">
+                                        </a>
+                                        <h4 class="username text-ellipsis">
+                                            {{ $stream->twitch_title }}
+                                            <small>{{ $stream->name }}</small>
+                                        </h4>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="widget-chart-sidebar bg-black-darker">
+                        <div class="chart-number">
+                            {{ $followers->followers }}
+                            <small>total seguidores</small>
+                        </div>
+                        <div id="visitors-donut-chart" style="height: 160px">
+                        </div>
+                        <ul class="chart-legend">
+                            <li><i class="fa fa-circle-o fa-fw text-success m-r-5"></i> {{ $streams->count() }} <span>Live Streams</span></li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
             <!-- end col-8 -->
             <!-- begin col-4 -->
@@ -266,53 +302,6 @@
                     </div>
                 </div>
                 <!-- end panel -->
-            </div>
-            <!-- end col-4 -->
-
-        </div>
-        <!-- end row -->
-
-        <div class="row">
-
-            <div class="col-md-8">
-                <div class="widget-chart with-sidebar bg-black">
-                    <div class="widget-chart-content">
-                        <h4 class="chart-title">
-                            Live Streams
-                            <small>acompanhe os melhores jogadores brasileiros</small>
-                        </h4>
-                        <div id="visitors-line-chart" class="morris-inverse" style="height: 260px; position: relative; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
-                            <ul class="registered-users-list clearfix">
-                                @foreach ($streams as $stream)
-                                    <li>
-                                        <a href="http://twitch.tv/{{ $stream->twitch }}" target="_blank">
-                                            <img src="{{ $stream->twitch_logo }}" alt="{{ $stream->gamer->battletag }} stream">
-                                        </a>
-                                        <h4 class="username text-ellipsis">
-                                            {{ $stream->twitch_title }}
-                                            <small>{{ $stream->name }}</small>
-                                        </h4>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="widget-chart-sidebar bg-black-darker">
-                        <div class="chart-number">
-                            {{ $followers->followers }}
-                            <small>total seguidores</small>
-                        </div>
-                        <div id="visitors-donut-chart" style="height: 160px">
-                        </div>
-                        <ul class="chart-legend">
-                            <li><i class="fa fa-circle-o fa-fw text-success m-r-5"></i> {{ $streams->count() }} <span>Live Streams</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- begin col-4 -->
-            <div class="col-md-4">
 
                 <!-- begin panel -->
                 <div class="panel panel-inverse" data-sortable-id="index-2">
@@ -399,8 +388,11 @@
                 <!-- end panel -->
                 
             </div>
-            <!-- end col -->
+            <!-- end col-4 -->
+
         </div>
+        <!-- end row -->
+
 
     </div>
     <!-- end #content -->
