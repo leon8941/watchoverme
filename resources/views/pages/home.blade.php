@@ -285,7 +285,9 @@
                             <ul class="registered-users-list clearfix">
                                 @foreach ($streams as $stream)
                                     <li>
-                                        <a href="javascript:;"><img src="{{ $stream->twitch_logo }}" alt=""></a>
+                                        <a href="http://twitch.tv/{{ $stream->twitch }}" target="_blank">
+                                            <img src="{{ $stream->twitch_logo }}" alt="{{ $stream->gamer->battletag }} stream">
+                                        </a>
                                         <h4 class="username text-ellipsis">
                                             {{ $stream->twitch_title }}
                                             <small>{{ $stream->name }}</small>
@@ -356,10 +358,7 @@
                     </div>
                 </div>
                 <!-- end panel -->
-            </div>
-            <!-- end col -->
-            <!-- begin col-4 -->
-            <div class="col-md-4">
+
                 <!-- begin panel -->
                 <div class="panel panel-inverse" data-sortable-id="index-3">
                     <div class="panel-heading">
@@ -398,10 +397,11 @@
                     </div>
                 </div>
                 <!-- end panel -->
+                
             </div>
             <!-- end col -->
-
         </div>
+
     </div>
     <!-- end #content -->
 @endsection
