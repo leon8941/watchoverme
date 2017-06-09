@@ -48,15 +48,21 @@ class CheckStreams extends Command
         $users = User::select('twitch')->whereNotNull('twitch')
             ->where('twitch','!=','')->get();
 
+        $total = $users->count();
         $channels = '';
+        $i = 1;
 
         //
         foreach ($users as $user) {
 
             if ($user->twitch && !empty($user->twitch))
-                $channels .= $user->twitch . ',';
-        }
+                $channels .= $user->twitch;
 
+            if ($i < $total)
+                $channels .= ',';
+
+            $i++;
+        }
 
         $channelsApi = 'https://api.twitch.tv/kraken/channels/';
         //$channelName = $channel? $channel : 'wraxu';
@@ -78,7 +84,7 @@ class CheckStreams extends Command
 
         $json = json_decode($response, TRUE);
 
-        dd($json);
+        print_r($json);
 
     }
 }
