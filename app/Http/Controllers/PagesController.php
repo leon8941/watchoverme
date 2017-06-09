@@ -86,9 +86,11 @@ class PagesController extends Controller
             ->take(8)
             ->get();
 
+        $followers = User::select(DB::raw('SUM(twitch_followers) as followers'))->first();
+
         return view('pages.home',compact(
             'posts','updated_players','new_registered_users','count_new_users',
-            'events','tops','teams','mercado','streams'));
+            'events','tops','teams','mercado','streams','followers'));
     }
 
 

@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3406a468-5bd2-41d7-a381-c80813249479" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Console/Kernel.php" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/home.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/home.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="watchoverme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,25 +25,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.384615">
-              <caret line="290" column="67" selection-start-line="290" selection-start-column="67" selection-end-line="290" selection-end-column="67" />
+            <state vertical-scroll-proportion="0.6753689">
+              <caret line="303" column="24" selection-start-line="303" selection-start-column="24" selection-end-line="303" selection-end-column="24" />
               <folding>
                 <element signature="e#15742#15831#0#HTML" expanded="true" />
-                <element signature="e#16871#16892#0#HTML" expanded="true" />
-                <element signature="e#16972#17036#0#HTML" expanded="true" />
-                <element signature="e#17043#17097#0#HTML" expanded="true" />
-                <element signature="e#17138#17192#0#HTML" expanded="true" />
-                <element signature="e#17373#17439#0#HTML" expanded="true" />
-                <element signature="e#17669#17723#0#HTML" expanded="true" />
-                <element signature="e#17916#17982#0#HTML" expanded="true" />
-                <element signature="e#18253#18307#0#HTML" expanded="true" />
-                <element signature="e#18416#18631#0#HTML" expanded="true" />
-                <element signature="e#18781#18835#0#HTML" expanded="true" />
-                <element signature="e#18967#19185#0#HTML" expanded="true" />
-                <element signature="e#19322#19376#0#HTML" expanded="true" />
+                <element signature="e#16897#16918#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -63,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PagesController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PagesController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PagesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.86833143">
-              <caret line="90" column="54" selection-start-line="90" selection-start-column="54" selection-end-line="90" selection-end-column="54" />
+            <state vertical-scroll-proportion="-24.846153">
+              <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
               <folding>
                 <element signature="e#40#54#0#PHP" expanded="true" />
               </folding>
@@ -159,8 +146,8 @@
         <option value="$PROJECT_DIR$/resources/views/elements/menu-left.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/gamers/streams.blade.php" />
         <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/home.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/home.blade.php" />
       </list>
     </option>
   </component>
@@ -1213,34 +1200,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/home.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PagesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.384615">
-          <caret line="290" column="67" selection-start-line="290" selection-start-column="67" selection-end-line="290" selection-end-column="67" />
+        <state vertical-scroll-proportion="-24.846153">
+          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
           <folding>
-            <element signature="e#15742#15831#0#HTML" expanded="true" />
-            <element signature="e#16871#16892#0#HTML" expanded="true" />
-            <element signature="e#16972#17036#0#HTML" expanded="true" />
-            <element signature="e#17043#17097#0#HTML" expanded="true" />
-            <element signature="e#17138#17192#0#HTML" expanded="true" />
-            <element signature="e#17373#17439#0#HTML" expanded="true" />
-            <element signature="e#17669#17723#0#HTML" expanded="true" />
-            <element signature="e#17916#17982#0#HTML" expanded="true" />
-            <element signature="e#18253#18307#0#HTML" expanded="true" />
-            <element signature="e#18416#18631#0#HTML" expanded="true" />
-            <element signature="e#18781#18835#0#HTML" expanded="true" />
-            <element signature="e#18967#19185#0#HTML" expanded="true" />
-            <element signature="e#19322#19376#0#HTML" expanded="true" />
+            <element signature="e#40#54#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PagesController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.86833143">
-          <caret line="90" column="54" selection-start-line="90" selection-start-column="54" selection-end-line="90" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.6753689">
+          <caret line="303" column="24" selection-start-line="303" selection-start-column="24" selection-end-line="303" selection-end-column="24" />
           <folding>
-            <element signature="e#40#54#0#PHP" expanded="true" />
+            <element signature="e#15742#15831#0#HTML" expanded="true" />
+            <element signature="e#16897#16918#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
