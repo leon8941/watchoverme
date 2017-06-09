@@ -50,24 +50,12 @@ class CheckStreams extends Command
             ->where('twitch','!=','')
             ->get();
 
-        /*
-        $total = $users->count();
-        $channels = '';
-        $i = 1;
-*/
+
         //
         foreach ($users as $user) {
-/*
-            if ($user->twitch && !empty($user->twitch))
-                $channels .= $user->twitch;
 
-            if ($i < $total)
-                $channels .= ',';
-
-            $i++;*/
             $info = $this->getTwitchChannelInfo($user->twitch);
 
-            var_dump($info);
             User::where('id',$user->id)->update([
                 'twitch_status' => $info['mature'],
                 'twitch_followers' => $info['followers'],
@@ -77,7 +65,8 @@ class CheckStreams extends Command
             ]);
 
             $this->info('channel ' . $user->twitch . ' updated');
-            
+
+            sleep(1);
         }
 
     }
@@ -86,9 +75,7 @@ class CheckStreams extends Command
     {
 
         $channelsApi = 'https://api.twitch.tv/kraken/channels/';
-        //$channelName = $channel? $channel : 'wraxu';
-        //$channelName = $channel;
-        //$channelName = 'wraxu';
+
         $clientId = 'h6b0lkg3c14e4h068thlrzy4sgp7t4';
         $ch = curl_init();
 

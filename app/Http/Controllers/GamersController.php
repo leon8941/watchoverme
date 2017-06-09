@@ -662,9 +662,10 @@ class GamersController extends Controller
 
     public function streams()
     {
-
         $streams = User::whereNotNull('twitch')
-            ->take(10)
+            ->where('twitch_status','1')
+            ->take(15)
+            ->orderBy('twitch_followers','DESC')
             ->get();
 
         return view('gamers.streams',compact('streams'));

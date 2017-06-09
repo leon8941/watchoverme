@@ -165,8 +165,6 @@ class PagesController extends Controller
     public function test($channel = false)
     {
 
-
-
         $channelsApi = 'https://api.twitch.tv/kraken/channels/';
         $channelName = $channel? $channel : 'wraxu';
         $clientId = 'h6b0lkg3c14e4h068thlrzy4sgp7t4';

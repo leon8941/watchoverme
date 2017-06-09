@@ -17,17 +17,17 @@
         @foreach($streams as $stream)
             <div class="image isotope-item">
                 <div class="image-inner">
-                    <a href="{{ route('posts.show', [$stream->slug]) }}" data-lightbox="humor" >
-                        <img src="{{ getPostImage($stream->image) }}" alt="" />
+                    <a href="{{ route('users.show', [$stream->slug]) }}" data-lightbox="humor" >
+                        <img src="{{ getPostImage($stream->twitch_logo) }}" alt="" />
                     </a>
                     <p class="image-caption">
-                        {{ $stream->title }}
+                        {{ $stream->gamer->battletag }}
                     </p>
                 </div>
                 <div class="image-info">
-                    <h5 class="title">{{ link_to( route('posts.show', [$stream->slug]), $stream->title) }}</h5>
+                    <h5 class="title">{{ link_to( route('users.show', [$stream->slug]), $stream->gamer->battletag) }}</h5>
                     <div class="pull-right">
-                        <small>by</small> <a href="javascript:;">{{ $stream->name }}</a>
+                        <small>followers</small> <a href="javascript:;">{{ $stream->twitch_followers }}</a>
                     </div>
                     <div class="rating">
                         <span class="star active"></span>

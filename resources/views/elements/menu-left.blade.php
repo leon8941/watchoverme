@@ -57,14 +57,12 @@
                     <span>Rankings</span>
                 </a>
             </li>
-            <!--
             <li class="{{ isActive('gamers') }}">
                 <a href="{{ route('gamers.streams') }}">
                     <i class="fa fa-star"></i>
                     <span>Streams</span>
                 </a>
             </li>
-            -->
             <li class="{{ isActive('teams') }}">
                 <a href="{{ route('teams.index') }}">
                     <i class="fa fa-users"></i>
