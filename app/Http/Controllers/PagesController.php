@@ -162,12 +162,13 @@ class PagesController extends Controller
         return Response::json($events);
     }
 
-    public function test()
+    public function test($channel = false)
     {
 
 
+
         $channelsApi = 'https://api.twitch.tv/kraken/channels/';
-        $channelName = 'wraxu';
+        $channelName = $channel? $channel : 'wraxu';
         $clientId = 'h6b0lkg3c14e4h068thlrzy4sgp7t4';
         $ch = curl_init();
 

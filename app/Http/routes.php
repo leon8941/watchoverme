@@ -32,7 +32,7 @@ Route::group(['middleware' => ['web']], function () {
 
     // Inhouse
     Route::get('gamers.activate',['as' => 'gamers.activate', 'uses' => 'GamersController@activate']);
-    Route::get('test',['as' => 'test', 'uses' => 'PagesController@test']);
+    Route::get('test/{channel?}',['as' => 'test', 'uses' => 'PagesController@test']);
 
     // Resources
     Route::resource('events','EventsController');
