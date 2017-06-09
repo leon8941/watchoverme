@@ -50,30 +50,42 @@ class CheckStreams extends Command
             ->where('twitch','!=','')
             ->get();
 
+        /*
         $total = $users->count();
         $channels = '';
         $i = 1;
-
+*/
         //
         foreach ($users as $user) {
-
+/*
             if ($user->twitch && !empty($user->twitch))
                 $channels .= $user->twitch;
 
             if ($i < $total)
                 $channels .= ',';
 
-            $i++;
+            $i++;*/
+            $info = $this->getTwitchChannelInfo($user->twitch);
+
+            $user->update([
+                'twitch_status' => $info['mature'],
+                'twitch_followers' => $info['followers'],
+                'twitch_views' => $info['views'],
+                'twitch_logo' => $info['logo'],
+                'twitch_banner' => $info['banner'],
+            ]);
+
+            $this->info('channel ' . $user->twitch . ' updated');
         }
 
-        if (!$channels || empty($channels)) {
-            $this->info('sem canais');
-            return false;
-        }
+    }
+
+    public function getTwitchChannelInfo($channelName)
+    {
 
         $channelsApi = 'https://api.twitch.tv/kraken/streams?channels=';
         //$channelName = $channel? $channel : 'wraxu';
-        $channelName = $channels;
+        //$channelName = $channel;
         //$channelName = 'wraxu';
         $clientId = 'h6b0lkg3c14e4h068thlrzy4sgp7t4';
         $ch = curl_init();
@@ -90,10 +102,7 @@ class CheckStreams extends Command
 
         curl_close($ch);
 
-        $json = json_decode($response, TRUE);
-
-        print_r($json);
-        $this->info($json);
+        return json_decode($response, TRUE);
 
     }
 }
