@@ -67,6 +67,7 @@ class CheckStreams extends Command
             $i++;*/
             $info = $this->getTwitchChannelInfo($user->twitch);
 
+            print_r($info);
             $user->update([
                 'twitch_status' => $info['mature'],
                 'twitch_followers' => $info['followers'],
