@@ -261,7 +261,7 @@
                         </div>
                         <h4 class="panel-title">Calendário</h4>
                     </div>
-                    <div class="panel-body bg-green-lighter">
+                    <div class="panel-body">
                         <div id="calendar"></div>
                         <br>
                         <div class="panel-footer text-center">
