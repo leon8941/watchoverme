@@ -21,7 +21,7 @@
                         <img src="{{ $stream->twitch_logo }}" alt="" />
                     </a>
                     <p class="image-caption">
-                        {{ $stream->gamer->battletag }}
+                        {{ $stream->twitch_title }}
                     </p>
                 </div>
                 <div class="image-info">
