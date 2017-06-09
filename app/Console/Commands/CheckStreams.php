@@ -62,6 +62,7 @@ class CheckStreams extends Command
                 'twitch_views' => $info['views'],
                 'twitch_logo' => $info['logo'],
                 'twitch_banner' => $info['banner'],
+                'twitch_title' => $info['status'],
             ]);
 
             $this->info('channel ' . $user->twitch . ' updated');

@@ -18,7 +18,7 @@
             <div class="image isotope-item">
                 <div class="image-inner">
                     <a href="{{ route('users.show', [$stream->slug]) }}" data-lightbox="humor" >
-                        <img src="{{ getPostImage($stream->twitch_logo) }}" alt="" />
+                        <img src="{{ $stream->twitch_logo }}" alt="" />
                     </a>
                     <p class="image-caption">
                         {{ $stream->gamer->battletag }}
