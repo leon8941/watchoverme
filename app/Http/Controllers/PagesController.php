@@ -77,7 +77,7 @@ class PagesController extends Controller
 
         $teams = Team::orderBy('points','DESC')->take(5)->get();
 
-        $mercado = Market::orderBy('created_at','DESC')->take(5)->get();
+        $mercado = Market::orderBy('created_at','DESC')->take(15)->get();
 
         return view('pages.home',compact(
             'posts','updated_players','new_registered_users','count_new_users',

@@ -45,8 +45,10 @@ class CheckStreams extends Command
     public function checkStreams()
     {
 
-        $users = User::select('twitch')->whereNotNull('twitch')
-            ->where('twitch','!=','')->get();
+        $users = User::select('twitch')
+            ->whereNotNull('twitch')
+            ->where('twitch','!=','')
+            ->get();
 
         $total = $users->count();
         $channels = '';
@@ -64,10 +66,15 @@ class CheckStreams extends Command
             $i++;
         }
 
+        if (!$channels || empty($channels)) {
+            $this->info('sem canais');
+            return false;
+        }
+
         $channelsApi = 'https://api.twitch.tv/kraken/channels/';
         //$channelName = $channel? $channel : 'wraxu';
-        //$channelName = $channels;
-        $channelName = 'wraxu';
+        $channelName = $channels;
+        //$channelName = 'wraxu';
         $clientId = 'h6b0lkg3c14e4h068thlrzy4sgp7t4';
         $ch = curl_init();
 
@@ -86,6 +93,7 @@ class CheckStreams extends Command
         $json = json_decode($response, TRUE);
 
         print_r($json);
+        $this->info($json);
 
     }
 }
