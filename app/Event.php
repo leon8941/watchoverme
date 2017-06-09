@@ -37,6 +37,14 @@ class Event extends Model implements SluggableInterface
         'Asia'
     ];
 
+    public static $flags = [
+        'flag-icon-us',
+        'South America',
+        'flag-icon-br',
+        'Europe',
+        'flag-icon-kr'
+    ];
+
     /**
      * The attributes that should be mutated to dates.
      *

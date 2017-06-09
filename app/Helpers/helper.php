@@ -116,6 +116,14 @@ function getRegion($from) {
     return isset(\App\Event::$regions[$from])? \App\Event::$regions[$from] : '';
 }
 
+function getRegionFlag($from) {
+
+    if ($from == 'South America')
+        return $from;
+
+    return '<h2 class="flag-icon ' . \App\Event::$flags[$from] . ' width-full m-r-10 m-t-0 m-b-3" title="br" id="br"></h2>';
+}
+
 function getUserAvatar($avatar) {
 
     if (!$avatar)

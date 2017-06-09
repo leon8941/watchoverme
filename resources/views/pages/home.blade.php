@@ -130,6 +130,7 @@
                                     <th>Região</th>
                                     <th>Descrição</th>
                                     <th>Stream</th>
+                                    <th>Link</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -144,13 +145,14 @@
                                         <td class="hidden-sm">
                                             {{ $event->title }}
                                         </td>
-                                        <td>{{ getRegion($event->from) }}</td>
+                                        <td>{!! getRegionFlag($event->from) !!}</td>
                                         <td>{{ $event->description }}</td>
                                         <td>
                                             @if ($event->streamer)
                                                 <a href="{{ $event->streamer }}" target="_blank"><i class="fa fa-caret-square-o-right"></i></a>
                                             @endif
                                         </td>
+                                        <td><a href="{{ $event->url }}" target="_blank"><i class="fa fa-2x fa-link"></i></a></td>
                                     </tr>
                                 @endforeach
                                 </tbody>
