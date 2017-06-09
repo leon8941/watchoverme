@@ -21,6 +21,9 @@ Route::group(['middleware' => ['web']], function () {
     // Sobre
     Route::get('about',['as' => 'about', 'uses' => 'PagesController@about']);
 
+    // Streams
+    Route::get('gamers/streams',['as' => 'gamers.streams', 'uses' => 'GamersController@streams']);
+
     // API consuming
     Route::get('consult',['as' => 'consult', 'uses' => 'PagesController@consult']);
 

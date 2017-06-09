@@ -659,4 +659,14 @@ class GamersController extends Controller
 
         return $result;
     }
+
+    public function streams()
+    {
+
+        $streams = User::whereNotNull('twitch')
+            ->take(10)
+            ->get();
+
+        return view('gamers.streams',compact('streams'));
+    }
 }

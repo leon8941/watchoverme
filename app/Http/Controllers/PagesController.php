@@ -122,6 +122,32 @@ class PagesController extends Controller
 
     public function about()
     {
+
+
+        $channelsApi = 'https://api.twitch.tv/kraken/channels/';
+        $channelName = 'wraxu';
+        $clientId = 'h6b0lkg3c14e4h068thlrzy4sgp7t4';
+        $ch = curl_init();
+
+        curl_setopt_array($ch, array(
+            CURLOPT_HTTPHEADER => array(
+                'Client-ID: ' . $clientId
+            ),
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_URL => $channelsApi . $channelName
+        ));
+
+        $response = curl_exec($ch);
+
+        //dd($ch);
+
+        curl_close($ch);
+
+        $json = json_decode($response, TRUE);
+
+        print_r($json);
+        dd($json);
+exit;
         $news = Post::count();
 
         $users = User::count();

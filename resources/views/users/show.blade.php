@@ -919,7 +919,7 @@
                 var user_name, api_key, twitch_widget;
 
                 user_name = "{{ $user->twitch }}";
-                api_key = "5j0r5b7qb7kro03fvka3o8kbq262wwm";
+                api_key = "h6b0lkg3c14e4h068thlrzy4sgp7t4";
                 twitch_widget = $("#twitch-widget");
 
                 twitch_widget.attr("href","https://twitch.tv/" + user_name);
