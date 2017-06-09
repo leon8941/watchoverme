@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3406a468-5bd2-41d7-a381-c80813249479" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/User.php" afterPath="$PROJECT_DIR$/app/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/elements/scripts.blade.php" afterPath="$PROJECT_DIR$/resources/views/elements/scripts.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/users/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/users/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="watchoverme.iws" />
@@ -49,6 +53,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5289444">
+              <caret line="69" column="14" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
+              <folding>
+                <element signature="e#7#392#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="helper.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Helpers/helper.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -69,73 +85,63 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/main.blade.php">
+      <file leaf-file-name="scripts.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/elements/scripts.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.076923">
-              <caret line="26" column="53" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
+            <state vertical-scroll-proportion="-13.615385">
+              <caret line="390" column="16" selection-start-line="390" selection-start-column="16" selection-end-line="390" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
+      <file leaf-file-name="UsersController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.61748016">
-              <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
+            <state vertical-scroll-proportion="-29.961538">
+              <caret line="229" column="1" selection-start-line="229" selection-start-column="1" selection-end-line="229" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Event.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Event.php">
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-27.461538">
-              <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/teams/show.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/users/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="156" column="52" selection-start-line="156" selection-start-column="52" selection-end-line="156" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scripts.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/elements/scripts.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.884615">
-              <caret line="157" column="41" selection-start-line="157" selection-start-column="41" selection-end-line="157" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2017_06_09_152803_add_image_to_events.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2017_06_09_152803_add_image_to_events.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.153846">
-              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TeamsController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TeamsController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="349" column="43" selection-start-line="349" selection-start-column="43" selection-end-line="349" selection-end-column="43" />
+            <state vertical-scroll-proportion="-8.563637">
+              <caret line="49" column="100" selection-start-line="49" selection-start-column="100" selection-end-line="49" selection-end-column="100" />
               <folding>
-                <element signature="e#40#55#0#PHP" expanded="true" />
+                <element signature="e#2325#2365#0#HTML" expanded="true" />
+                <element signature="e#2764#2784#0#HTML" expanded="true" />
+                <element signature="e#12601#12622#0#HTML" expanded="true" />
+                <element signature="e#15373#15397#0#HTML" expanded="true" />
+                <marker date="1497037550154" expanded="true" signature="64263:65182" placeholder="..." />
+                <marker date="1497037550154" expanded="true" signature="64275:65181" placeholder="..." />
+                <marker date="1497037550154" expanded="true" signature="64316:64352" placeholder=" TWITCH ..." />
+                <marker date="1497037550154" expanded="true" signature="64681:65168" placeholder="..." />
+                <marker date="1497037550154" expanded="true" signature="64792:65167" placeholder="..." />
+                <marker date="1497037550154" expanded="true" signature="64831:65035" placeholder="..." />
+                <marker date="1497037550154" expanded="true" signature="65043:65149" placeholder="..." />
+                <marker date="1497037550154" expanded="true" signature="65221:65414" placeholder="..." />
+                <marker date="1497037550154" expanded="true" signature="65233:65413" placeholder="..." />
+                <marker date="1497037550154" expanded="true" signature="65355:65369" placeholder="..." />
+                <marker date="1497037550154" expanded="true" signature="65389:65403" placeholder="..." />
+                <marker date="1497037550154" expanded="true" signature="65594:65684" placeholder="..." />
+                <marker date="1497037550154" expanded="true" signature="65606:65683" placeholder="..." />
+                <marker date="1497037550154" expanded="true" signature="65724:65794" placeholder="..." />
+                <marker date="1497037550154" expanded="true" signature="65736:65793" placeholder="..." />
+                <marker date="1497037550154" expanded="true" signature="65861:65997" placeholder="..." />
+                <marker date="1497037550154" expanded="true" signature="65873:65996" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -156,8 +162,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/inhouse/join.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/InhouseController.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/about.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/css/style.min.css" />
         <option value="$PROJECT_DIR$/app/Category.php" />
@@ -179,9 +183,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
         <option value="$PROJECT_DIR$/resources/views/teams/create.blade.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
         <option value="$PROJECT_DIR$/resources/views/errors/401.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/users/show.blade.php" />
         <option value="$PROJECT_DIR$/config/debugbar.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/teams/index.blade.php" />
@@ -197,16 +199,20 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" />
         <option value="$PROJECT_DIR$/app/Team.php" />
         <option value="$PROJECT_DIR$/app/Request.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Market.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/TeamsController.php" />
         <option value="$PROJECT_DIR$/resources/views/teams/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/elements/scripts.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2017_06_09_152803_add_image_to_events.php" />
         <option value="$PROJECT_DIR$/app/Helpers/helper.php" />
         <option value="$PROJECT_DIR$/app/Event.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/home.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2017_06_09_193419_add_twitch_to_users.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" />
+        <option value="$PROJECT_DIR$/app/User.php" />
+        <option value="$PROJECT_DIR$/resources/views/users/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/elements/scripts.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
       </list>
     </option>
   </component>
@@ -343,6 +349,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="users" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="watchoverme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="watchoverme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="teams" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -424,6 +452,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="watchoverme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="watchoverme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="watchoverme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="watchoverme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -590,7 +650,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="helper&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Helpers/helper.php&#10;ui_modal&#9;FILE&#9;file://C:/Projetos/watchoverme/public/template/ui_modal_notification.html&#10;route&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/routes.php&#10;scripts&#9;FILE&#9;file://C:/Projetos/watchoverme/resources/views/elements/scripts.blade.php&#10;Team&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Team.php&#10;market&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Market.php&#10;Market&#9;null&#9;null&#10;Request&#9;null&#9;null&#10;style.min&#9;FILE&#9;file://C:/Projetos/watchoverme/public/assets/css/style.min.css&#10;Pages&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/Controllers/PagesController.php&#10;home&#9;null&#9;null&#10;Teams&#9;null&#9;null&#10;script&#9;FILE&#9;file://C:/Projetos/watchoverme/resources/views/elements/scripts.blade.php&#10;Gamer&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Gamer.php&#10;User&#9;FILE&#9;file://C:/Projetos/watchoverme/app/User.php&#10;Catego&#9;null&#9;null&#10;Posts&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/Controllers/Admin/PostsController.php&#10;Categor&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Category.php&#10;style&#9;FILE&#9;file://C:/Projetos/watchoverme/public/assets/css/style.min.css&#10;inhouse&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/Controllers/InhouseController.php&#10;Users&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/Controllers/UsersController.php&#10;menu&#9;FILE&#9;file://C:/Projetos/watchoverme/resources/views/elements/menu-left.blade.php&#10;app&#9;FILE&#9;file://C:/Projetos/watchoverme/public/css/app.css&#10;test&#9;FILE&#9;file://C:/Projetos/watchoverme/resources/views/inhouse/tests.blade.php&#10;Match&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Match.php&#10;gamer&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/Controllers/GamersController.php&#10;pages&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/Controllers/PagesController.php&#10;gamers&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/Controllers/GamersController.php&#10;Message&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Message.php&#10;all.&#9;FILE&#9;file://C:/Projetos/watchoverme/public/js/inhouse/all.js&#10;Inhouse&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/Controllers/InhouseController.php&#10;app.css&#9;FILE&#9;file://C:/Projetos/watchoverme/public/css/inhouse/app.css&#10;round-corn&#9;null&#9;null&#10;fullcalendar.print&#9;FILE&#9;file://C:/Projetos/watchoverme/public/css/fullcalendar/fullcalendar.print.css&#10;fullcalendar&#9;FILE&#9;file://C:/Projetos/watchoverme/public/css/fullcalendar/fullcalendar.css&#10;Gamers&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/Controllers/GamersController.php&#10;sty&#9;FILE&#9;file://C:/Projetos/watchoverme/public/assets/css/style.min.css&#10;Post&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/Controllers/PostsController.php&#10;index&#9;FILE&#9;file://C:/Projetos/watchoverme/resources/views/teams/index.blade.php&#10;TEam&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/Controllers/TeamsController.php&#10;rou&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/routes.php&#10;Us&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/Controllers/UsersController.php&#10;users&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/Controllers/UsersController.php&#10;styl&#9;FILE&#9;file://C:/Projetos/watchoverme/public/assets/css/style.min.css&#10;Event&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Event.php&#10;user&#9;FILE&#9;file://C:/Projetos/watchoverme/app/User.php&#10;composer&#9;FILE&#9;file://C:/Projetos/watchoverme/composer.json&#10;style.css&#9;FILE&#9;file://C:/Projetos/watchoverme/public/assets/css/style.min.css" />
+    <property name="SearchEverywhereHistoryKey" value="User&#9;null&#9;null&#10;UsersC&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/Controllers/UsersController.php&#10;route&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/routes.php&#10;scrip&#9;FILE&#9;file://C:/Projetos/watchoverme/resources/views/elements/scripts.blade.php&#10;helper&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Helpers/helper.php&#10;ui_modal&#9;FILE&#9;file://C:/Projetos/watchoverme/public/template/ui_modal_notification.html&#10;scripts&#9;FILE&#9;file://C:/Projetos/watchoverme/resources/views/elements/scripts.blade.php&#10;Team&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Team.php&#10;market&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Market.php&#10;Market&#9;null&#9;null&#10;Request&#9;null&#9;null&#10;style.min&#9;FILE&#9;file://C:/Projetos/watchoverme/public/assets/css/style.min.css&#10;Pages&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/Controllers/PagesController.php&#10;home&#9;null&#9;null&#10;Teams&#9;null&#9;null&#10;script&#9;FILE&#9;file://C:/Projetos/watchoverme/resources/views/elements/scripts.blade.php&#10;Gamer&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Gamer.php&#10;Catego&#9;null&#9;null&#10;Posts&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/Controllers/Admin/PostsController.php&#10;Categor&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Category.php&#10;style&#9;FILE&#9;file://C:/Projetos/watchoverme/public/assets/css/style.min.css&#10;inhouse&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/Controllers/InhouseController.php&#10;Users&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/Controllers/UsersController.php&#10;menu&#9;FILE&#9;file://C:/Projetos/watchoverme/resources/views/elements/menu-left.blade.php&#10;app&#9;FILE&#9;file://C:/Projetos/watchoverme/public/css/app.css&#10;test&#9;FILE&#9;file://C:/Projetos/watchoverme/resources/views/inhouse/tests.blade.php&#10;Match&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Match.php&#10;gamer&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/Controllers/GamersController.php&#10;pages&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/Controllers/PagesController.php&#10;gamers&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/Controllers/GamersController.php&#10;Message&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Message.php&#10;all.&#9;FILE&#9;file://C:/Projetos/watchoverme/public/js/inhouse/all.js&#10;Inhouse&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/Controllers/InhouseController.php&#10;app.css&#9;FILE&#9;file://C:/Projetos/watchoverme/public/css/inhouse/app.css&#10;round-corn&#9;null&#9;null&#10;fullcalendar.print&#9;FILE&#9;file://C:/Projetos/watchoverme/public/css/fullcalendar/fullcalendar.print.css&#10;fullcalendar&#9;FILE&#9;file://C:/Projetos/watchoverme/public/css/fullcalendar/fullcalendar.css&#10;Gamers&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/Controllers/GamersController.php&#10;sty&#9;FILE&#9;file://C:/Projetos/watchoverme/public/assets/css/style.min.css&#10;Post&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/Controllers/PostsController.php&#10;index&#9;FILE&#9;file://C:/Projetos/watchoverme/resources/views/teams/index.blade.php&#10;TEam&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/Controllers/TeamsController.php&#10;rou&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/routes.php&#10;Us&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/Controllers/UsersController.php&#10;users&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Http/Controllers/UsersController.php&#10;styl&#9;FILE&#9;file://C:/Projetos/watchoverme/public/assets/css/style.min.css&#10;Event&#9;FILE&#9;file://C:/Projetos/watchoverme/app/Event.php&#10;user&#9;FILE&#9;file://C:/Projetos/watchoverme/app/User.php&#10;composer&#9;FILE&#9;file://C:/Projetos/watchoverme/composer.json&#10;style.css&#9;FILE&#9;file://C:/Projetos/watchoverme/public/assets/css/style.min.css" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
@@ -713,27 +773,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/debugbar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-23.153847">
@@ -829,13 +868,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614">
-          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -967,14 +999,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/template/ui_modal_notification.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.038462">
@@ -1005,7 +1029,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="349" column="43" selection-start-line="349" selection-start-column="43" selection-end-line="349" selection-end-column="43" />
           <folding>
-            <element signature="e#40#55#0#PHP" expanded="true" />
+            <element signature="e#40#55#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1014,22 +1038,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2508513">
           <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="17" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2017_06_09_152803_add_image_to_events.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/elements/scripts.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.884615">
-          <caret line="157" column="41" selection-start-line="157" selection-start-column="41" selection-end-line="157" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -1096,11 +1104,91 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_06_09_152803_add_image_to_events.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.5">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="17" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_06_09_193419_add_twitch_to_users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28944382">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61748016">
-          <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.4245176">
+          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/users/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.563637">
+          <caret line="49" column="100" selection-start-line="49" selection-start-column="100" selection-end-line="49" selection-end-column="100" />
+          <folding>
+            <element signature="e#2325#2365#0#HTML" expanded="true" />
+            <element signature="e#2764#2784#0#HTML" expanded="true" />
+            <element signature="e#12601#12622#0#HTML" expanded="true" />
+            <element signature="e#15373#15397#0#HTML" expanded="true" />
+            <marker date="1497037550154" expanded="true" signature="64263:65182" placeholder="..." />
+            <marker date="1497037550154" expanded="true" signature="64275:65181" placeholder="..." />
+            <marker date="1497037550154" expanded="true" signature="64316:64352" placeholder=" TWITCH ..." />
+            <marker date="1497037550154" expanded="true" signature="64681:65168" placeholder="..." />
+            <marker date="1497037550154" expanded="true" signature="64792:65167" placeholder="..." />
+            <marker date="1497037550154" expanded="true" signature="64831:65035" placeholder="..." />
+            <marker date="1497037550154" expanded="true" signature="65043:65149" placeholder="..." />
+            <marker date="1497037550154" expanded="true" signature="65221:65414" placeholder="..." />
+            <marker date="1497037550154" expanded="true" signature="65233:65413" placeholder="..." />
+            <marker date="1497037550154" expanded="true" signature="65355:65369" placeholder="..." />
+            <marker date="1497037550154" expanded="true" signature="65389:65403" placeholder="..." />
+            <marker date="1497037550154" expanded="true" signature="65594:65684" placeholder="..." />
+            <marker date="1497037550154" expanded="true" signature="65606:65683" placeholder="..." />
+            <marker date="1497037550154" expanded="true" signature="65724:65794" placeholder="..." />
+            <marker date="1497037550154" expanded="true" signature="65736:65793" placeholder="..." />
+            <marker date="1497037550154" expanded="true" signature="65861:65997" placeholder="..." />
+            <marker date="1497037550154" expanded="true" signature="65873:65996" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-29.961538">
+          <caret line="229" column="1" selection-start-line="229" selection-start-column="1" selection-end-line="229" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/elements/scripts.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.615385">
+          <caret line="390" column="16" selection-start-line="390" selection-start-column="16" selection-end-line="390" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5289444">
+          <caret line="69" column="14" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
+          <folding>
+            <element signature="e#7#392#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -216,4 +216,15 @@ class UsersController extends Controller
 
         return Response::json($users);
     }
+
+    public function salvarTwitch()
+    {
+        $twitch = Input::get('twitch');
+
+        $user = User::where('id',Auth::user()->id)->update([
+            'twitch' => $twitch
+        ]);
+
+        return Response::json($user);
+    }
 }

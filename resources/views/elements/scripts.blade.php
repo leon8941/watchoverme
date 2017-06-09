@@ -386,4 +386,30 @@
 
         return false;
     }
+
+    function salvarTwitch(twitch){
+        $.ajax({
+            url: '{{ route('users.salvarTwitch') }}',
+            dataType: "html",
+            type: "GET",
+            data: {
+                twitch:twitch
+            }
+        }).done(function(data) {
+
+            var msg, title = '';
+
+            if (data) {
+                title = 'Sucesso!';
+                msg = 'Twitch salvo com sucesso.';
+            }
+            else {
+                title = 'Erro!';
+                msg = 'Erro ao remover player';
+            }
+
+            notification(title, msg, true);
+        });
+    }
+
 </script>

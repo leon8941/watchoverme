@@ -35,6 +35,23 @@
                             {!! Form::close() !!}
                         @endif
                     </div>
+                    <div class="profile-highlight">
+                        <h4><i class="fa fa-twitch fa-2x"></i> Twich</h4>
+                        <div class="checkbox m-b-5 m-t-0">
+                            {{ $user->twitch }}
+                            <a href="#" class="twitch-widget" id="twitch-widget" target="_blank"></a>
+                            @if ($user->twitch)
+                                <iframe src="http://streambadge.com/twitch/?username={{ $user->twitch }}&theme=dark" style="width:100%;height:64px;border:0;"></iframe>
+                            @endif
+                        </div>
+                        <div class="checkbox m-b-0">
+                            @if (Auth::check() && Auth::user()->id == $user->id)
+                                Meu Twitch: <input type="text" name="twitch" id="twitch" class="form-control input-sm">
+                                <button class="btn btn-info btn-sm" style="padding: 3px" id="salvar-twitch">Salvar</button>
+                            @endif
+                        </div>
+
+                    </div>
                 </div>
                 <!-- end profile-left -->
                 <!-- begin profile-right -->
@@ -895,6 +912,27 @@
     <script>
         $(document).ready(function() {
             App.init();
+
+            /**
+             * TWITCH
+             */
+                var user_name, api_key, twitch_widget;
+
+                user_name = "{{ $user->twitch }}";
+                api_key = "5j0r5b7qb7kro03fvka3o8kbq262wwm";
+                twitch_widget = $("#twitch-widget");
+
+                twitch_widget.attr("href","https://twitch.tv/" + user_name);
+
+                $.getJSON('https://api.twitch.tv/kraken/streams/' + user_name + '?client_id=' + api_key + '&callback=?', function(data) {
+                    if (data.stream) {
+                        twitch_widget.html("<span class='online'></span> Online! Playing: " + data.stream.game + "<span class='viewers'>Viewers: " + data.stream.viewers + "</span>");
+                    } else {
+                        twitch_widget.html("<span class='offline'></span> Offline");
+                    }
+                });
+
+
         });
 
         $('#ativar-jogador').click(function() {
@@ -908,6 +946,13 @@
             else {
 
             }
+        });
+
+        $('#salvar-twitch').click(function() {
+
+            var twitch = $('#twitch').val();
+
+            salvarTwitch(twitch);
         });
 
         $('#change-picture').click(function() {

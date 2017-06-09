@@ -67,6 +67,7 @@ Route::group(['middleware' => ['auth']], function () {
 
     // User avatar upload
     Route::post('users/upload',['as' => 'users/upload', 'uses' => 'UsersController@upload']);
+    Route::get('users.salvarTwitch',['as' => 'users.salvarTwitch', 'uses' => 'UsersController@salvarTwitch']);
     Route::post('teams/upload',['as' => 'teams/upload', 'uses' => 'TeamsController@upload']);
 
     // Team request to join
