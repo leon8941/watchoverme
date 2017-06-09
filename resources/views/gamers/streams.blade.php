@@ -17,7 +17,7 @@
         @foreach($streams as $stream)
             <div class="image isotope-item">
                 <div class="image-inner">
-                    <a href="http://twitch.tv/{{ $stream->twitch }}" target="_blank" data-lightbox="humor" >
+                    <a href="http://twitch.tv/{{ $stream->twitch }}" target="_blank" >
                         <img src="{{ $stream->twitch_logo }}" alt="" />
                     </a>
                     <p class="image-caption">
