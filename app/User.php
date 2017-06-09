@@ -34,7 +34,8 @@ class User extends Model implements AuthenticatableContract, SluggableInterface,
      *
      * @var array
      */
-    protected $fillable = ['name', 'email', 'password', 'role_id','twitch'];
+    protected $fillable = ['name', 'email', 'password', 'role_id','twitch','twitch_followers','twitch_views',
+        'twitch_status','twitch_logo','twitch_banner'];
 
     protected $sluggable = array(
         'build_from' => 'name',
