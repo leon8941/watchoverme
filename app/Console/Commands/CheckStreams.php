@@ -56,8 +56,13 @@ class CheckStreams extends Command
 
             $info = $this->getTwitchChannelInfo($user->twitch);
 
+            sleep(1);
+
+            // Check if channel is live
+            $live = $this->getTwitchChannelStatus($user->twitch);
+
             User::where('id',$user->id)->update([
-                'twitch_status' => $info['mature'],
+                'twitch_status' => $live,
                 'twitch_followers' => $info['followers'],
                 'twitch_views' => $info['views'],
                 'twitch_logo' => $info['logo'],
@@ -69,7 +74,6 @@ class CheckStreams extends Command
 
             sleep(1);
         }
-
     }
 
     public function getTwitchChannelInfo($channelName)
@@ -86,6 +90,31 @@ class CheckStreams extends Command
             ),
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_URL => $channelsApi . $channelName
+        ));
+
+        $response = curl_exec($ch);
+
+        curl_close($ch);
+
+        return json_decode($response, TRUE);
+    }
+
+    public function getTwitchChannelStatus($channelName)
+    {
+
+        $channelsApi = 'https://api.twitch.tv/kraken/streams/';
+
+        $clientId = 'h6b0lkg3c14e4h068thlrzy4sgp7t4';
+        $ch = curl_init();
+
+        $params = '?game=Overwatch&stream_type=live';
+
+        curl_setopt_array($ch, array(
+            CURLOPT_HTTPHEADER => array(
+                'Client-ID: ' . $clientId
+            ),
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_URL => $channelsApi . $channelName . $params
         ));
 
         $response = curl_exec($ch);

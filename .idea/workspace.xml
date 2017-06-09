@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3406a468-5bd2-41d7-a381-c80813249479" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Console/Commands/CheckStreams.php" afterPath="$PROJECT_DIR$/app/Console/Commands/CheckStreams.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Console/Kernel.php" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/home.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/home.blade.php" />
     </list>
     <ignored path="watchoverme.iws" />
@@ -24,21 +26,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9614075">
-              <caret line="388" column="16" selection-start-line="388" selection-start-column="16" selection-end-line="388" selection-end-column="16" />
+            <state vertical-scroll-proportion="-27.076923">
+              <caret line="194" column="144" selection-start-line="194" selection-start-column="144" selection-end-line="194" selection-end-column="144" />
               <folding>
                 <element signature="e#9000#9089#0#HTML" expanded="true" />
                 <element signature="e#10321#10342#0#HTML" expanded="true" />
-                <element signature="e#21009#21029#0#HTML" expanded="true" />
-                <element signature="e#21307#21328#0#HTML" expanded="true" />
-                <element signature="e#21504#21525#0#HTML" expanded="true" />
-                <element signature="e#21711#21732#0#HTML" expanded="true" />
-                <element signature="e#21920#21941#0#HTML" expanded="true" />
-                <element signature="e#22126#22147#0#HTML" expanded="true" />
+                <element signature="e#21166#21186#0#HTML" expanded="true" />
+                <element signature="e#21464#21485#0#HTML" expanded="true" />
+                <element signature="e#21661#21682#0#HTML" expanded="true" />
+                <element signature="e#21868#21889#0#HTML" expanded="true" />
+                <element signature="e#22077#22098#0#HTML" expanded="true" />
+                <element signature="e#22283#22304#0#HTML" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CheckStreams.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Console/Commands/CheckStreams.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6333712">
+              <caret line="74" column="12" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="12" />
+              <folding>
+                <element signature="e#40#53#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Kernel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.0">
+              <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -46,8 +70,8 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.038462">
-              <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+            <state vertical-scroll-proportion="-5.163636">
+              <caret line="23" column="12" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="12" />
               <folding>
                 <element signature="e#7#392#0#PHP" expanded="true" />
               </folding>
@@ -58,8 +82,8 @@
       <file leaf-file-name="PagesController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PagesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.846153">
-              <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+            <state vertical-scroll-proportion="-29.961538">
+              <caret line="200" column="0" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
               <folding>
                 <element signature="e#40#54#0#PHP" expanded="true" />
               </folding>
@@ -102,7 +126,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Controllers/CategoriesController.php" />
         <option value="$PROJECT_DIR$/resources/views/posts/index.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_07_18_202800_create_categories_table.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" />
@@ -146,13 +169,14 @@
         <option value="$PROJECT_DIR$/database/migrations/2017_06_09_211255_add_twitch_options_to_users.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/GamersController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2017_06_09_222520_add_twitch_title_to_users.php" />
-        <option value="$PROJECT_DIR$/app/Console/Commands/CheckStreams.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/resources/views/elements/menu-left.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/gamers/streams.blade.php" />
-        <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/home.blade.php" />
+        <option value="$PROJECT_DIR$/app/Console/Commands/CheckLiveStreams.php" />
+        <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
+        <option value="$PROJECT_DIR$/app/Console/Commands/CheckStreams.php" />
       </list>
     </option>
   </component>
@@ -823,13 +847,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/laraveldaily/quickadmin/src/Controllers/publish/UsersController">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.1685022">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laraveldaily/quickadmin/src/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1119,16 +1136,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.038462">
-          <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
-          <folding>
-            <element signature="e#7#392#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-29.961538">
@@ -1163,16 +1170,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Commands/CheckStreams.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.653846">
-          <caret line="64" column="47" selection-start-line="64" selection-start-column="47" selection-end-line="64" selection-end-column="47" />
-          <folding>
-            <element signature="e#40#53#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.346153">
@@ -1189,14 +1186,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5017026">
-          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/gamers/streams.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.692307">
@@ -1207,27 +1196,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PagesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.846153">
-          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+        <state vertical-scroll-proportion="-29.961538">
+          <caret line="200" column="0" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
           <folding>
             <element signature="e#40#54#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.163636">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="12" />
+          <folding>
+            <element signature="e#7#392#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9614075">
-          <caret line="388" column="16" selection-start-line="388" selection-start-column="16" selection-end-line="388" selection-end-column="16" />
+        <state vertical-scroll-proportion="-27.076923">
+          <caret line="194" column="144" selection-start-line="194" selection-start-column="144" selection-end-line="194" selection-end-column="144" />
           <folding>
             <element signature="e#9000#9089#0#HTML" expanded="true" />
             <element signature="e#10321#10342#0#HTML" expanded="true" />
-            <element signature="e#21009#21029#0#HTML" expanded="true" />
-            <element signature="e#21307#21328#0#HTML" expanded="true" />
-            <element signature="e#21504#21525#0#HTML" expanded="true" />
-            <element signature="e#21711#21732#0#HTML" expanded="true" />
-            <element signature="e#21920#21941#0#HTML" expanded="true" />
-            <element signature="e#22126#22147#0#HTML" expanded="true" />
+            <element signature="e#21166#21186#0#HTML" expanded="true" />
+            <element signature="e#21464#21485#0#HTML" expanded="true" />
+            <element signature="e#21661#21682#0#HTML" expanded="true" />
+            <element signature="e#21868#21889#0#HTML" expanded="true" />
+            <element signature="e#22077#22098#0#HTML" expanded="true" />
+            <element signature="e#22283#22304#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.0">
+          <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Commands/CheckStreams.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6333712">
+          <caret line="74" column="12" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="12" />
+          <folding>
+            <element signature="e#40#53#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

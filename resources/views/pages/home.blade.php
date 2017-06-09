@@ -192,6 +192,7 @@
                         </div>
                         <ul class="chart-legend">
                             <li><i class="fa fa-circle-o fa-fw text-success m-r-5"></i> {{ $streams->count() }} <span>Live Streams</span></li>
+                            <li><i class="fa fa-circle-o fa-fw text-info m-r-5"></i> <span><a href="{{ route('gamers.streams') }}">Ver Todos</a></span></li>
                         </ul>
                     </div>
                 </div>
@@ -386,7 +387,7 @@
                     </div>
                 </div>
                 <!-- end panel -->
-                
+
             </div>
             <!-- end col-4 -->
 
