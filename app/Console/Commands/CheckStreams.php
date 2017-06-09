@@ -68,7 +68,7 @@ class CheckStreams extends Command
             $info = $this->getTwitchChannelInfo($user->twitch);
 
             print_r($info);
-            $user->update([
+            User::where('id',$user->id)->update([
                 'twitch_status' => $info['mature'],
                 'twitch_followers' => $info['followers'],
                 'twitch_views' => $info['views'],
