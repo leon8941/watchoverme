@@ -274,8 +274,44 @@
 
         <div class="row">
 
+            <div class="col-md-8">
+                <div class="widget-chart with-sidebar bg-black">
+                    <div class="widget-chart-content">
+                        <h4 class="chart-title">
+                            Live Streams
+                            <small>acompanhe os melhores jogadores brasileiros</small>
+                        </h4>
+                        <div id="visitors-line-chart" class="morris-inverse" style="height: 260px; position: relative; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                            <ul class="registered-users-list clearfix">
+                                @foreach ($streams as $stream)
+                                    <li>
+                                        <a href="javascript:;"><img src="{{ $stream->twitch_logo }}" alt=""></a>
+                                        <h4 class="username text-ellipsis">
+                                            {{ $stream->twitch_title }}
+                                            <small>{{ $stream->name }}</small>
+                                        </h4>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="widget-chart-sidebar bg-black-darker">
+                        <div class="chart-number">
+                            1,225,729
+                            <small>visitors</small>
+                        </div>
+                        <div id="visitors-donut-chart" style="height: 160px"><svg height="160" version="1.1" width="200" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative; left: -0.984375px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with RaphaÃ«l 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><path fill="none" stroke="#00acac" d="M100,126.66666666666666A46.666666666666664,46.666666666666664,0,0,0,119.6077138339182,37.652445926772224" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#00acac" stroke="#242a30" d="M100,129.66666666666666A49.666666666666664,49.666666666666664,0,0,0,120.8682097232415,34.93010316492187L127.31074426867178,21.015906826575595A65,65,0,0,1,100,145Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#348fe2" d="M119.6077138339182,37.652445926772224A46.666666666666664,46.666666666666664,0,1,0,99.98533923452437,126.666664363759" stroke-width="2" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></path><path fill="#348fe2" stroke="#242a30" d="M120.8682097232415,34.93010316492187A49.666666666666664,49.666666666666664,0,1,0,99.98439675674379,129.66666421571492L99.97800885178656,149.9999965456385A70,70,0,1,1,129.4115707508773,16.478668890158332Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="100" y="70" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: 800; font-stretch: normal; font-size: 15px; line-height: normal; font-family: Arial;" font-size="15px" fill-opacity="0.4" font-weight="800" transform="matrix(0.672,0,0,0.672,32.8,26.568)" stroke-width="1.488095238095238"><tspan dy="6" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Return Visitors</tspan></text><text x="100" y="90" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 14px; line-height: normal; font-family: Arial;" font-size="14px" fill-opacity="0.4" transform="matrix(0.9722,0,0,0.9722,2.7778,2.2778)" stroke-width="1.0285714285714287"><tspan dy="5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">1,200</tspan></text></svg></div>
+                        <ul class="chart-legend">
+                            <li><i class="fa fa-circle-o fa-fw text-success m-r-5"></i> 34.0% <span>New Visitors</span></li>
+                            <li><i class="fa fa-circle-o fa-fw text-primary m-r-5"></i> 56.0% <span>Return Visitors</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
             <!-- begin col-4 -->
             <div class="col-md-4">
+
                 <!-- begin panel -->
                 <div class="panel panel-inverse" data-sortable-id="index-2">
                     <div class="panel-heading">
@@ -365,58 +401,6 @@
             </div>
             <!-- end col -->
 
-            <!-- begin col-4 -->
-            <div class="col-md-4">
-
-                <!-- begin panel -->
-                <div class="panel panel-inverse" data-sortable-id="index-6">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">Parceiros<span class="label label-success pull-right">3 deuses</span></h4>
-                    </div>
-                    <div class="panel-body bg-silver">
-                        <div data-scrollbar="true" data-height="310px">
-                            <ul class="chats">
-                                <li class="left">
-                                    <a href="http://www.bestgamers.com.br"
-                                       target="_blank" class="name">Best Gamers</a>
-                                    <a href="http://www.bestgamers.com.br"
-                                       target="_blank" class="image pull-left">
-                                        <img src="{{ asset('img/partners/best-gamers.jpg') }}" alt="" class="" width="160px"/>
-                                    </a>
-                                    <div class="message">
-                                        Uma das maiores e melhores lojas <b>para gamers</b> do Brasil.<br>
-                                        Patrocinamos a Temporada Best Gamers do ranking nacional de Overwatch pois acreditamos
-                                        no cenário de e-sports brasileiro.
-                                    </div>
-                                </li>
-                                <li class="right">
-                                    <a href="https://www.youtube.com/channel/UCcpyVzY-cxTTmacKZM3_edQ"
-                                       target="_blank" class="name">pOkiz Games - YouTube Channel</a>
-                                    <a href="https://www.youtube.com/channel/UCcpyVzY-cxTTmacKZM3_edQ"
-                                       target="_blank"  class="image"><img alt="" src="{{ asset('img/partners/pokiz.PNG') }}" /></a>
-                                    <div class="message">
-                                        Canal dedicado exclusivamente à abordagem de assuntos técnicos, informativos e gameplays.
-                                    </div>
-                                </li>
-                                <li class="left">
-                                    <a href="http://gamingroom.net" class="name">Gaming Room</a>
-                                    <a href="www.gamingroom.net"
-                                       target="_blank" class="image pull-left">
-                                        <img src="{{ asset('img/partners/gaming-room-square.PNG') }}" alt="" class="" width="160px"/>
-                                    </a>
-                                    <div class="message">
-                                        Gaming Room é um canal de debate de games que começa a ganhar volume no YouTube.
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- end panel -->
-
-
-            </div>
-            <!-- end col -->
         </div>
     </div>
     <!-- end #content -->

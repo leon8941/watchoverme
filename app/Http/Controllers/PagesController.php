@@ -79,9 +79,16 @@ class PagesController extends Controller
 
         $mercado = Market::orderBy('created_at','DESC')->take(15)->get();
 
+        $streams = User::whereNotNull('twitch')
+            ->where('twitch_status','1')
+            ->with('gamer')
+            ->orderBy('twitch_followers','DESC')
+            ->take(8)
+            ->get();
+
         return view('pages.home',compact(
             'posts','updated_players','new_registered_users','count_new_users',
-            'events','tops','teams','mercado'));
+            'events','tops','teams','mercado','streams'));
     }
 
 
