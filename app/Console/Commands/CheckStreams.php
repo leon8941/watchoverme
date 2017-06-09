@@ -71,7 +71,7 @@ class CheckStreams extends Command
             return false;
         }
 
-        $channelsApi = 'https://api.twitch.tv/kraken/channels/';
+        $channelsApi = 'https://api.twitch.tv/kraken/streams?channels=';
         //$channelName = $channel? $channel : 'wraxu';
         $channelName = $channels;
         //$channelName = 'wraxu';
