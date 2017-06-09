@@ -66,7 +66,8 @@ class CheckStreams extends Command
 
         $channelsApi = 'https://api.twitch.tv/kraken/channels/';
         //$channelName = $channel? $channel : 'wraxu';
-        $channelName = $channels;
+        //$channelName = $channels;
+        $channelName = 'wraxu';
         $clientId = 'h6b0lkg3c14e4h068thlrzy4sgp7t4';
         $ch = curl_init();
 
