@@ -54,8 +54,8 @@ class CheckStreams extends Command
         //
         foreach ($users as $user) {
 
-            //$channel = $user->twitch;
-            $channel = 'stpeach';
+            $channel = $user->twitch;
+            //$channel = 'stpeach';
 
             $info = $this->getTwitchChannelInfo($channel);
 
