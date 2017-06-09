@@ -182,13 +182,10 @@ class PagesController extends Controller
 
         $response = curl_exec($ch);
 
-        //dd($ch);
-
         curl_close($ch);
 
         $json = json_decode($response, TRUE);
 
-        print_r($json);
         dd($json);
         exit;
 
