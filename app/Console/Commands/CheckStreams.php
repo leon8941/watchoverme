@@ -54,12 +54,15 @@ class CheckStreams extends Command
         //
         foreach ($users as $user) {
 
-            $info = $this->getTwitchChannelInfo($user->twitch);
+            //$channel = $user->twitch;
+            $channel = 'stpeach';
+
+            $info = $this->getTwitchChannelInfo($channel);
 
             sleep(1);
 
             // Check if channel is live
-            $live = $this->getTwitchChannelStatus($user->twitch);
+            $live = $this->getTwitchChannelStatus($channel);
 
             dd($live);
             User::where('id',$user->id)->update([
