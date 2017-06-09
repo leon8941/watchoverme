@@ -77,7 +77,7 @@ class CheckStreams extends Command
             ]);
 
             $this->info('channel ' . $user->twitch . ' updated');
-            exit;
+            
         }
 
     }
