@@ -84,7 +84,7 @@ class CheckStreams extends Command
     public function getTwitchChannelInfo($channelName)
     {
 
-        $channelsApi = 'https://api.twitch.tv/kraken/streams?channels=';
+        $channelsApi = 'https://api.twitch.tv/kraken/channels/';
         //$channelName = $channel? $channel : 'wraxu';
         //$channelName = $channel;
         //$channelName = 'wraxu';
