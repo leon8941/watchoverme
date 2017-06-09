@@ -59,8 +59,8 @@
             </li>
             <li class="{{ isActive('gamers') }}">
                 <a href="{{ route('gamers.streams') }}">
-                    <i class="fa fa-star"></i>
-                    <span>Streams</span>
+                    <i class="fa fa-twitch"></i>
+                    <span>LIVE Streams</span>
                 </a>
             </li>
             <li class="{{ isActive('teams') }}">
