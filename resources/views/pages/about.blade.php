@@ -168,14 +168,14 @@
                     <div class="panel-body p-0">
                         <div class="media media-lg">
                             <a class="media-left" href="javascript:;">
-                                <img src="{{ asset('img/verme.png') }}" alt="" class="media-object">
+                                <img src="{{ asset('img/nerfthis.jpg') }}" alt="" class="media-object">
                             </a>
                             <div class="media-body">
                                 <br>
                                 <p>Somos a maior comunidade de brasileira focada no cenário competitivo de OverWatch.</p>
                                 <p>Damos as melhores ferramentas e informações que os gamers precisam.</p>
                                 <h4>Entre em contato</h4>
-                                <p>Você quer ser um parceiro, um colaborador, um investidor? Mande-nos um email: {{ 'staff@watchoverme.com.br' }}</p>
+                                <p>Você quer ser um parceiro, um colaborador, um investidor? Mande-nos um email: {{ 'staff@nerfthis.com.br' }}</p>
                             </div>
                         </div>
                     </div>
