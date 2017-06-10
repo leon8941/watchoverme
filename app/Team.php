@@ -15,7 +15,7 @@ class Team extends Model implements SluggableInterface
      *
      * @var array
      */
-    protected $fillable = ['title', 'slug', 'description', 'image'];
+    protected $fillable = ['title', 'slug', 'description', 'image','owner_id'];
 
 
     protected $sluggable = array(

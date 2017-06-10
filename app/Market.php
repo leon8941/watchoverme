@@ -34,13 +34,16 @@ class Market extends Model
      * @param $team
      * @return static
      */
-    public static function registerTeam($team)
+    public static function registerTeam($team, $action = 'I')
     {
+        $description = $action == 'I'? 'Time ' . $team->title . ' criado' :
+            'Time ' . $team->title . ' disbanded';
+
         return Market::create([
             'type' => 'T',
-            'action' => 'I',
+            'action' => $action,
             'team_id' => $team->id,
-            'description' => 'Time ' . $team->title . ' criado'
+            'description' => $description
         ]);
     }
 

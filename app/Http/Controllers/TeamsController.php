@@ -339,19 +339,62 @@ class TeamsController extends Controller
 
     public function removePlayer()
     {
+        $response = [
+            'status' => '0',
+            'msg' => ''
+        ];
+
         $team_id = Input::get('team_id');
         $player_id = Input::get('player_id');
 
         $team = Team::where('id',$team_id)->first();
 
-        if (!$team)
-            return Response::json(false);
+        if (!$team) {
+            $response['msg'] = 'No team found!';
+            return Response::json($response);
+        }
+
+        if ($team->users()->count() <= 1) {
+            $response['msg'] = 'Último jogador no time. Faça o disband!';
+            return Response::json($response);
+        }
 
         $team->users()->detach($player_id);
 
         // Notify market
         Market::registerPlayer($team_id,$player_id, 'O');
 
-        return Response::json(true);
+        $response['msg'] = 'Player removido com sucesso!';
+        $response['status'] = '1';
+
+        return Response::json($response);
     }
+
+    public function disband()
+    {
+        $response = [
+            'status' => '0',
+            'msg' => ''
+        ];
+
+        $team_id = Input::get('team_id');
+
+        $team = Team::where('id',$team_id)->first();
+
+        if (!$team) {
+            $response['msg'] = 'No team found!';
+            return Response::json($response);
+        }
+
+        Team::where('id',$team_id)->delete();
+
+        // Notify market
+        Market::registerTeam($team, 'O');
+
+        $response['msg'] = 'Time disbanded com sucesso!';
+        $response['status'] = '1';
+
+        return Response::json($response);
+    }
+
 }

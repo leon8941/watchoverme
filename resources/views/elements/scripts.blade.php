@@ -357,19 +357,46 @@
 
             var msg, title = '';
 
-            if (data) {
+            var obj = JSON.parse(data);
+
+            if (obj.status == '1') {
                 title = 'Sucesso!';
-                msg = 'Player removido com sucesso.';
+                notification(title, obj.msg, true);
             }
             else {
                 title = 'Erro!';
-                msg = 'Erro ao remover player';
+                notification(title, obj.msg, false);
             }
 
-            notification(title, msg, true);
         });
     }
 
+
+    function disbandTeam(team_id){
+        $.ajax({
+            url: '{{ route('teams.disband') }}',
+            dataType: "html",
+            type: "GET",
+            data: {
+                team_id: team_id
+            }
+        }).done(function(data) {
+
+            var msg, title = '';
+
+            var obj = JSON.parse(data);
+
+            if (obj.status == '1') {
+                title = 'Sucesso!';
+                notification(title, obj.msg, false);
+            }
+            else {
+                title = 'Erro!';
+                notification(title, obj.msg, false);
+            }
+
+        });
+    }
 
     function notification(title, msg , reload) {
 
@@ -381,7 +408,7 @@
         if (typeof (reload) != 'undefined' && reload == true) {
             setTimeout(function(){
                 location.reload();
-            }, 450);
+            }, 500);
         }
 
         return false;

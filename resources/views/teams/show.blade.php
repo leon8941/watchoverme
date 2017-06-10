@@ -31,6 +31,9 @@
                                 <p class="errors">{!! Session::get('error') !!}</p>
                             @endif
                             <div class="btn btn-warning btn-block btn-sm" id="change-picture">Change Picture</div>
+                            @if ($team->owner_id == Auth::user()->id)
+                                <div class="btn btn-danger btn-block btn-sm" id="disband-team">Disband Team</div>
+                            @endif
                             <input type="file" name="image" style="opacity: 0" id="upload-picture">
                             <input type="hidden" name="team_id" value="{{ $team->id }}">
                         {!! Form::close() !!}
@@ -286,6 +289,19 @@
             var team_id = '{{ $team->id }}';
 
             removePlayerFromTeam(player_id, team_id);
+        });
+
+        $('#disband-team').click(function () {
+
+            var team_id = '{{ $team->id }}';
+
+            var owner = '{{ $team->owner_id == Auth::user()->id? '1' : '0' }}}';
+
+            if (!owner)
+                notification('Impossibru!', 'Você não é o owner do time.',false);
+
+            if (confirm("Tem certeza que deseja deletar o time?"))
+                disbandTeam(team_id);
         });
     </script>
 @endsection

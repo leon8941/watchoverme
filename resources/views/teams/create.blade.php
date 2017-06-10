@@ -45,8 +45,8 @@
                     <div class="form-group">
                         {!! Form::label('description', 'Descrição', array('class'=>'col-sm-2 control-label')) !!}
                         <div class="col-md-9">
-                            <textarea class="form-control no-rounded-corner bg-silver" rows="4" name="description">Descrição do time...
-                            Descreva os horários de treinos e objetivos do time...
+                            <textarea class="form-control no-rounded-corner bg-silver text text-black" rows="4" name="description"
+                                      placeholder="Descreva os horários de treinos e objetivos do time...">
                             </textarea>
                         </div>
                     </div>

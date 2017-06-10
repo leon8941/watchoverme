@@ -77,6 +77,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('teams.request',['as' => 'teams.request', 'uses' => 'TeamsController@request']);
     Route::get('teams.aproveRequest',['as' => 'teams.aproveRequest', 'uses' => 'TeamsController@aproveRequest']);
     Route::get('teams.removePlayer',['as' => 'teams.removePlayer', 'uses' => 'TeamsController@removePlayer']);
+    Route::get('teams.disband',['as' => 'teams.disband', 'uses' => 'TeamsController@disband']);
 
     // Create Team
     Route::get('teams/create',['as' => 'teams.create', 'uses' => 'TeamsController@create']);
