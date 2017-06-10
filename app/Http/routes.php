@@ -37,7 +37,6 @@ Route::group(['middleware' => ['web']], function () {
     // Resources
     Route::resource('events','EventsController');
     Route::resource('gamers','GamersController');
-    Route::resource('teams','TeamsController');
     Route::resource('posts','PostsController');
 
     // Sitemaps
@@ -66,6 +65,7 @@ Route::resource('users','UsersController');
 Route::group(['middleware' => ['auth']], function () {
 
 
+    Route::resource('teams','TeamsController');
     //Route::resource('inhouse','InhouseController');
 
     // User avatar upload
