@@ -172,7 +172,7 @@
                                 @foreach ($streams as $stream)
                                     <li>
                                         <a href="http://twitch.tv/{{ $stream->twitch }}" target="_blank">
-                                            <img src="{{ $stream->twitch_logo }}" alt="{{ $stream->gamer->battletag }} stream">
+                                            <img src="{{ $stream->twitch_logo }}" alt="{{ $stream->name }} stream">
                                         </a>
                                         <h4 class="username text-ellipsis">
                                             {{ $stream->twitch_title }}
