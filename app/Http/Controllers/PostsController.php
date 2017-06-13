@@ -27,7 +27,7 @@ class PostsController extends Controller
         SEOMeta::setCanonical('http://nerfthis.com.br/posts/' . $post->slug);
         SEOMeta::addMeta('article:published_time', $post->created_at->toW3CString(), 'property');
         //SEOMeta::addMeta('article:section', $post->category, 'property');
-        SEOMeta::addKeyword(['notícia', 'overwatch', $post->title,$post->slug, 'o verme', 'verme']);
+        SEOMeta::addKeyword(['notícia', 'overwatch', $post->title,$post->slug, 'nerfthis', 'verme']);
 
         OpenGraph::setDescription($post->description);
         OpenGraph::setTitle($post->title);
@@ -50,7 +50,7 @@ class PostsController extends Controller
         SEOMeta::setCanonical('http://nerfthis.com.br/posts/');
         //SEOMeta::addMeta('article:published_time', $post->created_at->toW3CString(), 'property');
         //SEOMeta::addMeta('article:section', $post->category, 'property');
-        SEOMeta::addKeyword(['noticias', 'overwatch', 'o verme', 'videos', 'jogadas', 'comics', 'notícias overwatch']);
+        SEOMeta::addKeyword(['noticias', 'overwatch', 'nerfthis', 'videos', 'jogadas', 'comics', 'notícias overwatch']);
 
         OpenGraph::setDescription('Notícias de Overwatch, tudo sobre os campeonatos e rankings, eventos e vídeos. - NerfThis');
         OpenGraph::setTitle('Notícias de OverWatch - NerfThis');

@@ -83,7 +83,7 @@ class InhouseController extends Controller
         SEOMeta::setDescription('Melhor sistema de ranking brasileiro de Overwatch no modo InHouse');
         SEOMeta::setCanonical('http://nerfthis.com.br/inhouse');
         SEOMeta::addKeyword(['inhouse', 'ranking', 'rating', 'campeonato','overwatch',
-            'o verme', 'verme', 'campeonatos overwatch', 'ranking overwatch', 'ranking nacional']);
+            'nerfthis', 'verme', 'campeonatos overwatch', 'ranking overwatch', 'ranking nacional']);
 
         $credentials['pusher_app_id'] = getenv('PUSHER_APP_ID');
         $credentials['pusher_key'] = getenv('PUSHER_KEY');
