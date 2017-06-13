@@ -42,6 +42,7 @@ class TeamsController extends Controller
         if ($request->query->count() <= 0) {
             // Define Query
             $query = (new Team())
+				->where('active' ,'1')
                 ->newQuery();
         }
         else {
