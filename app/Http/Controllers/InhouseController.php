@@ -81,7 +81,7 @@ class InhouseController extends Controller
 
         SEOMeta::setTitle('InHouse - NerfThis');
         SEOMeta::setDescription('Melhor sistema de ranking brasileiro de Overwatch no modo InHouse');
-        SEOMeta::setCanonical('http://watchoverme.com.br/inhouse');
+        SEOMeta::setCanonical('http://nerfthis.com.br/inhouse');
         SEOMeta::addKeyword(['inhouse', 'ranking', 'rating', 'campeonato','overwatch',
             'o verme', 'verme', 'campeonatos overwatch', 'ranking overwatch', 'ranking nacional']);
 

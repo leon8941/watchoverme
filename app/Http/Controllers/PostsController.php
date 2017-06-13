@@ -24,14 +24,14 @@ class PostsController extends Controller
 
         SEOMeta::setTitle($post->title);
         SEOMeta::setDescription($post->description . ' - Notícias OverWatch - NerfThis');
-        SEOMeta::setCanonical('http://watchoverme.com.br/posts/' . $post->slug);
+        SEOMeta::setCanonical('http://nerfthis.com.br/posts/' . $post->slug);
         SEOMeta::addMeta('article:published_time', $post->created_at->toW3CString(), 'property');
         //SEOMeta::addMeta('article:section', $post->category, 'property');
         SEOMeta::addKeyword(['notícia', 'overwatch', $post->title,$post->slug, 'o verme', 'verme']);
 
         OpenGraph::setDescription($post->description);
         OpenGraph::setTitle($post->title);
-        OpenGraph::setUrl('http://www.watchoverme.com.br/posts/' . $post->slug);
+        OpenGraph::setUrl('http://www.nerfthis.com.br/posts/' . $post->slug);
         OpenGraph::addProperty('type', 'article');
         OpenGraph::addProperty('locale', 'pt-br');
         OpenGraph::addProperty('locale:alternate', ['pt-pt', 'en-us']);
@@ -47,14 +47,14 @@ class PostsController extends Controller
     {
         SEOMeta::setTitle('Notícias');
         SEOMeta::setDescription('Notícias de Overwatch, tudo sobre os campeonatos e rankings, eventos e vídeos. - NerfThis');
-        SEOMeta::setCanonical('http://watchoverme.com.br/posts/');
+        SEOMeta::setCanonical('http://nerfthis.com.br/posts/');
         //SEOMeta::addMeta('article:published_time', $post->created_at->toW3CString(), 'property');
         //SEOMeta::addMeta('article:section', $post->category, 'property');
         SEOMeta::addKeyword(['noticias', 'overwatch', 'o verme', 'videos', 'jogadas', 'comics', 'notícias overwatch']);
 
         OpenGraph::setDescription('Notícias de Overwatch, tudo sobre os campeonatos e rankings, eventos e vídeos. - NerfThis');
         OpenGraph::setTitle('Notícias de OverWatch - NerfThis');
-        OpenGraph::setUrl('http://www.watchoverme.com.br/posts/');
+        OpenGraph::setUrl('http://www.nerfthis.com.br/posts/');
         OpenGraph::addProperty('type', 'article');
         OpenGraph::addProperty('locale', 'pt-br');
         OpenGraph::addProperty('locale:alternate', ['pt-pt', 'en-us']);

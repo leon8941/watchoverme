@@ -136,7 +136,7 @@ class TeamsController extends Controller
 
         SEO::setTitle('Times brasileiros de OverWatch');
         SEO::setDescription('As principais equipes, clãs e times de Overwatch do Brasil, encontre o seu time.');
-        SEO::opengraph()->setUrl('http://watchoverme.com.br/teams');
+        SEO::opengraph()->setUrl('http://nerfthis.com.br/teams');
         //SEO::setCanonical('https://codecasts.com.br/lesson');
         SEO::opengraph()->addProperty('type', 'articles');
 
@@ -156,7 +156,7 @@ class TeamsController extends Controller
 
         SEO::setTitle($team->title, '- Time brasileiro de OverWatch | ' . 'Watch OVerme');
         SEO::setDescription('Time de Overwatch ' . $team->title . ' - ' . $team->description);
-        SEO::opengraph()->setUrl('http://watchoverme.com.br/teams/' . $team->slug);
+        SEO::opengraph()->setUrl('http://nerfthis.com.br/teams/' . $team->slug);
         //SEO::setCanonical('https://codecasts.com.br/lesson');
         SEO::opengraph()->addProperty('type', 'articles');
 

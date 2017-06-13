@@ -33,7 +33,7 @@ class EventsController extends Controller
     {
         SEO::setTitle('Eventos');
         SEO::setDescription('Lista dos eventos de Overwatch, campeonatos, encontros, torneios, ligas.');
-        SEO::opengraph()->setUrl('http://watchoverme.com.br/events');
+        SEO::opengraph()->setUrl('http://nerfthis.com.br/events');
         //SEO::setCanonical('https://codecasts.com.br/lesson');
         SEO::opengraph()->addProperty('type', 'articles');
 

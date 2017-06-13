@@ -74,7 +74,7 @@ class AuthController extends Controller
         if ($user) {
             /*
             Mail::send('emails.users.register', [], function ($m) use ($data) {
-                $m->from('staff@watchoverme.com.br', 'NerfThis');
+                $m->from('staff@nerfthis.com.br', 'NerfThis');
 
                 $m->to($data['email'], $data['name'])->subject('Bem vindo Verme!');
             });
