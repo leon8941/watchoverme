@@ -28,7 +28,7 @@
 				@if ($stream->gamer)
                     <h5 class="title">{{ link_to( route('users.show', [$stream->slug]), $stream->gamer->battletag) }}</h5>
 				@else
-					<h5 class="title">{{ $stream->name) }}</h5>
+					<h5 class="title">{{ $stream->name }}</h5>
 				@endif
                     <div class="pull-right">
                         <small>followers</small> <a href="javascript:;">{{ $stream->twitch_followers }}</a>
