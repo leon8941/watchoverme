@@ -280,6 +280,7 @@
                             <ul class="chats">
                                 <?php $row = 0; ?>
                                 @foreach ($mercado as $item)
+                                    <?php if (!$item->team) { continue; } ?>
                                     <li class="{{ $row%2==0? 'left' : 'right' }}">
                                         <a href="{{ route('teams.show', ['slug' => $item->team->slug]) }}"
                                            target="_blank" class="name">{{ $item->team->title }}</a>
