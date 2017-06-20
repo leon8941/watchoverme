@@ -97,13 +97,7 @@
                                     <tr class="highlight">
                                         <td>Gamer Profile</td>
                                         <td>
-                                            @if (Auth::check() && Auth::user()->id == $user->id)
-                                                <button class="btn btn-info btn-xs" id="update-gamer">Update</button>
-                                                <br>
-                                                <span class=""
-                                            @else
-                                                Ativo
-                                            @endif
+											<i>Funcionalidade em manutenção</i>
                                         </td>
                                     </tr>
                                     <tr class="highlight">
